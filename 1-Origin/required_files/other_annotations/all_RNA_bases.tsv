@@ -1,0 +1,4087 @@
+Type	Genomic_coordinate	RNA.base	x1	y1	Pair_coordinate	file
+b	648	A	453	526		MT-RNR1_with_pairs.tsv
+b	649	A	458	519	668	MT-RNR1_with_pairs.tsv
+b	650	T	464	524		MT-RNR1_with_pairs.tsv
+b	651	A	467	517	667	MT-RNR1_with_pairs.tsv
+b	652	G	475	514	666	MT-RNR1_with_pairs.tsv
+b	653	G	483	511	665	MT-RNR1_with_pairs.tsv
+b	654	T	491	508	664	MT-RNR1_with_pairs.tsv
+b	655	T	498	507		MT-RNR1_with_pairs.tsv
+b	656	T	525	512		MT-RNR1_with_pairs.tsv
+b	657	G	544	499	1173	MT-RNR1_with_pairs.tsv
+b	658	G	536	495	1172	MT-RNR1_with_pairs.tsv
+b	659	T	528	493	1171	MT-RNR1_with_pairs.tsv
+b	660	C	519	491	1170	MT-RNR1_with_pairs.tsv
+b	661	C	511	489	1169	MT-RNR1_with_pairs.tsv
+b	662	T	503	487		MT-RNR1_with_pairs.tsv
+b	663	A	494	487		MT-RNR1_with_pairs.tsv
+b	664	G	486	489	654	MT-RNR1_with_pairs.tsv
+b	665	C	478	491	653	MT-RNR1_with_pairs.tsv
+b	666	C	470	494	652	MT-RNR1_with_pairs.tsv
+b	667	T	462	496	651	MT-RNR1_with_pairs.tsv
+b	668	T	454	497	649	MT-RNR1_with_pairs.tsv
+b	669	T	447	501	928	MT-RNR1_with_pairs.tsv
+b	670	C	440	506	927	MT-RNR1_with_pairs.tsv
+b	671	T	434	512	926	MT-RNR1_with_pairs.tsv
+b	672	A	428	516	925	MT-RNR1_with_pairs.tsv
+b	673	T	420	521	924	MT-RNR1_with_pairs.tsv
+b	674	T	414	527	923	MT-RNR1_with_pairs.tsv
+b	675	A	407	532	922	MT-RNR1_with_pairs.tsv
+b	676	G	400	537	921	MT-RNR1_with_pairs.tsv
+b	677	C	393	543	920	MT-RNR1_with_pairs.tsv
+b	678	T	387	550		MT-RNR1_with_pairs.tsv
+b	679	C	377	560		MT-RNR1_with_pairs.tsv
+b	680	T	365	563	866	MT-RNR1_with_pairs.tsv
+b	681	T	358	569	865	MT-RNR1_with_pairs.tsv
+b	682	A	351	574	864	MT-RNR1_with_pairs.tsv
+b	683	G	345	579	863	MT-RNR1_with_pairs.tsv
+b	684	T	338	584	862	MT-RNR1_with_pairs.tsv
+b	685	A	331	589	861	MT-RNR1_with_pairs.tsv
+b	686	A	324	595	859	MT-RNR1_with_pairs.tsv
+b	687	G	317	601	858	MT-RNR1_with_pairs.tsv
+b	688	A	315	629		MT-RNR1_with_pairs.tsv
+b	689	T	315	654	824	MT-RNR1_with_pairs.tsv
+b	690	T	314	667	823	MT-RNR1_with_pairs.tsv
+b	691	A	321	673		MT-RNR1_with_pairs.tsv
+b	692	C	315	680	822	MT-RNR1_with_pairs.tsv
+b	693	A	315	690	821	MT-RNR1_with_pairs.tsv
+b	694	C	315	698	820	MT-RNR1_with_pairs.tsv
+b	695	A	322	701		MT-RNR1_with_pairs.tsv
+b	696	T	315	706	819	MT-RNR1_with_pairs.tsv
+b	697	G	315	714	818	MT-RNR1_with_pairs.tsv
+b	698	C	316	723	817	MT-RNR1_with_pairs.tsv
+b	699	A	326	736		MT-RNR1_with_pairs.tsv
+b	700	A	335	749		MT-RNR1_with_pairs.tsv
+b	701	G	340	766	708	MT-RNR1_with_pairs.tsv
+b	702	C	348	766	707	MT-RNR1_with_pairs.tsv
+b	703	A	357	765		MT-RNR1_with_pairs.tsv
+b	704	T	365	771		MT-RNR1_with_pairs.tsv
+b	705	C	366	781		MT-RNR1_with_pairs.tsv
+b	706	C	358	788		MT-RNR1_with_pairs.tsv
+b	707	C	348	786	702	MT-RNR1_with_pairs.tsv
+b	708	C	340	786	701	MT-RNR1_with_pairs.tsv
+b	709	G	333	800		MT-RNR1_with_pairs.tsv
+b	710	T	325	810		MT-RNR1_with_pairs.tsv
+b	711	T	315	819		MT-RNR1_with_pairs.tsv
+b	712	C	301	825		MT-RNR1_with_pairs.tsv
+b	713	C	287	828		MT-RNR1_with_pairs.tsv
+b	714	A	272	825		MT-RNR1_with_pairs.tsv
+b	715	G	259	823	800	MT-RNR1_with_pairs.tsv
+b	716	T	253	828	799	MT-RNR1_with_pairs.tsv
+b	717	G	248	835	798	MT-RNR1_with_pairs.tsv
+b	718	A	253	843		MT-RNR1_with_pairs.tsv
+b	719	G	256	851		MT-RNR1_with_pairs.tsv
+b	720	T	255	860		MT-RNR1_with_pairs.tsv
+b	721	T	251	867		MT-RNR1_with_pairs.tsv
+b	722	C	244	873		MT-RNR1_with_pairs.tsv
+b	723	A	236	878		MT-RNR1_with_pairs.tsv
+b	724	C	236	886	751	MT-RNR1_with_pairs.tsv
+b	725	C	237	897	749	MT-RNR1_with_pairs.tsv
+b	726	C	236	905	748	MT-RNR1_with_pairs.tsv
+b	727	T	236	914	747	MT-RNR1_with_pairs.tsv
+b	728	C	240	922		MT-RNR1_with_pairs.tsv
+b	729	T	243	932		MT-RNR1_with_pairs.tsv
+b	730	A	242	944		MT-RNR1_with_pairs.tsv
+b	731	A	239	954		MT-RNR1_with_pairs.tsv
+b	732	A	236	961	742	MT-RNR1_with_pairs.tsv
+b	733	T	236	969	741	MT-RNR1_with_pairs.tsv
+b	734	C	236	978	740	MT-RNR1_with_pairs.tsv
+b	735	A	237	986		MT-RNR1_with_pairs.tsv
+b	736	C	234	995		MT-RNR1_with_pairs.tsv
+b	737	C	226	998		MT-RNR1_with_pairs.tsv
+b	738	A	217	995		MT-RNR1_with_pairs.tsv
+b	739	C	213	986		MT-RNR1_with_pairs.tsv
+b	740	G	214	978	734	MT-RNR1_with_pairs.tsv
+b	741	A	214	969	733	MT-RNR1_with_pairs.tsv
+b	742	T	214	961	732	MT-RNR1_with_pairs.tsv
+b	743	C	210	952		MT-RNR1_with_pairs.tsv
+b	744	A	206	943		MT-RNR1_with_pairs.tsv
+b	745	A	206	933		MT-RNR1_with_pairs.tsv
+b	746	A	210	924		MT-RNR1_with_pairs.tsv
+b	747	A	214	914	727	MT-RNR1_with_pairs.tsv
+b	748	G	214	905	726	MT-RNR1_with_pairs.tsv
+b	749	G	214	897	725	MT-RNR1_with_pairs.tsv
+b	750	A	208	891		MT-RNR1_with_pairs.tsv
+b	751	A	214	886	724	MT-RNR1_with_pairs.tsv
+b	752	C	214	876		MT-RNR1_with_pairs.tsv
+b	753	A	209	870	789	MT-RNR1_with_pairs.tsv
+b	754	A	204	878	788	MT-RNR1_with_pairs.tsv
+b	755	G	198	882	787	MT-RNR1_with_pairs.tsv
+b	756	C	192	890	786	MT-RNR1_with_pairs.tsv
+b	757	A	194	899		MT-RNR1_with_pairs.tsv
+b	758	T	187	906		MT-RNR1_with_pairs.tsv
+b	759	C	179	900	785	MT-RNR1_with_pairs.tsv
+b	760	A	172	914		MT-RNR1_with_pairs.tsv
+b	761	A	159	920	779	MT-RNR1_with_pairs.tsv
+b	762	G	154	927	778	MT-RNR1_with_pairs.tsv
+b	763	C	155	936		MT-RNR1_with_pairs.tsv
+b	764	A	148	942		MT-RNR1_with_pairs.tsv
+b	765	C	141	941	777	MT-RNR1_with_pairs.tsv
+b	766	G	133	949	775	MT-RNR1_with_pairs.tsv
+b	767	C	127	955	774	MT-RNR1_with_pairs.tsv
+b	768	A	121	962	773	MT-RNR1_with_pairs.tsv
+b	769	G	115	968		MT-RNR1_with_pairs.tsv
+b	770	C	105	969		MT-RNR1_with_pairs.tsv
+b	771	A	97	962		MT-RNR1_with_pairs.tsv
+b	772	A	99	952		MT-RNR1_with_pairs.tsv
+b	773	T	106	946	768	MT-RNR1_with_pairs.tsv
+b	774	G	112	939	767	MT-RNR1_with_pairs.tsv
+b	775	C	118	934	766	MT-RNR1_with_pairs.tsv
+b	776	A	119	926		MT-RNR1_with_pairs.tsv
+b	777	G	127	925	765	MT-RNR1_with_pairs.tsv
+b	778	C	140	913	762	MT-RNR1_with_pairs.tsv
+b	779	T	146	906	761	MT-RNR1_with_pairs.tsv
+b	780	C	139	899		MT-RNR1_with_pairs.tsv
+b	781	A	138	890		MT-RNR1_with_pairs.tsv
+b	782	A	142	883		MT-RNR1_with_pairs.tsv
+b	783	A	150	880		MT-RNR1_with_pairs.tsv
+b	784	A	158	880		MT-RNR1_with_pairs.tsv
+b	785	C	167	885	759	MT-RNR1_with_pairs.tsv
+b	786	G	177	874	756	MT-RNR1_with_pairs.tsv
+b	787	C	183	868	755	MT-RNR1_with_pairs.tsv
+b	788	T	189	862	754	MT-RNR1_with_pairs.tsv
+b	789	T	194	855	753	MT-RNR1_with_pairs.tsv
+b	790	A	201	848		MT-RNR1_with_pairs.tsv
+b	791	G	209	840	797	MT-RNR1_with_pairs.tsv
+b	792	C	203	834	796	MT-RNR1_with_pairs.tsv
+b	793	C	200	827		MT-RNR1_with_pairs.tsv
+b	794	T	199	817		MT-RNR1_with_pairs.tsv
+b	795	A	208	815		MT-RNR1_with_pairs.tsv
+b	796	G	218	819	792	MT-RNR1_with_pairs.tsv
+b	797	C	225	825	791	MT-RNR1_with_pairs.tsv
+b	798	C	233	820	717	MT-RNR1_with_pairs.tsv
+b	799	A	238	814	716	MT-RNR1_with_pairs.tsv
+b	800	C	244	807	715	MT-RNR1_with_pairs.tsv
+b	801	A	234	780		MT-RNR1_with_pairs.tsv
+b	802	C	240	750	811	MT-RNR1_with_pairs.tsv
+b	803	C	235	743	810	MT-RNR1_with_pairs.tsv
+b	804	C	228	737	809	MT-RNR1_with_pairs.tsv
+b	805	C	221	730		MT-RNR1_with_pairs.tsv
+b	806	C	219	720		MT-RNR1_with_pairs.tsv
+b	807	A	226	714		MT-RNR1_with_pairs.tsv
+b	808	C	235	714		MT-RNR1_with_pairs.tsv
+b	809	G	243	722	804	MT-RNR1_with_pairs.tsv
+b	810	G	249	729	803	MT-RNR1_with_pairs.tsv
+b	811	G	255	736	802	MT-RNR1_with_pairs.tsv
+b	812	A	262	734		MT-RNR1_with_pairs.tsv
+b	813	A	268	730		MT-RNR1_with_pairs.tsv
+b	814	A	275	727		MT-RNR1_with_pairs.tsv
+b	815	C	281	725		MT-RNR1_with_pairs.tsv
+b	816	A	288	724		MT-RNR1_with_pairs.tsv
+b	817	G	294	723	698	MT-RNR1_with_pairs.tsv
+b	818	C	294	714	697	MT-RNR1_with_pairs.tsv
+b	819	A	294	706	696	MT-RNR1_with_pairs.tsv
+b	820	G	294	698	694	MT-RNR1_with_pairs.tsv
+b	821	T	294	690	693	MT-RNR1_with_pairs.tsv
+b	822	G	294	680	692	MT-RNR1_with_pairs.tsv
+b	823	A	294	667	690	MT-RNR1_with_pairs.tsv
+b	824	T	294	654	689	MT-RNR1_with_pairs.tsv
+b	825	T	294	646		MT-RNR1_with_pairs.tsv
+b	826	A	294	638		MT-RNR1_with_pairs.tsv
+b	827	A	294	630		MT-RNR1_with_pairs.tsv
+b	828	C	294	622		MT-RNR1_with_pairs.tsv
+b	829	C	294	614		MT-RNR1_with_pairs.tsv
+b	830	T	287	614	856	MT-RNR1_with_pairs.tsv
+b	831	T	282	622		MT-RNR1_with_pairs.tsv
+b	832	T	278	614	855	MT-RNR1_with_pairs.tsv
+b	833	A	270	614	854	MT-RNR1_with_pairs.tsv
+b	834	G	262	614	853	MT-RNR1_with_pairs.tsv
+b	835	C	258	621		MT-RNR1_with_pairs.tsv
+b	836	A	251	626		MT-RNR1_with_pairs.tsv
+b	837	A	243	622		MT-RNR1_with_pairs.tsv
+b	838	T	239	614	851	MT-RNR1_with_pairs.tsv
+b	839	A	231	614	850	MT-RNR1_with_pairs.tsv
+b	840	A	223	614	849	MT-RNR1_with_pairs.tsv
+b	841	A	215	614	848	MT-RNR1_with_pairs.tsv
+b	842	C	206	614	847	MT-RNR1_with_pairs.tsv
+b	843	G	197	614		MT-RNR1_with_pairs.tsv
+b	844	A	190	608		MT-RNR1_with_pairs.tsv
+b	845	A	190	598		MT-RNR1_with_pairs.tsv
+b	846	A	197	591		MT-RNR1_with_pairs.tsv
+b	847	G	206	591	842	MT-RNR1_with_pairs.tsv
+b	848	T	214	591	841	MT-RNR1_with_pairs.tsv
+b	849	T	223	591	840	MT-RNR1_with_pairs.tsv
+b	850	T	231	591	839	MT-RNR1_with_pairs.tsv
+b	851	A	239	591	838	MT-RNR1_with_pairs.tsv
+b	852	A	250	589		MT-RNR1_with_pairs.tsv
+b	853	C	262	592	834	MT-RNR1_with_pairs.tsv
+b	854	T	270	592	833	MT-RNR1_with_pairs.tsv
+b	855	A	278	592	832	MT-RNR1_with_pairs.tsv
+b	856	A	286	592	830	MT-RNR1_with_pairs.tsv
+b	857	G	294	588		MT-RNR1_with_pairs.tsv
+b	858	C	303	586	687	MT-RNR1_with_pairs.tsv
+b	859	T	309	580	686	MT-RNR1_with_pairs.tsv
+b	860	A	311	572		MT-RNR1_with_pairs.tsv
+b	861	T	318	573	685	MT-RNR1_with_pairs.tsv
+b	862	A	325	568	684	MT-RNR1_with_pairs.tsv
+b	863	C	332	563	683	MT-RNR1_with_pairs.tsv
+b	864	T	338	558	682	MT-RNR1_with_pairs.tsv
+b	865	A	345	554	681	MT-RNR1_with_pairs.tsv
+b	866	A	352	548	680	MT-RNR1_with_pairs.tsv
+b	867	C	345	544		MT-RNR1_with_pairs.tsv
+b	868	C	339	539		MT-RNR1_with_pairs.tsv
+b	869	C	338	531		MT-RNR1_with_pairs.tsv
+b	870	C	340	523		MT-RNR1_with_pairs.tsv
+b	871	A	344	517		MT-RNR1_with_pairs.tsv
+b	872	G	351	514	917	MT-RNR1_with_pairs.tsv
+b	873	G	351	506	916	MT-RNR1_with_pairs.tsv
+b	874	G	351	497	915	MT-RNR1_with_pairs.tsv
+b	875	T	351	489	914	MT-RNR1_with_pairs.tsv
+b	876	T	351	480	913	MT-RNR1_with_pairs.tsv
+b	877	G	342	477		MT-RNR1_with_pairs.tsv
+b	878	G	334	480		MT-RNR1_with_pairs.tsv
+b	879	T	327	476		MT-RNR1_with_pairs.tsv
+b	880	C	328	466		MT-RNR1_with_pairs.tsv
+b	881	A	334	462		MT-RNR1_with_pairs.tsv
+b	882	A	341	460		MT-RNR1_with_pairs.tsv
+b	883	T	351	462	912	MT-RNR1_with_pairs.tsv
+b	884	T	351	454	911	MT-RNR1_with_pairs.tsv
+b	885	T	351	446	910	MT-RNR1_with_pairs.tsv
+b	886	C	351	437	909	MT-RNR1_with_pairs.tsv
+b	887	G	351	428	908	MT-RNR1_with_pairs.tsv
+b	888	T	341	422		MT-RNR1_with_pairs.tsv
+b	889	G	334	412		MT-RNR1_with_pairs.tsv
+b	890	C	331	400		MT-RNR1_with_pairs.tsv
+b	891	C	334	389		MT-RNR1_with_pairs.tsv
+b	892	A	340	379		MT-RNR1_with_pairs.tsv
+b	893	G	350	371	900	MT-RNR1_with_pairs.tsv
+b	894	C	350	362	899	MT-RNR1_with_pairs.tsv
+b	895	C	344	356		MT-RNR1_with_pairs.tsv
+b	896	A	352	349		MT-RNR1_with_pairs.tsv
+b	897	C	361	345		MT-RNR1_with_pairs.tsv
+b	898	C	371	349		MT-RNR1_with_pairs.tsv
+b	899	G	372	362	894	MT-RNR1_with_pairs.tsv
+b	900	C	372	371	893	MT-RNR1_with_pairs.tsv
+b	901	G	380	375		MT-RNR1_with_pairs.tsv
+b	902	G	387	383		MT-RNR1_with_pairs.tsv
+b	903	T	391	390		MT-RNR1_with_pairs.tsv
+b	904	C	393	400		MT-RNR1_with_pairs.tsv
+b	905	A	391	410		MT-RNR1_with_pairs.tsv
+b	906	C	387	418		MT-RNR1_with_pairs.tsv
+b	907	A	380	425		MT-RNR1_with_pairs.tsv
+b	908	C	373	428	887	MT-RNR1_with_pairs.tsv
+b	909	G	373	437	886	MT-RNR1_with_pairs.tsv
+b	910	A	373	446	885	MT-RNR1_with_pairs.tsv
+b	911	T	373	454	884	MT-RNR1_with_pairs.tsv
+b	912	T	373	463	883	MT-RNR1_with_pairs.tsv
+b	913	A	373	480	876	MT-RNR1_with_pairs.tsv
+b	914	A	373	489	875	MT-RNR1_with_pairs.tsv
+b	915	C	373	497	874	MT-RNR1_with_pairs.tsv
+b	916	C	373	506	873	MT-RNR1_with_pairs.tsv
+b	917	C	373	514	872	MT-RNR1_with_pairs.tsv
+b	918	A	373	524		MT-RNR1_with_pairs.tsv
+b	919	A	373	533		MT-RNR1_with_pairs.tsv
+b	920	G	381	528	677	MT-RNR1_with_pairs.tsv
+b	921	T	388	522	676	MT-RNR1_with_pairs.tsv
+b	922	C	394	516	675	MT-RNR1_with_pairs.tsv
+b	923	A	401	512	674	MT-RNR1_with_pairs.tsv
+b	924	A	407	506	673	MT-RNR1_with_pairs.tsv
+b	925	T	413	501	672	MT-RNR1_with_pairs.tsv
+b	926	A	421	496	671	MT-RNR1_with_pairs.tsv
+b	927	G	427	491	670	MT-RNR1_with_pairs.tsv
+b	928	A	434	487	669	MT-RNR1_with_pairs.tsv
+b	929	A	429	475		MT-RNR1_with_pairs.tsv
+b	930	G	431	416		MT-RNR1_with_pairs.tsv
+b	931	C	439	407		MT-RNR1_with_pairs.tsv
+b	932	C	450	398		MT-RNR1_with_pairs.tsv
+b	933	G	462	395	1136	MT-RNR1_with_pairs.tsv
+b	934	G	462	386	1135	MT-RNR1_with_pairs.tsv
+b	935	C	462	378	1134	MT-RNR1_with_pairs.tsv
+b	936	G	462	369		MT-RNR1_with_pairs.tsv
+b	937	T	454	368		MT-RNR1_with_pairs.tsv
+b	938	A	445	362		MT-RNR1_with_pairs.tsv
+b	939	A	438	354		MT-RNR1_with_pairs.tsv
+b	940	A	432	346		MT-RNR1_with_pairs.tsv
+b	941	G	428	336		MT-RNR1_with_pairs.tsv
+b	942	A	425	327		MT-RNR1_with_pairs.tsv
+b	943	G	419	321	1052	MT-RNR1_with_pairs.tsv
+b	944	T	413	316	1051	MT-RNR1_with_pairs.tsv
+b	945	G	405	312	1050	MT-RNR1_with_pairs.tsv
+b	946	T	398	307	1049	MT-RNR1_with_pairs.tsv
+b	947	T	389	308		MT-RNR1_with_pairs.tsv
+b	948	T	379	305		MT-RNR1_with_pairs.tsv
+b	949	T	373	297		MT-RNR1_with_pairs.tsv
+b	950	A	372	288	1044	MT-RNR1_with_pairs.tsv
+b	951	G	366	282	1043	MT-RNR1_with_pairs.tsv
+b	952	A	358	276	1042	MT-RNR1_with_pairs.tsv
+b	953	T	352	270		MT-RNR1_with_pairs.tsv
+b	954	C	346	263		MT-RNR1_with_pairs.tsv
+b	955	A	340	255		MT-RNR1_with_pairs.tsv
+b	956	C	336	246		MT-RNR1_with_pairs.tsv
+b	957	C	333	237		MT-RNR1_with_pairs.tsv
+b	958	C	329	229		MT-RNR1_with_pairs.tsv
+b	959	C	327	219		MT-RNR1_with_pairs.tsv
+b	960	C	326	210		MT-RNR1_with_pairs.tsv
+b	961	T	324	200		MT-RNR1_with_pairs.tsv
+b	962	C	325	190		MT-RNR1_with_pairs.tsv
+b	963	C	326	181		MT-RNR1_with_pairs.tsv
+b	964	C	327	171		MT-RNR1_with_pairs.tsv
+b	965	C	330	162		MT-RNR1_with_pairs.tsv
+b	966	A	333	155		MT-RNR1_with_pairs.tsv
+b	967	A	338	146		MT-RNR1_with_pairs.tsv
+b	968	T	342	138	1036	MT-RNR1_with_pairs.tsv
+b	969	A	342	129	1035	MT-RNR1_with_pairs.tsv
+b	970	A	342	121	1034	MT-RNR1_with_pairs.tsv
+b	971	A	342	112	1033	MT-RNR1_with_pairs.tsv
+b	972	G	342	103	1032	MT-RNR1_with_pairs.tsv
+b	973	C	342	94	1031	MT-RNR1_with_pairs.tsv
+b	974	T	335	89	1014	MT-RNR1_with_pairs.tsv
+b	975	A	327	90	1013	MT-RNR1_with_pairs.tsv
+b	976	A	319	93		MT-RNR1_with_pairs.tsv
+b	977	A	310	93		MT-RNR1_with_pairs.tsv
+b	978	A	302	90	1010	MT-RNR1_with_pairs.tsv
+b	979	C	293	90	1009	MT-RNR1_with_pairs.tsv
+b	980	T	285	90	1008	MT-RNR1_with_pairs.tsv
+b	981	C	277	90	1007	MT-RNR1_with_pairs.tsv
+b	982	A	268	90	1006	MT-RNR1_with_pairs.tsv
+b	983	C	260	90	1005	MT-RNR1_with_pairs.tsv
+b	984	C	251	90	1004	MT-RNR1_with_pairs.tsv
+b	985	T	242	90	1003	MT-RNR1_with_pairs.tsv
+b	986	G	234	94		MT-RNR1_with_pairs.tsv
+b	987	A	223	95		MT-RNR1_with_pairs.tsv
+b	988	G	215	88	999	MT-RNR1_with_pairs.tsv
+b	989	T	205	88	998	MT-RNR1_with_pairs.tsv
+b	990	T	197	88	997	MT-RNR1_with_pairs.tsv
+b	991	G	189	92		MT-RNR1_with_pairs.tsv
+b	992	T	181	89		MT-RNR1_with_pairs.tsv
+b	993	A	175	84		MT-RNR1_with_pairs.tsv
+b	994	A	175	75		MT-RNR1_with_pairs.tsv
+b	995	A	180	68		MT-RNR1_with_pairs.tsv
+b	996	A	188	65		MT-RNR1_with_pairs.tsv
+b	997	A	197	69	990	MT-RNR1_with_pairs.tsv
+b	998	A	205	69	989	MT-RNR1_with_pairs.tsv
+b	999	C	215	69	988	MT-RNR1_with_pairs.tsv
+b	1000	T	220	60		MT-RNR1_with_pairs.tsv
+b	1001	C	228	58		MT-RNR1_with_pairs.tsv
+b	1002	C	237	61		MT-RNR1_with_pairs.tsv
+b	1003	A	243	69	985	MT-RNR1_with_pairs.tsv
+b	1004	G	251	69	984	MT-RNR1_with_pairs.tsv
+b	1005	T	259	69	983	MT-RNR1_with_pairs.tsv
+b	1006	T	268	69	982	MT-RNR1_with_pairs.tsv
+b	1007	G	277	69	981	MT-RNR1_with_pairs.tsv
+b	1008	A	285	69	980	MT-RNR1_with_pairs.tsv
+b	1009	C	293	69	979	MT-RNR1_with_pairs.tsv
+b	1010	A	302	69	978	MT-RNR1_with_pairs.tsv
+b	1011	C	311	64		MT-RNR1_with_pairs.tsv
+b	1012	A	320	66		MT-RNR1_with_pairs.tsv
+b	1013	A	327	69	975	MT-RNR1_with_pairs.tsv
+b	1014	A	335	69	974	MT-RNR1_with_pairs.tsv
+b	1015	A	339	61		MT-RNR1_with_pairs.tsv
+b	1016	T	345	54		MT-RNR1_with_pairs.tsv
+b	1017	A	354	53		MT-RNR1_with_pairs.tsv
+b	1018	G	362	55		MT-RNR1_with_pairs.tsv
+b	1019	A	368	61		MT-RNR1_with_pairs.tsv
+b	1020	C	372	67	1030	MT-RNR1_with_pairs.tsv
+b	1021	T	381	61		MT-RNR1_with_pairs.tsv
+b	1022	A	389	68	1029	MT-RNR1_with_pairs.tsv
+b	1023	C	398	68	1028	MT-RNR1_with_pairs.tsv
+b	1024	G	407	67		MT-RNR1_with_pairs.tsv
+b	1025	A	413	74		MT-RNR1_with_pairs.tsv
+b	1026	A	414	84		MT-RNR1_with_pairs.tsv
+b	1027	A	407	90		MT-RNR1_with_pairs.tsv
+b	1028	G	398	89	1023	MT-RNR1_with_pairs.tsv
+b	1029	T	389	89	1022	MT-RNR1_with_pairs.tsv
+b	1030	G	372	89	1020	MT-RNR1_with_pairs.tsv
+b	1031	G	364	94	973	MT-RNR1_with_pairs.tsv
+b	1032	C	364	103	972	MT-RNR1_with_pairs.tsv
+b	1033	T	364	112	971	MT-RNR1_with_pairs.tsv
+b	1034	T	364	121	970	MT-RNR1_with_pairs.tsv
+b	1035	T	364	129	969	MT-RNR1_with_pairs.tsv
+b	1036	A	364	138	968	MT-RNR1_with_pairs.tsv
+b	1037	A	371	157		MT-RNR1_with_pairs.tsv
+b	1038	C	376	177		MT-RNR1_with_pairs.tsv
+b	1039	A	378	198		MT-RNR1_with_pairs.tsv
+b	1040	T	379	219		MT-RNR1_with_pairs.tsv
+b	1041	A	376	241		MT-RNR1_with_pairs.tsv
+b	1042	T	371	259	952	MT-RNR1_with_pairs.tsv
+b	1043	C	378	265	951	MT-RNR1_with_pairs.tsv
+b	1044	T	386	270	950	MT-RNR1_with_pairs.tsv
+b	1045	G	393	266		MT-RNR1_with_pairs.tsv
+b	1046	A	401	268		MT-RNR1_with_pairs.tsv
+b	1047	A	408	274		MT-RNR1_with_pairs.tsv
+b	1048	C	412	282		MT-RNR1_with_pairs.tsv
+b	1049	A	410	290	946	MT-RNR1_with_pairs.tsv
+b	1050	C	417	294	945	MT-RNR1_with_pairs.tsv
+b	1051	A	424	299	944	MT-RNR1_with_pairs.tsv
+b	1052	C	431	305	943	MT-RNR1_with_pairs.tsv
+b	1053	A	438	310		MT-RNR1_with_pairs.tsv
+b	1054	A	441	301		MT-RNR1_with_pairs.tsv
+b	1055	T	446	293		MT-RNR1_with_pairs.tsv
+b	1056	A	454	283		MT-RNR1_with_pairs.tsv
+b	1057	G	463	278	1098	MT-RNR1_with_pairs.tsv
+b	1058	C	463	269	1097	MT-RNR1_with_pairs.tsv
+b	1059	T	463	261	1096	MT-RNR1_with_pairs.tsv
+b	1060	A	463	253	1095	MT-RNR1_with_pairs.tsv
+b	1061	A	463	244	1094	MT-RNR1_with_pairs.tsv
+b	1062	G	463	236	1093	MT-RNR1_with_pairs.tsv
+b	1063	A	456	236		MT-RNR1_with_pairs.tsv
+b	1064	C	450	229		MT-RNR1_with_pairs.tsv
+b	1065	C	456	223		MT-RNR1_with_pairs.tsv
+b	1066	C	463	222	1092	MT-RNR1_with_pairs.tsv
+b	1067	A	462	213	1091	MT-RNR1_with_pairs.tsv
+b	1068	A	456	206		MT-RNR1_with_pairs.tsv
+b	1069	A	454	197		MT-RNR1_with_pairs.tsv
+b	1070	C	456	186		MT-RNR1_with_pairs.tsv
+b	1071	T	463	179	1087	MT-RNR1_with_pairs.tsv
+b	1072	G	463	170	1086	MT-RNR1_with_pairs.tsv
+b	1073	G	463	162	1085	MT-RNR1_with_pairs.tsv
+b	1074	G	463	153	1084	MT-RNR1_with_pairs.tsv
+b	1075	A	456	146		MT-RNR1_with_pairs.tsv
+b	1076	T	454	135		MT-RNR1_with_pairs.tsv
+b	1077	T	456	126		MT-RNR1_with_pairs.tsv
+b	1078	A	463	120		MT-RNR1_with_pairs.tsv
+b	1079	G	473	117		MT-RNR1_with_pairs.tsv
+b	1080	A	482	120		MT-RNR1_with_pairs.tsv
+b	1081	T	490	126		MT-RNR1_with_pairs.tsv
+b	1082	A	492	135		MT-RNR1_with_pairs.tsv
+b	1083	C	490	145		MT-RNR1_with_pairs.tsv
+b	1084	C	484	153	1074	MT-RNR1_with_pairs.tsv
+b	1085	C	484	162	1073	MT-RNR1_with_pairs.tsv
+b	1086	C	484	170	1072	MT-RNR1_with_pairs.tsv
+b	1087	A	484	179	1071	MT-RNR1_with_pairs.tsv
+b	1088	C	490	186		MT-RNR1_with_pairs.tsv
+b	1089	T	491	197		MT-RNR1_with_pairs.tsv
+b	1090	A	489	206		MT-RNR1_with_pairs.tsv
+b	1091	T	484	213	1067	MT-RNR1_with_pairs.tsv
+b	1092	G	484	222	1066	MT-RNR1_with_pairs.tsv
+b	1093	C	484	236	1062	MT-RNR1_with_pairs.tsv
+b	1094	T	484	244	1061	MT-RNR1_with_pairs.tsv
+b	1095	T	484	253	1060	MT-RNR1_with_pairs.tsv
+b	1096	A	484	261	1059	MT-RNR1_with_pairs.tsv
+b	1097	G	484	269	1058	MT-RNR1_with_pairs.tsv
+b	1098	C	484	278	1057	MT-RNR1_with_pairs.tsv
+b	1099	C	493	279		MT-RNR1_with_pairs.tsv
+b	1100	C	501	283		MT-RNR1_with_pairs.tsv
+b	1101	T	507	287		MT-RNR1_with_pairs.tsv
+b	1102	A	512	295		MT-RNR1_with_pairs.tsv
+b	1103	A	514	304		MT-RNR1_with_pairs.tsv
+b	1104	A	514	311		MT-RNR1_with_pairs.tsv
+b	1105	C	512	319		MT-RNR1_with_pairs.tsv
+b	1106	C	507	325		MT-RNR1_with_pairs.tsv
+b	1107	T	500	330		MT-RNR1_with_pairs.tsv
+b	1108	C	492	333		MT-RNR1_with_pairs.tsv
+b	1109	A	492	343	1132	MT-RNR1_with_pairs.tsv
+b	1110	A	500	343	1131	MT-RNR1_with_pairs.tsv
+b	1111	C	509	343	1130	MT-RNR1_with_pairs.tsv
+b	1112	A	517	343	1129	MT-RNR1_with_pairs.tsv
+b	1113	G	525	343	1128	MT-RNR1_with_pairs.tsv
+b	1114	T	534	343	1127	MT-RNR1_with_pairs.tsv
+b	1115	T	542	343	1126	MT-RNR1_with_pairs.tsv
+b	1116	A	548	336		MT-RNR1_with_pairs.tsv
+b	1117	A	558	333		MT-RNR1_with_pairs.tsv
+b	1118	A	568	334		MT-RNR1_with_pairs.tsv
+b	1119	T	576	339		MT-RNR1_with_pairs.tsv
+b	1120	C	580	348		MT-RNR1_with_pairs.tsv
+b	1121	A	580	359		MT-RNR1_with_pairs.tsv
+b	1122	A	576	367		MT-RNR1_with_pairs.tsv
+b	1123	C	568	373		MT-RNR1_with_pairs.tsv
+b	1124	A	558	374		MT-RNR1_with_pairs.tsv
+b	1125	A	549	371		MT-RNR1_with_pairs.tsv
+b	1126	A	542	364	1115	MT-RNR1_with_pairs.tsv
+b	1127	A	534	364	1114	MT-RNR1_with_pairs.tsv
+b	1128	C	525	364	1113	MT-RNR1_with_pairs.tsv
+b	1129	T	517	364	1112	MT-RNR1_with_pairs.tsv
+b	1130	G	509	364	1111	MT-RNR1_with_pairs.tsv
+b	1131	C	500	364	1110	MT-RNR1_with_pairs.tsv
+b	1132	T	492	364	1109	MT-RNR1_with_pairs.tsv
+b	1133	C	483	369		MT-RNR1_with_pairs.tsv
+b	1134	G	483	378	935	MT-RNR1_with_pairs.tsv
+b	1135	C	483	386	934	MT-RNR1_with_pairs.tsv
+b	1136	C	483	395	933	MT-RNR1_with_pairs.tsv
+b	1137	A	483	405		MT-RNR1_with_pairs.tsv
+b	1138	G	498	427	1165	MT-RNR1_with_pairs.tsv
+b	1139	A	506	427	1164	MT-RNR1_with_pairs.tsv
+b	1140	A	514	427	1163	MT-RNR1_with_pairs.tsv
+b	1141	C	516	420		MT-RNR1_with_pairs.tsv
+b	1142	A	521	410		MT-RNR1_with_pairs.tsv
+b	1143	C	528	406		MT-RNR1_with_pairs.tsv
+b	1144	T	536	407		MT-RNR1_with_pairs.tsv
+b	1145	A	542	409		MT-RNR1_with_pairs.tsv
+b	1146	C	548	417		MT-RNR1_with_pairs.tsv
+b	1147	G	550	425	1158	MT-RNR1_with_pairs.tsv
+b	1148	A	558	425	1157	MT-RNR1_with_pairs.tsv
+b	1149	G	567	425	1156	MT-RNR1_with_pairs.tsv
+b	1150	C	576	425	1155	MT-RNR1_with_pairs.tsv
+b	1151	C	585	425		MT-RNR1_with_pairs.tsv
+b	1152	A	590	432		MT-RNR1_with_pairs.tsv
+b	1153	C	590	441		MT-RNR1_with_pairs.tsv
+b	1154	A	584	448		MT-RNR1_with_pairs.tsv
+b	1155	G	576	448	1150	MT-RNR1_with_pairs.tsv
+b	1156	C	568	448	1149	MT-RNR1_with_pairs.tsv
+b	1157	T	559	448	1148	MT-RNR1_with_pairs.tsv
+b	1158	T	550	448	1147	MT-RNR1_with_pairs.tsv
+b	1159	A	544	456		MT-RNR1_with_pairs.tsv
+b	1160	A	537	460		MT-RNR1_with_pairs.tsv
+b	1161	A	528	460		MT-RNR1_with_pairs.tsv
+b	1162	A	520	458		MT-RNR1_with_pairs.tsv
+b	1163	C	515	448	1140	MT-RNR1_with_pairs.tsv
+b	1164	T	506	448	1139	MT-RNR1_with_pairs.tsv
+b	1165	C	498	448	1138	MT-RNR1_with_pairs.tsv
+b	1166	A	500	456		MT-RNR1_with_pairs.tsv
+b	1167	A	505	461		MT-RNR1_with_pairs.tsv
+b	1168	A	510	467		MT-RNR1_with_pairs.tsv
+b	1169	G	518	470	661	MT-RNR1_with_pairs.tsv
+b	1170	G	526	473	660	MT-RNR1_with_pairs.tsv
+b	1171	A	534	476	659	MT-RNR1_with_pairs.tsv
+b	1172	C	543	479	658	MT-RNR1_with_pairs.tsv
+b	1173	C	552	480	657	MT-RNR1_with_pairs.tsv
+b	1174	T	563	480	1480	MT-RNR1_with_pairs.tsv
+b	1175	G	571	480	1479	MT-RNR1_with_pairs.tsv
+b	1176	G	582	480	1477	MT-RNR1_with_pairs.tsv
+b	1177	C	591	480	1476	MT-RNR1_with_pairs.tsv
+b	1178	G	599	480	1475	MT-RNR1_with_pairs.tsv
+b	1179	G	605	473		MT-RNR1_with_pairs.tsv
+b	1180	T	610	480	1474	MT-RNR1_with_pairs.tsv
+b	1181	G	618	480	1473	MT-RNR1_with_pairs.tsv
+b	1182	C	627	480	1472	MT-RNR1_with_pairs.tsv
+b	1183	T	635	480	1471	MT-RNR1_with_pairs.tsv
+b	1184	T	644	480	1470	MT-RNR1_with_pairs.tsv
+b	1185	C	652	480	1469	MT-RNR1_with_pairs.tsv
+b	1186	A	661	480	1468	MT-RNR1_with_pairs.tsv
+b	1187	T	665	472		MT-RNR1_with_pairs.tsv
+b	1188	A	670	465		MT-RNR1_with_pairs.tsv
+b	1189	T	674	472		MT-RNR1_with_pairs.tsv
+b	1190	C	678	480	1464	MT-RNR1_with_pairs.tsv
+b	1191	C	686	480	1463	MT-RNR1_with_pairs.tsv
+b	1192	C	694	480	1462	MT-RNR1_with_pairs.tsv
+b	1193	T	701	478		MT-RNR1_with_pairs.tsv
+b	1194	C	708	475	1428	MT-RNR1_with_pairs.tsv
+b	1195	T	715	471	1427	MT-RNR1_with_pairs.tsv
+b	1196	A	722	467	1426	MT-RNR1_with_pairs.tsv
+b	1197	G	729	462	1425	MT-RNR1_with_pairs.tsv
+b	1198	A	737	458	1424	MT-RNR1_with_pairs.tsv
+b	1199	G	748	447		MT-RNR1_with_pairs.tsv
+b	1200	G	760	436	1365	MT-RNR1_with_pairs.tsv
+b	1201	A	760	428	1364	MT-RNR1_with_pairs.tsv
+b	1202	G	760	419	1363	MT-RNR1_with_pairs.tsv
+b	1203	C	760	410	1362	MT-RNR1_with_pairs.tsv
+b	1204	C	760	402	1361	MT-RNR1_with_pairs.tsv
+b	1205	T	760	394	1360	MT-RNR1_with_pairs.tsv
+b	1206	G	760	385	1359	MT-RNR1_with_pairs.tsv
+b	1207	T	760	376	1358	MT-RNR1_with_pairs.tsv
+b	1208	T	760	368	1357	MT-RNR1_with_pairs.tsv
+b	1209	C	760	355	1355	MT-RNR1_with_pairs.tsv
+b	1210	T	760	346	1354	MT-RNR1_with_pairs.tsv
+b	1211	G	751	351		MT-RNR1_with_pairs.tsv
+b	1212	T	742	352		MT-RNR1_with_pairs.tsv
+b	1213	A	731	353		MT-RNR1_with_pairs.tsv
+b	1214	A	721	353		MT-RNR1_with_pairs.tsv
+b	1215	T	715	358		MT-RNR1_with_pairs.tsv
+b	1216	C	710	364	1227	MT-RNR1_with_pairs.tsv
+b	1217	G	704	370	1226	MT-RNR1_with_pairs.tsv
+b	1218	A	703	381		MT-RNR1_with_pairs.tsv
+b	1219	T	696	387		MT-RNR1_with_pairs.tsv
+b	1220	A	687	391		MT-RNR1_with_pairs.tsv
+b	1221	A	677	389		MT-RNR1_with_pairs.tsv
+b	1222	A	671	383		MT-RNR1_with_pairs.tsv
+b	1223	C	669	372		MT-RNR1_with_pairs.tsv
+b	1224	C	672	362		MT-RNR1_with_pairs.tsv
+b	1225	C	680	357		MT-RNR1_with_pairs.tsv
+b	1226	C	689	355	1217	MT-RNR1_with_pairs.tsv
+b	1227	G	695	349	1216	MT-RNR1_with_pairs.tsv
+b	1228	A	702	342		MT-RNR1_with_pairs.tsv
+b	1229	T	707	337		MT-RNR1_with_pairs.tsv
+b	1230	C	706	328		MT-RNR1_with_pairs.tsv
+b	1231	A	707	319		MT-RNR1_with_pairs.tsv
+b	1232	A	711	312		MT-RNR1_with_pairs.tsv
+b	1233	C	718	304		MT-RNR1_with_pairs.tsv
+b	1234	C	727	300		MT-RNR1_with_pairs.tsv
+b	1235	T	736	299		MT-RNR1_with_pairs.tsv
+b	1236	C	746	301		MT-RNR1_with_pairs.tsv
+b	1237	A	752	309		MT-RNR1_with_pairs.tsv
+b	1238	C	760	313	1351	MT-RNR1_with_pairs.tsv
+b	1239	C	760	304	1350	MT-RNR1_with_pairs.tsv
+b	1240	A	760	296	1349	MT-RNR1_with_pairs.tsv
+b	1241	C	760	288	1348	MT-RNR1_with_pairs.tsv
+b	1242	C	760	279	1347	MT-RNR1_with_pairs.tsv
+b	1243	T	760	270	1346	MT-RNR1_with_pairs.tsv
+b	1244	C	760	261	1345	MT-RNR1_with_pairs.tsv
+b	1245	T	751	261		MT-RNR1_with_pairs.tsv
+b	1246	T	743	261		MT-RNR1_with_pairs.tsv
+b	1247	G	737	255		MT-RNR1_with_pairs.tsv
+b	1248	C	737	247		MT-RNR1_with_pairs.tsv
+b	1249	T	743	241		MT-RNR1_with_pairs.tsv
+b	1250	C	752	241		MT-RNR1_with_pairs.tsv
+b	1251	A	760	241		MT-RNR1_with_pairs.tsv
+b	1252	G	760	233	1340	MT-RNR1_with_pairs.tsv
+b	1253	C	760	224	1339	MT-RNR1_with_pairs.tsv
+b	1254	C	753	218		MT-RNR1_with_pairs.tsv
+b	1255	T	760	213	1338	MT-RNR1_with_pairs.tsv
+b	1256	A	760	204	1337	MT-RNR1_with_pairs.tsv
+b	1257	T	760	196	1336	MT-RNR1_with_pairs.tsv
+b	1258	A	760	188	1335	MT-RNR1_with_pairs.tsv
+b	1259	T	752	186		MT-RNR1_with_pairs.tsv
+b	1260	A	752	177		MT-RNR1_with_pairs.tsv
+b	1261	C	760	175	1334	MT-RNR1_with_pairs.tsv
+b	1262	C	760	167	1333	MT-RNR1_with_pairs.tsv
+b	1263	G	760	151	1329	MT-RNR1_with_pairs.tsv
+b	1264	C	760	143	1328	MT-RNR1_with_pairs.tsv
+b	1265	C	760	135	1327	MT-RNR1_with_pairs.tsv
+b	1266	A	760	124	1325	MT-RNR1_with_pairs.tsv
+b	1267	T	760	115	1324	MT-RNR1_with_pairs.tsv
+b	1268	C	760	107	1323	MT-RNR1_with_pairs.tsv
+b	1269	T	760	98	1322	MT-RNR1_with_pairs.tsv
+b	1270	T	757	89		MT-RNR1_with_pairs.tsv
+b	1271	C	757	80		MT-RNR1_with_pairs.tsv
+b	1272	A	757	72		MT-RNR1_with_pairs.tsv
+b	1273	G	751	62	1302	MT-RNR1_with_pairs.tsv
+b	1274	C	743	62	1301	MT-RNR1_with_pairs.tsv
+b	1275	A	734	62	1300	MT-RNR1_with_pairs.tsv
+b	1276	A	725	62	1299	MT-RNR1_with_pairs.tsv
+b	1277	A	717	62	1298	MT-RNR1_with_pairs.tsv
+b	1278	C	709	62	1297	MT-RNR1_with_pairs.tsv
+b	1279	C	697	64	1289	MT-RNR1_with_pairs.tsv
+b	1280	C	697	73	1288	MT-RNR1_with_pairs.tsv
+b	1281	T	697	82	1287	MT-RNR1_with_pairs.tsv
+b	1282	G	699	90		MT-RNR1_with_pairs.tsv
+b	1283	A	695	99		MT-RNR1_with_pairs.tsv
+b	1284	T	685	101		MT-RNR1_with_pairs.tsv
+b	1285	G	678	98		MT-RNR1_with_pairs.tsv
+b	1286	A	673	91		MT-RNR1_with_pairs.tsv
+b	1287	A	676	82	1281	MT-RNR1_with_pairs.tsv
+b	1288	G	676	73	1280	MT-RNR1_with_pairs.tsv
+b	1289	G	676	64	1279	MT-RNR1_with_pairs.tsv
+b	1290	C	672	57		MT-RNR1_with_pairs.tsv
+b	1291	T	670	47		MT-RNR1_with_pairs.tsv
+b	1292	A	674	38		MT-RNR1_with_pairs.tsv
+b	1293	C	680	32		MT-RNR1_with_pairs.tsv
+b	1294	A	687	30		MT-RNR1_with_pairs.tsv
+b	1295	A	696	31		MT-RNR1_with_pairs.tsv
+b	1296	A	703	34		MT-RNR1_with_pairs.tsv
+b	1297	G	709	41	1278	MT-RNR1_with_pairs.tsv
+b	1298	T	717	41	1277	MT-RNR1_with_pairs.tsv
+b	1299	A	725	41	1276	MT-RNR1_with_pairs.tsv
+b	1300	A	734	41	1275	MT-RNR1_with_pairs.tsv
+b	1301	G	743	41	1274	MT-RNR1_with_pairs.tsv
+b	1302	C	751	41	1273	MT-RNR1_with_pairs.tsv
+b	1303	G	756	34		MT-RNR1_with_pairs.tsv
+b	1304	C	763	29		MT-RNR1_with_pairs.tsv
+b	1305	A	770	28		MT-RNR1_with_pairs.tsv
+b	1306	A	779	30		MT-RNR1_with_pairs.tsv
+b	1307	G	785	34		MT-RNR1_with_pairs.tsv
+b	1308	T	790	42	1317	MT-RNR1_with_pairs.tsv
+b	1309	A	799	42	1316	MT-RNR1_with_pairs.tsv
+b	1310	C	808	42	1315	MT-RNR1_with_pairs.tsv
+b	1311	C	817	42		MT-RNR1_with_pairs.tsv
+b	1312	C	824	48		MT-RNR1_with_pairs.tsv
+b	1313	A	823	59		MT-RNR1_with_pairs.tsv
+b	1314	C	817	64		MT-RNR1_with_pairs.tsv
+b	1315	G	808	64	1310	MT-RNR1_with_pairs.tsv
+b	1316	T	799	64	1309	MT-RNR1_with_pairs.tsv
+b	1317	A	790	64	1308	MT-RNR1_with_pairs.tsv
+b	1318	A	783	64		MT-RNR1_with_pairs.tsv
+b	1319	A	783	73		MT-RNR1_with_pairs.tsv
+b	1320	G	783	81		MT-RNR1_with_pairs.tsv
+b	1321	A	783	90		MT-RNR1_with_pairs.tsv
+b	1322	C	781	98	1269	MT-RNR1_with_pairs.tsv
+b	1323	G	781	107	1268	MT-RNR1_with_pairs.tsv
+b	1324	T	781	115	1267	MT-RNR1_with_pairs.tsv
+b	1325	T	781	124	1266	MT-RNR1_with_pairs.tsv
+b	1326	A	787	130		MT-RNR1_with_pairs.tsv
+b	1327	G	781	135	1265	MT-RNR1_with_pairs.tsv
+b	1328	G	781	143	1264	MT-RNR1_with_pairs.tsv
+b	1329	T	781	151	1263	MT-RNR1_with_pairs.tsv
+b	1330	C	789	152		MT-RNR1_with_pairs.tsv
+b	1331	A	793	160		MT-RNR1_with_pairs.tsv
+b	1332	A	789	167		MT-RNR1_with_pairs.tsv
+b	1333	G	781	167	1262	MT-RNR1_with_pairs.tsv
+b	1334	G	781	175	1261	MT-RNR1_with_pairs.tsv
+b	1335	T	781	188	1258	MT-RNR1_with_pairs.tsv
+b	1336	G	781	196	1257	MT-RNR1_with_pairs.tsv
+b	1337	T	781	204	1256	MT-RNR1_with_pairs.tsv
+b	1338	A	781	213	1255	MT-RNR1_with_pairs.tsv
+b	1339	G	781	224	1253	MT-RNR1_with_pairs.tsv
+b	1340	C	781	233	1252	MT-RNR1_with_pairs.tsv
+b	1341	C	789	236		MT-RNR1_with_pairs.tsv
+b	1342	C	793	243		MT-RNR1_with_pairs.tsv
+b	1343	A	793	252		MT-RNR1_with_pairs.tsv
+b	1344	T	788	258		MT-RNR1_with_pairs.tsv
+b	1345	G	781	261	1244	MT-RNR1_with_pairs.tsv
+b	1346	A	781	270	1243	MT-RNR1_with_pairs.tsv
+b	1347	G	781	279	1242	MT-RNR1_with_pairs.tsv
+b	1348	G	781	288	1241	MT-RNR1_with_pairs.tsv
+b	1349	T	781	296	1240	MT-RNR1_with_pairs.tsv
+b	1350	G	781	304	1239	MT-RNR1_with_pairs.tsv
+b	1351	G	781	313	1238	MT-RNR1_with_pairs.tsv
+b	1352	C	788	324		MT-RNR1_with_pairs.tsv
+b	1353	A	787	337		MT-RNR1_with_pairs.tsv
+b	1354	A	780	346	1210	MT-RNR1_with_pairs.tsv
+b	1355	G	781	355	1209	MT-RNR1_with_pairs.tsv
+b	1356	A	787	362		MT-RNR1_with_pairs.tsv
+b	1357	A	780	368	1208	MT-RNR1_with_pairs.tsv
+b	1358	A	780	376	1207	MT-RNR1_with_pairs.tsv
+b	1359	T	780	385	1206	MT-RNR1_with_pairs.tsv
+b	1360	G	780	394	1205	MT-RNR1_with_pairs.tsv
+b	1361	G	780	402	1204	MT-RNR1_with_pairs.tsv
+b	1362	G	780	410	1203	MT-RNR1_with_pairs.tsv
+b	1363	C	780	419	1202	MT-RNR1_with_pairs.tsv
+b	1364	T	780	428	1201	MT-RNR1_with_pairs.tsv
+b	1365	A	780	436	1200	MT-RNR1_with_pairs.tsv
+b	1366	C	780	444		MT-RNR1_with_pairs.tsv
+b	1367	A	790	444		MT-RNR1_with_pairs.tsv
+b	1368	T	799	445		MT-RNR1_with_pairs.tsv
+b	1369	T	807	446		MT-RNR1_with_pairs.tsv
+b	1370	T	814	451	1382	MT-RNR1_with_pairs.tsv
+b	1371	T	821	446	1381	MT-RNR1_with_pairs.tsv
+b	1372	C	829	441	1380	MT-RNR1_with_pairs.tsv
+b	1373	T	835	435	1379	MT-RNR1_with_pairs.tsv
+b	1374	A	842	430		MT-RNR1_with_pairs.tsv
+b	1375	C	850	426		MT-RNR1_with_pairs.tsv
+b	1376	C	858	430		MT-RNR1_with_pairs.tsv
+b	1377	C	860	439		MT-RNR1_with_pairs.tsv
+b	1378	C	855	446		MT-RNR1_with_pairs.tsv
+b	1379	A	848	453	1373	MT-RNR1_with_pairs.tsv
+b	1380	G	841	457	1372	MT-RNR1_with_pairs.tsv
+b	1381	A	834	464	1371	MT-RNR1_with_pairs.tsv
+b	1382	A	827	469	1370	MT-RNR1_with_pairs.tsv
+b	1383	A	830	477		MT-RNR1_with_pairs.tsv
+b	1384	A	829	488		MT-RNR1_with_pairs.tsv
+b	1385	C	826	496		MT-RNR1_with_pairs.tsv
+b	1386	T	821	503		MT-RNR1_with_pairs.tsv
+b	1387	A	815	512		MT-RNR1_with_pairs.tsv
+b	1388	C	808	519	1418	MT-RNR1_with_pairs.tsv
+b	1389	G	813	525		MT-RNR1_with_pairs.tsv
+b	1390	A	816	534		MT-RNR1_with_pairs.tsv
+b	1391	T	818	542		MT-RNR1_with_pairs.tsv
+b	1392	A	817	552	1414	MT-RNR1_with_pairs.tsv
+b	1393	G	819	560	1413	MT-RNR1_with_pairs.tsv
+b	1394	C	821	568	1412	MT-RNR1_with_pairs.tsv
+b	1395	C	823	576	1411	MT-RNR1_with_pairs.tsv
+b	1396	C	826	584	1410	MT-RNR1_with_pairs.tsv
+b	1397	T	828	592	1409	MT-RNR1_with_pairs.tsv
+b	1398	T	830	601	1408	MT-RNR1_with_pairs.tsv
+b	1399	A	833	610	1407	MT-RNR1_with_pairs.tsv
+b	1400	T	839	615		MT-RNR1_with_pairs.tsv
+b	1401	G	842	625		MT-RNR1_with_pairs.tsv
+b	1402	A	838	635		MT-RNR1_with_pairs.tsv
+b	1403	A	830	640		MT-RNR1_with_pairs.tsv
+b	1404	A	820	640		MT-RNR1_with_pairs.tsv
+b	1405	C	812	633		MT-RNR1_with_pairs.tsv
+b	1406	T	809	624		MT-RNR1_with_pairs.tsv
+b	1407	T	811	615	1399	MT-RNR1_with_pairs.tsv
+b	1408	A	810	607	1398	MT-RNR1_with_pairs.tsv
+b	1409	A	808	598	1397	MT-RNR1_with_pairs.tsv
+b	1410	G	805	589	1396	MT-RNR1_with_pairs.tsv
+b	1411	G	803	582	1395	MT-RNR1_with_pairs.tsv
+b	1412	G	801	574	1394	MT-RNR1_with_pairs.tsv
+b	1413	T	798	566	1393	MT-RNR1_with_pairs.tsv
+b	1414	C	795	558	1392	MT-RNR1_with_pairs.tsv
+b	1415	G	790	551		MT-RNR1_with_pairs.tsv
+b	1416	A	787	543		MT-RNR1_with_pairs.tsv
+b	1417	A	785	533		MT-RNR1_with_pairs.tsv
+b	1418	G	787	525	1388	MT-RNR1_with_pairs.tsv
+b	1419	G	776	522		MT-RNR1_with_pairs.tsv
+b	1420	T	766	515		MT-RNR1_with_pairs.tsv
+b	1421	G	758	508		MT-RNR1_with_pairs.tsv
+b	1422	G	752	498		MT-RNR1_with_pairs.tsv
+b	1423	A	750	487		MT-RNR1_with_pairs.tsv
+b	1424	T	748	476	1198	MT-RNR1_with_pairs.tsv
+b	1425	T	741	480	1197	MT-RNR1_with_pairs.tsv
+b	1426	T	734	485	1196	MT-RNR1_with_pairs.tsv
+b	1427	A	726	490	1195	MT-RNR1_with_pairs.tsv
+b	1428	G	719	493	1194	MT-RNR1_with_pairs.tsv
+b	1429	C	728	500		MT-RNR1_with_pairs.tsv
+b	1430	A	734	508		MT-RNR1_with_pairs.tsv
+b	1431	G	740	516		MT-RNR1_with_pairs.tsv
+b	1432	T	743	525		MT-RNR1_with_pairs.tsv
+b	1433	A	744	537		MT-RNR1_with_pairs.tsv
+b	1434	A	746	547	1456	MT-RNR1_with_pairs.tsv
+b	1435	A	749	555	1455	MT-RNR1_with_pairs.tsv
+b	1436	C	753	562	1454	MT-RNR1_with_pairs.tsv
+b	1437	T	757	569	1453	MT-RNR1_with_pairs.tsv
+b	1438	A	761	577	1452	MT-RNR1_with_pairs.tsv
+b	1439	A	765	584	1451	MT-RNR1_with_pairs.tsv
+b	1440	G	770	590	1450	MT-RNR1_with_pairs.tsv
+b	1441	A	775	597	1449	MT-RNR1_with_pairs.tsv
+b	1442	G	782	602		MT-RNR1_with_pairs.tsv
+b	1443	T	785	610		MT-RNR1_with_pairs.tsv
+b	1444	A	784	619		MT-RNR1_with_pairs.tsv
+b	1445	G	778	625		MT-RNR1_with_pairs.tsv
+b	1446	A	769	629		MT-RNR1_with_pairs.tsv
+b	1447	G	761	624		MT-RNR1_with_pairs.tsv
+b	1448	T	756	617		MT-RNR1_with_pairs.tsv
+b	1449	G	755	609	1441	MT-RNR1_with_pairs.tsv
+b	1450	C	752	601	1440	MT-RNR1_with_pairs.tsv
+b	1451	T	747	593	1439	MT-RNR1_with_pairs.tsv
+b	1452	T	743	586	1438	MT-RNR1_with_pairs.tsv
+b	1453	A	739	578	1437	MT-RNR1_with_pairs.tsv
+b	1454	G	735	571	1436	MT-RNR1_with_pairs.tsv
+b	1455	T	730	564	1435	MT-RNR1_with_pairs.tsv
+b	1456	T	726	556	1434	MT-RNR1_with_pairs.tsv
+b	1457	G	717	552		MT-RNR1_with_pairs.tsv
+b	1458	A	709	546		MT-RNR1_with_pairs.tsv
+b	1459	A	701	536		MT-RNR1_with_pairs.tsv
+b	1460	C	696	525		MT-RNR1_with_pairs.tsv
+b	1461	A	694	514		MT-RNR1_with_pairs.tsv
+b	1462	G	695	502	1192	MT-RNR1_with_pairs.tsv
+b	1463	G	687	502	1191	MT-RNR1_with_pairs.tsv
+b	1464	G	679	502	1190	MT-RNR1_with_pairs.tsv
+b	1465	C	678	510		MT-RNR1_with_pairs.tsv
+b	1466	C	670	514		MT-RNR1_with_pairs.tsv
+b	1467	C	662	510		MT-RNR1_with_pairs.tsv
+b	1468	T	661	502	1186	MT-RNR1_with_pairs.tsv
+b	1469	G	652	502	1185	MT-RNR1_with_pairs.tsv
+b	1470	A	644	502	1184	MT-RNR1_with_pairs.tsv
+b	1471	A	635	502	1183	MT-RNR1_with_pairs.tsv
+b	1472	G	627	502	1182	MT-RNR1_with_pairs.tsv
+b	1473	C	618	502	1181	MT-RNR1_with_pairs.tsv
+b	1474	G	610	502	1180	MT-RNR1_with_pairs.tsv
+b	1475	C	599	502	1178	MT-RNR1_with_pairs.tsv
+b	1476	G	591	502	1177	MT-RNR1_with_pairs.tsv
+b	1477	T	582	502	1176	MT-RNR1_with_pairs.tsv
+b	1478	A	577	508		MT-RNR1_with_pairs.tsv
+b	1479	C	571	502	1175	MT-RNR1_with_pairs.tsv
+b	1480	A	563	502	1174	MT-RNR1_with_pairs.tsv
+b	1481	C	559	510		MT-RNR1_with_pairs.tsv
+b	1482	A	558	521		MT-RNR1_with_pairs.tsv
+b	1483	C	558	533		MT-RNR1_with_pairs.tsv
+b	1484	C	559	544		MT-RNR1_with_pairs.tsv
+b	1485	G	562	556	1566	MT-RNR1_with_pairs.tsv
+b	1486	C	562	565	1565	MT-RNR1_with_pairs.tsv
+b	1487	C	558	574		MT-RNR1_with_pairs.tsv
+b	1488	C	562	582	1562	MT-RNR1_with_pairs.tsv
+b	1489	G	562	591	1561	MT-RNR1_with_pairs.tsv
+b	1490	T	562	599	1560	MT-RNR1_with_pairs.tsv
+b	1491	C	562	608	1559	MT-RNR1_with_pairs.tsv
+b	1492	A	555	616		MT-RNR1_with_pairs.tsv
+b	1493	C	555	624		MT-RNR1_with_pairs.tsv
+b	1494	C	562	635	1555	MT-RNR1_with_pairs.tsv
+b	1495	C	562	643	1554	MT-RNR1_with_pairs.tsv
+b	1496	T	562	651	1553	MT-RNR1_with_pairs.tsv
+b	1497	C	562	660	1552	MT-RNR1_with_pairs.tsv
+b	1498	C	562	668	1551	MT-RNR1_with_pairs.tsv
+b	1499	T	562	676	1550	MT-RNR1_with_pairs.tsv
+b	1500	C	562	685	1549	MT-RNR1_with_pairs.tsv
+b	1501	A	553	689		MT-RNR1_with_pairs.tsv
+b	1502	A	550	696		MT-RNR1_with_pairs.tsv
+b	1503	G	554	702		MT-RNR1_with_pairs.tsv
+b	1504	T	562	704	1546	MT-RNR1_with_pairs.tsv
+b	1505	A	561	714	1545	MT-RNR1_with_pairs.tsv
+b	1506	T	561	723	1544	MT-RNR1_with_pairs.tsv
+b	1507	A	561	732	1543	MT-RNR1_with_pairs.tsv
+b	1508	C	561	740	1542	MT-RNR1_with_pairs.tsv
+b	1509	T	561	749	1541	MT-RNR1_with_pairs.tsv
+b	1510	T	561	757	1540	MT-RNR1_with_pairs.tsv
+b	1511	C	561	768	1538	MT-RNR1_with_pairs.tsv
+b	1512	A	556	778		MT-RNR1_with_pairs.tsv
+b	1513	A	556	787		MT-RNR1_with_pairs.tsv
+b	1514	A	562	795	1535	MT-RNR1_with_pairs.tsv
+b	1515	G	562	803	1534	MT-RNR1_with_pairs.tsv
+b	1516	G	562	811	1533	MT-RNR1_with_pairs.tsv
+b	1517	A	555	817		MT-RNR1_with_pairs.tsv
+b	1518	C	550	825		MT-RNR1_with_pairs.tsv
+b	1519	A	550	835		MT-RNR1_with_pairs.tsv
+b	1520	T	554	842		MT-RNR1_with_pairs.tsv
+b	1521	T	561	849	1529	MT-RNR1_with_pairs.tsv
+b	1522	T	561	859	1528	MT-RNR1_with_pairs.tsv
+b	1523	A	559	869		MT-RNR1_with_pairs.tsv
+b	1524	A	561	878		MT-RNR1_with_pairs.tsv
+b	1525	C	572	881		MT-RNR1_with_pairs.tsv
+b	1526	T	582	876		MT-RNR1_with_pairs.tsv
+b	1527	A	586	868		MT-RNR1_with_pairs.tsv
+b	1528	A	582	859	1522	MT-RNR1_with_pairs.tsv
+b	1529	A	582	849	1521	MT-RNR1_with_pairs.tsv
+b	1530	A	588	843		MT-RNR1_with_pairs.tsv
+b	1531	C	593	832		MT-RNR1_with_pairs.tsv
+b	1532	C	590	820		MT-RNR1_with_pairs.tsv
+b	1533	C	583	811	1516	MT-RNR1_with_pairs.tsv
+b	1534	C	583	803	1515	MT-RNR1_with_pairs.tsv
+b	1535	T	583	795	1514	MT-RNR1_with_pairs.tsv
+b	1536	A	587	787		MT-RNR1_with_pairs.tsv
+b	1537	C	588	777		MT-RNR1_with_pairs.tsv
+b	1538	G	582	768	1511	MT-RNR1_with_pairs.tsv
+b	1539	C	589	764		MT-RNR1_with_pairs.tsv
+b	1540	A	582	757	1510	MT-RNR1_with_pairs.tsv
+b	1541	T	582	749	1509	MT-RNR1_with_pairs.tsv
+b	1542	T	582	740	1508	MT-RNR1_with_pairs.tsv
+b	1543	T	582	732	1507	MT-RNR1_with_pairs.tsv
+b	1544	A	582	723	1506	MT-RNR1_with_pairs.tsv
+b	1545	T	582	714	1505	MT-RNR1_with_pairs.tsv
+b	1546	A	582	704	1504	MT-RNR1_with_pairs.tsv
+b	1547	T	591	699		MT-RNR1_with_pairs.tsv
+b	1548	A	591	690		MT-RNR1_with_pairs.tsv
+b	1549	G	582	685	1500	MT-RNR1_with_pairs.tsv
+b	1550	A	582	676	1499	MT-RNR1_with_pairs.tsv
+b	1551	G	582	668	1498	MT-RNR1_with_pairs.tsv
+b	1552	G	582	660	1497	MT-RNR1_with_pairs.tsv
+b	1553	A	582	651	1496	MT-RNR1_with_pairs.tsv
+b	1554	G	582	643	1495	MT-RNR1_with_pairs.tsv
+b	1555	A	582	635	1494	MT-RNR1_with_pairs.tsv
+b	1556	C	589	630		MT-RNR1_with_pairs.tsv
+b	1557	A	593	622		MT-RNR1_with_pairs.tsv
+b	1558	A	590	614		MT-RNR1_with_pairs.tsv
+b	1559	G	583	608	1491	MT-RNR1_with_pairs.tsv
+b	1560	T	583	599	1490	MT-RNR1_with_pairs.tsv
+b	1561	C	583	591	1489	MT-RNR1_with_pairs.tsv
+b	1562	G	583	582	1488	MT-RNR1_with_pairs.tsv
+b	1563	T	589	578		MT-RNR1_with_pairs.tsv
+b	1564	A	589	571		MT-RNR1_with_pairs.tsv
+b	1565	A	583	565	1486	MT-RNR1_with_pairs.tsv
+b	1566	C	583	556	1485	MT-RNR1_with_pairs.tsv
+b	1567	A	590	548		MT-RNR1_with_pairs.tsv
+b	1568	T	602	547		MT-RNR1_with_pairs.tsv
+b	1569	G	612	557		MT-RNR1_with_pairs.tsv
+b	1570	G	612	571		MT-RNR1_with_pairs.tsv
+b	1571	T	612	587		MT-RNR1_with_pairs.tsv
+b	1572	A	620	587	1593	MT-RNR1_with_pairs.tsv
+b	1573	A	629	587	1592	MT-RNR1_with_pairs.tsv
+b	1574	G	637	587	1591	MT-RNR1_with_pairs.tsv
+b	1575	T	645	587	1590	MT-RNR1_with_pairs.tsv
+b	1576	G	654	587	1589	MT-RNR1_with_pairs.tsv
+b	1577	T	663	587	1588	MT-RNR1_with_pairs.tsv
+b	1578	A	671	587	1587	MT-RNR1_with_pairs.tsv
+b	1579	C	681	587	1586	MT-RNR1_with_pairs.tsv
+b	1580	T	689	587	1585	MT-RNR1_with_pairs.tsv
+b	1581	G	698	587		MT-RNR1_with_pairs.tsv
+b	1582	G	705	593		MT-RNR1_with_pairs.tsv
+b	1583	A	704	603		MT-RNR1_with_pairs.tsv
+b	1584	A	698	609		MT-RNR1_with_pairs.tsv
+b	1585	A	689	609	1580	MT-RNR1_with_pairs.tsv
+b	1586	G	681	609	1579	MT-RNR1_with_pairs.tsv
+b	1587	T	671	609	1578	MT-RNR1_with_pairs.tsv
+b	1588	G	663	609	1577	MT-RNR1_with_pairs.tsv
+b	1589	C	654	609	1576	MT-RNR1_with_pairs.tsv
+b	1590	A	645	609	1575	MT-RNR1_with_pairs.tsv
+b	1591	C	637	609	1574	MT-RNR1_with_pairs.tsv
+b	1592	T	629	609	1573	MT-RNR1_with_pairs.tsv
+b	1593	T	620	609	1572	MT-RNR1_with_pairs.tsv
+b	1594	G	612	609		MT-RNR1_with_pairs.tsv
+b	1595	G	612	618		MT-RNR1_with_pairs.tsv
+b	1596	A	612	628		MT-RNR1_with_pairs.tsv
+b	1597	C	612	636		MT-RNR1_with_pairs.tsv
+b	1598	G	612	644		MT-RNR1_with_pairs.tsv
+b	1599	A	612	653		MT-RNR1_with_pairs.tsv
+b	1600	A	612	661		MT-RNR1_with_pairs.tsv
+b	1601	C	612	670		MT-RNR1_with_pairs.tsv
+b	1671	G	1105	1425	1817	MT-RNR2_with_pairs.tsv
+b	1672	C	1105	1444	1816	MT-RNR2_with_pairs.tsv
+b	1673	T	1136	1459		MT-RNR2_with_pairs.tsv
+b	1674	A	1158	1490		MT-RNR2_with_pairs.tsv
+b	1675	A	1166	1524		MT-RNR2_with_pairs.tsv
+b	1676	A	1158	1558		MT-RNR2_with_pairs.tsv
+b	1677	C	1136	1586		MT-RNR2_with_pairs.tsv
+b	1678	C	1107	1602	1797	MT-RNR2_with_pairs.tsv
+b	1679	T	1131	1612		MT-RNR2_with_pairs.tsv
+b	1680	A	1153	1634		MT-RNR2_with_pairs.tsv
+b	1681	G	1166	1661	1771	MT-RNR2_with_pairs.tsv
+b	1682	C	1185	1661	1770	MT-RNR2_with_pairs.tsv
+b	1683	C	1211	1661	1768	MT-RNR2_with_pairs.tsv
+b	1684	C	1232	1661	1767	MT-RNR2_with_pairs.tsv
+b	1685	C	1234	1645		MT-RNR2_with_pairs.tsv
+b	1686	A	1237	1631		MT-RNR2_with_pairs.tsv
+b	1687	A	1242	1616		MT-RNR2_with_pairs.tsv
+b	1688	A	1248	1602		MT-RNR2_with_pairs.tsv
+b	1689	C	1256	1588		MT-RNR2_with_pairs.tsv
+b	1690	C	1265	1576		MT-RNR2_with_pairs.tsv
+b	1691	C	1275	1564		MT-RNR2_with_pairs.tsv
+b	1692	A	1286	1553		MT-RNR2_with_pairs.tsv
+b	1693	C	1298	1543		MT-RNR2_with_pairs.tsv
+b	1694	T	1310	1534		MT-RNR2_with_pairs.tsv
+b	1695	C	1324	1527		MT-RNR2_with_pairs.tsv
+b	1696	C	1338	1520		MT-RNR2_with_pairs.tsv
+b	1697	A	1352	1516		MT-RNR2_with_pairs.tsv
+b	1698	C	1368	1512		MT-RNR2_with_pairs.tsv
+b	1699	C	1382	1509		MT-RNR2_with_pairs.tsv
+b	1700	T	1398	1508		MT-RNR2_with_pairs.tsv
+b	1701	T	1413	1509		MT-RNR2_with_pairs.tsv
+b	1702	A	1429	1511		MT-RNR2_with_pairs.tsv
+b	1703	C	1444	1514		MT-RNR2_with_pairs.tsv
+b	1704	T	1458	1518		MT-RNR2_with_pairs.tsv
+b	1705	A	1473	1524		MT-RNR2_with_pairs.tsv
+b	1706	C	1487	1531		MT-RNR2_with_pairs.tsv
+b	1707	C	1500	1540		MT-RNR2_with_pairs.tsv
+b	1708	A	1512	1549		MT-RNR2_with_pairs.tsv
+b	1709	G	1523	1560		MT-RNR2_with_pairs.tsv
+b	1710	A	1533	1572		MT-RNR2_with_pairs.tsv
+b	1711	C	1543	1584		MT-RNR2_with_pairs.tsv
+b	1712	A	1551	1597		MT-RNR2_with_pairs.tsv
+b	1713	A	1557	1612		MT-RNR2_with_pairs.tsv
+b	1714	C	1563	1625		MT-RNR2_with_pairs.tsv
+b	1715	C	1567	1640		MT-RNR2_with_pairs.tsv
+b	1716	T	1570	1655		MT-RNR2_with_pairs.tsv
+b	1717	T	1571	1671		MT-RNR2_with_pairs.tsv
+b	1718	A	1571	1687		MT-RNR2_with_pairs.tsv
+b	1719	G	1570	1702		MT-RNR2_with_pairs.tsv
+b	1720	C	1567	1717		MT-RNR2_with_pairs.tsv
+b	1721	C	1563	1732		MT-RNR2_with_pairs.tsv
+b	1722	A	1557	1747	1729	MT-RNR2_with_pairs.tsv
+b	1723	A	1575	1746		MT-RNR2_with_pairs.tsv
+b	1724	A	1589	1757		MT-RNR2_with_pairs.tsv
+b	1725	C	1592	1774		MT-RNR2_with_pairs.tsv
+b	1726	C	1584	1790		MT-RNR2_with_pairs.tsv
+b	1727	A	1567	1797		MT-RNR2_with_pairs.tsv
+b	1728	T	1550	1790		MT-RNR2_with_pairs.tsv
+b	1729	T	1541	1775	1722	MT-RNR2_with_pairs.tsv
+b	1730	T	1528	1792		MT-RNR2_with_pairs.tsv
+b	1731	A	1513	1808		MT-RNR2_with_pairs.tsv
+b	1732	C	1496	1821		MT-RNR2_with_pairs.tsv
+b	1733	C	1477	1832		MT-RNR2_with_pairs.tsv
+b	1734	C	1457	1840		MT-RNR2_with_pairs.tsv
+b	1735	A	1436	1846		MT-RNR2_with_pairs.tsv
+b	1736	A	1415	1849		MT-RNR2_with_pairs.tsv
+b	1737	A	1393	1850		MT-RNR2_with_pairs.tsv
+b	1738	T	1372	1846	1759	MT-RNR2_with_pairs.tsv
+b	1739	A	1376	1830	1758	MT-RNR2_with_pairs.tsv
+b	1740	A	1390	1820		MT-RNR2_with_pairs.tsv
+b	1741	A	1404	1809		MT-RNR2_with_pairs.tsv
+b	1742	G	1412	1794		MT-RNR2_with_pairs.tsv
+b	1743	T	1414	1774		MT-RNR2_with_pairs.tsv
+b	1744	A	1408	1759		MT-RNR2_with_pairs.tsv
+b	1745	T	1397	1747	1753	MT-RNR2_with_pairs.tsv
+b	1746	A	1403	1729	1752	MT-RNR2_with_pairs.tsv
+b	1747	G	1412	1717		MT-RNR2_with_pairs.tsv
+b	1748	G	1410	1702		MT-RNR2_with_pairs.tsv
+b	1749	C	1397	1692		MT-RNR2_with_pairs.tsv
+b	1750	G	1381	1694		MT-RNR2_with_pairs.tsv
+b	1751	A	1371	1706		MT-RNR2_with_pairs.tsv
+b	1752	T	1371	1720	1746	MT-RNR2_with_pairs.tsv
+b	1753	A	1365	1738	1745	MT-RNR2_with_pairs.tsv
+b	1754	G	1348	1747		MT-RNR2_with_pairs.tsv
+b	1755	A	1333	1762		MT-RNR2_with_pairs.tsv
+b	1756	A	1329	1783		MT-RNR2_with_pairs.tsv
+b	1757	A	1334	1803		MT-RNR2_with_pairs.tsv
+b	1758	T	1344	1821	1739	MT-RNR2_with_pairs.tsv
+b	1759	T	1340	1837	1738	MT-RNR2_with_pairs.tsv
+b	1760	G	1319	1828		MT-RNR2_with_pairs.tsv
+b	1761	A	1298	1816		MT-RNR2_with_pairs.tsv
+b	1762	A	1280	1800		MT-RNR2_with_pairs.tsv
+b	1763	A	1265	1782		MT-RNR2_with_pairs.tsv
+b	1764	C	1252	1761		MT-RNR2_with_pairs.tsv
+b	1765	C	1242	1740		MT-RNR2_with_pairs.tsv
+b	1766	T	1234	1717		MT-RNR2_with_pairs.tsv
+b	1767	G	1231	1694	1684	MT-RNR2_with_pairs.tsv
+b	1768	G	1211	1693	1683	MT-RNR2_with_pairs.tsv
+b	1769	C	1198	1698		MT-RNR2_with_pairs.tsv
+b	1770	G	1184	1694	1682	MT-RNR2_with_pairs.tsv
+b	1771	C	1165	1694	1681	MT-RNR2_with_pairs.tsv
+b	1772	A	1161	1709		MT-RNR2_with_pairs.tsv
+b	1773	A	1154	1722		MT-RNR2_with_pairs.tsv
+b	1774	T	1144	1732		MT-RNR2_with_pairs.tsv
+b	1775	A	1132	1743		MT-RNR2_with_pairs.tsv
+b	1776	G	1120	1749		MT-RNR2_with_pairs.tsv
+b	1777	A	1105	1755		MT-RNR2_with_pairs.tsv
+b	1778	T	1090	1756		MT-RNR2_with_pairs.tsv
+b	1779	A	1075	1755		MT-RNR2_with_pairs.tsv
+b	1780	T	1061	1750		MT-RNR2_with_pairs.tsv
+b	1781	A	1047	1744		MT-RNR2_with_pairs.tsv
+b	1782	G	1036	1735		MT-RNR2_with_pairs.tsv
+b	1783	T	1026	1722		MT-RNR2_with_pairs.tsv
+b	1784	A	1018	1710		MT-RNR2_with_pairs.tsv
+b	1785	C	1014	1696	1792	MT-RNR2_with_pairs.tsv
+b	1786	C	993	1696	1791	MT-RNR2_with_pairs.tsv
+b	1787	G	976	1700		MT-RNR2_with_pairs.tsv
+b	1788	C	962	1689		MT-RNR2_with_pairs.tsv
+b	1789	A	962	1672		MT-RNR2_with_pairs.tsv
+b	1790	A	975	1660		MT-RNR2_with_pairs.tsv
+b	1791	G	993	1663	1786	MT-RNR2_with_pairs.tsv
+b	1792	G	1014	1663	1785	MT-RNR2_with_pairs.tsv
+b	1793	G	1018	1646		MT-RNR2_with_pairs.tsv
+b	1794	A	1027	1631		MT-RNR2_with_pairs.tsv
+b	1795	A	1039	1619		MT-RNR2_with_pairs.tsv
+b	1796	A	1053	1610		MT-RNR2_with_pairs.tsv
+b	1797	G	1071	1602	1678	MT-RNR2_with_pairs.tsv
+b	1798	A	1059	1600		MT-RNR2_with_pairs.tsv
+b	1799	T	1048	1594		MT-RNR2_with_pairs.tsv
+b	1800	G	1038	1589		MT-RNR2_with_pairs.tsv
+b	1801	A	1029	1582		MT-RNR2_with_pairs.tsv
+b	1802	A	1021	1572		MT-RNR2_with_pairs.tsv
+b	1803	A	1014	1562		MT-RNR2_with_pairs.tsv
+b	1804	A	1009	1551		MT-RNR2_with_pairs.tsv
+b	1805	A	1006	1540		MT-RNR2_with_pairs.tsv
+b	1806	T	1004	1527		MT-RNR2_with_pairs.tsv
+b	1807	T	1004	1516		MT-RNR2_with_pairs.tsv
+b	1808	A	1006	1504		MT-RNR2_with_pairs.tsv
+b	1809	T	1009	1492		MT-RNR2_with_pairs.tsv
+b	1810	A	1014	1482		MT-RNR2_with_pairs.tsv
+b	1811	A	1021	1474		MT-RNR2_with_pairs.tsv
+b	1812	C	1029	1463		MT-RNR2_with_pairs.tsv
+b	1813	C	1039	1456		MT-RNR2_with_pairs.tsv
+b	1814	A	1049	1450		MT-RNR2_with_pairs.tsv
+b	1815	A	1060	1445		MT-RNR2_with_pairs.tsv
+b	1816	G	1072	1443	1672	MT-RNR2_with_pairs.tsv
+b	1817	C	1073	1424	1671	MT-RNR2_with_pairs.tsv
+b	1818	A	1054	1423		MT-RNR2_with_pairs.tsv
+b	1819	T	1038	1418		MT-RNR2_with_pairs.tsv
+b	1820	A	1021	1412		MT-RNR2_with_pairs.tsv
+b	1821	A	1007	1406		MT-RNR2_with_pairs.tsv
+b	1822	T	992	1398		MT-RNR2_with_pairs.tsv
+b	1823	A	976	1387		MT-RNR2_with_pairs.tsv
+b	1824	T	962	1376		MT-RNR2_with_pairs.tsv
+b	1825	A	950	1363		MT-RNR2_with_pairs.tsv
+b	1826	G	939	1350		MT-RNR2_with_pairs.tsv
+b	1827	C	929	1335		MT-RNR2_with_pairs.tsv
+b	1828	A	919	1321		MT-RNR2_with_pairs.tsv
+b	1829	A	912	1306	1841	MT-RNR2_with_pairs.tsv
+b	1830	G	894	1312	1840	MT-RNR2_with_pairs.tsv
+b	1831	G	874	1315	1839	MT-RNR2_with_pairs.tsv
+b	1832	A	863	1333		MT-RNR2_with_pairs.tsv
+b	1833	C	848	1338		MT-RNR2_with_pairs.tsv
+b	1834	T	831	1332		MT-RNR2_with_pairs.tsv
+b	1835	A	820	1321		MT-RNR2_with_pairs.tsv
+b	1836	A	821	1302		MT-RNR2_with_pairs.tsv
+b	1837	C	832	1288		MT-RNR2_with_pairs.tsv
+b	1838	C	847	1282		MT-RNR2_with_pairs.tsv
+b	1839	C	865	1287	1831	MT-RNR2_with_pairs.tsv
+b	1840	C	883	1280	1830	MT-RNR2_with_pairs.tsv
+b	1841	T	901	1274	1829	MT-RNR2_with_pairs.tsv
+b	1842	A	896	1254		MT-RNR2_with_pairs.tsv
+b	1843	T	894	1236		MT-RNR2_with_pairs.tsv
+b	1844	A	893	1219		MT-RNR2_with_pairs.tsv
+b	1845	C	895	1200	1858	MT-RNR2_with_pairs.tsv
+b	1846	C	882	1212		MT-RNR2_with_pairs.tsv
+b	1847	T	865	1218		MT-RNR2_with_pairs.tsv
+b	1848	T	847	1217		MT-RNR2_with_pairs.tsv
+b	1849	C	832	1209		MT-RNR2_with_pairs.tsv
+b	1850	T	821	1195		MT-RNR2_with_pairs.tsv
+b	1851	G	817	1177		MT-RNR2_with_pairs.tsv
+b	1852	C	821	1161		MT-RNR2_with_pairs.tsv
+b	1853	A	830	1146		MT-RNR2_with_pairs.tsv
+b	1854	T	846	1136		MT-RNR2_with_pairs.tsv
+b	1855	A	863	1135		MT-RNR2_with_pairs.tsv
+b	1856	A	880	1140		MT-RNR2_with_pairs.tsv
+b	1857	T	894	1151		MT-RNR2_with_pairs.tsv
+b	1858	G	901	1168	1845	MT-RNR2_with_pairs.tsv
+b	1859	A	906	1151		MT-RNR2_with_pairs.tsv
+b	1860	A	913	1135	2305	MT-RNR2_with_pairs.tsv
+b	1861	T	896	1125	2304	MT-RNR2_with_pairs.tsv
+b	1862	T	877	1115	2303	MT-RNR2_with_pairs.tsv
+b	1863	A	860	1106	2302	MT-RNR2_with_pairs.tsv
+b	1864	A	843	1095	2301	MT-RNR2_with_pairs.tsv
+b	1865	C	826	1084	2300	MT-RNR2_with_pairs.tsv
+b	1866	T	817	1093		MT-RNR2_with_pairs.tsv
+b	1867	A	808	1102		MT-RNR2_with_pairs.tsv
+b	1868	G	798	1110		MT-RNR2_with_pairs.tsv
+b	1869	A	787	1116		MT-RNR2_with_pairs.tsv
+b	1870	A	775	1121		MT-RNR2_with_pairs.tsv
+b	1871	A	763	1125		MT-RNR2_with_pairs.tsv
+b	1872	T	751	1126		MT-RNR2_with_pairs.tsv
+b	1873	A	739	1128		MT-RNR2_with_pairs.tsv
+b	1874	A	727	1127		MT-RNR2_with_pairs.tsv
+b	1875	C	714	1125	1899	MT-RNR2_with_pairs.tsv
+b	1876	T	715	1142		MT-RNR2_with_pairs.tsv
+b	1877	T	703	1155	1897	MT-RNR2_with_pairs.tsv
+b	1878	T	703	1172		MT-RNR2_with_pairs.tsv
+b	1879	G	691	1186	1895	MT-RNR2_with_pairs.tsv
+b	1880	C	684	1205	1894	MT-RNR2_with_pairs.tsv
+b	1881	A	691	1218		MT-RNR2_with_pairs.tsv
+b	1882	A	695	1233		MT-RNR2_with_pairs.tsv
+b	1883	G	689	1250	1890	MT-RNR2_with_pairs.tsv
+b	1884	G	700	1266	1889	MT-RNR2_with_pairs.tsv
+b	1885	A	713	1279		MT-RNR2_with_pairs.tsv
+b	1886	G	712	1296		MT-RNR2_with_pairs.tsv
+b	1887	A	697	1307		MT-RNR2_with_pairs.tsv
+b	1888	G	680	1302		MT-RNR2_with_pairs.tsv
+b	1889	C	673	1285	1884	MT-RNR2_with_pairs.tsv
+b	1890	C	662	1268	1883	MT-RNR2_with_pairs.tsv
+b	1891	A	637	1257		MT-RNR2_with_pairs.tsv
+b	1892	A	623	1232		MT-RNR2_with_pairs.tsv
+b	1893	A	632	1207		MT-RNR2_with_pairs.tsv
+b	1894	G	653	1193	1880	MT-RNR2_with_pairs.tsv
+b	1895	C	661	1174	1879	MT-RNR2_with_pairs.tsv
+b	1896	T	660	1156		MT-RNR2_with_pairs.tsv
+b	1897	A	672	1145	1877	MT-RNR2_with_pairs.tsv
+b	1898	A	672	1127		MT-RNR2_with_pairs.tsv
+b	1899	G	684	1113	1875	MT-RNR2_with_pairs.tsv
+b	1900	A	670	1106		MT-RNR2_with_pairs.tsv
+b	1901	C	657	1098		MT-RNR2_with_pairs.tsv
+b	1902	C	648	1088		MT-RNR2_with_pairs.tsv
+b	1903	C	639	1075	2019	MT-RNR2_with_pairs.tsv
+b	1904	C	622	1087	2018	MT-RNR2_with_pairs.tsv
+b	1905	C	612	1102		MT-RNR2_with_pairs.tsv
+b	1906	G	594	1105	2016	MT-RNR2_with_pairs.tsv
+b	1907	A	591	1127		MT-RNR2_with_pairs.tsv
+b	1908	A	578	1142		MT-RNR2_with_pairs.tsv
+b	1909	A	558	1149		MT-RNR2_with_pairs.tsv
+b	1910	C	537	1144	2010	MT-RNR2_with_pairs.tsv
+b	1911	C	521	1157	2009	MT-RNR2_with_pairs.tsv
+b	1912	A	506	1170	2008	MT-RNR2_with_pairs.tsv
+b	1913	G	490	1183	2007	MT-RNR2_with_pairs.tsv
+b	1914	A	482	1200		MT-RNR2_with_pairs.tsv
+b	1915	C	463	1213	2004	MT-RNR2_with_pairs.tsv
+b	1916	G	466	1224		MT-RNR2_with_pairs.tsv
+b	1917	A	466	1236		MT-RNR2_with_pairs.tsv
+b	1918	G	464	1246		MT-RNR2_with_pairs.tsv
+b	1919	C	459	1256		MT-RNR2_with_pairs.tsv
+b	1920	T	451	1263		MT-RNR2_with_pairs.tsv
+b	1921	A	438	1275	1983	MT-RNR2_with_pairs.tsv
+b	1922	C	438	1296	1982	MT-RNR2_with_pairs.tsv
+b	1923	C	438	1315	1981	MT-RNR2_with_pairs.tsv
+b	1924	T	438	1336	1980	MT-RNR2_with_pairs.tsv
+b	1925	A	438	1355	1979	MT-RNR2_with_pairs.tsv
+b	1926	A	451	1369		MT-RNR2_with_pairs.tsv
+b	1927	G	451	1389		MT-RNR2_with_pairs.tsv
+b	1928	A	438	1402	1976	MT-RNR2_with_pairs.tsv
+b	1929	A	438	1422	1975	MT-RNR2_with_pairs.tsv
+b	1930	C	438	1447	1973	MT-RNR2_with_pairs.tsv
+b	1931	A	455	1460		MT-RNR2_with_pairs.tsv
+b	1932	G	464	1479	1942	MT-RNR2_with_pairs.tsv
+b	1933	C	483	1483	1941	MT-RNR2_with_pairs.tsv
+b	1934	T	503	1488	1940	MT-RNR2_with_pairs.tsv
+b	1935	A	520	1486		MT-RNR2_with_pairs.tsv
+b	1936	A	534	1497		MT-RNR2_with_pairs.tsv
+b	1937	A	537	1514		MT-RNR2_with_pairs.tsv
+b	1938	A	526	1529		MT-RNR2_with_pairs.tsv
+b	1939	G	509	1531		MT-RNR2_with_pairs.tsv
+b	1940	A	495	1521	1934	MT-RNR2_with_pairs.tsv
+b	1941	G	475	1516	1933	MT-RNR2_with_pairs.tsv
+b	1942	C	456	1511	1932	MT-RNR2_with_pairs.tsv
+b	1943	A	443	1521		MT-RNR2_with_pairs.tsv
+b	1944	C	429	1527		MT-RNR2_with_pairs.tsv
+b	1945	A	413	1526		MT-RNR2_with_pairs.tsv
+b	1946	C	398	1519	1970	MT-RNR2_with_pairs.tsv
+b	1947	C	381	1530	1969	MT-RNR2_with_pairs.tsv
+b	1948	C	364	1540	1968	MT-RNR2_with_pairs.tsv
+b	1949	G	357	1554		MT-RNR2_with_pairs.tsv
+b	1950	T	344	1561		MT-RNR2_with_pairs.tsv
+b	1951	C	329	1560	1966	MT-RNR2_with_pairs.tsv
+b	1952	T	311	1569	1965	MT-RNR2_with_pairs.tsv
+b	1953	A	294	1580	1964	MT-RNR2_with_pairs.tsv
+b	1954	T	276	1590	1963	MT-RNR2_with_pairs.tsv
+b	1955	G	271	1607		MT-RNR2_with_pairs.tsv
+b	1956	T	256	1618		MT-RNR2_with_pairs.tsv
+b	1957	A	238	1621		MT-RNR2_with_pairs.tsv
+b	1958	G	223	1611		MT-RNR2_with_pairs.tsv
+b	1959	C	215	1596		MT-RNR2_with_pairs.tsv
+b	1960	A	215	1579		MT-RNR2_with_pairs.tsv
+b	1961	A	226	1565		MT-RNR2_with_pairs.tsv
+b	1962	A	243	1558		MT-RNR2_with_pairs.tsv
+b	1963	A	260	1562	1954	MT-RNR2_with_pairs.tsv
+b	1964	T	278	1551	1953	MT-RNR2_with_pairs.tsv
+b	1965	A	295	1542	1952	MT-RNR2_with_pairs.tsv
+b	1966	G	313	1532	1951	MT-RNR2_with_pairs.tsv
+b	1967	T	325	1514		MT-RNR2_with_pairs.tsv
+b	1968	G	347	1512	1948	MT-RNR2_with_pairs.tsv
+b	1969	G	364	1502	1947	MT-RNR2_with_pairs.tsv
+b	1970	G	382	1492	1946	MT-RNR2_with_pairs.tsv
+b	1971	A	383	1474		MT-RNR2_with_pairs.tsv
+b	1972	A	391	1459		MT-RNR2_with_pairs.tsv
+b	1973	G	406	1448	1930	MT-RNR2_with_pairs.tsv
+b	1974	A	398	1435		MT-RNR2_with_pairs.tsv
+b	1975	T	405	1422	1929	MT-RNR2_with_pairs.tsv
+b	1976	T	404	1402	1928	MT-RNR2_with_pairs.tsv
+b	1977	T	391	1388		MT-RNR2_with_pairs.tsv
+b	1978	A	391	1369		MT-RNR2_with_pairs.tsv
+b	1979	T	404	1355	1925	MT-RNR2_with_pairs.tsv
+b	1980	A	404	1336	1924	MT-RNR2_with_pairs.tsv
+b	1981	G	404	1315	1923	MT-RNR2_with_pairs.tsv
+b	1982	G	404	1296	1922	MT-RNR2_with_pairs.tsv
+b	1983	T	404	1275	1921	MT-RNR2_with_pairs.tsv
+b	1984	A	382	1261		MT-RNR2_with_pairs.tsv
+b	1985	G	373	1239	2001	MT-RNR2_with_pairs.tsv
+b	1986	A	347	1245		MT-RNR2_with_pairs.tsv
+b	1987	G	328	1230	1997	MT-RNR2_with_pairs.tsv
+b	1988	G	307	1227	1996	MT-RNR2_with_pairs.tsv
+b	1989	C	292	1235		MT-RNR2_with_pairs.tsv
+b	1990	G	275	1232		MT-RNR2_with_pairs.tsv
+b	1991	A	262	1220		MT-RNR2_with_pairs.tsv
+b	1992	C	259	1202		MT-RNR2_with_pairs.tsv
+b	1993	A	267	1187		MT-RNR2_with_pairs.tsv
+b	1994	A	283	1179		MT-RNR2_with_pairs.tsv
+b	1995	A	300	1182		MT-RNR2_with_pairs.tsv
+b	1996	C	313	1194	1988	MT-RNR2_with_pairs.tsv
+b	1997	C	333	1197	1987	MT-RNR2_with_pairs.tsv
+b	1998	T	344	1191		MT-RNR2_with_pairs.tsv
+b	1999	A	358	1190		MT-RNR2_with_pairs.tsv
+b	2000	C	370	1195		MT-RNR2_with_pairs.tsv
+b	2001	C	379	1206	1985	MT-RNR2_with_pairs.tsv
+b	2002	G	396	1189		MT-RNR2_with_pairs.tsv
+b	2003	A	418	1184		MT-RNR2_with_pairs.tsv
+b	2004	G	440	1191	1915	MT-RNR2_with_pairs.tsv
+b	2005	C	440	1173		MT-RNR2_with_pairs.tsv
+b	2006	C	451	1159		MT-RNR2_with_pairs.tsv
+b	2007	T	468	1156	1913	MT-RNR2_with_pairs.tsv
+b	2008	G	485	1144	1912	MT-RNR2_with_pairs.tsv
+b	2009	G	501	1133	1911	MT-RNR2_with_pairs.tsv
+b	2010	T	517	1119	1910	MT-RNR2_with_pairs.tsv
+b	2011	G	517	1105		MT-RNR2_with_pairs.tsv
+b	2012	A	521	1090		MT-RNR2_with_pairs.tsv
+b	2013	T	533	1078		MT-RNR2_with_pairs.tsv
+b	2014	A	547	1072		MT-RNR2_with_pairs.tsv
+b	2015	G	562	1072		MT-RNR2_with_pairs.tsv
+b	2016	C	577	1078	1906	MT-RNR2_with_pairs.tsv
+b	2017	T	586	1063		MT-RNR2_with_pairs.tsv
+b	2018	G	604	1060	1904	MT-RNR2_with_pairs.tsv
+b	2019	G	620	1049	1903	MT-RNR2_with_pairs.tsv
+b	2020	T	621	1011		MT-RNR2_with_pairs.tsv
+b	2021	T	630	974		MT-RNR2_with_pairs.tsv
+b	2022	G	650	940	2271	MT-RNR2_with_pairs.tsv
+b	2023	T	636	925	2270	MT-RNR2_with_pairs.tsv
+b	2024	C	623	910	2269	MT-RNR2_with_pairs.tsv
+b	2025	C	610	895	2268	MT-RNR2_with_pairs.tsv
+b	2026	A	596	880	2267	MT-RNR2_with_pairs.tsv
+b	2027	A	582	866	2266	MT-RNR2_with_pairs.tsv
+b	2028	G	571	871		MT-RNR2_with_pairs.tsv
+b	2029	A	561	875		MT-RNR2_with_pairs.tsv
+b	2030	T	549	879		MT-RNR2_with_pairs.tsv
+b	2031	A	537	881		MT-RNR2_with_pairs.tsv
+b	2032	G	522	883	2043	MT-RNR2_with_pairs.tsv
+b	2033	A	516	909	2041	MT-RNR2_with_pairs.tsv
+b	2034	A	518	923		MT-RNR2_with_pairs.tsv
+b	2035	T	509	934	2040	MT-RNR2_with_pairs.tsv
+b	2036	C	507	952		MT-RNR2_with_pairs.tsv
+b	2037	T	492	962		MT-RNR2_with_pairs.tsv
+b	2038	T	476	956		MT-RNR2_with_pairs.tsv
+b	2039	A	468	941		MT-RNR2_with_pairs.tsv
+b	2040	G	477	925	2035	MT-RNR2_with_pairs.tsv
+b	2041	T	484	902	2033	MT-RNR2_with_pairs.tsv
+b	2042	T	480	887		MT-RNR2_with_pairs.tsv
+b	2043	C	490	876	2032	MT-RNR2_with_pairs.tsv
+b	2044	A	470	867		MT-RNR2_with_pairs.tsv
+b	2045	A	450	858	2095	MT-RNR2_with_pairs.tsv
+b	2046	C	438	874	2094	MT-RNR2_with_pairs.tsv
+b	2047	T	433	893		MT-RNR2_with_pairs.tsv
+b	2048	T	413	904	2091	MT-RNR2_with_pairs.tsv
+b	2049	T	400	920	2090	MT-RNR2_with_pairs.tsv
+b	2050	A	387	937	2089	MT-RNR2_with_pairs.tsv
+b	2051	A	374	952	2088	MT-RNR2_with_pairs.tsv
+b	2052	A	361	968	2087	MT-RNR2_with_pairs.tsv
+b	2053	T	349	982	2086	MT-RNR2_with_pairs.tsv
+b	2054	T	336	998	2085	MT-RNR2_with_pairs.tsv
+b	2055	T	323	1014	2084	MT-RNR2_with_pairs.tsv
+b	2056	G	310	1030	2083	MT-RNR2_with_pairs.tsv
+b	2057	C	298	1046	2082	MT-RNR2_with_pairs.tsv
+b	2058	C	302	1061		MT-RNR2_with_pairs.tsv
+b	2059	C	301	1077		MT-RNR2_with_pairs.tsv
+b	2060	A	293	1092		MT-RNR2_with_pairs.tsv
+b	2061	C	282	1102		MT-RNR2_with_pairs.tsv
+b	2062	A	266	1107		MT-RNR2_with_pairs.tsv
+b	2063	G	251	1106	2077	MT-RNR2_with_pairs.tsv
+b	2064	A	238	1122	2076	MT-RNR2_with_pairs.tsv
+b	2065	A	243	1139		MT-RNR2_with_pairs.tsv
+b	2066	C	240	1156		MT-RNR2_with_pairs.tsv
+b	2067	C	230	1170		MT-RNR2_with_pairs.tsv
+b	2068	C	214	1179		MT-RNR2_with_pairs.tsv
+b	2069	T	196	1179		MT-RNR2_with_pairs.tsv
+b	2070	C	180	1172		MT-RNR2_with_pairs.tsv
+b	2071	T	169	1159		MT-RNR2_with_pairs.tsv
+b	2072	A	164	1142		MT-RNR2_with_pairs.tsv
+b	2073	A	168	1124		MT-RNR2_with_pairs.tsv
+b	2074	A	179	1110		MT-RNR2_with_pairs.tsv
+b	2075	T	194	1102		MT-RNR2_with_pairs.tsv
+b	2076	C	213	1102	2064	MT-RNR2_with_pairs.tsv
+b	2077	C	225	1086	2063	MT-RNR2_with_pairs.tsv
+b	2078	C	219	1067		MT-RNR2_with_pairs.tsv
+b	2079	C	222	1048		MT-RNR2_with_pairs.tsv
+b	2080	T	235	1032		MT-RNR2_with_pairs.tsv
+b	2081	T	253	1024		MT-RNR2_with_pairs.tsv
+b	2082	G	273	1025	2057	MT-RNR2_with_pairs.tsv
+b	2083	T	285	1008	2056	MT-RNR2_with_pairs.tsv
+b	2084	A	298	994	2055	MT-RNR2_with_pairs.tsv
+b	2085	A	310	978	2054	MT-RNR2_with_pairs.tsv
+b	2086	A	323	963	2053	MT-RNR2_with_pairs.tsv
+b	2087	T	336	946	2052	MT-RNR2_with_pairs.tsv
+b	2088	T	349	930	2051	MT-RNR2_with_pairs.tsv
+b	2089	T	362	915	2050	MT-RNR2_with_pairs.tsv
+b	2090	A	374	900	2049	MT-RNR2_with_pairs.tsv
+b	2091	A	387	884	2048	MT-RNR2_with_pairs.tsv
+b	2092	C	389	869		MT-RNR2_with_pairs.tsv
+b	2093	T	398	857		MT-RNR2_with_pairs.tsv
+b	2094	G	412	853	2046	MT-RNR2_with_pairs.tsv
+b	2095	T	424	835	2045	MT-RNR2_with_pairs.tsv
+b	2096	T	419	811		MT-RNR2_with_pairs.tsv
+b	2097	A	414	790		MT-RNR2_with_pairs.tsv
+b	2098	G	413	767	2123	MT-RNR2_with_pairs.tsv
+b	2099	T	393	762	2122	MT-RNR2_with_pairs.tsv
+b	2100	C	373	759	2121	MT-RNR2_with_pairs.tsv
+b	2101	C	353	754	2120	MT-RNR2_with_pairs.tsv
+b	2102	A	333	750	2119	MT-RNR2_with_pairs.tsv
+b	2103	A	313	746	2118	MT-RNR2_with_pairs.tsv
+b	2104	A	293	743	2117	MT-RNR2_with_pairs.tsv
+b	2105	G	274	738	2116	MT-RNR2_with_pairs.tsv
+b	2106	A	254	734	2115	MT-RNR2_with_pairs.tsv
+b	2107	G	235	729	2114	MT-RNR2_with_pairs.tsv
+b	2108	G	218	735		MT-RNR2_with_pairs.tsv
+b	2109	A	201	729		MT-RNR2_with_pairs.tsv
+b	2110	A	193	714		MT-RNR2_with_pairs.tsv
+b	2111	C	196	695		MT-RNR2_with_pairs.tsv
+b	2112	A	210	686		MT-RNR2_with_pairs.tsv
+b	2113	G	228	685		MT-RNR2_with_pairs.tsv
+b	2114	C	241	697	2107	MT-RNR2_with_pairs.tsv
+b	2115	T	260	701	2106	MT-RNR2_with_pairs.tsv
+b	2116	C	280	706	2105	MT-RNR2_with_pairs.tsv
+b	2117	T	300	709	2104	MT-RNR2_with_pairs.tsv
+b	2118	T	320	713	2103	MT-RNR2_with_pairs.tsv
+b	2119	T	340	717	2102	MT-RNR2_with_pairs.tsv
+b	2120	G	360	722	2101	MT-RNR2_with_pairs.tsv
+b	2121	G	379	726	2100	MT-RNR2_with_pairs.tsv
+b	2122	A	399	730	2099	MT-RNR2_with_pairs.tsv
+b	2123	C	419	735	2098	MT-RNR2_with_pairs.tsv
+b	2124	A	426	718		MT-RNR2_with_pairs.tsv
+b	2125	C	436	703		MT-RNR2_with_pairs.tsv
+b	2126	T	449	690		MT-RNR2_with_pairs.tsv
+b	2127	A	462	680	2138	MT-RNR2_with_pairs.tsv
+b	2128	G	454	661	2137	MT-RNR2_with_pairs.tsv
+b	2129	G	446	643	2136	MT-RNR2_with_pairs.tsv
+b	2130	A	431	633		MT-RNR2_with_pairs.tsv
+b	2131	A	427	616		MT-RNR2_with_pairs.tsv
+b	2132	A	434	600		MT-RNR2_with_pairs.tsv
+b	2133	A	451	593		MT-RNR2_with_pairs.tsv
+b	2134	A	467	598		MT-RNR2_with_pairs.tsv
+b	2135	A	477	612		MT-RNR2_with_pairs.tsv
+b	2136	C	476	630	2129	MT-RNR2_with_pairs.tsv
+b	2137	C	484	648	2128	MT-RNR2_with_pairs.tsv
+b	2138	T	492	666	2127	MT-RNR2_with_pairs.tsv
+b	2139	T	509	662		MT-RNR2_with_pairs.tsv
+b	2140	G	527	662		MT-RNR2_with_pairs.tsv
+b	2141	T	545	663		MT-RNR2_with_pairs.tsv
+b	2142	A	562	668		MT-RNR2_with_pairs.tsv
+b	2143	G	578	667	2257	MT-RNR2_with_pairs.tsv
+b	2144	A	592	658	2256	MT-RNR2_with_pairs.tsv
+b	2145	G	604	645	2255	MT-RNR2_with_pairs.tsv
+b	2146	A	604	630		MT-RNR2_with_pairs.tsv
+b	2147	G	619	625	2254	MT-RNR2_with_pairs.tsv
+b	2148	A	632	610	2253	MT-RNR2_with_pairs.tsv
+b	2149	G	645	594	2252	MT-RNR2_with_pairs.tsv
+b	2150	T	643	576		MT-RNR2_with_pairs.tsv
+b	2151	A	650	560		MT-RNR2_with_pairs.tsv
+b	2152	A	664	550		MT-RNR2_with_pairs.tsv
+b	2153	A	682	549	2248	MT-RNR2_with_pairs.tsv
+b	2154	A	670	536		MT-RNR2_with_pairs.tsv
+b	2155	A	655	517		MT-RNR2_with_pairs.tsv
+b	2156	A	641	490		MT-RNR2_with_pairs.tsv
+b	2157	T	631	465		MT-RNR2_with_pairs.tsv
+b	2158	T	624	439		MT-RNR2_with_pairs.tsv
+b	2159	T	621	412		MT-RNR2_with_pairs.tsv
+b	2160	A	620	388		MT-RNR2_with_pairs.tsv
+b	2161	A	620	363		MT-RNR2_with_pairs.tsv
+b	2162	C	621	338		MT-RNR2_with_pairs.tsv
+b	2163	A	622	315		MT-RNR2_with_pairs.tsv
+b	2164	C	624	295		MT-RNR2_with_pairs.tsv
+b	2165	C	628	273		MT-RNR2_with_pairs.tsv
+b	2166	C	635	251		MT-RNR2_with_pairs.tsv
+b	2167	A	633	234		MT-RNR2_with_pairs.tsv
+b	2168	T	625	218		MT-RNR2_with_pairs.tsv
+b	2169	A	613	222		MT-RNR2_with_pairs.tsv
+b	2170	G	601	217	2190	MT-RNR2_with_pairs.tsv
+b	2171	T	587	222		MT-RNR2_with_pairs.tsv
+b	2172	A	572	222		MT-RNR2_with_pairs.tsv
+b	2173	G	556	217	2187	MT-RNR2_with_pairs.tsv
+b	2174	G	536	217	2186	MT-RNR2_with_pairs.tsv
+b	2175	C	516	217	2185	MT-RNR2_with_pairs.tsv
+b	2176	C	503	229		MT-RNR2_with_pairs.tsv
+b	2177	T	486	233		MT-RNR2_with_pairs.tsv
+b	2178	A	468	229		MT-RNR2_with_pairs.tsv
+b	2179	A	456	217		MT-RNR2_with_pairs.tsv
+b	2180	A	451	200		MT-RNR2_with_pairs.tsv
+b	2181	A	456	183		MT-RNR2_with_pairs.tsv
+b	2182	G	469	170		MT-RNR2_with_pairs.tsv
+b	2183	C	486	166		MT-RNR2_with_pairs.tsv
+b	2184	A	503	171		MT-RNR2_with_pairs.tsv
+b	2185	G	516	183	2175	MT-RNR2_with_pairs.tsv
+b	2186	C	536	183	2174	MT-RNR2_with_pairs.tsv
+b	2187	C	556	183	2173	MT-RNR2_with_pairs.tsv
+b	2188	A	572	180		MT-RNR2_with_pairs.tsv
+b	2189	C	587	180		MT-RNR2_with_pairs.tsv
+b	2190	C	602	183	2170	MT-RNR2_with_pairs.tsv
+b	2191	A	614	180		MT-RNR2_with_pairs.tsv
+b	2192	A	628	183		MT-RNR2_with_pairs.tsv
+b	2193	T	639	175		MT-RNR2_with_pairs.tsv
+b	2194	T	651	168		MT-RNR2_with_pairs.tsv
+b	2195	A	665	168		MT-RNR2_with_pairs.tsv
+b	2196	A	676	175		MT-RNR2_with_pairs.tsv
+b	2197	G	690	185	2212	MT-RNR2_with_pairs.tsv
+b	2198	A	700	174		MT-RNR2_with_pairs.tsv
+b	2199	A	713	174		MT-RNR2_with_pairs.tsv
+b	2200	A	724	185	2211	MT-RNR2_with_pairs.tsv
+b	2201	G	745	185	2210	MT-RNR2_with_pairs.tsv
+b	2202	C	758	173		MT-RNR2_with_pairs.tsv
+b	2203	G	776	170		MT-RNR2_with_pairs.tsv
+b	2204	T	792	177		MT-RNR2_with_pairs.tsv
+b	2205	T	801	191		MT-RNR2_with_pairs.tsv
+b	2206	C	802	210		MT-RNR2_with_pairs.tsv
+b	2207	A	791	225		MT-RNR2_with_pairs.tsv
+b	2208	A	775	232		MT-RNR2_with_pairs.tsv
+b	2209	G	758	229		MT-RNR2_with_pairs.tsv
+b	2210	C	745	217	2201	MT-RNR2_with_pairs.tsv
+b	2211	T	724	217	2200	MT-RNR2_with_pairs.tsv
+b	2212	C	689	217	2197	MT-RNR2_with_pairs.tsv
+b	2213	A	684	228		MT-RNR2_with_pairs.tsv
+b	2214	A	674	239		MT-RNR2_with_pairs.tsv
+b	2215	C	686	250		MT-RNR2_with_pairs.tsv
+b	2216	A	697	260		MT-RNR2_with_pairs.tsv
+b	2217	C	707	274		MT-RNR2_with_pairs.tsv
+b	2218	C	715	290		MT-RNR2_with_pairs.tsv
+b	2219	C	723	306		MT-RNR2_with_pairs.tsv
+b	2220	A	728	323		MT-RNR2_with_pairs.tsv
+b	2221	C	733	337		MT-RNR2_with_pairs.tsv
+b	2222	T	746	336		MT-RNR2_with_pairs.tsv
+b	2223	A	760	337		MT-RNR2_with_pairs.tsv
+b	2224	C	775	340		MT-RNR2_with_pairs.tsv
+b	2225	C	788	345		MT-RNR2_with_pairs.tsv
+b	2226	T	800	351		MT-RNR2_with_pairs.tsv
+b	2227	A	811	358		MT-RNR2_with_pairs.tsv
+b	2228	A	823	368		MT-RNR2_with_pairs.tsv
+b	2229	A	836	381		MT-RNR2_with_pairs.tsv
+b	2230	A	844	393		MT-RNR2_with_pairs.tsv
+b	2231	A	850	407		MT-RNR2_with_pairs.tsv
+b	2232	A	855	421		MT-RNR2_with_pairs.tsv
+b	2233	T	857	438		MT-RNR2_with_pairs.tsv
+b	2234	C	858	455		MT-RNR2_with_pairs.tsv
+b	2235	C	857	470		MT-RNR2_with_pairs.tsv
+b	2236	C	854	486		MT-RNR2_with_pairs.tsv
+b	2237	A	849	501		MT-RNR2_with_pairs.tsv
+b	2238	A	842	515		MT-RNR2_with_pairs.tsv
+b	2239	A	834	529		MT-RNR2_with_pairs.tsv
+b	2240	C	823	541		MT-RNR2_with_pairs.tsv
+b	2241	A	812	551		MT-RNR2_with_pairs.tsv
+b	2242	T	798	561		MT-RNR2_with_pairs.tsv
+b	2243	A	785	567		MT-RNR2_with_pairs.tsv
+b	2244	T	771	572		MT-RNR2_with_pairs.tsv
+b	2245	A	756	575		MT-RNR2_with_pairs.tsv
+b	2246	A	740	575		MT-RNR2_with_pairs.tsv
+b	2247	C	721	576		MT-RNR2_with_pairs.tsv
+b	2248	T	708	569	2153	MT-RNR2_with_pairs.tsv
+b	2249	G	710	587		MT-RNR2_with_pairs.tsv
+b	2250	A	702	604		MT-RNR2_with_pairs.tsv
+b	2251	A	688	614		MT-RNR2_with_pairs.tsv
+b	2252	C	670	615	2149	MT-RNR2_with_pairs.tsv
+b	2253	T	657	630	2148	MT-RNR2_with_pairs.tsv
+b	2254	C	645	646	2147	MT-RNR2_with_pairs.tsv
+b	2255	C	629	665	2145	MT-RNR2_with_pairs.tsv
+b	2256	T	616	681	2144	MT-RNR2_with_pairs.tsv
+b	2257	C	604	697	2143	MT-RNR2_with_pairs.tsv
+b	2258	A	614	712		MT-RNR2_with_pairs.tsv
+b	2259	C	623	727		MT-RNR2_with_pairs.tsv
+b	2260	A	628	744		MT-RNR2_with_pairs.tsv
+b	2261	C	632	760		MT-RNR2_with_pairs.tsv
+b	2262	C	633	778		MT-RNR2_with_pairs.tsv
+b	2263	C	630	795		MT-RNR2_with_pairs.tsv
+b	2264	A	625	813		MT-RNR2_with_pairs.tsv
+b	2265	A	617	829		MT-RNR2_with_pairs.tsv
+b	2266	T	607	842	2027	MT-RNR2_with_pairs.tsv
+b	2267	T	620	857	2026	MT-RNR2_with_pairs.tsv
+b	2268	G	634	873	2025	MT-RNR2_with_pairs.tsv
+b	2269	G	648	888	2024	MT-RNR2_with_pairs.tsv
+b	2270	A	661	904	2023	MT-RNR2_with_pairs.tsv
+b	2271	C	675	918	2022	MT-RNR2_with_pairs.tsv
+b	2272	C	692	909		MT-RNR2_with_pairs.tsv
+b	2273	A	709	903		MT-RNR2_with_pairs.tsv
+b	2274	A	728	900		MT-RNR2_with_pairs.tsv
+b	2275	T	748	900	2290	MT-RNR2_with_pairs.tsv
+b	2276	C	754	881	2289	MT-RNR2_with_pairs.tsv
+b	2277	T	758	861	2288	MT-RNR2_with_pairs.tsv
+b	2278	A	763	842	2287	MT-RNR2_with_pairs.tsv
+b	2279	T	768	822	2286	MT-RNR2_with_pairs.tsv
+b	2280	C	763	805		MT-RNR2_with_pairs.tsv
+b	2281	A	770	789		MT-RNR2_with_pairs.tsv
+b	2282	C	787	781		MT-RNR2_with_pairs.tsv
+b	2283	C	803	785		MT-RNR2_with_pairs.tsv
+b	2284	C	814	800		MT-RNR2_with_pairs.tsv
+b	2285	T	812	817		MT-RNR2_with_pairs.tsv
+b	2286	A	800	830	2279	MT-RNR2_with_pairs.tsv
+b	2287	T	795	849	2278	MT-RNR2_with_pairs.tsv
+b	2288	A	790	870	2277	MT-RNR2_with_pairs.tsv
+b	2289	G	785	889	2276	MT-RNR2_with_pairs.tsv
+b	2290	A	780	909	2275	MT-RNR2_with_pairs.tsv
+b	2291	A	795	917		MT-RNR2_with_pairs.tsv
+b	2292	G	811	926		MT-RNR2_with_pairs.tsv
+b	2293	A	822	940		MT-RNR2_with_pairs.tsv
+b	2294	A	833	955		MT-RNR2_with_pairs.tsv
+b	2295	C	841	969		MT-RNR2_with_pairs.tsv
+b	2296	T	846	985		MT-RNR2_with_pairs.tsv
+b	2297	A	849	1004		MT-RNR2_with_pairs.tsv
+b	2298	A	850	1022		MT-RNR2_with_pairs.tsv
+b	2299	T	847	1038		MT-RNR2_with_pairs.tsv
+b	2300	G	842	1056	1865	MT-RNR2_with_pairs.tsv
+b	2301	T	859	1065	1864	MT-RNR2_with_pairs.tsv
+b	2302	T	877	1075	1863	MT-RNR2_with_pairs.tsv
+b	2303	A	894	1087	1862	MT-RNR2_with_pairs.tsv
+b	2304	G	912	1096	1861	MT-RNR2_with_pairs.tsv
+b	2305	T	929	1106	1860	MT-RNR2_with_pairs.tsv
+b	2306	A	938	1095		MT-RNR2_with_pairs.tsv
+b	2307	T	945	1087		MT-RNR2_with_pairs.tsv
+b	2308	A	954	1076		MT-RNR2_with_pairs.tsv
+b	2309	A	963	1069		MT-RNR2_with_pairs.tsv
+b	2310	G	971	1063		MT-RNR2_with_pairs.tsv
+b	2311	T	982	1055		MT-RNR2_with_pairs.tsv
+b	2312	A	992	1048		MT-RNR2_with_pairs.tsv
+b	2313	A	1001	1042		MT-RNR2_with_pairs.tsv
+b	2314	C	1010	1037		MT-RNR2_with_pairs.tsv
+b	2315	A	1020	1033		MT-RNR2_with_pairs.tsv
+b	2316	T	1029	1030		MT-RNR2_with_pairs.tsv
+b	2317	G	1041	1027	2326	MT-RNR2_with_pairs.tsv
+b	2318	A	1036	1008	2325	MT-RNR2_with_pairs.tsv
+b	2319	A	1031	989	2324	MT-RNR2_with_pairs.tsv
+b	2320	A	1023	972		MT-RNR2_with_pairs.tsv
+b	2321	A	1031	957		MT-RNR2_with_pairs.tsv
+b	2322	C	1049	952		MT-RNR2_with_pairs.tsv
+b	2323	A	1062	963		MT-RNR2_with_pairs.tsv
+b	2324	T	1063	979	2319	MT-RNR2_with_pairs.tsv
+b	2325	T	1068	999	2318	MT-RNR2_with_pairs.tsv
+b	2326	C	1074	1019	2317	MT-RNR2_with_pairs.tsv
+b	2327	T	1093	1018	2450	MT-RNR2_with_pairs.tsv
+b	2328	C	1093	998	2449	MT-RNR2_with_pairs.tsv
+b	2329	C	1093	977	2448	MT-RNR2_with_pairs.tsv
+b	2330	T	1078	957		MT-RNR2_with_pairs.tsv
+b	2331	C	1067	933		MT-RNR2_with_pairs.tsv
+b	2332	C	1078	909		MT-RNR2_with_pairs.tsv
+b	2333	G	1093	890	2441	MT-RNR2_with_pairs.tsv
+b	2334	C	1094	870	2440	MT-RNR2_with_pairs.tsv
+b	2335	A	1094	850	2439	MT-RNR2_with_pairs.tsv
+b	2336	T	1094	830	2438	MT-RNR2_with_pairs.tsv
+b	2337	A	1077	821		MT-RNR2_with_pairs.tsv
+b	2338	A	1065	807		MT-RNR2_with_pairs.tsv
+b	2339	G	1059	789		MT-RNR2_with_pairs.tsv
+b	2340	C	1060	770		MT-RNR2_with_pairs.tsv
+b	2341	C	1067	752		MT-RNR2_with_pairs.tsv
+b	2342	T	1078	738		MT-RNR2_with_pairs.tsv
+b	2343	G	1095	730	2423	MT-RNR2_with_pairs.tsv
+b	2344	C	1078	719		MT-RNR2_with_pairs.tsv
+b	2345	G	1068	702	2368	MT-RNR2_with_pairs.tsv
+b	2346	T	1047	702	2367	MT-RNR2_with_pairs.tsv
+b	2347	C	1027	702	2366	MT-RNR2_with_pairs.tsv
+b	2348	A	1007	702	2365	MT-RNR2_with_pairs.tsv
+b	2349	G	987	702	2364	MT-RNR2_with_pairs.tsv
+b	2350	A	977	718		MT-RNR2_with_pairs.tsv
+b	2351	T	963	728		MT-RNR2_with_pairs.tsv
+b	2352	T	947	734		MT-RNR2_with_pairs.tsv
+b	2353	A	929	733		MT-RNR2_with_pairs.tsv
+b	2354	A	913	726		MT-RNR2_with_pairs.tsv
+b	2355	A	901	713		MT-RNR2_with_pairs.tsv
+b	2356	A	894	696		MT-RNR2_with_pairs.tsv
+b	2357	C	895	678		MT-RNR2_with_pairs.tsv
+b	2358	A	900	662		MT-RNR2_with_pairs.tsv
+b	2359	C	913	648		MT-RNR2_with_pairs.tsv
+b	2360	T	929	640		MT-RNR2_with_pairs.tsv
+b	2361	G	947	638		MT-RNR2_with_pairs.tsv
+b	2362	A	963	644		MT-RNR2_with_pairs.tsv
+b	2363	A	977	656		MT-RNR2_with_pairs.tsv
+b	2364	C	987	669	2349	MT-RNR2_with_pairs.tsv
+b	2365	T	1007	669	2348	MT-RNR2_with_pairs.tsv
+b	2366	G	1027	669	2347	MT-RNR2_with_pairs.tsv
+b	2367	A	1047	669	2346	MT-RNR2_with_pairs.tsv
+b	2368	C	1067	669	2345	MT-RNR2_with_pairs.tsv
+b	2369	A	1075	656		MT-RNR2_with_pairs.tsv
+b	2370	A	1087	645		MT-RNR2_with_pairs.tsv
+b	2371	T	1103	638		MT-RNR2_with_pairs.tsv
+b	2372	T	1120	638		MT-RNR2_with_pairs.tsv
+b	2373	A	1135	645		MT-RNR2_with_pairs.tsv
+b	2374	A	1147	656		MT-RNR2_with_pairs.tsv
+b	2375	C	1156	670	2421	MT-RNR2_with_pairs.tsv
+b	2376	A	1176	670	2420	MT-RNR2_with_pairs.tsv
+b	2377	G	1196	670	2419	MT-RNR2_with_pairs.tsv
+b	2378	C	1206	654		MT-RNR2_with_pairs.tsv
+b	2379	C	1220	644		MT-RNR2_with_pairs.tsv
+b	2380	C	1238	641		MT-RNR2_with_pairs.tsv
+b	2381	A	1255	644	2411	MT-RNR2_with_pairs.tsv
+b	2382	A	1269	631	2410	MT-RNR2_with_pairs.tsv
+b	2383	T	1283	615	2409	MT-RNR2_with_pairs.tsv
+b	2384	A	1297	602	2408	MT-RNR2_with_pairs.tsv
+b	2385	T	1290	584		MT-RNR2_with_pairs.tsv
+b	2386	C	1287	568		MT-RNR2_with_pairs.tsv
+b	2387	T	1288	550		MT-RNR2_with_pairs.tsv
+b	2388	A	1293	534		MT-RNR2_with_pairs.tsv
+b	2389	C	1304	518		MT-RNR2_with_pairs.tsv
+b	2390	A	1317	507		MT-RNR2_with_pairs.tsv
+b	2391	A	1332	499		MT-RNR2_with_pairs.tsv
+b	2392	T	1349	494		MT-RNR2_with_pairs.tsv
+b	2393	C	1368	495		MT-RNR2_with_pairs.tsv
+b	2394	A	1384	501		MT-RNR2_with_pairs.tsv
+b	2395	A	1399	510		MT-RNR2_with_pairs.tsv
+b	2396	C	1412	521		MT-RNR2_with_pairs.tsv
+b	2397	C	1421	537		MT-RNR2_with_pairs.tsv
+b	2398	A	1426	554		MT-RNR2_with_pairs.tsv
+b	2399	A	1426	572		MT-RNR2_with_pairs.tsv
+b	2400	C	1422	589	2403	MT-RNR2_with_pairs.tsv
+b	2401	A	1431	604		MT-RNR2_with_pairs.tsv
+b	2402	A	1420	620		MT-RNR2_with_pairs.tsv
+b	2403	G	1404	616	2400	MT-RNR2_with_pairs.tsv
+b	2404	T	1389	626		MT-RNR2_with_pairs.tsv
+b	2405	C	1372	632		MT-RNR2_with_pairs.tsv
+b	2406	A	1354	635		MT-RNR2_with_pairs.tsv
+b	2407	T	1337	630		MT-RNR2_with_pairs.tsv
+b	2408	T	1320	623	2384	MT-RNR2_with_pairs.tsv
+b	2409	A	1306	639	2383	MT-RNR2_with_pairs.tsv
+b	2410	T	1292	652	2382	MT-RNR2_with_pairs.tsv
+b	2411	T	1278	666	2381	MT-RNR2_with_pairs.tsv
+b	2412	A	1282	685		MT-RNR2_with_pairs.tsv
+b	2413	C	1279	702		MT-RNR2_with_pairs.tsv
+b	2414	C	1270	717		MT-RNR2_with_pairs.tsv
+b	2415	C	1255	727		MT-RNR2_with_pairs.tsv
+b	2416	T	1237	730		MT-RNR2_with_pairs.tsv
+b	2417	C	1220	727		MT-RNR2_with_pairs.tsv
+b	2418	A	1205	717		MT-RNR2_with_pairs.tsv
+b	2419	C	1196	701	2377	MT-RNR2_with_pairs.tsv
+b	2420	T	1176	701	2376	MT-RNR2_with_pairs.tsv
+b	2421	G	1156	701	2375	MT-RNR2_with_pairs.tsv
+b	2422	T	1145	718		MT-RNR2_with_pairs.tsv
+b	2423	C	1128	730	2343	MT-RNR2_with_pairs.tsv
+b	2424	A	1142	738		MT-RNR2_with_pairs.tsv
+b	2425	A	1153	749		MT-RNR2_with_pairs.tsv
+b	2426	C	1161	762		MT-RNR2_with_pairs.tsv
+b	2427	C	1164	778	2436	MT-RNR2_with_pairs.tsv
+b	2428	C	1184	783	2435	MT-RNR2_with_pairs.tsv
+b	2429	A	1200	780		MT-RNR2_with_pairs.tsv
+b	2430	A	1216	788		MT-RNR2_with_pairs.tsv
+b	2431	C	1224	803		MT-RNR2_with_pairs.tsv
+b	2432	A	1219	820		MT-RNR2_with_pairs.tsv
+b	2433	C	1204	830		MT-RNR2_with_pairs.tsv
+b	2434	A	1186	828		MT-RNR2_with_pairs.tsv
+b	2435	G	1174	815	2428	MT-RNR2_with_pairs.tsv
+b	2436	G	1155	810	2427	MT-RNR2_with_pairs.tsv
+b	2437	C	1143	822		MT-RNR2_with_pairs.tsv
+b	2438	A	1126	831	2336	MT-RNR2_with_pairs.tsv
+b	2439	T	1126	851	2335	MT-RNR2_with_pairs.tsv
+b	2440	G	1126	871	2334	MT-RNR2_with_pairs.tsv
+b	2441	C	1126	891	2333	MT-RNR2_with_pairs.tsv
+b	2442	T	1139	900		MT-RNR2_with_pairs.tsv
+b	2443	C	1148	913		MT-RNR2_with_pairs.tsv
+b	2444	A	1153	927		MT-RNR2_with_pairs.tsv
+b	2445	T	1154	940		MT-RNR2_with_pairs.tsv
+b	2446	A	1147	955		MT-RNR2_with_pairs.tsv
+b	2447	A	1136	966		MT-RNR2_with_pairs.tsv
+b	2448	G	1126	977	2329	MT-RNR2_with_pairs.tsv
+b	2449	G	1126	998	2328	MT-RNR2_with_pairs.tsv
+b	2450	A	1126	1018	2327	MT-RNR2_with_pairs.tsv
+b	2451	A	1140	1018		MT-RNR2_with_pairs.tsv
+b	2452	A	1154	1018		MT-RNR2_with_pairs.tsv
+b	2453	G	1776	1018	2671	MT-RNR2_with_pairs.tsv
+b	2454	G	1776	1000	2670	MT-RNR2_with_pairs.tsv
+b	2455	T	1776	980	2669	MT-RNR2_with_pairs.tsv
+b	2456	T	1776	960	2668	MT-RNR2_with_pairs.tsv
+b	2457	A	1767	952		MT-RNR2_with_pairs.tsv
+b	2458	A	1762	941		MT-RNR2_with_pairs.tsv
+b	2459	A	1762	928		MT-RNR2_with_pairs.tsv
+b	2460	A	1767	917		MT-RNR2_with_pairs.tsv
+b	2461	A	1776	908	2666	MT-RNR2_with_pairs.tsv
+b	2462	A	1776	888	2665	MT-RNR2_with_pairs.tsv
+b	2463	A	1776	868	2664	MT-RNR2_with_pairs.tsv
+b	2464	G	1776	848	2663	MT-RNR2_with_pairs.tsv
+b	2465	T	1776	828	2662	MT-RNR2_with_pairs.tsv
+b	2466	A	1776	808	2661	MT-RNR2_with_pairs.tsv
+b	2467	A	1776	788	2660	MT-RNR2_with_pairs.tsv
+b	2468	A	1768	770		MT-RNR2_with_pairs.tsv
+b	2469	A	1776	753	2658	MT-RNR2_with_pairs.tsv
+b	2470	G	1776	734	2657	MT-RNR2_with_pairs.tsv
+b	2471	G	1770	723		MT-RNR2_with_pairs.tsv
+b	2472	A	1770	711		MT-RNR2_with_pairs.tsv
+b	2473	A	1776	701	2656	MT-RNR2_with_pairs.tsv
+b	2474	C	1764	687		MT-RNR2_with_pairs.tsv
+b	2475	T	1759	669		MT-RNR2_with_pairs.tsv
+b	2476	C	1765	653		MT-RNR2_with_pairs.tsv
+b	2477	G	1778	641		MT-RNR2_with_pairs.tsv
+b	2478	G	1796	637	2653	MT-RNR2_with_pairs.tsv
+b	2479	C	1790	628		MT-RNR2_with_pairs.tsv
+b	2480	A	1786	619		MT-RNR2_with_pairs.tsv
+b	2481	A	1784	608		MT-RNR2_with_pairs.tsv
+b	2482	A	1785	597		MT-RNR2_with_pairs.tsv
+b	2483	T	1788	586		MT-RNR2_with_pairs.tsv
+b	2484	C	1793	577		MT-RNR2_with_pairs.tsv
+b	2485	T	1799	569		MT-RNR2_with_pairs.tsv
+b	2486	T	1808	562		MT-RNR2_with_pairs.tsv
+b	2487	A	1818	558	2648	MT-RNR2_with_pairs.tsv
+b	2488	C	1818	538	2647	MT-RNR2_with_pairs.tsv
+b	2489	C	1818	517	2646	MT-RNR2_with_pairs.tsv
+b	2490	C	1818	497	2645	MT-RNR2_with_pairs.tsv
+b	2491	C	1818	471	2643	MT-RNR2_with_pairs.tsv
+b	2492	G	1818	451	2642	MT-RNR2_with_pairs.tsv
+b	2493	C	1799	444		MT-RNR2_with_pairs.tsv
+b	2494	C	1783	431		MT-RNR2_with_pairs.tsv
+b	2495	T	1770	414		MT-RNR2_with_pairs.tsv
+b	2496	G	1763	396	2508	MT-RNR2_with_pairs.tsv
+b	2497	T	1743	396	2507	MT-RNR2_with_pairs.tsv
+b	2498	T	1731	408		MT-RNR2_with_pairs.tsv
+b	2499	T	1714	414		MT-RNR2_with_pairs.tsv
+b	2500	A	1696	411		MT-RNR2_with_pairs.tsv
+b	2501	C	1684	398		MT-RNR2_with_pairs.tsv
+b	2502	C	1679	381		MT-RNR2_with_pairs.tsv
+b	2503	A	1683	364		MT-RNR2_with_pairs.tsv
+b	2504	A	1695	352		MT-RNR2_with_pairs.tsv
+b	2505	A	1713	347		MT-RNR2_with_pairs.tsv
+b	2506	A	1729	352		MT-RNR2_with_pairs.tsv
+b	2507	A	1742	363	2497	MT-RNR2_with_pairs.tsv
+b	2508	C	1763	363	2496	MT-RNR2_with_pairs.tsv
+b	2509	A	1768	347		MT-RNR2_with_pairs.tsv
+b	2510	T	1776	332		MT-RNR2_with_pairs.tsv
+b	2511	C	1789	320		MT-RNR2_with_pairs.tsv
+b	2512	A	1803	311		MT-RNR2_with_pairs.tsv
+b	2513	C	1819	305	2537	MT-RNR2_with_pairs.tsv
+b	2514	C	1819	285	2536	MT-RNR2_with_pairs.tsv
+b	2515	T	1819	265	2535	MT-RNR2_with_pairs.tsv
+b	2516	C	1819	244	2534	MT-RNR2_with_pairs.tsv
+b	2517	T	1819	223	2533	MT-RNR2_with_pairs.tsv
+b	2518	A	1819	205	2532	MT-RNR2_with_pairs.tsv
+b	2519	G	1805	195		MT-RNR2_with_pairs.tsv
+b	2520	C	1795	185		MT-RNR2_with_pairs.tsv
+b	2521	A	1790	163		MT-RNR2_with_pairs.tsv
+b	2522	T	1793	144		MT-RNR2_with_pairs.tsv
+b	2523	C	1804	130		MT-RNR2_with_pairs.tsv
+b	2524	A	1819	120		MT-RNR2_with_pairs.tsv
+b	2525	C	1836	117		MT-RNR2_with_pairs.tsv
+b	2526	C	1853	120		MT-RNR2_with_pairs.tsv
+b	2527	A	1867	131		MT-RNR2_with_pairs.tsv
+b	2528	G	1877	145		MT-RNR2_with_pairs.tsv
+b	2529	T	1880	161		MT-RNR2_with_pairs.tsv
+b	2530	A	1876	180		MT-RNR2_with_pairs.tsv
+b	2531	T	1867	193		MT-RNR2_with_pairs.tsv
+b	2532	T	1852	205	2518	MT-RNR2_with_pairs.tsv
+b	2533	A	1852	223	2517	MT-RNR2_with_pairs.tsv
+b	2534	G	1852	244	2516	MT-RNR2_with_pairs.tsv
+b	2535	A	1852	265	2515	MT-RNR2_with_pairs.tsv
+b	2536	G	1852	285	2514	MT-RNR2_with_pairs.tsv
+b	2537	G	1852	305	2513	MT-RNR2_with_pairs.tsv
+b	2538	C	1867	310		MT-RNR2_with_pairs.tsv
+b	2539	A	1881	319		MT-RNR2_with_pairs.tsv
+b	2540	C	1893	330		MT-RNR2_with_pairs.tsv
+b	2541	C	1902	343		MT-RNR2_with_pairs.tsv
+b	2542	G	1908	359	2637	MT-RNR2_with_pairs.tsv
+b	2543	C	1928	359	2636	MT-RNR2_with_pairs.tsv
+b	2544	C	1948	359	2635	MT-RNR2_with_pairs.tsv
+b	2545	T	1966	322		MT-RNR2_with_pairs.tsv
+b	2546	G	1999	303	2569	MT-RNR2_with_pairs.tsv
+b	2547	C	1999	283	2568	MT-RNR2_with_pairs.tsv
+b	2548	C	1998	263	2567	MT-RNR2_with_pairs.tsv
+b	2549	C	1988	253		MT-RNR2_with_pairs.tsv
+b	2550	A	1989	241		MT-RNR2_with_pairs.tsv
+b	2551	G	1998	230	2566	MT-RNR2_with_pairs.tsv
+b	2552	T	1998	210	2565	MT-RNR2_with_pairs.tsv
+b	2553	G	1997	176	2562	MT-RNR2_with_pairs.tsv
+b	2554	A	1997	156	2561	MT-RNR2_with_pairs.tsv
+b	2555	C	1997	136	2560	MT-RNR2_with_pairs.tsv
+b	2556	A	1993	120		MT-RNR2_with_pairs.tsv
+b	2557	C	2004	106		MT-RNR2_with_pairs.tsv
+b	2558	A	2022	106		MT-RNR2_with_pairs.tsv
+b	2559	T	2033	118		MT-RNR2_with_pairs.tsv
+b	2560	G	2030	136	2555	MT-RNR2_with_pairs.tsv
+b	2561	T	2030	156	2554	MT-RNR2_with_pairs.tsv
+b	2562	T	2030	176	2553	MT-RNR2_with_pairs.tsv
+b	2563	T	2041	186		MT-RNR2_with_pairs.tsv
+b	2564	A	2041	200		MT-RNR2_with_pairs.tsv
+b	2565	A	2032	210	2552	MT-RNR2_with_pairs.tsv
+b	2566	C	2032	230	2551	MT-RNR2_with_pairs.tsv
+b	2567	G	2032	263	2548	MT-RNR2_with_pairs.tsv
+b	2568	G	2032	283	2547	MT-RNR2_with_pairs.tsv
+b	2569	C	2032	303	2546	MT-RNR2_with_pairs.tsv
+b	2570	C	2053	312	2587	MT-RNR2_with_pairs.tsv
+b	2571	G	2068	298	2586	MT-RNR2_with_pairs.tsv
+b	2572	C	2083	284	2585	MT-RNR2_with_pairs.tsv
+b	2573	G	2097	270	2584	MT-RNR2_with_pairs.tsv
+b	2574	G	2112	256	2583	MT-RNR2_with_pairs.tsv
+b	2575	T	2113	238		MT-RNR2_with_pairs.tsv
+b	2576	A	2124	226		MT-RNR2_with_pairs.tsv
+b	2577	C	2141	219		MT-RNR2_with_pairs.tsv
+b	2578	C	2158	223		MT-RNR2_with_pairs.tsv
+b	2579	C	2171	236		MT-RNR2_with_pairs.tsv
+b	2580	T	2173	253		MT-RNR2_with_pairs.tsv
+b	2581	A	2166	270		MT-RNR2_with_pairs.tsv
+b	2582	A	2152	280		MT-RNR2_with_pairs.tsv
+b	2583	C	2135	280	2574	MT-RNR2_with_pairs.tsv
+b	2584	C	2120	294	2573	MT-RNR2_with_pairs.tsv
+b	2585	G	2105	308	2572	MT-RNR2_with_pairs.tsv
+b	2586	T	2090	321	2571	MT-RNR2_with_pairs.tsv
+b	2587	G	2076	336	2570	MT-RNR2_with_pairs.tsv
+b	2588	C	2081	347		MT-RNR2_with_pairs.tsv
+b	2589	A	2084	360		MT-RNR2_with_pairs.tsv
+b	2590	A	2085	372		MT-RNR2_with_pairs.tsv
+b	2591	A	2083	385		MT-RNR2_with_pairs.tsv
+b	2592	G	2080	396		MT-RNR2_with_pairs.tsv
+b	2593	G	2074	407		MT-RNR2_with_pairs.tsv
+b	2594	T	2067	416		MT-RNR2_with_pairs.tsv
+b	2595	A	2057	426		MT-RNR2_with_pairs.tsv
+b	2596	G	2047	432	2630	MT-RNR2_with_pairs.tsv
+b	2597	C	2058	448	2627	MT-RNR2_with_pairs.tsv
+b	2598	A	2075	441		MT-RNR2_with_pairs.tsv
+b	2599	T	2094	440		MT-RNR2_with_pairs.tsv
+b	2600	A	2112	447		MT-RNR2_with_pairs.tsv
+b	2601	A	2126	460		MT-RNR2_with_pairs.tsv
+b	2602	T	2135	476		MT-RNR2_with_pairs.tsv
+b	2603	C	2137	496		MT-RNR2_with_pairs.tsv
+b	2604	A	2130	514		MT-RNR2_with_pairs.tsv
+b	2605	C	2119	529		MT-RNR2_with_pairs.tsv
+b	2606	T	2102	537		MT-RNR2_with_pairs.tsv
+b	2607	T	2083	540		MT-RNR2_with_pairs.tsv
+b	2608	G	2065	535	2624	MT-RNR2_with_pairs.tsv
+b	2609	T	2051	550	2623	MT-RNR2_with_pairs.tsv
+b	2610	T	2037	567	2622	MT-RNR2_with_pairs.tsv
+b	2611	C	2023	579	2621	MT-RNR2_with_pairs.tsv
+b	2612	C	2009	594	2620	MT-RNR2_with_pairs.tsv
+b	2613	T	2006	611		MT-RNR2_with_pairs.tsv
+b	2614	T	1994	624		MT-RNR2_with_pairs.tsv
+b	2615	A	1976	628		MT-RNR2_with_pairs.tsv
+b	2616	A	1960	620		MT-RNR2_with_pairs.tsv
+b	2617	A	1952	604		MT-RNR2_with_pairs.tsv
+b	2618	T	1955	586		MT-RNR2_with_pairs.tsv
+b	2619	A	1967	574		MT-RNR2_with_pairs.tsv
+b	2620	G	1985	571	2612	MT-RNR2_with_pairs.tsv
+b	2621	G	1999	556	2611	MT-RNR2_with_pairs.tsv
+b	2622	G	2013	542	2610	MT-RNR2_with_pairs.tsv
+b	2623	A	2027	528	2609	MT-RNR2_with_pairs.tsv
+b	2624	C	2042	513	2608	MT-RNR2_with_pairs.tsv
+b	2625	C	2037	500		MT-RNR2_with_pairs.tsv
+b	2626	T	2036	487		MT-RNR2_with_pairs.tsv
+b	2627	G	2039	475	2597	MT-RNR2_with_pairs.tsv
+b	2628	T	2021	470		MT-RNR2_with_pairs.tsv
+b	2629	A	2012	457		MT-RNR2_with_pairs.tsv
+b	2630	T	2015	439	2596	MT-RNR2_with_pairs.tsv
+b	2631	G	1998	437		MT-RNR2_with_pairs.tsv
+b	2632	A	1981	431		MT-RNR2_with_pairs.tsv
+b	2633	A	1967	421		MT-RNR2_with_pairs.tsv
+b	2634	T	1956	405		MT-RNR2_with_pairs.tsv
+b	2635	G	1948	390	2544	MT-RNR2_with_pairs.tsv
+b	2636	G	1928	390	2543	MT-RNR2_with_pairs.tsv
+b	2637	C	1908	390	2542	MT-RNR2_with_pairs.tsv
+b	2638	T	1903	407		MT-RNR2_with_pairs.tsv
+b	2639	C	1895	424		MT-RNR2_with_pairs.tsv
+b	2640	C	1882	436		MT-RNR2_with_pairs.tsv
+b	2641	A	1867	446		MT-RNR2_with_pairs.tsv
+b	2642	C	1850	451	2492	MT-RNR2_with_pairs.tsv
+b	2643	G	1850	471	2491	MT-RNR2_with_pairs.tsv
+b	2644	A	1854	484		MT-RNR2_with_pairs.tsv
+b	2645	G	1850	497	2490	MT-RNR2_with_pairs.tsv
+b	2646	G	1850	517	2489	MT-RNR2_with_pairs.tsv
+b	2647	G	1850	538	2488	MT-RNR2_with_pairs.tsv
+b	2648	T	1850	558	2487	MT-RNR2_with_pairs.tsv
+b	2649	T	1874	574		MT-RNR2_with_pairs.tsv
+b	2650	C	1885	604		MT-RNR2_with_pairs.tsv
+b	2651	A	1876	633		MT-RNR2_with_pairs.tsv
+b	2652	G	1853	652		MT-RNR2_with_pairs.tsv
+b	2653	C	1823	654	2478	MT-RNR2_with_pairs.tsv
+b	2654	T	1826	671		MT-RNR2_with_pairs.tsv
+b	2655	G	1822	688		MT-RNR2_with_pairs.tsv
+b	2656	T	1809	701	2473	MT-RNR2_with_pairs.tsv
+b	2657	C	1808	733	2470	MT-RNR2_with_pairs.tsv
+b	2658	T	1808	753	2469	MT-RNR2_with_pairs.tsv
+b	2659	C	1815	769		MT-RNR2_with_pairs.tsv
+b	2660	T	1808	787	2467	MT-RNR2_with_pairs.tsv
+b	2661	T	1808	808	2466	MT-RNR2_with_pairs.tsv
+b	2662	A	1808	828	2465	MT-RNR2_with_pairs.tsv
+b	2663	C	1808	848	2464	MT-RNR2_with_pairs.tsv
+b	2664	T	1808	868	2463	MT-RNR2_with_pairs.tsv
+b	2665	T	1808	888	2462	MT-RNR2_with_pairs.tsv
+b	2666	T	1808	908	2461	MT-RNR2_with_pairs.tsv
+b	2667	T	1822	932		MT-RNR2_with_pairs.tsv
+b	2668	A	1808	960	2456	MT-RNR2_with_pairs.tsv
+b	2669	A	1808	980	2455	MT-RNR2_with_pairs.tsv
+b	2670	C	1808	1000	2454	MT-RNR2_with_pairs.tsv
+b	2671	C	1808	1019	2453	MT-RNR2_with_pairs.tsv
+b	2672	A	1826	1022		MT-RNR2_with_pairs.tsv
+b	2673	G	1844	1024		MT-RNR2_with_pairs.tsv
+b	2674	T	1861	1027		MT-RNR2_with_pairs.tsv
+b	2675	G	1878	1033		MT-RNR2_with_pairs.tsv
+b	2676	A	1895	1039		MT-RNR2_with_pairs.tsv
+b	2677	A	1911	1046		MT-RNR2_with_pairs.tsv
+b	2678	A	1926	1054		MT-RNR2_with_pairs.tsv
+b	2679	T	1942	1062		MT-RNR2_with_pairs.tsv
+b	2680	T	1957	1072		MT-RNR2_with_pairs.tsv
+b	2681	G	1971	1084		MT-RNR2_with_pairs.tsv
+b	2682	A	1984	1096		MT-RNR2_with_pairs.tsv
+b	2683	C	1997	1108		MT-RNR2_with_pairs.tsv
+b	2684	C	2009	1121		MT-RNR2_with_pairs.tsv
+b	2685	T	2019	1135		MT-RNR2_with_pairs.tsv
+b	2686	G	2029	1151	2703	MT-RNR2_with_pairs.tsv
+b	2687	C	2047	1140	2702	MT-RNR2_with_pairs.tsv
+b	2688	C	2065	1131	2701	MT-RNR2_with_pairs.tsv
+b	2689	C	2082	1121	2700	MT-RNR2_with_pairs.tsv
+b	2690	G	2100	1111	2699	MT-RNR2_with_pairs.tsv
+b	2691	T	2106	1094		MT-RNR2_with_pairs.tsv
+b	2692	G	2120	1083		MT-RNR2_with_pairs.tsv
+b	2693	A	2137	1082		MT-RNR2_with_pairs.tsv
+b	2694	A	2153	1091		MT-RNR2_with_pairs.tsv
+b	2695	G	2162	1106		MT-RNR2_with_pairs.tsv
+b	2696	A	2160	1124		MT-RNR2_with_pairs.tsv
+b	2697	G	2150	1138		MT-RNR2_with_pairs.tsv
+b	2698	G	2133	1144		MT-RNR2_with_pairs.tsv
+b	2699	C	2116	1140	2690	MT-RNR2_with_pairs.tsv
+b	2700	G	2098	1149	2689	MT-RNR2_with_pairs.tsv
+b	2701	G	2080	1159	2688	MT-RNR2_with_pairs.tsv
+b	2702	G	2063	1169	2687	MT-RNR2_with_pairs.tsv
+b	2703	C	2045	1179	2686	MT-RNR2_with_pairs.tsv
+b	2704	A	2052	1195		MT-RNR2_with_pairs.tsv
+b	2705	T	2058	1211		MT-RNR2_with_pairs.tsv
+b	2706	A	2062	1229		MT-RNR2_with_pairs.tsv
+b	2707	A	2066	1247		MT-RNR2_with_pairs.tsv
+b	2708	C	2070	1264		MT-RNR2_with_pairs.tsv
+b	2709	A	2071	1282		MT-RNR2_with_pairs.tsv
+b	2710	C	2072	1299		MT-RNR2_with_pairs.tsv
+b	2711	A	2070	1316	3108	MT-RNR2_with_pairs.tsv
+b	2712	G	2089	1316	3106	MT-RNR2_with_pairs.tsv
+b	2713	C	2101	1306		MT-RNR2_with_pairs.tsv
+b	2714	A	2113	1306		MT-RNR2_with_pairs.tsv
+b	2715	A	2121	1316	3104	MT-RNR2_with_pairs.tsv
+b	2716	G	2145	1316	3103	MT-RNR2_with_pairs.tsv
+b	2717	A	2166	1316	3102	MT-RNR2_with_pairs.tsv
+b	2718	C	2186	1306		MT-RNR2_with_pairs.tsv
+b	2719	G	2206	1316	3099	MT-RNR2_with_pairs.tsv
+b	2720	A	2228	1315	3098	MT-RNR2_with_pairs.tsv
+b	2721	G	2236	1291		MT-RNR2_with_pairs.tsv
+b	2722	A	2247	1271		MT-RNR2_with_pairs.tsv
+b	2723	A	2262	1253		MT-RNR2_with_pairs.tsv
+b	2724	G	2281	1236		MT-RNR2_with_pairs.tsv
+b	2725	A	2300	1225		MT-RNR2_with_pairs.tsv
+b	2726	C	2323	1215		MT-RNR2_with_pairs.tsv
+b	2727	C	2346	1210	2933	MT-RNR2_with_pairs.tsv
+b	2728	C	2346	1190	2932	MT-RNR2_with_pairs.tsv
+b	2729	T	2346	1170	2931	MT-RNR2_with_pairs.tsv
+b	2730	A	2346	1150	2930	MT-RNR2_with_pairs.tsv
+b	2731	T	2340	1137		MT-RNR2_with_pairs.tsv
+b	2732	G	2346	1124	2929	MT-RNR2_with_pairs.tsv
+b	2733	G	2346	1104	2928	MT-RNR2_with_pairs.tsv
+b	2734	A	2346	1084	2927	MT-RNR2_with_pairs.tsv
+b	2735	G	2346	1063	2926	MT-RNR2_with_pairs.tsv
+b	2736	C	2346	1043	2925	MT-RNR2_with_pairs.tsv
+b	2737	T	2346	1022	2924	MT-RNR2_with_pairs.tsv
+b	2738	T	2335	1001		MT-RNR2_with_pairs.tsv
+b	2739	T	2327	977		MT-RNR2_with_pairs.tsv
+b	2740	A	2332	955		MT-RNR2_with_pairs.tsv
+b	2741	A	2346	934	2807	MT-RNR2_with_pairs.tsv
+b	2742	T	2346	914	2806	MT-RNR2_with_pairs.tsv
+b	2743	T	2346	895	2805	MT-RNR2_with_pairs.tsv
+b	2744	T	2336	879		MT-RNR2_with_pairs.tsv
+b	2745	A	2336	862		MT-RNR2_with_pairs.tsv
+b	2746	T	2347	847	2802	MT-RNR2_with_pairs.tsv
+b	2747	T	2347	827	2801	MT-RNR2_with_pairs.tsv
+b	2748	A	2347	808	2800	MT-RNR2_with_pairs.tsv
+b	2749	A	2347	788	2799	MT-RNR2_with_pairs.tsv
+b	2750	T	2347	767	2798	MT-RNR2_with_pairs.tsv
+b	2751	G	2347	747	2797	MT-RNR2_with_pairs.tsv
+b	2752	C	2347	727	2796	MT-RNR2_with_pairs.tsv
+b	2753	A	2347	707	2795	MT-RNR2_with_pairs.tsv
+b	2754	A	2330	703		MT-RNR2_with_pairs.tsv
+b	2755	A	2313	697		MT-RNR2_with_pairs.tsv
+b	2756	C	2298	688		MT-RNR2_with_pairs.tsv
+b	2757	A	2283	678		MT-RNR2_with_pairs.tsv
+b	2758	G	2271	665		MT-RNR2_with_pairs.tsv
+b	2759	T	2260	650		MT-RNR2_with_pairs.tsv
+b	2760	A	2251	636		MT-RNR2_with_pairs.tsv
+b	2761	C	2246	619		MT-RNR2_with_pairs.tsv
+b	2762	C	2242	601		MT-RNR2_with_pairs.tsv
+b	2763	T	2240	583		MT-RNR2_with_pairs.tsv
+b	2764	A	2242	566		MT-RNR2_with_pairs.tsv
+b	2765	A	2245	549		MT-RNR2_with_pairs.tsv
+b	2766	C	2252	532		MT-RNR2_with_pairs.tsv
+b	2767	A	2260	517		MT-RNR2_with_pairs.tsv
+b	2768	A	2270	503		MT-RNR2_with_pairs.tsv
+b	2769	A	2283	491		MT-RNR2_with_pairs.tsv
+b	2770	C	2298	479		MT-RNR2_with_pairs.tsv
+b	2771	C	2313	471		MT-RNR2_with_pairs.tsv
+b	2772	C	2330	465		MT-RNR2_with_pairs.tsv
+b	2773	A	2347	461		MT-RNR2_with_pairs.tsv
+b	2774	C	2365	460		MT-RNR2_with_pairs.tsv
+b	2775	A	2382	461		MT-RNR2_with_pairs.tsv
+b	2776	G	2400	465		MT-RNR2_with_pairs.tsv
+b	2777	G	2417	471		MT-RNR2_with_pairs.tsv
+b	2778	T	2432	479		MT-RNR2_with_pairs.tsv
+b	2779	C	2446	491		MT-RNR2_with_pairs.tsv
+b	2780	C	2459	503		MT-RNR2_with_pairs.tsv
+b	2781	T	2469	517		MT-RNR2_with_pairs.tsv
+b	2782	A	2477	533		MT-RNR2_with_pairs.tsv
+b	2783	A	2483	550		MT-RNR2_with_pairs.tsv
+b	2784	A	2487	568		MT-RNR2_with_pairs.tsv
+b	2785	C	2488	585		MT-RNR2_with_pairs.tsv
+b	2786	T	2486	602		MT-RNR2_with_pairs.tsv
+b	2787	A	2482	620		MT-RNR2_with_pairs.tsv
+b	2788	C	2477	636		MT-RNR2_with_pairs.tsv
+b	2789	C	2468	652		MT-RNR2_with_pairs.tsv
+b	2790	A	2456	666		MT-RNR2_with_pairs.tsv
+b	2791	A	2444	679		MT-RNR2_with_pairs.tsv
+b	2792	A	2429	689		MT-RNR2_with_pairs.tsv
+b	2793	C	2415	697		MT-RNR2_with_pairs.tsv
+b	2794	C	2398	703		MT-RNR2_with_pairs.tsv
+b	2795	T	2380	706	2753	MT-RNR2_with_pairs.tsv
+b	2796	G	2380	727	2752	MT-RNR2_with_pairs.tsv
+b	2797	C	2380	747	2751	MT-RNR2_with_pairs.tsv
+b	2798	A	2380	767	2750	MT-RNR2_with_pairs.tsv
+b	2799	T	2380	788	2749	MT-RNR2_with_pairs.tsv
+b	2800	T	2380	808	2748	MT-RNR2_with_pairs.tsv
+b	2801	A	2380	827	2747	MT-RNR2_with_pairs.tsv
+b	2802	A	2380	848	2746	MT-RNR2_with_pairs.tsv
+b	2803	A	2390	863		MT-RNR2_with_pairs.tsv
+b	2804	A	2390	881		MT-RNR2_with_pairs.tsv
+b	2805	A	2380	895	2743	MT-RNR2_with_pairs.tsv
+b	2806	T	2380	914	2742	MT-RNR2_with_pairs.tsv
+b	2807	T	2380	934	2741	MT-RNR2_with_pairs.tsv
+b	2808	T	2402	931		MT-RNR2_with_pairs.tsv
+b	2809	C	2421	929		MT-RNR2_with_pairs.tsv
+b	2810	G	2443	927	2822	MT-RNR2_with_pairs.tsv
+b	2811	G	2442	907	2821	MT-RNR2_with_pairs.tsv
+b	2812	T	2441	886	2820	MT-RNR2_with_pairs.tsv
+b	2813	T	2430	872		MT-RNR2_with_pairs.tsv
+b	2814	G	2430	855		MT-RNR2_with_pairs.tsv
+b	2815	G	2439	840		MT-RNR2_with_pairs.tsv
+b	2816	G	2456	834		MT-RNR2_with_pairs.tsv
+b	2817	G	2473	839		MT-RNR2_with_pairs.tsv
+b	2818	C	2484	853		MT-RNR2_with_pairs.tsv
+b	2819	G	2484	870		MT-RNR2_with_pairs.tsv
+b	2820	A	2474	885	2812	MT-RNR2_with_pairs.tsv
+b	2821	C	2475	905	2811	MT-RNR2_with_pairs.tsv
+b	2822	C	2476	925	2810	MT-RNR2_with_pairs.tsv
+b	2823	T	2509	924	2845	MT-RNR2_with_pairs.tsv
+b	2824	C	2509	904	2844	MT-RNR2_with_pairs.tsv
+b	2825	G	2510	884	2843	MT-RNR2_with_pairs.tsv
+b	2826	G	2510	864	2842	MT-RNR2_with_pairs.tsv
+b	2827	A	2511	843	2841	MT-RNR2_with_pairs.tsv
+b	2828	G	2511	823	2840	MT-RNR2_with_pairs.tsv
+b	2829	C	2497	812		MT-RNR2_with_pairs.tsv
+b	2830	A	2489	797		MT-RNR2_with_pairs.tsv
+b	2831	G	2490	779		MT-RNR2_with_pairs.tsv
+b	2832	A	2497	764		MT-RNR2_with_pairs.tsv
+b	2833	A	2511	753		MT-RNR2_with_pairs.tsv
+b	2834	C	2529	748		MT-RNR2_with_pairs.tsv
+b	2835	C	2546	752		MT-RNR2_with_pairs.tsv
+b	2836	C	2560	764		MT-RNR2_with_pairs.tsv
+b	2837	A	2566	781		MT-RNR2_with_pairs.tsv
+b	2838	A	2566	798		MT-RNR2_with_pairs.tsv
+b	2839	C	2558	813		MT-RNR2_with_pairs.tsv
+b	2840	C	2544	824	2828	MT-RNR2_with_pairs.tsv
+b	2841	T	2544	843	2827	MT-RNR2_with_pairs.tsv
+b	2842	C	2543	864	2826	MT-RNR2_with_pairs.tsv
+b	2843	C	2543	884	2825	MT-RNR2_with_pairs.tsv
+b	2844	G	2543	905	2824	MT-RNR2_with_pairs.tsv
+b	2845	A	2542	925	2823	MT-RNR2_with_pairs.tsv
+b	2846	G	2558	925		MT-RNR2_with_pairs.tsv
+b	2847	C	2574	925		MT-RNR2_with_pairs.tsv
+b	2848	A	2588	925	2890	MT-RNR2_with_pairs.tsv
+b	2849	G	2609	925	2889	MT-RNR2_with_pairs.tsv
+b	2850	T	2623	902		MT-RNR2_with_pairs.tsv
+b	2851	A	2643	887		MT-RNR2_with_pairs.tsv
+b	2852	C	2669	880		MT-RNR2_with_pairs.tsv
+b	2853	A	2693	886		MT-RNR2_with_pairs.tsv
+b	2854	T	2715	899		MT-RNR2_with_pairs.tsv
+b	2855	G	2727	926	2877	MT-RNR2_with_pairs.tsv
+b	2856	C	2748	925	2876	MT-RNR2_with_pairs.tsv
+b	2857	T	2760	910		MT-RNR2_with_pairs.tsv
+b	2858	A	2777	906		MT-RNR2_with_pairs.tsv
+b	2859	A	2795	911		MT-RNR2_with_pairs.tsv
+b	2860	G	2807	924	2872	MT-RNR2_with_pairs.tsv
+b	2861	A	2827	925	2871	MT-RNR2_with_pairs.tsv
+b	2862	C	2848	925	2870	MT-RNR2_with_pairs.tsv
+b	2863	T	2862	914		MT-RNR2_with_pairs.tsv
+b	2864	T	2880	914		MT-RNR2_with_pairs.tsv
+b	2865	C	2895	926		MT-RNR2_with_pairs.tsv
+b	2866	A	2899	943		MT-RNR2_with_pairs.tsv
+b	2867	C	2894	960		MT-RNR2_with_pairs.tsv
+b	2868	C	2879	970		MT-RNR2_with_pairs.tsv
+b	2869	A	2860	970		MT-RNR2_with_pairs.tsv
+b	2870	G	2849	958	2862	MT-RNR2_with_pairs.tsv
+b	2871	T	2827	957	2861	MT-RNR2_with_pairs.tsv
+b	2872	C	2807	957	2860	MT-RNR2_with_pairs.tsv
+b	2873	A	2794	969		MT-RNR2_with_pairs.tsv
+b	2874	A	2777	973		MT-RNR2_with_pairs.tsv
+b	2875	A	2761	969		MT-RNR2_with_pairs.tsv
+b	2876	G	2749	957	2856	MT-RNR2_with_pairs.tsv
+b	2877	C	2729	958	2855	MT-RNR2_with_pairs.tsv
+b	2878	G	2724	968		MT-RNR2_with_pairs.tsv
+b	2879	A	2716	979		MT-RNR2_with_pairs.tsv
+b	2880	A	2706	989		MT-RNR2_with_pairs.tsv
+b	2881	C	2696	996		MT-RNR2_with_pairs.tsv
+b	2882	T	2683	1000		MT-RNR2_with_pairs.tsv
+b	2883	A	2669	1003		MT-RNR2_with_pairs.tsv
+b	2884	C	2656	1001		MT-RNR2_with_pairs.tsv
+b	2885	T	2643	997		MT-RNR2_with_pairs.tsv
+b	2886	A	2631	991		MT-RNR2_with_pairs.tsv
+b	2887	T	2621	981		MT-RNR2_with_pairs.tsv
+b	2888	A	2613	971		MT-RNR2_with_pairs.tsv
+b	2889	C	2609	958	2849	MT-RNR2_with_pairs.tsv
+b	2890	T	2588	957	2848	MT-RNR2_with_pairs.tsv
+b	2891	C	2576	963		MT-RNR2_with_pairs.tsv
+b	2892	A	2572	976		MT-RNR2_with_pairs.tsv
+b	2893	A	2581	985		MT-RNR2_with_pairs.tsv
+b	2894	T	2593	996		MT-RNR2_with_pairs.tsv
+b	2895	T	2599	1014		MT-RNR2_with_pairs.tsv
+b	2896	G	2587	1025		MT-RNR2_with_pairs.tsv
+b	2897	A	2571	1026		MT-RNR2_with_pairs.tsv
+b	2898	T	2558	1015		MT-RNR2_with_pairs.tsv
+b	2899	C	2547	1004		MT-RNR2_with_pairs.tsv
+b	2900	C	2534	997	2909	MT-RNR2_with_pairs.tsv
+b	2901	A	2533	1017	2908	MT-RNR2_with_pairs.tsv
+b	2902	A	2533	1038	2907	MT-RNR2_with_pairs.tsv
+b	2903	T	2537	1054		MT-RNR2_with_pairs.tsv
+b	2904	A	2526	1069		MT-RNR2_with_pairs.tsv
+b	2905	A	2508	1069		MT-RNR2_with_pairs.tsv
+b	2906	C	2498	1055		MT-RNR2_with_pairs.tsv
+b	2907	T	2500	1037	2902	MT-RNR2_with_pairs.tsv
+b	2908	T	2500	1016	2901	MT-RNR2_with_pairs.tsv
+b	2909	G	2500	997	2900	MT-RNR2_with_pairs.tsv
+b	2910	A	2487	997		MT-RNR2_with_pairs.tsv
+b	2911	C	2475	1006		MT-RNR2_with_pairs.tsv
+b	2912	C	2472	1021		MT-RNR2_with_pairs.tsv
+b	2913	A	2473	1036		MT-RNR2_with_pairs.tsv
+b	2914	A	2473	1049		MT-RNR2_with_pairs.tsv
+b	2915	C	2472	1063		MT-RNR2_with_pairs.tsv
+b	2916	G	2461	1073		MT-RNR2_with_pairs.tsv
+b	2917	G	2447	1067		MT-RNR2_with_pairs.tsv
+b	2918	A	2436	1057		MT-RNR2_with_pairs.tsv
+b	2919	A	2427	1046		MT-RNR2_with_pairs.tsv
+b	2920	C	2421	1033		MT-RNR2_with_pairs.tsv
+b	2921	A	2410	1021		MT-RNR2_with_pairs.tsv
+b	2922	A	2399	1012		MT-RNR2_with_pairs.tsv
+b	2923	G	2386	1008		MT-RNR2_with_pairs.tsv
+b	2924	T	2379	1022	2737	MT-RNR2_with_pairs.tsv
+b	2925	T	2379	1043	2736	MT-RNR2_with_pairs.tsv
+b	2926	A	2378	1064	2735	MT-RNR2_with_pairs.tsv
+b	2927	C	2379	1084	2734	MT-RNR2_with_pairs.tsv
+b	2928	C	2379	1104	2733	MT-RNR2_with_pairs.tsv
+b	2929	C	2378	1124	2732	MT-RNR2_with_pairs.tsv
+b	2930	T	2378	1150	2730	MT-RNR2_with_pairs.tsv
+b	2931	A	2378	1170	2729	MT-RNR2_with_pairs.tsv
+b	2932	G	2379	1190	2728	MT-RNR2_with_pairs.tsv
+b	2933	G	2379	1210	2727	MT-RNR2_with_pairs.tsv
+b	2934	G	2395	1213		MT-RNR2_with_pairs.tsv
+b	2935	A	2409	1217		MT-RNR2_with_pairs.tsv
+b	2936	T	2424	1224		MT-RNR2_with_pairs.tsv
+b	2937	A	2437	1231		MT-RNR2_with_pairs.tsv
+b	2938	A	2450	1241		MT-RNR2_with_pairs.tsv
+b	2939	C	2464	1253		MT-RNR2_with_pairs.tsv
+b	2940	A	2475	1266		MT-RNR2_with_pairs.tsv
+b	2941	G	2485	1280		MT-RNR2_with_pairs.tsv
+b	2942	C	2493	1297		MT-RNR2_with_pairs.tsv
+b	2943	G	2500	1316	2982	MT-RNR2_with_pairs.tsv
+b	2944	C	2512	1308		MT-RNR2_with_pairs.tsv
+b	2945	A	2527	1308		MT-RNR2_with_pairs.tsv
+b	2946	A	2539	1316	2980	MT-RNR2_with_pairs.tsv
+b	2947	T	2562	1305		MT-RNR2_with_pairs.tsv
+b	2948	C	2586	1316	2976	MT-RNR2_with_pairs.tsv
+b	2949	C	2606	1316	2975	MT-RNR2_with_pairs.tsv
+b	2950	T	2626	1316	2974	MT-RNR2_with_pairs.tsv
+b	2951	A	2646	1316	2973	MT-RNR2_with_pairs.tsv
+b	2952	T	2666	1316	2972	MT-RNR2_with_pairs.tsv
+b	2953	T	2686	1316	2971	MT-RNR2_with_pairs.tsv
+b	2954	C	2707	1307		MT-RNR2_with_pairs.tsv
+b	2955	T	2725	1316	2968	MT-RNR2_with_pairs.tsv
+b	2956	A	2738	1313		MT-RNR2_with_pairs.tsv
+b	2957	G	2752	1316	2967	MT-RNR2_with_pairs.tsv
+b	2958	A	2771	1316	2966	MT-RNR2_with_pairs.tsv
+b	2959	G	2786	1304		MT-RNR2_with_pairs.tsv
+b	2960	T	2803	1302		MT-RNR2_with_pairs.tsv
+b	2961	C	2818	1313		MT-RNR2_with_pairs.tsv
+b	2962	C	2824	1329		MT-RNR2_with_pairs.tsv
+b	2963	A	2819	1348		MT-RNR2_with_pairs.tsv
+b	2964	T	2805	1357		MT-RNR2_with_pairs.tsv
+b	2965	A	2787	1359		MT-RNR2_with_pairs.tsv
+b	2966	T	2773	1347	2958	MT-RNR2_with_pairs.tsv
+b	2967	C	2753	1348	2957	MT-RNR2_with_pairs.tsv
+b	2968	A	2726	1350	2955	MT-RNR2_with_pairs.tsv
+b	2969	A	2714	1358		MT-RNR2_with_pairs.tsv
+b	2970	C	2700	1358		MT-RNR2_with_pairs.tsv
+b	2971	A	2686	1350	2953	MT-RNR2_with_pairs.tsv
+b	2972	A	2666	1350	2952	MT-RNR2_with_pairs.tsv
+b	2973	T	2646	1349	2951	MT-RNR2_with_pairs.tsv
+b	2974	A	2626	1349	2950	MT-RNR2_with_pairs.tsv
+b	2975	G	2605	1349	2949	MT-RNR2_with_pairs.tsv
+b	2976	G	2586	1349	2948	MT-RNR2_with_pairs.tsv
+b	2977	G	2576	1357		MT-RNR2_with_pairs.tsv
+b	2978	T	2563	1360		MT-RNR2_with_pairs.tsv
+b	2979	T	2549	1357		MT-RNR2_with_pairs.tsv
+b	2980	T	2539	1348	2946	MT-RNR2_with_pairs.tsv
+b	2981	A	2520	1359		MT-RNR2_with_pairs.tsv
+b	2982	C	2501	1349	2943	MT-RNR2_with_pairs.tsv
+b	2983	G	2500	1366		MT-RNR2_with_pairs.tsv
+b	2984	A	2495	1382		MT-RNR2_with_pairs.tsv
+b	2985	C	2493	1398		MT-RNR2_with_pairs.tsv
+b	2986	C	2485	1413		MT-RNR2_with_pairs.tsv
+b	2987	T	2477	1427		MT-RNR2_with_pairs.tsv
+b	2988	C	2467	1440		MT-RNR2_with_pairs.tsv
+b	2989	G	2455	1452		MT-RNR2_with_pairs.tsv
+b	2990	A	2441	1463		MT-RNR2_with_pairs.tsv
+b	2991	T	2426	1471		MT-RNR2_with_pairs.tsv
+b	2992	G	2412	1477		MT-RNR2_with_pairs.tsv
+b	2993	T	2396	1482		MT-RNR2_with_pairs.tsv
+b	2994	T	2380	1486	3068	MT-RNR2_with_pairs.tsv
+b	2995	G	2381	1514	3067	MT-RNR2_with_pairs.tsv
+b	2996	G	2381	1534	3066	MT-RNR2_with_pairs.tsv
+b	2997	A	2381	1556	3065	MT-RNR2_with_pairs.tsv
+b	2998	T	2392	1581		MT-RNR2_with_pairs.tsv
+b	2999	C	2381	1604	3061	MT-RNR2_with_pairs.tsv
+b	3000	A	2381	1638	3058	MT-RNR2_with_pairs.tsv
+b	3001	G	2381	1657	3057	MT-RNR2_with_pairs.tsv
+b	3002	G	2381	1678	3056	MT-RNR2_with_pairs.tsv
+b	3003	A	2381	1698	3055	MT-RNR2_with_pairs.tsv
+b	3004	C	2381	1718	3054	MT-RNR2_with_pairs.tsv
+b	3005	A	2392	1725		MT-RNR2_with_pairs.tsv
+b	3006	T	2402	1734		MT-RNR2_with_pairs.tsv
+b	3007	C	2409	1746	3032	MT-RNR2_with_pairs.tsv
+b	3008	C	2429	1746	3031	MT-RNR2_with_pairs.tsv
+b	3009	C	2452	1735		MT-RNR2_with_pairs.tsv
+b	3010	G	2475	1746	3027	MT-RNR2_with_pairs.tsv
+b	3011	A	2495	1746	3026	MT-RNR2_with_pairs.tsv
+b	3012	T	2515	1745	3025	MT-RNR2_with_pairs.tsv
+b	3013	G	2536	1745	3024	MT-RNR2_with_pairs.tsv
+b	3014	G	2556	1745	3023	MT-RNR2_with_pairs.tsv
+b	3015	T	2576	1744	3022	MT-RNR2_with_pairs.tsv
+b	3016	G	2592	1736		MT-RNR2_with_pairs.tsv
+b	3017	C	2609	1739		MT-RNR2_with_pairs.tsv
+b	3018	A	2620	1753		MT-RNR2_with_pairs.tsv
+b	3019	G	2621	1770		MT-RNR2_with_pairs.tsv
+b	3020	C	2609	1783		MT-RNR2_with_pairs.tsv
+b	3021	C	2592	1787		MT-RNR2_with_pairs.tsv
+b	3022	G	2576	1778	3015	MT-RNR2_with_pairs.tsv
+b	3023	C	2556	1778	3014	MT-RNR2_with_pairs.tsv
+b	3024	T	2536	1778	3013	MT-RNR2_with_pairs.tsv
+b	3025	A	2515	1778	3012	MT-RNR2_with_pairs.tsv
+b	3026	T	2495	1778	3011	MT-RNR2_with_pairs.tsv
+b	3027	T	2475	1778	3010	MT-RNR2_with_pairs.tsv
+b	3028	A	2465	1788		MT-RNR2_with_pairs.tsv
+b	3029	A	2452	1792		MT-RNR2_with_pairs.tsv
+b	3030	A	2438	1789		MT-RNR2_with_pairs.tsv
+b	3031	G	2429	1779	3008	MT-RNR2_with_pairs.tsv
+b	3032	G	2409	1779	3007	MT-RNR2_with_pairs.tsv
+b	3033	T	2397	1795		MT-RNR2_with_pairs.tsv
+b	3034	T	2381	1808	3048	MT-RNR2_with_pairs.tsv
+b	3035	C	2381	1827	3047	MT-RNR2_with_pairs.tsv
+b	3036	G	2381	1847	3046	MT-RNR2_with_pairs.tsv
+b	3037	T	2381	1868	3045	MT-RNR2_with_pairs.tsv
+b	3038	T	2381	1888	3044	MT-RNR2_with_pairs.tsv
+b	3039	T	2387	1903		MT-RNR2_with_pairs.tsv
+b	3040	G	2381	1921		MT-RNR2_with_pairs.tsv
+b	3041	T	2364	1927		MT-RNR2_with_pairs.tsv
+b	3042	T	2347	1920		MT-RNR2_with_pairs.tsv
+b	3043	C	2341	1904		MT-RNR2_with_pairs.tsv
+b	3044	A	2347	1888	3038	MT-RNR2_with_pairs.tsv
+b	3045	A	2347	1868	3037	MT-RNR2_with_pairs.tsv
+b	3046	C	2347	1847	3036	MT-RNR2_with_pairs.tsv
+b	3047	G	2347	1827	3035	MT-RNR2_with_pairs.tsv
+b	3048	A	2347	1808	3034	MT-RNR2_with_pairs.tsv
+b	3049	T	2331	1796		MT-RNR2_with_pairs.tsv
+b	3050	T	2321	1780		MT-RNR2_with_pairs.tsv
+b	3051	A	2316	1763		MT-RNR2_with_pairs.tsv
+b	3052	A	2320	1744		MT-RNR2_with_pairs.tsv
+b	3053	A	2331	1729		MT-RNR2_with_pairs.tsv
+b	3054	G	2348	1718	3004	MT-RNR2_with_pairs.tsv
+b	3055	T	2348	1698	3003	MT-RNR2_with_pairs.tsv
+b	3056	C	2348	1678	3002	MT-RNR2_with_pairs.tsv
+b	3057	C	2348	1657	3001	MT-RNR2_with_pairs.tsv
+b	3058	T	2348	1638	3000	MT-RNR2_with_pairs.tsv
+b	3059	A	2341	1627		MT-RNR2_with_pairs.tsv
+b	3060	C	2342	1615		MT-RNR2_with_pairs.tsv
+b	3061	G	2348	1604	2999	MT-RNR2_with_pairs.tsv
+b	3062	T	2339	1594		MT-RNR2_with_pairs.tsv
+b	3063	G	2336	1581		MT-RNR2_with_pairs.tsv
+b	3064	A	2338	1569		MT-RNR2_with_pairs.tsv
+b	3065	T	2348	1555	2997	MT-RNR2_with_pairs.tsv
+b	3066	C	2348	1534	2996	MT-RNR2_with_pairs.tsv
+b	3067	T	2348	1513	2995	MT-RNR2_with_pairs.tsv
+b	3068	G	2347	1487	2994	MT-RNR2_with_pairs.tsv
+b	3069	A	2336	1485		MT-RNR2_with_pairs.tsv
+b	3070	G	2324	1481		MT-RNR2_with_pairs.tsv
+b	3071	T	2313	1477		MT-RNR2_with_pairs.tsv
+b	3072	T	2303	1473		MT-RNR2_with_pairs.tsv
+b	3073	C	2293	1468		MT-RNR2_with_pairs.tsv
+b	3074	A	2283	1461		MT-RNR2_with_pairs.tsv
+b	3075	G	2273	1454	3093	MT-RNR2_with_pairs.tsv
+b	3076	A	2258	1469	3092	MT-RNR2_with_pairs.tsv
+b	3077	C	2243	1481	3091	MT-RNR2_with_pairs.tsv
+b	3078	C	2228	1495	3090	MT-RNR2_with_pairs.tsv
+b	3079	G	2210	1512	3088	MT-RNR2_with_pairs.tsv
+b	3080	G	2195	1526	3087	MT-RNR2_with_pairs.tsv
+b	3081	A	2180	1541	3086	MT-RNR2_with_pairs.tsv
+b	3082	G	2171	1555		MT-RNR2_with_pairs.tsv
+b	3083	T	2153	1556		MT-RNR2_with_pairs.tsv
+b	3084	A	2140	1545		MT-RNR2_with_pairs.tsv
+b	3085	A	2142	1527		MT-RNR2_with_pairs.tsv
+b	3086	T	2157	1516	3081	MT-RNR2_with_pairs.tsv
+b	3087	C	2172	1503	3080	MT-RNR2_with_pairs.tsv
+b	3088	C	2187	1489	3079	MT-RNR2_with_pairs.tsv
+b	3089	A	2193	1476		MT-RNR2_with_pairs.tsv
+b	3090	G	2206	1471	3078	MT-RNR2_with_pairs.tsv
+b	3091	G	2221	1457	3077	MT-RNR2_with_pairs.tsv
+b	3092	T	2235	1443	3076	MT-RNR2_with_pairs.tsv
+b	3093	C	2251	1430	3075	MT-RNR2_with_pairs.tsv
+b	3094	G	2242	1416		MT-RNR2_with_pairs.tsv
+b	3095	G	2235	1400		MT-RNR2_with_pairs.tsv
+b	3096	T	2229	1384		MT-RNR2_with_pairs.tsv
+b	3097	T	2225	1367		MT-RNR2_with_pairs.tsv
+b	3098	T	2224	1348	2720	MT-RNR2_with_pairs.tsv
+b	3099	C	2205	1348	2719	MT-RNR2_with_pairs.tsv
+b	3100	T	2191	1359		MT-RNR2_with_pairs.tsv
+b	3101	A	2177	1359		MT-RNR2_with_pairs.tsv
+b	3102	T	2166	1348	2717	MT-RNR2_with_pairs.tsv
+b	3103	C	2145	1348	2716	MT-RNR2_with_pairs.tsv
+b	3104	T	2121	1348	2715	MT-RNR2_with_pairs.tsv
+b	3105	A	2103	1359		MT-RNR2_with_pairs.tsv
+b	3106	C	2088	1348	2712	MT-RNR2_with_pairs.tsv
+b	3108	T	2069	1348	2711	MT-RNR2_with_pairs.tsv
+b	3109	T	2054	1422		MT-RNR2_with_pairs.tsv
+b	3110	C	2045	1496		MT-RNR2_with_pairs.tsv
+b	3111	A	2047	1576		MT-RNR2_with_pairs.tsv
+b	3112	A	2074	1648		MT-RNR2_with_pairs.tsv
+b	3113	A	2109	1694	3143	MT-RNR2_with_pairs.tsv
+b	3114	T	2124	1678	3142	MT-RNR2_with_pairs.tsv
+b	3115	T	2138	1663	3141	MT-RNR2_with_pairs.tsv
+b	3116	C	2144	1648		MT-RNR2_with_pairs.tsv
+b	3117	C	2161	1641	3139	MT-RNR2_with_pairs.tsv
+b	3118	T	2175	1625	3138	MT-RNR2_with_pairs.tsv
+b	3119	C	2189	1612	3137	MT-RNR2_with_pairs.tsv
+b	3120	C	2185	1596		MT-RNR2_with_pairs.tsv
+b	3121	C	2186	1580		MT-RNR2_with_pairs.tsv
+b	3122	T	2192	1564		MT-RNR2_with_pairs.tsv
+b	3123	G	2204	1553		MT-RNR2_with_pairs.tsv
+b	3124	T	2218	1545		MT-RNR2_with_pairs.tsv
+b	3125	A	2233	1545		MT-RNR2_with_pairs.tsv
+b	3126	C	2250	1547	3131	MT-RNR2_with_pairs.tsv
+b	3127	G	2259	1532		MT-RNR2_with_pairs.tsv
+b	3128	A	2276	1530		MT-RNR2_with_pairs.tsv
+b	3129	A	2289	1542		MT-RNR2_with_pairs.tsv
+b	3130	A	2288	1560		MT-RNR2_with_pairs.tsv
+b	3131	G	2275	1570	3126	MT-RNR2_with_pairs.tsv
+b	3132	G	2280	1589		MT-RNR2_with_pairs.tsv
+b	3133	A	2277	1609		MT-RNR2_with_pairs.tsv
+b	3134	C	2267	1624		MT-RNR2_with_pairs.tsv
+b	3135	A	2250	1636		MT-RNR2_with_pairs.tsv
+b	3136	A	2231	1640		MT-RNR2_with_pairs.tsv
+b	3137	G	2213	1635	3119	MT-RNR2_with_pairs.tsv
+b	3138	A	2198	1650	3118	MT-RNR2_with_pairs.tsv
+b	3139	G	2185	1664	3117	MT-RNR2_with_pairs.tsv
+b	3140	A	2177	1681		MT-RNR2_with_pairs.tsv
+b	3141	A	2161	1688	3115	MT-RNR2_with_pairs.tsv
+b	3142	A	2147	1703	3114	MT-RNR2_with_pairs.tsv
+b	3143	T	2133	1716	3113	MT-RNR2_with_pairs.tsv
+b	3144	A	2142	1730	3167	MT-RNR2_with_pairs.tsv
+b	3145	A	2156	1744	3166	MT-RNR2_with_pairs.tsv
+b	3146	G	2171	1759	3165	MT-RNR2_with_pairs.tsv
+b	3147	G	2185	1773	3164	MT-RNR2_with_pairs.tsv
+b	3148	C	2199	1788	3163	MT-RNR2_with_pairs.tsv
+b	3149	C	2212	1789		MT-RNR2_with_pairs.tsv
+b	3150	T	2225	1794		MT-RNR2_with_pairs.tsv
+b	3151	A	2230	1808		MT-RNR2_with_pairs.tsv
+b	3152	C	2234	1822	3161	MT-RNR2_with_pairs.tsv
+b	3153	T	2247	1836	3160	MT-RNR2_with_pairs.tsv
+b	3154	T	2261	1850	3159	MT-RNR2_with_pairs.tsv
+b	3155	C	2276	1861		MT-RNR2_with_pairs.tsv
+b	3156	A	2277	1879		MT-RNR2_with_pairs.tsv
+b	3157	C	2265	1891		MT-RNR2_with_pairs.tsv
+b	3158	A	2247	1890		MT-RNR2_with_pairs.tsv
+b	3159	A	2237	1874	3154	MT-RNR2_with_pairs.tsv
+b	3160	A	2223	1860	3153	MT-RNR2_with_pairs.tsv
+b	3161	G	2210	1845	3152	MT-RNR2_with_pairs.tsv
+b	3162	C	2182	1835		MT-RNR2_with_pairs.tsv
+b	3163	G	2175	1811	3148	MT-RNR2_with_pairs.tsv
+b	3164	C	2161	1796	3147	MT-RNR2_with_pairs.tsv
+b	3165	C	2147	1781	3146	MT-RNR2_with_pairs.tsv
+b	3166	T	2133	1766	3145	MT-RNR2_with_pairs.tsv
+b	3167	T	2119	1752	3144	MT-RNR2_with_pairs.tsv
+b	3168	C	2115	1766		MT-RNR2_with_pairs.tsv
+b	3169	C	2114	1779		MT-RNR2_with_pairs.tsv
+b	3170	C	2106	1791		MT-RNR2_with_pairs.tsv
+b	3171	C	2094	1799		MT-RNR2_with_pairs.tsv
+b	3172	C	2078	1801		MT-RNR2_with_pairs.tsv
+b	3173	G	2063	1805		MT-RNR2_with_pairs.tsv
+b	3174	T	2048	1804	3195	MT-RNR2_with_pairs.tsv
+b	3175	A	2033	1819	3194	MT-RNR2_with_pairs.tsv
+b	3176	A	2019	1833	3193	MT-RNR2_with_pairs.tsv
+b	3177	A	2024	1850		MT-RNR2_with_pairs.tsv
+b	3178	T	2024	1867		MT-RNR2_with_pairs.tsv
+b	3179	G	2018	1884		MT-RNR2_with_pairs.tsv
+b	3180	A	2006	1898		MT-RNR2_with_pairs.tsv
+b	3181	T	1991	1906		MT-RNR2_with_pairs.tsv
+b	3182	A	1973	1910		MT-RNR2_with_pairs.tsv
+b	3183	T	1956	1907		MT-RNR2_with_pairs.tsv
+b	3184	C	1940	1900		MT-RNR2_with_pairs.tsv
+b	3185	A	1927	1888		MT-RNR2_with_pairs.tsv
+b	3186	T	1920	1870		MT-RNR2_with_pairs.tsv
+b	3187	C	1918	1853		MT-RNR2_with_pairs.tsv
+b	3188	T	1922	1836		MT-RNR2_with_pairs.tsv
+b	3189	C	1932	1821		MT-RNR2_with_pairs.tsv
+b	3190	A	1945	1810		MT-RNR2_with_pairs.tsv
+b	3191	A	1962	1804		MT-RNR2_with_pairs.tsv
+b	3192	C	1980	1804		MT-RNR2_with_pairs.tsv
+b	3193	T	1996	1808	3176	MT-RNR2_with_pairs.tsv
+b	3194	T	2010	1794	3175	MT-RNR2_with_pairs.tsv
+b	3195	A	2025	1781	3174	MT-RNR2_with_pairs.tsv
+b	3196	G	2022	1749		MT-RNR2_with_pairs.tsv
+b	3197	T	2003	1701		MT-RNR2_with_pairs.tsv
+b	3198	A	1979	1657		MT-RNR2_with_pairs.tsv
+b	3199	T	1951	1616		MT-RNR2_with_pairs.tsv
+b	3200	T	1921	1579		MT-RNR2_with_pairs.tsv
+b	3201	A	1897	1549		MT-RNR2_with_pairs.tsv
+b	3202	T	1876	1537		MT-RNR2_with_pairs.tsv
+b	3203	A	1859	1535		MT-RNR2_with_pairs.tsv
+b	3204	C	1843	1535		MT-RNR2_with_pairs.tsv
+b	3205	C	1826	1540		MT-RNR2_with_pairs.tsv
+b	3206	C	1811	1548		MT-RNR2_with_pairs.tsv
+b	3207	A	1792	1558		MT-RNR2_with_pairs.tsv
+b	3208	C	1779	1570		MT-RNR2_with_pairs.tsv
+b	3209	A	1764	1583		MT-RNR2_with_pairs.tsv
+b	3210	C	1756	1599		MT-RNR2_with_pairs.tsv
+b	3211	C	1754	1620		MT-RNR2_with_pairs.tsv
+b	3212	C	1758	1644		MT-RNR2_with_pairs.tsv
+b	3213	A	1769	1656	3227	MT-RNR2_with_pairs.tsv
+b	3214	C	1789	1656	3226	MT-RNR2_with_pairs.tsv
+b	3215	C	1810	1656	3225	MT-RNR2_with_pairs.tsv
+b	3216	C	1830	1656	3224	MT-RNR2_with_pairs.tsv
+b	3217	A	1846	1653		MT-RNR2_with_pairs.tsv
+b	3218	A	1864	1650		MT-RNR2_with_pairs.tsv
+b	3219	G	1881	1662		MT-RNR2_with_pairs.tsv
+b	3220	A	1889	1678		MT-RNR2_with_pairs.tsv
+b	3221	A	1880	1695		MT-RNR2_with_pairs.tsv
+b	3222	C	1865	1703		MT-RNR2_with_pairs.tsv
+b	3223	A	1846	1700		MT-RNR2_with_pairs.tsv
+b	3224	G	1830	1694	3216	MT-RNR2_with_pairs.tsv
+b	3225	G	1810	1694	3215	MT-RNR2_with_pairs.tsv
+b	3226	G	1790	1694	3214	MT-RNR2_with_pairs.tsv
+b	3227	T	1769	1694	3213	MT-RNR2_with_pairs.tsv
+b	3228	T	1755	1704		MT-RNR2_with_pairs.tsv
+b	3229	T	1745	1715		MT-RNR2_with_pairs.tsv
+b		A	205	10		MT-TA_with_pairs.tsv
+b		C	205	25		MT-TA_with_pairs.tsv
+b		C	205	40		MT-TA_with_pairs.tsv
+b	5587	A	205	55		MT-TA_with_pairs.tsv
+b	5588	T	205	70	5655	MT-TA_with_pairs.tsv
+b	5589	T	205	85	5654	MT-TA_with_pairs.tsv
+b	5590	C	205	100	5653	MT-TA_with_pairs.tsv
+b	5591	C	205	115	5652	MT-TA_with_pairs.tsv
+b	5592	T	205	130	5651	MT-TA_with_pairs.tsv
+b	5593	G	205	145	5650	MT-TA_with_pairs.tsv
+b	5594	A	205	160	5649	MT-TA_with_pairs.tsv
+b	5595	C	220	170	5611	MT-TA_with_pairs.tsv
+b	5596	G	233	170	5610	MT-TA_with_pairs.tsv
+b	5597	T	246	170	5609	MT-TA_with_pairs.tsv
+b	5598	T	259	170	5608	MT-TA_with_pairs.tsv
+b	5599	T	272	170	5607	MT-TA_with_pairs.tsv
+b	5600	T	282	163		MT-TA_with_pairs.tsv
+b	5601	G	294	160		MT-TA_with_pairs.tsv
+b	5602	G	306	168		MT-TA_with_pairs.tsv
+b	5603	G	312	181.5		MT-TA_with_pairs.tsv
+b	5604	G	306	195		MT-TA_with_pairs.tsv
+b	5605	T	294	203		MT-TA_with_pairs.tsv
+b	5606	G	282	200		MT-TA_with_pairs.tsv
+b	5607	A	272	193	5599	MT-TA_with_pairs.tsv
+b	5608	G	259	193	5598	MT-TA_with_pairs.tsv
+b	5609	A	246	193	5597	MT-TA_with_pairs.tsv
+b	5610	C	233	193	5596	MT-TA_with_pairs.tsv
+b	5611	G	220	193	5595	MT-TA_with_pairs.tsv
+b	5612	T	220	205		MT-TA_with_pairs.tsv
+b	5613	A	226	215		MT-TA_with_pairs.tsv
+b	5614	G	218	225		MT-TA_with_pairs.tsv
+b	5615	T	206	228		MT-TA_with_pairs.tsv
+b	5616	T	200	238	5632	MT-TA_with_pairs.tsv
+b	5617	G	200	253	5631	MT-TA_with_pairs.tsv
+b	5618	A	200	268	5630	MT-TA_with_pairs.tsv
+b	5619	C	200	283	5629	MT-TA_with_pairs.tsv
+b	5620	T	200	298	5628	MT-TA_with_pairs.tsv
+b	5621	T	208	308		MT-TA_with_pairs.tsv
+b	5622	G	208	323		MT-TA_with_pairs.tsv
+b	5623	C	200	334		MT-TA_with_pairs.tsv
+b	5624	G	187.5	336		MT-TA_with_pairs.tsv
+b	5625	T	175	334		MT-TA_with_pairs.tsv
+b	5626	T	167	323		MT-TA_with_pairs.tsv
+b	5627	T	167	308		MT-TA_with_pairs.tsv
+b	5628	A	175	298	5620	MT-TA_with_pairs.tsv
+b	5629	G	175	283	5619	MT-TA_with_pairs.tsv
+b	5630	T	175	268	5618	MT-TA_with_pairs.tsv
+b	5631	C	175	253	5617	MT-TA_with_pairs.tsv
+b	5632	G	175	238	5616	MT-TA_with_pairs.tsv
+b	5633	G	163	228		MT-TA_with_pairs.tsv
+b	5634	T	152	215	5646	MT-TA_with_pairs.tsv
+b	5635	G	139	215	5645	MT-TA_with_pairs.tsv
+b	5636	A	126	215	5644	MT-TA_with_pairs.tsv
+b	5637	A	113	215	5643	MT-TA_with_pairs.tsv
+b	5638	A	100	222		MT-TA_with_pairs.tsv
+b	5639	T	87	217		MT-TA_with_pairs.tsv
+b	5640	T	80	203.5		MT-TA_with_pairs.tsv
+b	5641	A	87	190		MT-TA_with_pairs.tsv
+b	5642	A	100	185		MT-TA_with_pairs.tsv
+b	5643	T	113	192	5637	MT-TA_with_pairs.tsv
+b	5644	T	126	192	5636	MT-TA_with_pairs.tsv
+b	5645	C	139	192	5635	MT-TA_with_pairs.tsv
+b	5646	G	152	192	5634	MT-TA_with_pairs.tsv
+b	5647	A	165	183		MT-TA_with_pairs.tsv
+b	5648	T	173	173		MT-TA_with_pairs.tsv
+b	5649	T	180	160	5594	MT-TA_with_pairs.tsv
+b	5650	C	180	145	5593	MT-TA_with_pairs.tsv
+b	5651	G	180	130	5592	MT-TA_with_pairs.tsv
+b	5652	G	180	115	5591	MT-TA_with_pairs.tsv
+b	5653	G	180	100	5590	MT-TA_with_pairs.tsv
+b	5654	A	180	85	5589	MT-TA_with_pairs.tsv
+b	5655	A	180	70	5588	MT-TA_with_pairs.tsv
+b		A	205	10		MT-TC_with_pairs.tsv
+b		C	205	25		MT-TC_with_pairs.tsv
+b		C	205	40		MT-TC_with_pairs.tsv
+b	5761	T	205	55		MT-TC_with_pairs.tsv
+b	5762	T	205	70	5826	MT-TC_with_pairs.tsv
+b	5763	C	205	85	5825	MT-TC_with_pairs.tsv
+b	5764	G	205	100	5824	MT-TC_with_pairs.tsv
+b	5765	G	205	115	5823	MT-TC_with_pairs.tsv
+b	5766	G	205	130	5822	MT-TC_with_pairs.tsv
+b	5767	G	205	145	5821	MT-TC_with_pairs.tsv
+b	5768	C	205	160	5820	MT-TC_with_pairs.tsv
+b	5769	C	218	170	5784	MT-TC_with_pairs.tsv
+b	5770	G	231	170	5783	MT-TC_with_pairs.tsv
+b	5771	T	244	170	5782	MT-TC_with_pairs.tsv
+b	5772	C	257	170	5781	MT-TC_with_pairs.tsv
+b	5773	C	269	163		MT-TC_with_pairs.tsv
+b	5774	A	281	160		MT-TC_with_pairs.tsv
+b	5775	A	293	163		MT-TC_with_pairs.tsv
+b	5776	A	302	174		MT-TC_with_pairs.tsv
+b	5777	C	302	189		MT-TC_with_pairs.tsv
+b	5778	T	293	200		MT-TC_with_pairs.tsv
+b	5779	T	281	203		MT-TC_with_pairs.tsv
+b	5780	C	269	200		MT-TC_with_pairs.tsv
+b	5781	G	257	193	5772	MT-TC_with_pairs.tsv
+b	5782	A	244	193	5771	MT-TC_with_pairs.tsv
+b	5783	C	231	193	5770	MT-TC_with_pairs.tsv
+b	5784	G	218	193	5769	MT-TC_with_pairs.tsv
+b	5785	A	220	205		MT-TC_with_pairs.tsv
+b	5786	A	226	215		MT-TC_with_pairs.tsv
+b	5787	G	218	225		MT-TC_with_pairs.tsv
+b	5788	A	206	228		MT-TC_with_pairs.tsv
+b	5789	A	200	238	5805	MT-TC_with_pairs.tsv
+b	5790	G	200	253	5804	MT-TC_with_pairs.tsv
+b	5791	C	200	268	5803	MT-TC_with_pairs.tsv
+b	5792	T	200	283	5802	MT-TC_with_pairs.tsv
+b	5793	T	200	298	5801	MT-TC_with_pairs.tsv
+b	5794	A	208	308		MT-TC_with_pairs.tsv
+b	5795	A	208	323		MT-TC_with_pairs.tsv
+b	5796	A	200	334		MT-TC_with_pairs.tsv
+b	5797	C	187.5	336		MT-TC_with_pairs.tsv
+b	5798	G	175	334		MT-TC_with_pairs.tsv
+b	5799	T	167	323		MT-TC_with_pairs.tsv
+b	5800	T	167	308		MT-TC_with_pairs.tsv
+b	5801	A	175	298	5793	MT-TC_with_pairs.tsv
+b	5802	A	175	283	5792	MT-TC_with_pairs.tsv
+b	5803	G	175	268	5791	MT-TC_with_pairs.tsv
+b	5804	T	175	253	5790	MT-TC_with_pairs.tsv
+b	5805	T	175	238	5789	MT-TC_with_pairs.tsv
+b	5806	A	163	228		MT-TC_with_pairs.tsv
+b	5807	T	152	215	5817	MT-TC_with_pairs.tsv
+b	5808	A	139	215	5816	MT-TC_with_pairs.tsv
+b	5809	C	126	215	5815	MT-TC_with_pairs.tsv
+b	5810	T	113	222		MT-TC_with_pairs.tsv
+b	5811	T	100	217		MT-TC_with_pairs.tsv
+b	5812	T	93	203.5		MT-TC_with_pairs.tsv
+b	5813	T	100	190		MT-TC_with_pairs.tsv
+b	5814	A	113	185		MT-TC_with_pairs.tsv
+b	5815	G	126	192	5809	MT-TC_with_pairs.tsv
+b	5816	T	139	192	5808	MT-TC_with_pairs.tsv
+b	5817	G	152	192	5807	MT-TC_with_pairs.tsv
+b	5818	G	163	183		MT-TC_with_pairs.tsv
+b	5819	A	173	173		MT-TC_with_pairs.tsv
+b	5820	G	180	160	5768	MT-TC_with_pairs.tsv
+b	5821	C	180	145	5767	MT-TC_with_pairs.tsv
+b	5822	C	180	130	5766	MT-TC_with_pairs.tsv
+b	5823	T	180	115	5765	MT-TC_with_pairs.tsv
+b	5824	C	180	100	5764	MT-TC_with_pairs.tsv
+b	5825	G	180	85	5763	MT-TC_with_pairs.tsv
+b	5826	A	180	70	5762	MT-TC_with_pairs.tsv
+b		A	205	10		MT-TD_with_pairs.tsv
+b		C	205	25		MT-TD_with_pairs.tsv
+b		C	205	40		MT-TD_with_pairs.tsv
+b	7585	A	205	55		MT-TD_with_pairs.tsv
+b	7584	T	205	70	7518	MT-TD_with_pairs.tsv
+b	7583	T	205	85	7519	MT-TD_with_pairs.tsv
+b	7582	C	205	100	7520	MT-TD_with_pairs.tsv
+b	7581	T	205	115	7521	MT-TD_with_pairs.tsv
+b	7580	A	205	130	7522	MT-TD_with_pairs.tsv
+b	7579	T	205	145	7523	MT-TD_with_pairs.tsv
+b	7578	A	205	160	7524	MT-TD_with_pairs.tsv
+b	7577	T	220	170	7562	MT-TD_with_pairs.tsv
+b	7576	A	233	170	7563	MT-TD_with_pairs.tsv
+b	7575	T	246	170	7564	MT-TD_with_pairs.tsv
+b	7574	C	259	170	7565	MT-TD_with_pairs.tsv
+b	7573	C	272	170	7566	MT-TD_with_pairs.tsv
+b	7572	T	283	163		MT-TD_with_pairs.tsv
+b	7571	A	296	163		MT-TD_with_pairs.tsv
+b	7570	A	308	175		MT-TD_with_pairs.tsv
+b	7569	A	308	190		MT-TD_with_pairs.tsv
+b	7568	T	296	200		MT-TD_with_pairs.tsv
+b	7567	C	283	200		MT-TD_with_pairs.tsv
+b	7566	G	272	193	7573	MT-TD_with_pairs.tsv
+b	7565	G	259	193	7574	MT-TD_with_pairs.tsv
+b	7564	A	246	193	7575	MT-TD_with_pairs.tsv
+b	7563	T	233	193	7576	MT-TD_with_pairs.tsv
+b	7562	A	220	193	7577	MT-TD_with_pairs.tsv
+b	7561	T	220	205		MT-TD_with_pairs.tsv
+b	7560	T	226	215		MT-TD_with_pairs.tsv
+b	7559	A	218	225		MT-TD_with_pairs.tsv
+b	7558	A	206	228		MT-TD_with_pairs.tsv
+b	7557	A	200	238	7541	MT-TD_with_pairs.tsv
+b	7556	T	200	253	7542	MT-TD_with_pairs.tsv
+b	7555	T	200	268	7543	MT-TD_with_pairs.tsv
+b	7554	G	200	283	7544	MT-TD_with_pairs.tsv
+b	7553	A	200	298	7545	MT-TD_with_pairs.tsv
+b	7552	A	208	308		MT-TD_with_pairs.tsv
+b	7551	A	208	323		MT-TD_with_pairs.tsv
+b	7550	C	200	334		MT-TD_with_pairs.tsv
+b	7549	T	187.5	336		MT-TD_with_pairs.tsv
+b	7548	G	175	334		MT-TD_with_pairs.tsv
+b	7547	T	167	323		MT-TD_with_pairs.tsv
+b	7546	T	167	308		MT-TD_with_pairs.tsv
+b	7545	T	175	298	7553	MT-TD_with_pairs.tsv
+b	7544	C	175	283	7554	MT-TD_with_pairs.tsv
+b	7543	A	175	268	7555	MT-TD_with_pairs.tsv
+b	7542	A	175	253	7556	MT-TD_with_pairs.tsv
+b	7541	T	175	238	7557	MT-TD_with_pairs.tsv
+b	7540	A	163	228		MT-TD_with_pairs.tsv
+b	7539	C	152	215	7527	MT-TD_with_pairs.tsv
+b	7538	T	139	215	7528	MT-TD_with_pairs.tsv
+b	7537	T	126	215	7529	MT-TD_with_pairs.tsv
+b	7536	T	113	215	7530	MT-TD_with_pairs.tsv
+b	7535	A	100	222		MT-TD_with_pairs.tsv
+b	7534	C	87	217		MT-TD_with_pairs.tsv
+b	7533	C	80	203.5		MT-TD_with_pairs.tsv
+b	7532	A	87	190		MT-TD_with_pairs.tsv
+b	7531	A	100	185		MT-TD_with_pairs.tsv
+b	7530	A	113	192	7536	MT-TD_with_pairs.tsv
+b	7529	A	126	192	7537	MT-TD_with_pairs.tsv
+b	7528	A	139	192	7538	MT-TD_with_pairs.tsv
+b	7527	G	152	192	7539	MT-TD_with_pairs.tsv
+b	7526	A	165	183		MT-TD_with_pairs.tsv
+b	7525	T	173	173		MT-TD_with_pairs.tsv
+b	7524	T	180	160	7578	MT-TD_with_pairs.tsv
+b	7523	A	180	145	7579	MT-TD_with_pairs.tsv
+b	7522	T	180	130	7580	MT-TD_with_pairs.tsv
+b	7521	G	180	115	7581	MT-TD_with_pairs.tsv
+b	7520	G	180	100	7582	MT-TD_with_pairs.tsv
+b	7519	A	180	85	7583	MT-TD_with_pairs.tsv
+b	7518	A	180	70	7584	MT-TD_with_pairs.tsv
+b		A	205	10		MT-TE_with_pairs.tsv
+b		C	205	25		MT-TE_with_pairs.tsv
+b		C	205	40		MT-TE_with_pairs.tsv
+b	14674	A	205	55		MT-TE_with_pairs.tsv
+b	14675	T	205	70	14742	MT-TE_with_pairs.tsv
+b	14676	A	205	85	14741	MT-TE_with_pairs.tsv
+b	14677	A	205	100	14740	MT-TE_with_pairs.tsv
+b	14678	G	205	115	14739	MT-TE_with_pairs.tsv
+b	14679	A	205	130	14738	MT-TE_with_pairs.tsv
+b	14680	G	205	145	14737	MT-TE_with_pairs.tsv
+b	14681	C	205	160	14736	MT-TE_with_pairs.tsv
+b	14682	G	220	170	14698	MT-TE_with_pairs.tsv
+b	14683	T	233	170	14697	MT-TE_with_pairs.tsv
+b	14684	G	246	170	14696	MT-TE_with_pairs.tsv
+b	14685	C	259	170	14695	MT-TE_with_pairs.tsv
+b	14686	C	272	170	14694	MT-TE_with_pairs.tsv
+b	14687	T	282	163		MT-TE_with_pairs.tsv
+b	14688	G	294	160		MT-TE_with_pairs.tsv
+b	14689	A	306	168		MT-TE_with_pairs.tsv
+b	14690	T	312	181.5		MT-TE_with_pairs.tsv
+b	14691	G	306	195		MT-TE_with_pairs.tsv
+b	14692	T	294	203		MT-TE_with_pairs.tsv
+b	14693	T	282	200		MT-TE_with_pairs.tsv
+b	14694	G	272	193	14686	MT-TE_with_pairs.tsv
+b	14695	G	259	193	14685	MT-TE_with_pairs.tsv
+b	14696	T	246	193	14684	MT-TE_with_pairs.tsv
+b	14697	G	233	193	14683	MT-TE_with_pairs.tsv
+b	14698	C	220	193	14682	MT-TE_with_pairs.tsv
+b	14699	T	220	205		MT-TE_with_pairs.tsv
+b	14700	G	226	215		MT-TE_with_pairs.tsv
+b	14701	G	218	225		MT-TE_with_pairs.tsv
+b	14702	T	206	228		MT-TE_with_pairs.tsv
+b	14703	T	200	238	14719	MT-TE_with_pairs.tsv
+b	14704	A	200	253	14718	MT-TE_with_pairs.tsv
+b	14705	C	200	268	14717	MT-TE_with_pairs.tsv
+b	14706	T	200	283	14716	MT-TE_with_pairs.tsv
+b	14707	A	200	298	14715	MT-TE_with_pairs.tsv
+b	14708	T	208	308		MT-TE_with_pairs.tsv
+b	14709	A	208	323		MT-TE_with_pairs.tsv
+b	14710	C	200	334		MT-TE_with_pairs.tsv
+b	14711	T	187.5	336		MT-TE_with_pairs.tsv
+b	14712	T	175	334		MT-TE_with_pairs.tsv
+b	14713	T	167	323		MT-TE_with_pairs.tsv
+b	14714	T	167	308		MT-TE_with_pairs.tsv
+b	14715	T	175	298	14707	MT-TE_with_pairs.tsv
+b	14716	G	175	283	14706	MT-TE_with_pairs.tsv
+b	14717	G	175	268	14705	MT-TE_with_pairs.tsv
+b	14718	T	175	253	14704	MT-TE_with_pairs.tsv
+b	14719	A	175	238	14703	MT-TE_with_pairs.tsv
+b	14720	G	163	228		MT-TE_with_pairs.tsv
+b	14721	C	152	215	14733	MT-TE_with_pairs.tsv
+b	14722	A	139	215	14732	MT-TE_with_pairs.tsv
+b	14723	A	126	215	14731	MT-TE_with_pairs.tsv
+b	14724	C	113	215	14730	MT-TE_with_pairs.tsv
+b	14725	A	100	222		MT-TE_with_pairs.tsv
+b	14726	T	87	217		MT-TE_with_pairs.tsv
+b	14727	A	80	203.5		MT-TE_with_pairs.tsv
+b	14728	A	87	190		MT-TE_with_pairs.tsv
+b	14729	A	100	185		MT-TE_with_pairs.tsv
+b	14730	G	113	192	14724	MT-TE_with_pairs.tsv
+b	14731	T	126	192	14723	MT-TE_with_pairs.tsv
+b	14732	T	139	192	14722	MT-TE_with_pairs.tsv
+b	14733	G	152	192	14721	MT-TE_with_pairs.tsv
+b	14734	A	165	183		MT-TE_with_pairs.tsv
+b	14735	T	173	173		MT-TE_with_pairs.tsv
+b	14736	G	180	160	14681	MT-TE_with_pairs.tsv
+b	14737	T	180	145	14680	MT-TE_with_pairs.tsv
+b	14738	T	180	130	14679	MT-TE_with_pairs.tsv
+b	14739	C	180	115	14678	MT-TE_with_pairs.tsv
+b	14740	T	180	100	14677	MT-TE_with_pairs.tsv
+b	14741	T	180	85	14676	MT-TE_with_pairs.tsv
+b	14742	G	180	70	14675	MT-TE_with_pairs.tsv
+b		A	205	10		MT-TF_with_pairs.tsv
+b		C	205	25		MT-TF_with_pairs.tsv
+b		C	205	40		MT-TF_with_pairs.tsv
+b	647	A	205	55		MT-TF_with_pairs.tsv
+b	646	C	205	70	577	MT-TF_with_pairs.tsv
+b	645	A	205	85	578	MT-TF_with_pairs.tsv
+b	644	A	205	100	579	MT-TF_with_pairs.tsv
+b	643	A	205	115	580	MT-TF_with_pairs.tsv
+b	642	T	205	130	581	MT-TF_with_pairs.tsv
+b	641	A	205	145	582	MT-TF_with_pairs.tsv
+b	640	C	205	160	583	MT-TF_with_pairs.tsv
+b	639	C	218	170	625	MT-TF_with_pairs.tsv
+b	638	C	231	170	626	MT-TF_with_pairs.tsv
+b	637	C	244	170	627	MT-TF_with_pairs.tsv
+b	636	A	256	160		MT-TF_with_pairs.tsv
+b	635	C	268	157		MT-TF_with_pairs.tsv
+b	634	T	280	160		MT-TF_with_pairs.tsv
+b	633	A	290	168		MT-TF_with_pairs.tsv
+b	632	C	295	181.5		MT-TF_with_pairs.tsv
+b	631	A	290	195		MT-TF_with_pairs.tsv
+b	630	C	280	203		MT-TF_with_pairs.tsv
+b	629	T	268	206		MT-TF_with_pairs.tsv
+b	628	C	256	203		MT-TF_with_pairs.tsv
+b	627	G	244	193	637	MT-TF_with_pairs.tsv
+b	626	G	231	193	638	MT-TF_with_pairs.tsv
+b	625	G	218	193	639	MT-TF_with_pairs.tsv
+b	624	C	216	207		MT-TF_with_pairs.tsv
+b	623	A	225	217		MT-TF_with_pairs.tsv
+b	622	G	220	230		MT-TF_with_pairs.tsv
+b	621	A	206	225		MT-TF_with_pairs.tsv
+b	620	T	200	238	604	MT-TF_with_pairs.tsv
+b	619	T	200	253	605	MT-TF_with_pairs.tsv
+b	618	T	200	268	606	MT-TF_with_pairs.tsv
+b	617	G	200	283	607	MT-TF_with_pairs.tsv
+b	616	T	200	298	608	MT-TF_with_pairs.tsv
+b	615	A	208	308		MT-TF_with_pairs.tsv
+b	614	A	208	323		MT-TF_with_pairs.tsv
+b	613	A	200	334		MT-TF_with_pairs.tsv
+b	612	A	187.5	336		MT-TF_with_pairs.tsv
+b	611	G	175	334		MT-TF_with_pairs.tsv
+b	610	T	167	323		MT-TF_with_pairs.tsv
+b	609	C	167	308		MT-TF_with_pairs.tsv
+b	608	A	175	298	616	MT-TF_with_pairs.tsv
+b	607	C	175	283	617	MT-TF_with_pairs.tsv
+b	606	A	175	268	618	MT-TF_with_pairs.tsv
+b	605	T	175	253	619	MT-TF_with_pairs.tsv
+b	604	A	175	238	620	MT-TF_with_pairs.tsv
+b	603	A	163	225		MT-TF_with_pairs.tsv
+b	602	C	152	215	586	MT-TF_with_pairs.tsv
+b	601	G	139	215	587	MT-TF_with_pairs.tsv
+b	600	A	126	215	588	MT-TF_with_pairs.tsv
+b	599	A	113	215	589	MT-TF_with_pairs.tsv
+b	598	A	103	223		MT-TF_with_pairs.tsv
+b	597	C	91	229		MT-TF_with_pairs.tsv
+b	596	T	79	227		MT-TF_with_pairs.tsv
+b	595	C	68	218		MT-TF_with_pairs.tsv
+b	594	C	62	203.5		MT-TF_with_pairs.tsv
+b	593	T	68	189		MT-TF_with_pairs.tsv
+b	592	C	79	180		MT-TF_with_pairs.tsv
+b	591	C	91	178		MT-TF_with_pairs.tsv
+b	590	A	103	184		MT-TF_with_pairs.tsv
+b	589	T	113	192	599	MT-TF_with_pairs.tsv
+b	588	T	126	192	600	MT-TF_with_pairs.tsv
+b	587	C	139	192	601	MT-TF_with_pairs.tsv
+b	586	G	152	192	602	MT-TF_with_pairs.tsv
+b	585	A	163	183		MT-TF_with_pairs.tsv
+b	584	T	173	173		MT-TF_with_pairs.tsv
+b	583	G	180	160	640	MT-TF_with_pairs.tsv
+b	582	T	180	145	641	MT-TF_with_pairs.tsv
+b	581	A	180	130	642	MT-TF_with_pairs.tsv
+b	580	T	180	115	643	MT-TF_with_pairs.tsv
+b	579	T	180	100	644	MT-TF_with_pairs.tsv
+b	578	T	180	85	645	MT-TF_with_pairs.tsv
+b	577	G	180	70	646	MT-TF_with_pairs.tsv
+b		A	205	10		MT-TG_with_pairs.tsv
+b		C	205	25		MT-TG_with_pairs.tsv
+b		C	205	40		MT-TG_with_pairs.tsv
+b	10058	A	205	55		MT-TG_with_pairs.tsv
+b	10057	T	205	70	9991	MT-TG_with_pairs.tsv
+b	10056	G	205	85	9992	MT-TG_with_pairs.tsv
+b	10055	A	205	100	9993	MT-TG_with_pairs.tsv
+b	10054	G	205	115	9994	MT-TG_with_pairs.tsv
+b	10053	A	205	130	9995	MT-TG_with_pairs.tsv
+b	10052	A	205	145	9996	MT-TG_with_pairs.tsv
+b	10051	A	205	160	9997	MT-TG_with_pairs.tsv
+b	10050	A	220	170	10035	MT-TG_with_pairs.tsv
+b	10049	A	233	170	10036	MT-TG_with_pairs.tsv
+b	10048	A	246	170	10037	MT-TG_with_pairs.tsv
+b	10047	C	259	170	10038	MT-TG_with_pairs.tsv
+b	10046	T	272	170	10039	MT-TG_with_pairs.tsv
+b	10045	T	283	163		MT-TG_with_pairs.tsv
+b	10044	A	296	163		MT-TG_with_pairs.tsv
+b	10043	C	308	175		MT-TG_with_pairs.tsv
+b	10042	A	308	190		MT-TG_with_pairs.tsv
+b	10041	A	296	200		MT-TG_with_pairs.tsv
+b	10040	C	283	200		MT-TG_with_pairs.tsv
+b	10039	A	272	193	10046	MT-TG_with_pairs.tsv
+b	10038	G	259	193	10047	MT-TG_with_pairs.tsv
+b	10037	T	246	193	10048	MT-TG_with_pairs.tsv
+b	10036	T	233	193	10049	MT-TG_with_pairs.tsv
+b	10035	T	220	193	10050	MT-TG_with_pairs.tsv
+b	10034	T	220	205		MT-TG_with_pairs.tsv
+b	10033	G	226	215		MT-TG_with_pairs.tsv
+b	10032	A	218	225		MT-TG_with_pairs.tsv
+b	10031	T	206	228		MT-TG_with_pairs.tsv
+b	10030	C	200	238	10014	MT-TG_with_pairs.tsv
+b	10029	A	200	253	10015	MT-TG_with_pairs.tsv
+b	10028	A	200	268	10016	MT-TG_with_pairs.tsv
+b	10027	T	200	283	10017	MT-TG_with_pairs.tsv
+b	10026	T	200	298	10018	MT-TG_with_pairs.tsv
+b	10025	A	208	308		MT-TG_with_pairs.tsv
+b	10024	A	208	323		MT-TG_with_pairs.tsv
+b	10023	C	200	334		MT-TG_with_pairs.tsv
+b	10022	C	187.5	336		MT-TG_with_pairs.tsv
+b	10021	T	175	334		MT-TG_with_pairs.tsv
+b	10020	T	167	323		MT-TG_with_pairs.tsv
+b	10019	C	167	308		MT-TG_with_pairs.tsv
+b	10018	A	175	298	10026	MT-TG_with_pairs.tsv
+b	10017	A	175	283	10027	MT-TG_with_pairs.tsv
+b	10016	T	175	268	10028	MT-TG_with_pairs.tsv
+b	10015	T	175	253	10029	MT-TG_with_pairs.tsv
+b	10014	G	175	238	10030	MT-TG_with_pairs.tsv
+b	10013	C	163	228		MT-TG_with_pairs.tsv
+b	10012	C	152	215	10000	MT-TG_with_pairs.tsv
+b	10011	A	139	215	10001	MT-TG_with_pairs.tsv
+b	10010	T	126	215	10002	MT-TG_with_pairs.tsv
+b	10009	G	113	215	10003	MT-TG_with_pairs.tsv
+b	10008	A	100	222		MT-TG_with_pairs.tsv
+b	10007	T	87	217		MT-TG_with_pairs.tsv
+b	10006	A	80	203.5		MT-TG_with_pairs.tsv
+b	10005	A	87	190		MT-TG_with_pairs.tsv
+b	10004	A	100	185		MT-TG_with_pairs.tsv
+b	10003	T	113	192	10009	MT-TG_with_pairs.tsv
+b	10002	A	126	192	10010	MT-TG_with_pairs.tsv
+b	10001	T	139	192	10011	MT-TG_with_pairs.tsv
+b	10000	G	152	192	10012	MT-TG_with_pairs.tsv
+b	9999	A	165	183		MT-TG_with_pairs.tsv
+b	9998	T	173	173		MT-TG_with_pairs.tsv
+b	9997	T	180	160	10051	MT-TG_with_pairs.tsv
+b	9996	T	180	145	10052	MT-TG_with_pairs.tsv
+b	9995	T	180	130	10053	MT-TG_with_pairs.tsv
+b	9994	C	180	115	10054	MT-TG_with_pairs.tsv
+b	9993	T	180	100	10055	MT-TG_with_pairs.tsv
+b	9992	C	180	85	10056	MT-TG_with_pairs.tsv
+b	9991	A	180	70	10057	MT-TG_with_pairs.tsv
+b		A	205	10		MT-TH_with_pairs.tsv
+b		C	205	25		MT-TH_with_pairs.tsv
+b		C	205	40		MT-TH_with_pairs.tsv
+b	12206	C	205	55		MT-TH_with_pairs.tsv
+b	12205	C	205	70	12138	MT-TH_with_pairs.tsv
+b	12204	A	205	85	12139	MT-TH_with_pairs.tsv
+b	12203	T	205	100	12140	MT-TH_with_pairs.tsv
+b	12202	T	205	115	12141	MT-TH_with_pairs.tsv
+b	12201	T	205	130	12142	MT-TH_with_pairs.tsv
+b	12200	A	205	145	12143	MT-TH_with_pairs.tsv
+b	12199	T	205	160	12144	MT-TH_with_pairs.tsv
+b	12198	T	220	170	12182	MT-TH_with_pairs.tsv
+b	12197	C	233	170	12183	MT-TH_with_pairs.tsv
+b	12196	C	246	170	12184	MT-TH_with_pairs.tsv
+b	12195	C	259	170	12185	MT-TH_with_pairs.tsv
+b	12194	C	272	170	12186	MT-TH_with_pairs.tsv
+b	12193	A	282	163		MT-TH_with_pairs.tsv
+b	12192	G	294	160		MT-TH_with_pairs.tsv
+b	12191	C	306	168		MT-TH_with_pairs.tsv
+b	12190	A	312	181.5		MT-TH_with_pairs.tsv
+b	12189	T	306	195		MT-TH_with_pairs.tsv
+b	12188	T	294	203		MT-TH_with_pairs.tsv
+b	12187	C	282	200		MT-TH_with_pairs.tsv
+b	12186	G	272	193	12194	MT-TH_with_pairs.tsv
+b	12185	G	259	193	12195	MT-TH_with_pairs.tsv
+b	12184	A	246	193	12196	MT-TH_with_pairs.tsv
+b	12183	G	233	193	12197	MT-TH_with_pairs.tsv
+b	12182	A	220	193	12198	MT-TH_with_pairs.tsv
+b	12181	C	220	205		MT-TH_with_pairs.tsv
+b	12180	A	226	215		MT-TH_with_pairs.tsv
+b	12179	A	218	225		MT-TH_with_pairs.tsv
+b	12178	C	206	228		MT-TH_with_pairs.tsv
+b	12177	A	200	238	12161	MT-TH_with_pairs.tsv
+b	12176	G	200	253	12162	MT-TH_with_pairs.tsv
+b	12175	T	200	268	12163	MT-TH_with_pairs.tsv
+b	12174	C	200	283	12164	MT-TH_with_pairs.tsv
+b	12173	T	200	298	12165	MT-TH_with_pairs.tsv
+b	12172	A	208	308		MT-TH_with_pairs.tsv
+b	12171	A	208	323		MT-TH_with_pairs.tsv
+b	12170	G	200	334		MT-TH_with_pairs.tsv
+b	12169	T	187.5	336		MT-TH_with_pairs.tsv
+b	12168	G	175	334		MT-TH_with_pairs.tsv
+b	12167	T	167	323		MT-TH_with_pairs.tsv
+b	12166	T	167	308		MT-TH_with_pairs.tsv
+b	12165	A	175	298	12173	MT-TH_with_pairs.tsv
+b	12164	G	175	283	12174	MT-TH_with_pairs.tsv
+b	12163	A	175	268	12175	MT-TH_with_pairs.tsv
+b	12162	C	175	253	12176	MT-TH_with_pairs.tsv
+b	12161	T	175	238	12177	MT-TH_with_pairs.tsv
+b	12160	A	163	228		MT-TH_with_pairs.tsv
+b	12159	C	152	215	12147	MT-TH_with_pairs.tsv
+b	12158	A	139	215	12148	MT-TH_with_pairs.tsv
+b	12157	A	126	215	12149	MT-TH_with_pairs.tsv
+b	12156	A	113	215	12150	MT-TH_with_pairs.tsv
+b	12155	A	100	222		MT-TH_with_pairs.tsv
+b	12154	C	87	217		MT-TH_with_pairs.tsv
+b	12153	C	80	203.5		MT-TH_with_pairs.tsv
+b	12152	A	87	190		MT-TH_with_pairs.tsv
+b	12151	A	100	185		MT-TH_with_pairs.tsv
+b	12150	T	113	192	12156	MT-TH_with_pairs.tsv
+b	12149	T	126	192	12157	MT-TH_with_pairs.tsv
+b	12148	T	139	192	12158	MT-TH_with_pairs.tsv
+b	12147	G	152	192	12159	MT-TH_with_pairs.tsv
+b	12146	A	165	183		MT-TH_with_pairs.tsv
+b	12145	T	173	173		MT-TH_with_pairs.tsv
+b	12144	A	180	160	12199	MT-TH_with_pairs.tsv
+b	12143	T	180	145	12200	MT-TH_with_pairs.tsv
+b	12142	A	180	130	12201	MT-TH_with_pairs.tsv
+b	12141	A	180	115	12202	MT-TH_with_pairs.tsv
+b	12140	A	180	100	12203	MT-TH_with_pairs.tsv
+b	12139	T	180	85	12204	MT-TH_with_pairs.tsv
+b	12138	G	180	70	12205	MT-TH_with_pairs.tsv
+b		A	205	10		MT-TI_with_pairs.tsv
+b		C	205	25		MT-TI_with_pairs.tsv
+b		C	205	40		MT-TI_with_pairs.tsv
+b	4331	A	205	55		MT-TI_with_pairs.tsv
+b	4330	T	205	70	4263	MT-TI_with_pairs.tsv
+b	4329	C	205	85	4264	MT-TI_with_pairs.tsv
+b	4328	T	205	100	4265	MT-TI_with_pairs.tsv
+b	4327	T	205	115	4266	MT-TI_with_pairs.tsv
+b	4326	T	205	130	4267	MT-TI_with_pairs.tsv
+b	4325	A	205	145	4268	MT-TI_with_pairs.tsv
+b	4324	T	205	160	4269	MT-TI_with_pairs.tsv
+b	4323	T	218	170	4307	MT-TI_with_pairs.tsv
+b	4322	C	231	170	4308	MT-TI_with_pairs.tsv
+b	4321	C	244	170	4309	MT-TI_with_pairs.tsv
+b	4320	C	257	170	4310	MT-TI_with_pairs.tsv
+b	4319	C	270	170	4311	MT-TI_with_pairs.tsv
+b	4318	C	282	163		MT-TI_with_pairs.tsv
+b	4317	A	294	160		MT-TI_with_pairs.tsv
+b	4316	A	306	168		MT-TI_with_pairs.tsv
+b	4315	A	312	181.5		MT-TI_with_pairs.tsv
+b	4314	T	306	195		MT-TI_with_pairs.tsv
+b	4313	T	294	203		MT-TI_with_pairs.tsv
+b	4312	C	282	200		MT-TI_with_pairs.tsv
+b	4311	G	270	193	4319	MT-TI_with_pairs.tsv
+b	4310	A	257	193	4320	MT-TI_with_pairs.tsv
+b	4309	G	244	193	4321	MT-TI_with_pairs.tsv
+b	4308	G	231	193	4322	MT-TI_with_pairs.tsv
+b	4307	A	218	193	4323	MT-TI_with_pairs.tsv
+b	4306	T	220	204		MT-TI_with_pairs.tsv
+b	4305	A	226	210		MT-TI_with_pairs.tsv
+b	4304	A	223	220		MT-TI_with_pairs.tsv
+b	4303	T	215	225		MT-TI_with_pairs.tsv
+b	4302	A	206	228		MT-TI_with_pairs.tsv
+b	4301	A	200	238	4285	MT-TI_with_pairs.tsv
+b	4300	A	200	253	4286	MT-TI_with_pairs.tsv
+b	4299	T	200	268	4287	MT-TI_with_pairs.tsv
+b	4298	G	200	283	4288	MT-TI_with_pairs.tsv
+b	4297	A	200	298	4289	MT-TI_with_pairs.tsv
+b	4296	G	208	308		MT-TI_with_pairs.tsv
+b	4295	A	208	323		MT-TI_with_pairs.tsv
+b	4294	T	200	334		MT-TI_with_pairs.tsv
+b	4293	A	187.5	336		MT-TI_with_pairs.tsv
+b	4292	G	175	334		MT-TI_with_pairs.tsv
+b	4291	T	167	323		MT-TI_with_pairs.tsv
+b	4290	T	167	308		MT-TI_with_pairs.tsv
+b	4289	T	175	298	4297	MT-TI_with_pairs.tsv
+b	4288	C	175	283	4298	MT-TI_with_pairs.tsv
+b	4287	A	175	268	4299	MT-TI_with_pairs.tsv
+b	4286	T	175	253	4300	MT-TI_with_pairs.tsv
+b	4285	T	175	238	4301	MT-TI_with_pairs.tsv
+b	4284	G	163	228		MT-TI_with_pairs.tsv
+b	4283	A	152	215	4272	MT-TI_with_pairs.tsv
+b	4282	G	139	215	4273	MT-TI_with_pairs.tsv
+b	4281	A	126	215	4274	MT-TI_with_pairs.tsv
+b	4280	A	113	222		MT-TI_with_pairs.tsv
+b	4279	A	100	222		MT-TI_with_pairs.tsv
+b	4278	A	87	210		MT-TI_with_pairs.tsv
+b	4277	T	87	194.5		MT-TI_with_pairs.tsv
+b	4276	A	100	185		MT-TI_with_pairs.tsv
+b	4275	G	113	185		MT-TI_with_pairs.tsv
+b	4274	T	126	192	4281	MT-TI_with_pairs.tsv
+b	4273	C	139	192	4282	MT-TI_with_pairs.tsv
+b	4272	T	152	192	4283	MT-TI_with_pairs.tsv
+b	4271	G	163	183		MT-TI_with_pairs.tsv
+b	4270	T	173	173		MT-TI_with_pairs.tsv
+b	4269	A	180	160	4324	MT-TI_with_pairs.tsv
+b	4268	T	180	145	4325	MT-TI_with_pairs.tsv
+b	4267	A	180	130	4326	MT-TI_with_pairs.tsv
+b	4266	A	180	115	4327	MT-TI_with_pairs.tsv
+b	4265	A	180	100	4328	MT-TI_with_pairs.tsv
+b	4264	G	180	85	4329	MT-TI_with_pairs.tsv
+b	4263	A	180	70	4330	MT-TI_with_pairs.tsv
+b		A	205	10		MT-TK_with_pairs.tsv
+b		C	205	25		MT-TK_with_pairs.tsv
+b		C	205	40		MT-TK_with_pairs.tsv
+b	8364	A	205	55		MT-TK_with_pairs.tsv
+b	8363	G	205	70	8295	MT-TK_with_pairs.tsv
+b	8362	T	205	85	8296	MT-TK_with_pairs.tsv
+b	8361	G	205	100	8297	MT-TK_with_pairs.tsv
+b	8360	A	205	115	8298	MT-TK_with_pairs.tsv
+b	8359	C	205	130	8299	MT-TK_with_pairs.tsv
+b	8358	A	205	145	8300	MT-TK_with_pairs.tsv
+b	8357	T	205	160	8301	MT-TK_with_pairs.tsv
+b	8356	T	218	170	8338	MT-TK_with_pairs.tsv
+b	8355	T	231	170	8339	MT-TK_with_pairs.tsv
+b	8354	C	244	170	8340	MT-TK_with_pairs.tsv
+b	8353	T	257	170	8341	MT-TK_with_pairs.tsv
+b	8352	C	270	170	8342	MT-TK_with_pairs.tsv
+b	8351	C	282	160		MT-TK_with_pairs.tsv
+b	8350	A	294	157		MT-TK_with_pairs.tsv
+b	8349	C	306	160		MT-TK_with_pairs.tsv
+b	8348	A	316	168		MT-TK_with_pairs.tsv
+b	8347	A	321	181.5		MT-TK_with_pairs.tsv
+b	8346	C	316	195		MT-TK_with_pairs.tsv
+b	8345	C	306	203		MT-TK_with_pairs.tsv
+b	8344	A	294	206		MT-TK_with_pairs.tsv
+b	8343	A	282	203		MT-TK_with_pairs.tsv
+b	8342	G	270	193	8352	MT-TK_with_pairs.tsv
+b	8341	A	257	193	8353	MT-TK_with_pairs.tsv
+b	8340	G	244	193	8354	MT-TK_with_pairs.tsv
+b	8339	A	231	193	8355	MT-TK_with_pairs.tsv
+b	8338	A	218	193	8356	MT-TK_with_pairs.tsv
+b	8337	T	220	205		MT-TK_with_pairs.tsv
+b	8336	T	228	214		MT-TK_with_pairs.tsv
+b	8335	A	228	225		MT-TK_with_pairs.tsv
+b	8334	G	218	230		MT-TK_with_pairs.tsv
+b	8333	A	206	228		MT-TK_with_pairs.tsv
+b	8332	A	200	238	8316	MT-TK_with_pairs.tsv
+b	8331	A	200	253	8317	MT-TK_with_pairs.tsv
+b	8330	T	200	268	8318	MT-TK_with_pairs.tsv
+b	8329	T	200	283	8319	MT-TK_with_pairs.tsv
+b	8328	G	200	298	8320	MT-TK_with_pairs.tsv
+b	8327	A	208	308		MT-TK_with_pairs.tsv
+b	8326	A	208	323		MT-TK_with_pairs.tsv
+b	8325	T	200	334		MT-TK_with_pairs.tsv
+b	8324	T	187.5	336		MT-TK_with_pairs.tsv
+b	8323	T	175	334		MT-TK_with_pairs.tsv
+b	8322	T	167	323		MT-TK_with_pairs.tsv
+b	8321	C	167	308		MT-TK_with_pairs.tsv
+b	8320	C	175	298	8328	MT-TK_with_pairs.tsv
+b	8319	A	175	283	8329	MT-TK_with_pairs.tsv
+b	8318	A	175	268	8330	MT-TK_with_pairs.tsv
+b	8317	T	175	253	8331	MT-TK_with_pairs.tsv
+b	8316	T	175	238	8332	MT-TK_with_pairs.tsv
+b	8315	A	163	228		MT-TK_with_pairs.tsv
+b	8314	C	152	215	8304	MT-TK_with_pairs.tsv
+b	8313	G	139	215	8305	MT-TK_with_pairs.tsv
+b	8312	A	126	215	8306	MT-TK_with_pairs.tsv
+b	8311	T	113	215	8307	MT-TK_with_pairs.tsv
+b	8310	T	100	222		MT-TK_with_pairs.tsv
+b	8309	C	90	203.5		MT-TK_with_pairs.tsv
+b	8308	A	100	185		MT-TK_with_pairs.tsv
+b	8307	A	113	192	8311	MT-TK_with_pairs.tsv
+b	8306	T	126	192	8312	MT-TK_with_pairs.tsv
+b	8305	C	139	192	8313	MT-TK_with_pairs.tsv
+b	8304	G	152	192	8314	MT-TK_with_pairs.tsv
+b	8303	A	163	183		MT-TK_with_pairs.tsv
+b	8302	A	173	173		MT-TK_with_pairs.tsv
+b	8301	A	180	160	8357	MT-TK_with_pairs.tsv
+b	8300	T	180	145	8358	MT-TK_with_pairs.tsv
+b	8299	G	180	130	8359	MT-TK_with_pairs.tsv
+b	8298	T	180	115	8360	MT-TK_with_pairs.tsv
+b	8297	C	180	100	8361	MT-TK_with_pairs.tsv
+b	8296	A	180	85	8362	MT-TK_with_pairs.tsv
+b	8295	C	180	70	8363	MT-TK_with_pairs.tsv
+b		A	205	10		MT-TL1_with_pairs.tsv
+b		C	205	25		MT-TL1_with_pairs.tsv
+b		C	205	40		MT-TL1_with_pairs.tsv
+b	3304	A	205	55		MT-TL1_with_pairs.tsv
+b	3303	C	205	70	3230	MT-TL1_with_pairs.tsv
+b	3302	A	205	85	3231	MT-TL1_with_pairs.tsv
+b	3301	A	205	100	3232	MT-TL1_with_pairs.tsv
+b	3300	T	205	115	3233	MT-TL1_with_pairs.tsv
+b	3299	T	205	130	3234	MT-TL1_with_pairs.tsv
+b	3298	C	205	145	3235	MT-TL1_with_pairs.tsv
+b	3297	T	205	160	3236	MT-TL1_with_pairs.tsv
+b	3296	T	218	170	3280	MT-TL1_with_pairs.tsv
+b	3295	C	231	170	3281	MT-TL1_with_pairs.tsv
+b	3294	T	244	170	3282	MT-TL1_with_pairs.tsv
+b	3293	C	257	170	3283	MT-TL1_with_pairs.tsv
+b	3292	C	270	170	3284	MT-TL1_with_pairs.tsv
+b	3291	T	282	163		MT-TL1_with_pairs.tsv
+b	3290	T	294	160		MT-TL1_with_pairs.tsv
+b	3289	A	306	168		MT-TL1_with_pairs.tsv
+b	3288	A	312	181.5		MT-TL1_with_pairs.tsv
+b	3287	C	306	195		MT-TL1_with_pairs.tsv
+b	3286	T	294	203		MT-TL1_with_pairs.tsv
+b	3285	T	282	200		MT-TL1_with_pairs.tsv
+b	3284	G	270	193	3292	MT-TL1_with_pairs.tsv
+b	3283	G	257	193	3293	MT-TL1_with_pairs.tsv
+b	3282	A	244	193	3294	MT-TL1_with_pairs.tsv
+b	3281	G	231	193	3295	MT-TL1_with_pairs.tsv
+b	3280	A	218	193	3296	MT-TL1_with_pairs.tsv
+b	3279	C	220	205		MT-TL1_with_pairs.tsv
+b	3278	T	228	214		MT-TL1_with_pairs.tsv
+b	3277	G	230	225		MT-TL1_with_pairs.tsv
+b	3276	A	220	230		MT-TL1_with_pairs.tsv
+b	3275	C	210	228		MT-TL1_with_pairs.tsv
+b	3274	A	200	238	3258	MT-TL1_with_pairs.tsv
+b	3273	T	200	253	3259	MT-TL1_with_pairs.tsv
+b	3272	T	200	268	3260	MT-TL1_with_pairs.tsv
+b	3271	T	200	283	3261	MT-TL1_with_pairs.tsv
+b	3270	C	200	298	3262	MT-TL1_with_pairs.tsv
+b	3269	A	208	308		MT-TL1_with_pairs.tsv
+b	3268	A	208	323		MT-TL1_with_pairs.tsv
+b	3267	A	200	334		MT-TL1_with_pairs.tsv
+b	3266	A	187.5	336		MT-TL1_with_pairs.tsv
+b	3265	T	175	334		MT-TL1_with_pairs.tsv
+b	3264	T	167	323		MT-TL1_with_pairs.tsv
+b	3263	C	167	308		MT-TL1_with_pairs.tsv
+b	3262	A	175	298	3270	MT-TL1_with_pairs.tsv
+b	3261	A	175	283	3271	MT-TL1_with_pairs.tsv
+b	3260	A	175	268	3272	MT-TL1_with_pairs.tsv
+b	3259	A	175	253	3273	MT-TL1_with_pairs.tsv
+b	3258	T	175	238	3274	MT-TL1_with_pairs.tsv
+b	3257	A	163	228		MT-TL1_with_pairs.tsv
+b	3256	C	152	215	3239	MT-TL1_with_pairs.tsv
+b	3255	G	139	215	3240	MT-TL1_with_pairs.tsv
+b	3254	C	126	215	3241	MT-TL1_with_pairs.tsv
+b	3253	T	113	215	3242	MT-TL1_with_pairs.tsv
+b	3252	A	104	224		MT-TL1_with_pairs.tsv
+b	3251	A	92	230		MT-TL1_with_pairs.tsv
+b	3250	T	81	230		MT-TL1_with_pairs.tsv
+b	3249	G	69	222.5		MT-TL1_with_pairs.tsv
+b	3248	G	63	208.5		MT-TL1_with_pairs.tsv
+b	3247	C	63	196		MT-TL1_with_pairs.tsv
+b	3246	C	69	184.5		MT-TL1_with_pairs.tsv
+b	3245	C	81	177		MT-TL1_with_pairs.tsv
+b	3244	G	92	177		MT-TL1_with_pairs.tsv
+b	3243	A	104	183		MT-TL1_with_pairs.tsv
+b	3242	G	113	192	3253	MT-TL1_with_pairs.tsv
+b	3241	A	126	192	3254	MT-TL1_with_pairs.tsv
+b	3240	C	139	192	3255	MT-TL1_with_pairs.tsv
+b	3239	G	152	192	3256	MT-TL1_with_pairs.tsv
+b	3238	G	163	183		MT-TL1_with_pairs.tsv
+b	3237	T	173	173		MT-TL1_with_pairs.tsv
+b	3236	A	180	160	3297	MT-TL1_with_pairs.tsv
+b	3235	G	180	145	3298	MT-TL1_with_pairs.tsv
+b	3234	A	180	130	3299	MT-TL1_with_pairs.tsv
+b	3233	A	180	115	3300	MT-TL1_with_pairs.tsv
+b	3232	T	180	100	3301	MT-TL1_with_pairs.tsv
+b	3231	T	180	85	3302	MT-TL1_with_pairs.tsv
+b	3230	G	180	70	3303	MT-TL1_with_pairs.tsv
+b		A	205	10		MT-TL2_with_pairs.tsv
+b		C	205	25		MT-TL2_with_pairs.tsv
+b		C	205	40		MT-TL2_with_pairs.tsv
+b	12336	A	205	55		MT-TL2_with_pairs.tsv
+b	12335	T	205	70	12266	MT-TL2_with_pairs.tsv
+b	12334	G	205	85	12267	MT-TL2_with_pairs.tsv
+b	12333	A	205	100	12268	MT-TL2_with_pairs.tsv
+b	12332	A	205	115	12269	MT-TL2_with_pairs.tsv
+b	12331	A	205	130	12270	MT-TL2_with_pairs.tsv
+b	12330	A	205	145	12271	MT-TL2_with_pairs.tsv
+b	12329	T	205	160	12272	MT-TL2_with_pairs.tsv
+b	12328	A	218	170	12312	MT-TL2_with_pairs.tsv
+b	12327	A	231	170	12313	MT-TL2_with_pairs.tsv
+b	12326	A	244	170	12314	MT-TL2_with_pairs.tsv
+b	12325	C	257	170	12315	MT-TL2_with_pairs.tsv
+b	12324	C	270	170	12316	MT-TL2_with_pairs.tsv
+b	12323	T	282	163		MT-TL2_with_pairs.tsv
+b	12322	C	294	160		MT-TL2_with_pairs.tsv
+b	12321	A	306	168		MT-TL2_with_pairs.tsv
+b	12320	A	312	181.5		MT-TL2_with_pairs.tsv
+b	12319	C	306	195		MT-TL2_with_pairs.tsv
+b	12318	G	294	203		MT-TL2_with_pairs.tsv
+b	12317	T	282	200		MT-TL2_with_pairs.tsv
+b	12316	G	270	193	12324	MT-TL2_with_pairs.tsv
+b	12315	G	257	193	12325	MT-TL2_with_pairs.tsv
+b	12314	T	244	193	12326	MT-TL2_with_pairs.tsv
+b	12313	T	231	193	12327	MT-TL2_with_pairs.tsv
+b	12312	T	218	193	12328	MT-TL2_with_pairs.tsv
+b	12311	T	220	205		MT-TL2_with_pairs.tsv
+b	12310	A	226	215		MT-TL2_with_pairs.tsv
+b	12309	A	218	225		MT-TL2_with_pairs.tsv
+b	12308	A	206	228		MT-TL2_with_pairs.tsv
+b	12307	A	200	238	12291	MT-TL2_with_pairs.tsv
+b	12306	A	200	253	12292	MT-TL2_with_pairs.tsv
+b	12305	C	200	268	12293	MT-TL2_with_pairs.tsv
+b	12304	C	200	283	12294	MT-TL2_with_pairs.tsv
+b	12303	C	200	298	12295	MT-TL2_with_pairs.tsv
+b	12302	C	208	308		MT-TL2_with_pairs.tsv
+b	12301	G	208	323		MT-TL2_with_pairs.tsv
+b	12300	G	200	334		MT-TL2_with_pairs.tsv
+b	12299	A	187.5	336		MT-TL2_with_pairs.tsv
+b	12298	T	175	334		MT-TL2_with_pairs.tsv
+b	12297	T	167	323		MT-TL2_with_pairs.tsv
+b	12296	C	167	308		MT-TL2_with_pairs.tsv
+b	12295	T	175	298	12303	MT-TL2_with_pairs.tsv
+b	12294	G	175	283	12304	MT-TL2_with_pairs.tsv
+b	12293	G	175	268	12305	MT-TL2_with_pairs.tsv
+b	12292	T	175	253	12306	MT-TL2_with_pairs.tsv
+b	12291	T	175	238	12307	MT-TL2_with_pairs.tsv
+b	12290	A	163	228		MT-TL2_with_pairs.tsv
+b	12289	C	152	215	12275	MT-TL2_with_pairs.tsv
+b	12288	C	139	215	12276	MT-TL2_with_pairs.tsv
+b	12287	T	126	215	12277	MT-TL2_with_pairs.tsv
+b	12286	A	113	215	12278	MT-TL2_with_pairs.tsv
+b	12285	T	101	222		MT-TL2_with_pairs.tsv
+b	12284	C	88	225		MT-TL2_with_pairs.tsv
+b	12283	G	75	219		MT-TL2_with_pairs.tsv
+b	12282	A	67	203.5		MT-TL2_with_pairs.tsv
+b	12281	C	75	188		MT-TL2_with_pairs.tsv
+b	12280	A	88	182		MT-TL2_with_pairs.tsv
+b	12279	A	101	185		MT-TL2_with_pairs.tsv
+b	12278	T	113	192	12286	MT-TL2_with_pairs.tsv
+b	12277	A	126	192	12287	MT-TL2_with_pairs.tsv
+b	12276	G	139	192	12288	MT-TL2_with_pairs.tsv
+b	12275	G	152	192	12289	MT-TL2_with_pairs.tsv
+b	12274	A	163	183		MT-TL2_with_pairs.tsv
+b	12273	A	173	173		MT-TL2_with_pairs.tsv
+b	12272	A	180	160	12329	MT-TL2_with_pairs.tsv
+b	12271	T	180	145	12330	MT-TL2_with_pairs.tsv
+b	12270	T	180	130	12331	MT-TL2_with_pairs.tsv
+b	12269	T	180	115	12332	MT-TL2_with_pairs.tsv
+b	12268	T	180	100	12333	MT-TL2_with_pairs.tsv
+b	12267	C	180	85	12334	MT-TL2_with_pairs.tsv
+b	12266	A	180	70	12335	MT-TL2_with_pairs.tsv
+b		A	205	10		MT-TM_with_pairs.tsv
+b		C	205	25		MT-TM_with_pairs.tsv
+b		C	205	40		MT-TM_with_pairs.tsv
+b	4469	A	205	55		MT-TM_with_pairs.tsv
+b	4468	T	205	70	4402	MT-TM_with_pairs.tsv
+b	4467	C	205	85	4403	MT-TM_with_pairs.tsv
+b	4466	A	205	100	4404	MT-TM_with_pairs.tsv
+b	4465	T	205	115	4405	MT-TM_with_pairs.tsv
+b	4464	G	205	130	4406	MT-TM_with_pairs.tsv
+b	4463	C	205	145	4407	MT-TM_with_pairs.tsv
+b	4462	C	205	160	4408	MT-TM_with_pairs.tsv
+b	4461	C	218	170	4446	MT-TM_with_pairs.tsv
+b	4460	T	231	170	4447	MT-TM_with_pairs.tsv
+b	4459	T	244	170	4448	MT-TM_with_pairs.tsv
+b	4458	C	257	170	4449	MT-TM_with_pairs.tsv
+b	4457	C	270	170	4450	MT-TM_with_pairs.tsv
+b	4456	C	283	163		MT-TM_with_pairs.tsv
+b	4455	A	296	163		MT-TM_with_pairs.tsv
+b	4454	T	308	175		MT-TM_with_pairs.tsv
+b	4453	A	308	190		MT-TM_with_pairs.tsv
+b	4452	T	296	200		MT-TM_with_pairs.tsv
+b	4451	T	283	200		MT-TM_with_pairs.tsv
+b	4450	G	270	193	4457	MT-TM_with_pairs.tsv
+b	4449	G	257	193	4458	MT-TM_with_pairs.tsv
+b	4448	T	244	193	4459	MT-TM_with_pairs.tsv
+b	4447	T	231	193	4460	MT-TM_with_pairs.tsv
+b	4446	G	218	193	4461	MT-TM_with_pairs.tsv
+b	4445	T	220	205		MT-TM_with_pairs.tsv
+b	4444	A	226	215		MT-TM_with_pairs.tsv
+b	4443	A	218	225		MT-TM_with_pairs.tsv
+b	4442	A	206	228		MT-TM_with_pairs.tsv
+b	4441	A	200	238	4425	MT-TM_with_pairs.tsv
+b	4440	G	200	253	4426	MT-TM_with_pairs.tsv
+b	4439	C	200	268	4427	MT-TM_with_pairs.tsv
+b	4438	C	200	283	4428	MT-TM_with_pairs.tsv
+b	4437	C	200	298	4429	MT-TM_with_pairs.tsv
+b	4436	C	208	308		MT-TM_with_pairs.tsv
+b	4435	A	208	323		MT-TM_with_pairs.tsv
+b	4434	T	200	334		MT-TM_with_pairs.tsv
+b	4433	A	187.5	336		MT-TM_with_pairs.tsv
+b	4432	C	175	334		MT-TM_with_pairs.tsv
+b	4431	C	167	323		MT-TM_with_pairs.tsv
+b	4430	C	167	308		MT-TM_with_pairs.tsv
+b	4429	G	175	298	4437	MT-TM_with_pairs.tsv
+b	4428	G	175	283	4438	MT-TM_with_pairs.tsv
+b	4427	G	175	268	4439	MT-TM_with_pairs.tsv
+b	4426	C	175	253	4440	MT-TM_with_pairs.tsv
+b	4425	T	175	238	4441	MT-TM_with_pairs.tsv
+b	4424	A	163	228		MT-TM_with_pairs.tsv
+b	4423	T	152	215	4411	MT-TM_with_pairs.tsv
+b	4422	C	139	215	4412	MT-TM_with_pairs.tsv
+b	4421	G	126	215	4413	MT-TM_with_pairs.tsv
+b	4420	A	113	215	4414	MT-TM_with_pairs.tsv
+b	4419	A	100	222		MT-TM_with_pairs.tsv
+b	4418	T	87	217		MT-TM_with_pairs.tsv
+b	4417	A	80	203.5		MT-TM_with_pairs.tsv
+b	4416	A	87	190		MT-TM_with_pairs.tsv
+b	4415	A	100	185		MT-TM_with_pairs.tsv
+b	4414	T	113	192	4420	MT-TM_with_pairs.tsv
+b	4413	C	126	192	4421	MT-TM_with_pairs.tsv
+b	4412	G	139	192	4422	MT-TM_with_pairs.tsv
+b	4411	A	152	192	4423	MT-TM_with_pairs.tsv
+b	4410	C	163	183		MT-TM_with_pairs.tsv
+b	4409	T	173	173		MT-TM_with_pairs.tsv
+b	4408	G	180	160	4462	MT-TM_with_pairs.tsv
+b	4407	G	180	145	4463	MT-TM_with_pairs.tsv
+b	4406	A	180	130	4464	MT-TM_with_pairs.tsv
+b	4405	A	180	115	4465	MT-TM_with_pairs.tsv
+b	4404	T	180	100	4466	MT-TM_with_pairs.tsv
+b	4403	G	180	85	4467	MT-TM_with_pairs.tsv
+b	4402	A	180	70	4468	MT-TM_with_pairs.tsv
+b		A	205	10		MT-TN_with_pairs.tsv
+b		C	205	25		MT-TN_with_pairs.tsv
+b		C	205	40		MT-TN_with_pairs.tsv
+b	5657	G	205	55		MT-TN_with_pairs.tsv
+b	5658	A	205	70	5729	MT-TN_with_pairs.tsv
+b	5659	T	205	85	5728	MT-TN_with_pairs.tsv
+b	5660	C	205	100	5727	MT-TN_with_pairs.tsv
+b	5661	T	205	115	5726	MT-TN_with_pairs.tsv
+b	5662	G	205	130	5725	MT-TN_with_pairs.tsv
+b	5663	G	205	145	5724	MT-TN_with_pairs.tsv
+b	5664	T	205	160	5723	MT-TN_with_pairs.tsv
+b	5665	T	218	170	5681	MT-TN_with_pairs.tsv
+b	5666	A	231	170	5680	MT-TN_with_pairs.tsv
+b	5667	C	244	170	5679	MT-TN_with_pairs.tsv
+b	5668	C	257	170	5678	MT-TN_with_pairs.tsv
+b	5669	C	270	170	5677	MT-TN_with_pairs.tsv
+b	5670	T	282	163		MT-TN_with_pairs.tsv
+b	5671	G	294	160		MT-TN_with_pairs.tsv
+b	5672	A	306	168		MT-TN_with_pairs.tsv
+b	5673	A	312	181.5		MT-TN_with_pairs.tsv
+b	5674	T	306	195		MT-TN_with_pairs.tsv
+b	5675	T	294	203		MT-TN_with_pairs.tsv
+b	5676	T	282	200		MT-TN_with_pairs.tsv
+b	5677	G	270	193	5669	MT-TN_with_pairs.tsv
+b	5678	G	257	193	5668	MT-TN_with_pairs.tsv
+b	5679	G	244	193	5667	MT-TN_with_pairs.tsv
+b	5680	T	231	193	5666	MT-TN_with_pairs.tsv
+b	5681	G	218	193	5665	MT-TN_with_pairs.tsv
+b	5682	T	220	204		MT-TN_with_pairs.tsv
+b	5683	T	226	210		MT-TN_with_pairs.tsv
+b	5684	T	223	220		MT-TN_with_pairs.tsv
+b	5685	G	215	225		MT-TN_with_pairs.tsv
+b	5686	T	206	228		MT-TN_with_pairs.tsv
+b	5687	G	200	238	5703	MT-TN_with_pairs.tsv
+b	5688	A	200	253	5702	MT-TN_with_pairs.tsv
+b	5689	A	200	268	5701	MT-TN_with_pairs.tsv
+b	5690	T	200	283	5700	MT-TN_with_pairs.tsv
+b	5691	C	200	298	5699	MT-TN_with_pairs.tsv
+b	5692	A	208	308		MT-TN_with_pairs.tsv
+b	5693	A	208	323		MT-TN_with_pairs.tsv
+b	5694	T	200	334		MT-TN_with_pairs.tsv
+b	5695	T	187.5	336		MT-TN_with_pairs.tsv
+b	5696	G	175	334		MT-TN_with_pairs.tsv
+b	5697	T	167	323		MT-TN_with_pairs.tsv
+b	5698	C	167	308		MT-TN_with_pairs.tsv
+b	5699	G	175	298	5691	MT-TN_with_pairs.tsv
+b	5700	A	175	283	5690	MT-TN_with_pairs.tsv
+b	5701	T	175	268	5689	MT-TN_with_pairs.tsv
+b	5702	T	175	253	5688	MT-TN_with_pairs.tsv
+b	5703	C	175	238	5687	MT-TN_with_pairs.tsv
+b	5704	G	163	228		MT-TN_with_pairs.tsv
+b	5705	T	152	215	5720	MT-TN_with_pairs.tsv
+b	5706	G	139	215	5719	MT-TN_with_pairs.tsv
+b	5707	G	126	215	5718	MT-TN_with_pairs.tsv
+b	5708	G	117	224		MT-TN_with_pairs.tsv
+b	5709	A	105	230		MT-TN_with_pairs.tsv
+b	5710	T	94	230		MT-TN_with_pairs.tsv
+b	5711	T	82	222.5		MT-TN_with_pairs.tsv
+b	5712	A	76	208.5		MT-TN_with_pairs.tsv
+b	5713	G	76	196		MT-TN_with_pairs.tsv
+b	5714	T	82	184.5		MT-TN_with_pairs.tsv
+b	5715	T	94	177		MT-TN_with_pairs.tsv
+b	5716	G	105	177		MT-TN_with_pairs.tsv
+b	5717	A	117	183		MT-TN_with_pairs.tsv
+b	5718	C	126	192	5707	MT-TN_with_pairs.tsv
+b	5719	C	139	192	5706	MT-TN_with_pairs.tsv
+b	5720	G	152	192	5705	MT-TN_with_pairs.tsv
+b	5721	A	163	183		MT-TN_with_pairs.tsv
+b	5722	A	173	173		MT-TN_with_pairs.tsv
+b	5723	G	180	160	5664	MT-TN_with_pairs.tsv
+b	5724	T	180	145	5663	MT-TN_with_pairs.tsv
+b	5725	T	180	130	5662	MT-TN_with_pairs.tsv
+b	5726	A	180	115	5661	MT-TN_with_pairs.tsv
+b	5727	G	180	100	5660	MT-TN_with_pairs.tsv
+b	5728	A	180	85	5659	MT-TN_with_pairs.tsv
+b	5729	T	180	70	5658	MT-TN_with_pairs.tsv
+b		A	205	10		MT-TP_with_pairs.tsv
+b		C	205	25		MT-TP_with_pairs.tsv
+b		C	205	40		MT-TP_with_pairs.tsv
+b	15956	A	205	55		MT-TP_with_pairs.tsv
+b	15957	G	205	70	16023	MT-TP_with_pairs.tsv
+b	15958	T	205	85	16022	MT-TP_with_pairs.tsv
+b	15959	C	205	100	16021	MT-TP_with_pairs.tsv
+b	15960	T	205	115	16020	MT-TP_with_pairs.tsv
+b	15961	C	205	130	16019	MT-TP_with_pairs.tsv
+b	15962	T	205	145	16018	MT-TP_with_pairs.tsv
+b	15963	T	205	160	16017	MT-TP_with_pairs.tsv
+b	15964	T	218	170	15978	MT-TP_with_pairs.tsv
+b	15965	T	231	170	15977	MT-TP_with_pairs.tsv
+b	15966	T	244	170	15976	MT-TP_with_pairs.tsv
+b	15967	C	257	170	15975	MT-TP_with_pairs.tsv
+b	15968	A	269	163		MT-TP_with_pairs.tsv
+b	15969	G	281	160		MT-TP_with_pairs.tsv
+b	15970	A	293	168		MT-TP_with_pairs.tsv
+b	15971	A	299	181.5		MT-TP_with_pairs.tsv
+b	15972	A	293	195		MT-TP_with_pairs.tsv
+b	15973	T	281	203		MT-TP_with_pairs.tsv
+b	15974	T	269	200		MT-TP_with_pairs.tsv
+b	15975	G	257	193	15967	MT-TP_with_pairs.tsv
+b	15976	A	244	193	15966	MT-TP_with_pairs.tsv
+b	15977	G	231	193	15965	MT-TP_with_pairs.tsv
+b	15978	G	218	193	15964	MT-TP_with_pairs.tsv
+b	15979	T	220	205		MT-TP_with_pairs.tsv
+b	15980	G	226	215		MT-TP_with_pairs.tsv
+b	15981	G	218	225		MT-TP_with_pairs.tsv
+b	15982	T	206	228		MT-TP_with_pairs.tsv
+b	15983	A	200	238	15999	MT-TP_with_pairs.tsv
+b	15984	A	200	253	15998	MT-TP_with_pairs.tsv
+b	15985	T	200	268	15997	MT-TP_with_pairs.tsv
+b	15986	C	200	283	15996	MT-TP_with_pairs.tsv
+b	15987	G	200	298	15995	MT-TP_with_pairs.tsv
+b	15988	T	208	308		MT-TP_with_pairs.tsv
+b	15989	G	208	323		MT-TP_with_pairs.tsv
+b	15990	G	200	334		MT-TP_with_pairs.tsv
+b	15991	G	187.5	336		MT-TP_with_pairs.tsv
+b	15992	T	175	334		MT-TP_with_pairs.tsv
+b	15993	T	167	323		MT-TP_with_pairs.tsv
+b	15994	T	167	308		MT-TP_with_pairs.tsv
+b	15995	C	175	298	15987	MT-TP_with_pairs.tsv
+b	15996	G	175	283	15986	MT-TP_with_pairs.tsv
+b	15997	A	175	268	15985	MT-TP_with_pairs.tsv
+b	15998	T	175	253	15984	MT-TP_with_pairs.tsv
+b	15999	T	175	238	15983	MT-TP_with_pairs.tsv
+b	16000	C	163	228		MT-TP_with_pairs.tsv
+b	16001	T	152	215	16014	MT-TP_with_pairs.tsv
+b	16002	A	139	215	16013	MT-TP_with_pairs.tsv
+b	16003	A	126	215	16012	MT-TP_with_pairs.tsv
+b	16004	G	113	215	16011	MT-TP_with_pairs.tsv
+b	16005	A	100	222		MT-TP_with_pairs.tsv
+b	16006	T	87	222		MT-TP_with_pairs.tsv
+b	16007	T	74	210		MT-TP_with_pairs.tsv
+b	16008	A	74	194.5		MT-TP_with_pairs.tsv
+b	16009	A	87	185		MT-TP_with_pairs.tsv
+b	16010	A	100	185		MT-TP_with_pairs.tsv
+b	16011	T	113	192	16004	MT-TP_with_pairs.tsv
+b	16012	T	126	192	16003	MT-TP_with_pairs.tsv
+b	16013	T	139	192	16002	MT-TP_with_pairs.tsv
+b	16014	G	152	192	16001	MT-TP_with_pairs.tsv
+b	16015	A	163	183		MT-TP_with_pairs.tsv
+b	16016	T	173	173		MT-TP_with_pairs.tsv
+b	16017	A	180	160	15963	MT-TP_with_pairs.tsv
+b	16018	A	180	145	15962	MT-TP_with_pairs.tsv
+b	16019	G	180	130	15961	MT-TP_with_pairs.tsv
+b	16020	A	180	115	15960	MT-TP_with_pairs.tsv
+b	16021	G	180	100	15959	MT-TP_with_pairs.tsv
+b	16022	A	180	85	15958	MT-TP_with_pairs.tsv
+b	16023	C	180	70	15957	MT-TP_with_pairs.tsv
+b		A	205	10		MT-TQ_with_pairs.tsv
+b		C	205	25		MT-TQ_with_pairs.tsv
+b		C	205	40		MT-TQ_with_pairs.tsv
+b	4329	G	205	55		MT-TQ_with_pairs.tsv
+b	4330	A	205	70	4400	MT-TQ_with_pairs.tsv
+b	4331	T	205	85	4399	MT-TQ_with_pairs.tsv
+b	4332	C	205	100	4398	MT-TQ_with_pairs.tsv
+b	4333	C	205	115	4397	MT-TQ_with_pairs.tsv
+b	4334	T	205	130	4396	MT-TQ_with_pairs.tsv
+b	4335	G	205	145	4395	MT-TQ_with_pairs.tsv
+b	4336	A	205	160	4394	MT-TQ_with_pairs.tsv
+b	4337	T	220	170	4353	MT-TQ_with_pairs.tsv
+b	4338	A	233	170	4352	MT-TQ_with_pairs.tsv
+b	4339	C	246	170	4351	MT-TQ_with_pairs.tsv
+b	4340	T	259	170	4350	MT-TQ_with_pairs.tsv
+b	4341	C	272	170	4349	MT-TQ_with_pairs.tsv
+b	4342	T	282	165		MT-TQ_with_pairs.tsv
+b	4343	T	294	162		MT-TQ_with_pairs.tsv
+b	4344	A	306	168		MT-TQ_with_pairs.tsv
+b	4345	G	312	181.5		MT-TQ_with_pairs.tsv
+b	4346	C	306	195		MT-TQ_with_pairs.tsv
+b	4347	T	294	201		MT-TQ_with_pairs.tsv
+b	4348	T	282	198		MT-TQ_with_pairs.tsv
+b	4349	G	272	193	4341	MT-TQ_with_pairs.tsv
+b	4350	G	259	193	4340	MT-TQ_with_pairs.tsv
+b	4351	G	246	193	4339	MT-TQ_with_pairs.tsv
+b	4352	T	233	193	4338	MT-TQ_with_pairs.tsv
+b	4353	A	220	193	4337	MT-TQ_with_pairs.tsv
+b	4354	G	220	205		MT-TQ_with_pairs.tsv
+b	4355	G	226	215		MT-TQ_with_pairs.tsv
+b	4356	G	218	225		MT-TQ_with_pairs.tsv
+b	4357	A	206	228		MT-TQ_with_pairs.tsv
+b	4358	C	200	238	4374	MT-TQ_with_pairs.tsv
+b	4359	T	200	253	4373	MT-TQ_with_pairs.tsv
+b	4360	C	200	268	4372	MT-TQ_with_pairs.tsv
+b	4361	T	200	283	4371	MT-TQ_with_pairs.tsv
+b	4362	T	200	298	4370	MT-TQ_with_pairs.tsv
+b	4363	A	208	308		MT-TQ_with_pairs.tsv
+b	4364	G	208	323		MT-TQ_with_pairs.tsv
+b	4365	G	200	334		MT-TQ_with_pairs.tsv
+b	4366	T	187.5	336		MT-TQ_with_pairs.tsv
+b	4367	T	175	334		MT-TQ_with_pairs.tsv
+b	4368	T	167	323		MT-TQ_with_pairs.tsv
+b	4369	T	167	308		MT-TQ_with_pairs.tsv
+b	4370	A	175	298	4362	MT-TQ_with_pairs.tsv
+b	4371	A	175	283	4361	MT-TQ_with_pairs.tsv
+b	4372	G	175	268	4360	MT-TQ_with_pairs.tsv
+b	4373	A	175	253	4359	MT-TQ_with_pairs.tsv
+b	4374	G	175	238	4358	MT-TQ_with_pairs.tsv
+b	4375	G	163	228		MT-TQ_with_pairs.tsv
+b	4376	C	152	215	4391	MT-TQ_with_pairs.tsv
+b	4377	A	139	215	4390	MT-TQ_with_pairs.tsv
+b	4378	C	126	215	4389	MT-TQ_with_pairs.tsv
+b	4379	G	113	215	4388	MT-TQ_with_pairs.tsv
+b	4380	G	101	223		MT-TQ_with_pairs.tsv
+b	4381	T	88	228		MT-TQ_with_pairs.tsv
+b	4382	G	75	223		MT-TQ_with_pairs.tsv
+b	4383	G	64	211		MT-TQ_with_pairs.tsv
+b	4384	A	64	196		MT-TQ_with_pairs.tsv
+b	4385	T	75	184		MT-TQ_with_pairs.tsv
+b	4386	A	88	179		MT-TQ_with_pairs.tsv
+b	4387	G	101	184		MT-TQ_with_pairs.tsv
+b	4388	T	113	192	4379	MT-TQ_with_pairs.tsv
+b	4389	G	126	192	4378	MT-TQ_with_pairs.tsv
+b	4390	T	139	192	4377	MT-TQ_with_pairs.tsv
+b	4391	G	152	192	4376	MT-TQ_with_pairs.tsv
+b	4392	G	165	183		MT-TQ_with_pairs.tsv
+b	4393	G	173	173		MT-TQ_with_pairs.tsv
+b	4394	G	180	160	4336	MT-TQ_with_pairs.tsv
+b	4395	T	180	145	4335	MT-TQ_with_pairs.tsv
+b	4396	A	180	130	4334	MT-TQ_with_pairs.tsv
+b	4397	G	180	115	4333	MT-TQ_with_pairs.tsv
+b	4398	G	180	100	4332	MT-TQ_with_pairs.tsv
+b	4399	A	180	85	4331	MT-TQ_with_pairs.tsv
+b	4400	T	180	70	4330	MT-TQ_with_pairs.tsv
+b		A	205	10		MT-TR_with_pairs.tsv
+b		C	205	25		MT-TR_with_pairs.tsv
+b		C	205	40		MT-TR_with_pairs.tsv
+b	10469	A	205	55		MT-TR_with_pairs.tsv
+b	10468	A	205	70	10405	MT-TR_with_pairs.tsv
+b	10467	C	205	85	10406	MT-TR_with_pairs.tsv
+b	10466	C	205	100	10407	MT-TR_with_pairs.tsv
+b	10465	A	205	115	10408	MT-TR_with_pairs.tsv
+b	10464	T	205	130	10409	MT-TR_with_pairs.tsv
+b	10463	T	205	145	10410	MT-TR_with_pairs.tsv
+b	10462	T	205	160	10411	MT-TR_with_pairs.tsv
+b	10461	A	218	170	10449	MT-TR_with_pairs.tsv
+b	10460	T	231	170	10450	MT-TR_with_pairs.tsv
+b	10459	A	244	170	10451	MT-TR_with_pairs.tsv
+b	10458	C	257	170	10452	MT-TR_with_pairs.tsv
+b	10457	T	268	165		MT-TR_with_pairs.tsv
+b	10456	A	281	167		MT-TR_with_pairs.tsv
+b	10455	A	289	181.5		MT-TR_with_pairs.tsv
+b	10454	T	281	196		MT-TR_with_pairs.tsv
+b	10453	A	268	198		MT-TR_with_pairs.tsv
+b	10452	G	257	193	10458	MT-TR_with_pairs.tsv
+b	10451	T	244	193	10459	MT-TR_with_pairs.tsv
+b	10450	A	231	193	10460	MT-TR_with_pairs.tsv
+b	10449	T	218	193	10461	MT-TR_with_pairs.tsv
+b	10448	T	220	205		MT-TR_with_pairs.tsv
+b	10447	A	226	215		MT-TR_with_pairs.tsv
+b	10446	A	218	225		MT-TR_with_pairs.tsv
+b	10445	A	206	228		MT-TR_with_pairs.tsv
+b	10444	T	200	238	10428	MT-TR_with_pairs.tsv
+b	10443	T	200	253	10429	MT-TR_with_pairs.tsv
+b	10442	A	200	268	10430	MT-TR_with_pairs.tsv
+b	10441	C	200	283	10431	MT-TR_with_pairs.tsv
+b	10440	T	200	298	10432	MT-TR_with_pairs.tsv
+b	10439	C	208	308		MT-TR_with_pairs.tsv
+b	10438	A	208	323		MT-TR_with_pairs.tsv
+b	10437	G	200	334		MT-TR_with_pairs.tsv
+b	10436	C	187.5	336		MT-TR_with_pairs.tsv
+b	10435	T	175	334		MT-TR_with_pairs.tsv
+b	10434	T	167	323		MT-TR_with_pairs.tsv
+b	10433	T	167	308		MT-TR_with_pairs.tsv
+b	10432	A	175	298	10440	MT-TR_with_pairs.tsv
+b	10431	G	175	283	10441	MT-TR_with_pairs.tsv
+b	10430	T	175	268	10442	MT-TR_with_pairs.tsv
+b	10429	A	175	253	10443	MT-TR_with_pairs.tsv
+b	10428	A	175	238	10444	MT-TR_with_pairs.tsv
+b	10427	G	163	228		MT-TR_with_pairs.tsv
+b	10426	C	152	215	10414	MT-TR_with_pairs.tsv
+b	10425	A	139	215	10415	MT-TR_with_pairs.tsv
+b	10424	A	126	215	10416	MT-TR_with_pairs.tsv
+b	10423	A	113	215	10417	MT-TR_with_pairs.tsv
+b	10422	A	100	222		MT-TR_with_pairs.tsv
+b	10421	C	87	217		MT-TR_with_pairs.tsv
+b	10420	A	80	203.5		MT-TR_with_pairs.tsv
+b	10419	A	87	190		MT-TR_with_pairs.tsv
+b	10418	A	100	185		MT-TR_with_pairs.tsv
+b	10417	T	113	192	10423	MT-TR_with_pairs.tsv
+b	10416	T	126	192	10424	MT-TR_with_pairs.tsv
+b	10415	T	139	192	10425	MT-TR_with_pairs.tsv
+b	10414	G	152	192	10426	MT-TR_with_pairs.tsv
+b	10413	A	163	183		MT-TR_with_pairs.tsv
+b	10412	T	173	173		MT-TR_with_pairs.tsv
+b	10411	A	180	160	10462	MT-TR_with_pairs.tsv
+b	10410	T	180	145	10463	MT-TR_with_pairs.tsv
+b	10409	A	180	130	10464	MT-TR_with_pairs.tsv
+b	10408	T	180	115	10465	MT-TR_with_pairs.tsv
+b	10407	G	180	100	10466	MT-TR_with_pairs.tsv
+b	10406	G	180	85	10467	MT-TR_with_pairs.tsv
+b	10405	T	180	70	10468	MT-TR_with_pairs.tsv
+b		A	205	10		MT-TS1_with_pairs.tsv
+b		C	205	25		MT-TS1_with_pairs.tsv
+b		C	205	40		MT-TS1_with_pairs.tsv
+b	7446	G	205	55		MT-TS1_with_pairs.tsv
+b	7447	T	205	70	7514	MT-TS1_with_pairs.tsv
+b	7448	T	205	85	7513	MT-TS1_with_pairs.tsv
+b	7449	T	205	100	7512	MT-TS1_with_pairs.tsv
+b	7450	T	205	115	7511	MT-TS1_with_pairs.tsv
+b	7451	T	205	130	7510	MT-TS1_with_pairs.tsv
+b	7452	T	205	145	7509	MT-TS1_with_pairs.tsv
+b	7453	C	205	160	7508	MT-TS1_with_pairs.tsv
+b	7454	C	217	167	7470	MT-TS1_with_pairs.tsv
+b	7455	T	230	167	7469	MT-TS1_with_pairs.tsv
+b	7456	T	243	167	7468	MT-TS1_with_pairs.tsv
+b	7457	C	256	167	7467	MT-TS1_with_pairs.tsv
+b	7458	C	269	167	7466	MT-TS1_with_pairs.tsv
+b	7459	T	279	160		MT-TS1_with_pairs.tsv
+b	7460	T	291	157		MT-TS1_with_pairs.tsv
+b	7461	A	303	165		MT-TS1_with_pairs.tsv
+b	7462	G	309	178.5		MT-TS1_with_pairs.tsv
+b	7463	C	303	192		MT-TS1_with_pairs.tsv
+b	7464	T	291	200		MT-TS1_with_pairs.tsv
+b	7465	T	279	197		MT-TS1_with_pairs.tsv
+b	7466	G	269	190	7458	MT-TS1_with_pairs.tsv
+b	7467	G	256	190	7457	MT-TS1_with_pairs.tsv
+b	7468	G	243	190	7456	MT-TS1_with_pairs.tsv
+b	7469	G	230	190	7455	MT-TS1_with_pairs.tsv
+b	7470	G	217	190	7454	MT-TS1_with_pairs.tsv
+b	7471	G	218	201		MT-TS1_with_pairs.tsv
+b	7472	T	213	212		MT-TS1_with_pairs.tsv
+b	7473	T	204	211		MT-TS1_with_pairs.tsv
+b	7474	T	200	223	7492	MT-TS1_with_pairs.tsv
+b	7475	C	200	238	7491	MT-TS1_with_pairs.tsv
+b	7476	G	200	253	7490	MT-TS1_with_pairs.tsv
+b	7477	A	200	268	7489	MT-TS1_with_pairs.tsv
+b	7478	C	200	283	7488	MT-TS1_with_pairs.tsv
+b	7479	C	200	298	7487	MT-TS1_with_pairs.tsv
+b	7480	A	208	308		MT-TS1_with_pairs.tsv
+b	7481	A	208	323		MT-TS1_with_pairs.tsv
+b	7482	A	200	334		MT-TS1_with_pairs.tsv
+b	7483	G	187.5	336		MT-TS1_with_pairs.tsv
+b	7484	T	175	334		MT-TS1_with_pairs.tsv
+b	7485	T	167	323		MT-TS1_with_pairs.tsv
+b	7486	C	167	308		MT-TS1_with_pairs.tsv
+b	7487	G	175	298	7479	MT-TS1_with_pairs.tsv
+b	7488	G	175	283	7478	MT-TS1_with_pairs.tsv
+b	7489	T	175	268	7477	MT-TS1_with_pairs.tsv
+b	7490	T	175	253	7476	MT-TS1_with_pairs.tsv
+b	7491	G	175	238	7475	MT-TS1_with_pairs.tsv
+b	7492	G	175	223	7474	MT-TS1_with_pairs.tsv
+b	7493	G	170	211		MT-TS1_with_pairs.tsv
+b	7494	G	162	203	7506	MT-TS1_with_pairs.tsv
+b	7495	T	149	203	7505	MT-TS1_with_pairs.tsv
+b	7496	A	136	203	7504	MT-TS1_with_pairs.tsv
+b	7497	C	123	203	7503	MT-TS1_with_pairs.tsv
+b	7498	C	110	210		MT-TS1_with_pairs.tsv
+b	7499	G	97	205		MT-TS1_with_pairs.tsv
+b	7500	G	90	191.5		MT-TS1_with_pairs.tsv
+b	7501	A	97	178		MT-TS1_with_pairs.tsv
+b	7502	G	110	173		MT-TS1_with_pairs.tsv
+b	7503	G	123	180	7497	MT-TS1_with_pairs.tsv
+b	7504	T	136	180	7496	MT-TS1_with_pairs.tsv
+b	7505	A	149	180	7495	MT-TS1_with_pairs.tsv
+b	7506	C	162	180	7494	MT-TS1_with_pairs.tsv
+b	7507	T	173	173		MT-TS1_with_pairs.tsv
+b	7508	G	180	160	7453	MT-TS1_with_pairs.tsv
+b	7509	A	180	145	7452	MT-TS1_with_pairs.tsv
+b	7510	A	180	130	7451	MT-TS1_with_pairs.tsv
+b	7511	A	180	115	7450	MT-TS1_with_pairs.tsv
+b	7512	A	180	100	7449	MT-TS1_with_pairs.tsv
+b	7513	A	180	85	7448	MT-TS1_with_pairs.tsv
+b	7514	G	180	70	7447	MT-TS1_with_pairs.tsv
+b		A	205	10		MT-TS2_with_pairs.tsv
+b		C	205	25		MT-TS2_with_pairs.tsv
+b		C	205	40		MT-TS2_with_pairs.tsv
+b	12265	A	205	55		MT-TS2_with_pairs.tsv
+b	12264	C	205	70	12207	MT-TS2_with_pairs.tsv
+b	12263	T	205	85	12208	MT-TS2_with_pairs.tsv
+b	12262	C	205	100	12209	MT-TS2_with_pairs.tsv
+b	12261	T	205	115	12210	MT-TS2_with_pairs.tsv
+b	12260	T	205	130	12211	MT-TS2_with_pairs.tsv
+b	12259	T	205	145	12212	MT-TS2_with_pairs.tsv
+b	12258	C	205	160	12213	MT-TS2_with_pairs.tsv
+b	12257	G	218	170	12240	MT-TS2_with_pairs.tsv
+b	12256	G	231	170	12241	MT-TS2_with_pairs.tsv
+b	12255	T	244	170	12242	MT-TS2_with_pairs.tsv
+b	12254	A	257	170	12243	MT-TS2_with_pairs.tsv
+b	12253	C	270	170	12244	MT-TS2_with_pairs.tsv
+b	12252	A	282	163		MT-TS2_with_pairs.tsv
+b	12251	A	294	160		MT-TS2_with_pairs.tsv
+b	12250	C	306	163		MT-TS2_with_pairs.tsv
+b	12249	A	315	174		MT-TS2_with_pairs.tsv
+b	12248	A	315	189		MT-TS2_with_pairs.tsv
+b	12247	T	306	200		MT-TS2_with_pairs.tsv
+b	12246	C	294	203		MT-TS2_with_pairs.tsv
+b	12245	T	282	200		MT-TS2_with_pairs.tsv
+b	12244	G	270	193	12253	MT-TS2_with_pairs.tsv
+b	12243	T	257	193	12254	MT-TS2_with_pairs.tsv
+b	12242	A	244	193	12255	MT-TS2_with_pairs.tsv
+b	12241	C	231	193	12256	MT-TS2_with_pairs.tsv
+b	12240	C	218	193	12257	MT-TS2_with_pairs.tsv
+b	12239	C	217	204		MT-TS2_with_pairs.tsv
+b	12238	C	215	216		MT-TS2_with_pairs.tsv
+b	12237	C	206	221		MT-TS2_with_pairs.tsv
+b	12236	G	200	233	12218	MT-TS2_with_pairs.tsv
+b	12235	T	200	248	12219	MT-TS2_with_pairs.tsv
+b	12234	A	200	263	12220	MT-TS2_with_pairs.tsv
+b	12233	C	200	278	12221	MT-TS2_with_pairs.tsv
+b	12232	T	200	293	12222	MT-TS2_with_pairs.tsv
+b	12231	C	200	308	12223	MT-TS2_with_pairs.tsv
+b	12230	A	208	318		MT-TS2_with_pairs.tsv
+b	12229	A	208	333		MT-TS2_with_pairs.tsv
+b	12228	T	200	344		MT-TS2_with_pairs.tsv
+b	12227	C	187.5	346		MT-TS2_with_pairs.tsv
+b	12226	G	175	344		MT-TS2_with_pairs.tsv
+b	12225	T	167	333		MT-TS2_with_pairs.tsv
+b	12224	C	167	318		MT-TS2_with_pairs.tsv
+b	12223	A	175	308	12231	MT-TS2_with_pairs.tsv
+b	12222	A	175	293	12232	MT-TS2_with_pairs.tsv
+b	12221	G	175	278	12233	MT-TS2_with_pairs.tsv
+b	12220	A	175	263	12234	MT-TS2_with_pairs.tsv
+b	12219	A	175	248	12235	MT-TS2_with_pairs.tsv
+b	12218	C	175	233	12236	MT-TS2_with_pairs.tsv
+b	12217	A	168	221		MT-TS2_with_pairs.tsv
+b	12216	C	160	205		MT-TS2_with_pairs.tsv
+b	12215	T	163	188		MT-TS2_with_pairs.tsv
+b	12214	C	171	173		MT-TS2_with_pairs.tsv
+b	12213	G	180	160	12258	MT-TS2_with_pairs.tsv
+b	12212	A	180	145	12259	MT-TS2_with_pairs.tsv
+b	12211	A	180	130	12260	MT-TS2_with_pairs.tsv
+b	12210	A	180	115	12261	MT-TS2_with_pairs.tsv
+b	12209	G	180	100	12262	MT-TS2_with_pairs.tsv
+b	12208	A	180	85	12263	MT-TS2_with_pairs.tsv
+b	12207	G	180	70	12264	MT-TS2_with_pairs.tsv
+b		A	205	10		MT-TT_with_pairs.tsv
+b		C	205	25		MT-TT_with_pairs.tsv
+b		C	205	40		MT-TT_with_pairs.tsv
+b	15953	A	205	55		MT-TT_with_pairs.tsv
+b	15952	C	205	70	15888	MT-TT_with_pairs.tsv
+b	15951	A	205	85	15889	MT-TT_with_pairs.tsv
+b	15950	G	205	100	15890	MT-TT_with_pairs.tsv
+b	15949	G	205	115	15891	MT-TT_with_pairs.tsv
+b	15948	A	205	130	15892	MT-TT_with_pairs.tsv
+b	15947	A	205	145	15893	MT-TT_with_pairs.tsv
+b	15946	C	205	160	15894	MT-TT_with_pairs.tsv
+b	15945	C	218	170	15933	MT-TT_with_pairs.tsv
+b	15944	T	231	170	15934	MT-TT_with_pairs.tsv
+b	15943	T	244	170	15935	MT-TT_with_pairs.tsv
+b	15942	T	257	170	15936	MT-TT_with_pairs.tsv
+b	15941	T	268	165		MT-TT_with_pairs.tsv
+b	15940	T	281	167		MT-TT_with_pairs.tsv
+b	15939	C	289	181.5		MT-TT_with_pairs.tsv
+b	15938	C	281	196		MT-TT_with_pairs.tsv
+b	15937	A	268	198		MT-TT_with_pairs.tsv
+b	15936	A	257	193	15942	MT-TT_with_pairs.tsv
+b	15935	A	244	193	15943	MT-TT_with_pairs.tsv
+b	15934	A	231	193	15944	MT-TT_with_pairs.tsv
+b	15933	G	218	193	15945	MT-TT_with_pairs.tsv
+b	15932	T	220	205		MT-TT_with_pairs.tsv
+b	15931	A	226	215		MT-TT_with_pairs.tsv
+b	15930	G	218	225		MT-TT_with_pairs.tsv
+b	15929	A	206	228		MT-TT_with_pairs.tsv
+b	15928	G	200	238	15912	MT-TT_with_pairs.tsv
+b	15927	G	200	253	15913	MT-TT_with_pairs.tsv
+b	15926	C	200	268	15914	MT-TT_with_pairs.tsv
+b	15925	C	200	283	15915	MT-TT_with_pairs.tsv
+b	15924	A	200	298	15916	MT-TT_with_pairs.tsv
+b	15923	A	208	308		MT-TT_with_pairs.tsv
+b	15922	A	208	323		MT-TT_with_pairs.tsv
+b	15921	T	200	334		MT-TT_with_pairs.tsv
+b	15920	G	187.5	336		MT-TT_with_pairs.tsv
+b	15919	T	175	334		MT-TT_with_pairs.tsv
+b	15918	T	167	323		MT-TT_with_pairs.tsv
+b	15917	C	167	308		MT-TT_with_pairs.tsv
+b	15916	T	175	298	15924	MT-TT_with_pairs.tsv
+b	15915	G	175	283	15925	MT-TT_with_pairs.tsv
+b	15914	A	175	268	15926	MT-TT_with_pairs.tsv
+b	15913	C	175	253	15927	MT-TT_with_pairs.tsv
+b	15912	C	175	238	15928	MT-TT_with_pairs.tsv
+b	15911	A	163	228		MT-TT_with_pairs.tsv
+b	15910	C	152	215	15897	MT-TT_with_pairs.tsv
+b	15909	A	139	215	15898	MT-TT_with_pairs.tsv
+b	15908	T	126	215	15899	MT-TT_with_pairs.tsv
+b	15907	A	114	223		MT-TT_with_pairs.tsv
+b	15906	A	101	228		MT-TT_with_pairs.tsv
+b	15905	T	88	223		MT-TT_with_pairs.tsv
+b	15904	C	75	211		MT-TT_with_pairs.tsv
+b	15903	A	76	195		MT-TT_with_pairs.tsv
+b	15902	A	88	184		MT-TT_with_pairs.tsv
+b	15901	A	101	179		MT-TT_with_pairs.tsv
+b	15900	T	114	184		MT-TT_with_pairs.tsv
+b	15899	A	126	192	15908	MT-TT_with_pairs.tsv
+b	15898	T	139	192	15909	MT-TT_with_pairs.tsv
+b	15897	G	152	192	15910	MT-TT_with_pairs.tsv
+b	15896	A	165	183		MT-TT_with_pairs.tsv
+b	15895	T	173	173		MT-TT_with_pairs.tsv
+b	15894	G	180	160	15946	MT-TT_with_pairs.tsv
+b	15893	T	180	145	15947	MT-TT_with_pairs.tsv
+b	15892	T	180	130	15948	MT-TT_with_pairs.tsv
+b	15891	C	180	115	15949	MT-TT_with_pairs.tsv
+b	15890	C	180	100	15950	MT-TT_with_pairs.tsv
+b	15889	T	180	85	15951	MT-TT_with_pairs.tsv
+b	15888	G	180	70	15952	MT-TT_with_pairs.tsv
+b		A	205	10		MT-TV_with_pairs.tsv
+b		C	205	25		MT-TV_with_pairs.tsv
+b		C	205	40		MT-TV_with_pairs.tsv
+b	1670	A	205	55		MT-TV_with_pairs.tsv
+b	1669	G	205	70	1602	MT-TV_with_pairs.tsv
+b	1668	T	205	85	1603	MT-TV_with_pairs.tsv
+b	1667	C	205	100	1604	MT-TV_with_pairs.tsv
+b	1666	T	205	115	1605	MT-TV_with_pairs.tsv
+b	1665	C	205	130	1606	MT-TV_with_pairs.tsv
+b	1664	G	205	145	1607	MT-TV_with_pairs.tsv
+b	1663	C	205	160	1608	MT-TV_with_pairs.tsv
+b	1662	C	218	170	1647	MT-TV_with_pairs.tsv
+b	1661	A	231	170	1648	MT-TV_with_pairs.tsv
+b	1660	G	244	170	1649	MT-TV_with_pairs.tsv
+b	1659	T	257	170	1650	MT-TV_with_pairs.tsv
+b	1658	T	270	170	1651	MT-TV_with_pairs.tsv
+b	1657	C	283	163		MT-TV_with_pairs.tsv
+b	1656	A	296	163		MT-TV_with_pairs.tsv
+b	1655	A	308	175		MT-TV_with_pairs.tsv
+b	1654	T	308	190		MT-TV_with_pairs.tsv
+b	1653	T	296	200		MT-TV_with_pairs.tsv
+b	1652	C	283	200		MT-TV_with_pairs.tsv
+b	1651	A	270	193	1658	MT-TV_with_pairs.tsv
+b	1650	A	257	193	1659	MT-TV_with_pairs.tsv
+b	1649	C	244	193	1660	MT-TV_with_pairs.tsv
+b	1648	T	231	193	1661	MT-TV_with_pairs.tsv
+b	1647	T	218	193	1662	MT-TV_with_pairs.tsv
+b	1646	T	220	205		MT-TV_with_pairs.tsv
+b	1645	A	226	215		MT-TV_with_pairs.tsv
+b	1644	G	218	225		MT-TV_with_pairs.tsv
+b	1643	A	206	228		MT-TV_with_pairs.tsv
+b	1642	G	200	238	1626	MT-TV_with_pairs.tsv
+b	1641	G	200	253	1627	MT-TV_with_pairs.tsv
+b	1640	A	200	268	1628	MT-TV_with_pairs.tsv
+b	1639	T	200	283	1629	MT-TV_with_pairs.tsv
+b	1638	T	200	298	1630	MT-TV_with_pairs.tsv
+b	1637	C	208	308		MT-TV_with_pairs.tsv
+b	1636	A	208	323		MT-TV_with_pairs.tsv
+b	1635	C	200	334		MT-TV_with_pairs.tsv
+b	1634	A	187.5	336		MT-TV_with_pairs.tsv
+b	1633	T	175	334		MT-TV_with_pairs.tsv
+b	1632	T	167	323		MT-TV_with_pairs.tsv
+b	1631	C	167	308		MT-TV_with_pairs.tsv
+b	1630	A	175	298	1638	MT-TV_with_pairs.tsv
+b	1629	A	175	283	1639	MT-TV_with_pairs.tsv
+b	1628	C	175	268	1640	MT-TV_with_pairs.tsv
+b	1627	C	175	253	1641	MT-TV_with_pairs.tsv
+b	1626	C	175	238	1642	MT-TV_with_pairs.tsv
+b	1625	A	163	228		MT-TV_with_pairs.tsv
+b	1624	C	152	215	1611	MT-TV_with_pairs.tsv
+b	1623	G	139	215	1612	MT-TV_with_pairs.tsv
+b	1622	A	126	215	1613	MT-TV_with_pairs.tsv
+b	1621	A	113	215	1614	MT-TV_with_pairs.tsv
+b	1620	A	100	222		MT-TV_with_pairs.tsv
+b	1619	C	86	222		MT-TV_with_pairs.tsv
+b	1618	A	74	210		MT-TV_with_pairs.tsv
+b	1617	C	74	194.5		MT-TV_with_pairs.tsv
+b	1616	A	87	185		MT-TV_with_pairs.tsv
+b	1615	A	100	185		MT-TV_with_pairs.tsv
+b	1614	T	113	192	1621	MT-TV_with_pairs.tsv
+b	1613	T	126	192	1622	MT-TV_with_pairs.tsv
+b	1612	C	139	192	1623	MT-TV_with_pairs.tsv
+b	1611	G	152	192	1624	MT-TV_with_pairs.tsv
+b	1610	A	163	183		MT-TV_with_pairs.tsv
+b	1609	T	173	173		MT-TV_with_pairs.tsv
+b	1608	G	180	160	1663	MT-TV_with_pairs.tsv
+b	1607	T	180	145	1664	MT-TV_with_pairs.tsv
+b	1606	G	180	130	1665	MT-TV_with_pairs.tsv
+b	1605	A	180	115	1666	MT-TV_with_pairs.tsv
+b	1604	G	180	100	1667	MT-TV_with_pairs.tsv
+b	1603	A	180	85	1668	MT-TV_with_pairs.tsv
+b	1602	C	180	70	1669	MT-TV_with_pairs.tsv
+b		A	205	10		MT-TW_with_pairs.tsv
+b		C	205	25		MT-TW_with_pairs.tsv
+b		C	205	40		MT-TW_with_pairs.tsv
+b	5579	G	205	55		MT-TW_with_pairs.tsv
+b	5578	T	205	70	5512	MT-TW_with_pairs.tsv
+b	5577	C	205	85	5513	MT-TW_with_pairs.tsv
+b	5576	T	205	100	5514	MT-TW_with_pairs.tsv
+b	5575	T	205	115	5515	MT-TW_with_pairs.tsv
+b	5574	T	205	130	5516	MT-TW_with_pairs.tsv
+b	5573	A	205	145	5517	MT-TW_with_pairs.tsv
+b	5572	A	205	160	5518	MT-TW_with_pairs.tsv
+b	5571	T	218	170	5558	MT-TW_with_pairs.tsv
+b	5570	T	231	170	5559	MT-TW_with_pairs.tsv
+b	5569	C	244	170	5560	MT-TW_with_pairs.tsv
+b	5568	A	256	163		MT-TW_with_pairs.tsv
+b	5567	T	268	160		MT-TW_with_pairs.tsv
+b	5566	A	280	163		MT-TW_with_pairs.tsv
+b	5565	A	289	174		MT-TW_with_pairs.tsv
+b	5564	C	289	189		MT-TW_with_pairs.tsv
+b	5563	G	280	200		MT-TW_with_pairs.tsv
+b	5562	T	268	203		MT-TW_with_pairs.tsv
+b	5561	T	256	200		MT-TW_with_pairs.tsv
+b	5560	G	244	193	5569	MT-TW_with_pairs.tsv
+b	5559	A	231	193	5570	MT-TW_with_pairs.tsv
+b	5558	A	218	193	5571	MT-TW_with_pairs.tsv
+b	5557	T	220	205		MT-TW_with_pairs.tsv
+b	5556	G	226	215		MT-TW_with_pairs.tsv
+b	5555	A	218	225		MT-TW_with_pairs.tsv
+b	5554	C	206	228		MT-TW_with_pairs.tsv
+b	5553	T	200	238	5537	MT-TW_with_pairs.tsv
+b	5552	C	200	253	5538	MT-TW_with_pairs.tsv
+b	5551	C	200	268	5539	MT-TW_with_pairs.tsv
+b	5550	C	200	283	5540	MT-TW_with_pairs.tsv
+b	5549	G	200	298	5541	MT-TW_with_pairs.tsv
+b	5548	A	208	308		MT-TW_with_pairs.tsv
+b	5547	A	208	323		MT-TW_with_pairs.tsv
+b	5546	A	200	334		MT-TW_with_pairs.tsv
+b	5545	C	187.5	336		MT-TW_with_pairs.tsv
+b	5544	T	175	334		MT-TW_with_pairs.tsv
+b	5543	T	167	323		MT-TW_with_pairs.tsv
+b	5542	C	167	308		MT-TW_with_pairs.tsv
+b	5541	C	175	298	5549	MT-TW_with_pairs.tsv
+b	5540	G	175	283	5550	MT-TW_with_pairs.tsv
+b	5539	A	175	268	5551	MT-TW_with_pairs.tsv
+b	5538	G	175	253	5552	MT-TW_with_pairs.tsv
+b	5537	A	175	238	5553	MT-TW_with_pairs.tsv
+b	5536	A	163	228		MT-TW_with_pairs.tsv
+b	5535	C	152	215	5521	MT-TW_with_pairs.tsv
+b	5534	C	139	215	5522	MT-TW_with_pairs.tsv
+b	5533	A	126	215	5523	MT-TW_with_pairs.tsv
+b	5532	G	113	215	5524	MT-TW_with_pairs.tsv
+b	5531	A	101	222		MT-TW_with_pairs.tsv
+b	5530	C	88	225		MT-TW_with_pairs.tsv
+b	5529	A	75	219		MT-TW_with_pairs.tsv
+b	5528	T	67	203.5		MT-TW_with_pairs.tsv
+b	5527	A	75	188		MT-TW_with_pairs.tsv
+b	5526	A	88	182		MT-TW_with_pairs.tsv
+b	5525	A	101	185		MT-TW_with_pairs.tsv
+b	5524	T	113	192	5532	MT-TW_with_pairs.tsv
+b	5523	T	126	192	5533	MT-TW_with_pairs.tsv
+b	5522	G	139	192	5534	MT-TW_with_pairs.tsv
+b	5521	G	152	192	5535	MT-TW_with_pairs.tsv
+b	5520	A	163	183		MT-TW_with_pairs.tsv
+b	5519	T	173	173		MT-TW_with_pairs.tsv
+b	5518	T	180	160	5572	MT-TW_with_pairs.tsv
+b	5517	T	180	145	5573	MT-TW_with_pairs.tsv
+b	5516	A	180	130	5574	MT-TW_with_pairs.tsv
+b	5515	A	180	115	5575	MT-TW_with_pairs.tsv
+b	5514	A	180	100	5576	MT-TW_with_pairs.tsv
+b	5513	G	180	85	5577	MT-TW_with_pairs.tsv
+b	5512	A	180	70	5578	MT-TW_with_pairs.tsv
+b		A	205	10		MT-TY_with_pairs.tsv
+b		C	205	25		MT-TY_with_pairs.tsv
+b		C	205	40		MT-TY_with_pairs.tsv
+b	5826	A	205	55		MT-TY_with_pairs.tsv
+b	5827	C	205	70	5891	MT-TY_with_pairs.tsv
+b	5828	C	205	85	5890	MT-TY_with_pairs.tsv
+b	5829	A	205	100	5889	MT-TY_with_pairs.tsv
+b	5830	T	205	115	5888	MT-TY_with_pairs.tsv
+b	5831	T	205	130	5887	MT-TY_with_pairs.tsv
+b	5832	T	205	145	5886	MT-TY_with_pairs.tsv
+b	5833	T	205	160	5885	MT-TY_with_pairs.tsv
+b	5834	T	218	170	5848	MT-TY_with_pairs.tsv
+b	5835	C	231	170	5847	MT-TY_with_pairs.tsv
+b	5836	T	244	170	5846	MT-TY_with_pairs.tsv
+b	5837	C	257	170	5845	MT-TY_with_pairs.tsv
+b	5838	C	270	170	5844	MT-TY_with_pairs.tsv
+b	5839	G	281	165		MT-TY_with_pairs.tsv
+b	5840	G	294	167		MT-TY_with_pairs.tsv
+b	5841	A	301	181.5		MT-TY_with_pairs.tsv
+b	5842	T	294	196		MT-TY_with_pairs.tsv
+b	5843	T	281	198		MT-TY_with_pairs.tsv
+b	5844	G	270	193	5838	MT-TY_with_pairs.tsv
+b	5845	G	257	193	5837	MT-TY_with_pairs.tsv
+b	5846	G	244	193	5836	MT-TY_with_pairs.tsv
+b	5847	G	231	193	5835	MT-TY_with_pairs.tsv
+b	5848	A	218	193	5834	MT-TY_with_pairs.tsv
+b	5849	C	220	205		MT-TY_with_pairs.tsv
+b	5850	A	226	215		MT-TY_with_pairs.tsv
+b	5851	G	218	225		MT-TY_with_pairs.tsv
+b	5852	A	206	228		MT-TY_with_pairs.tsv
+b	5853	A	200	238	5869	MT-TY_with_pairs.tsv
+b	5854	A	200	253	5868	MT-TY_with_pairs.tsv
+b	5855	T	200	268	5867	MT-TY_with_pairs.tsv
+b	5856	C	200	283	5866	MT-TY_with_pairs.tsv
+b	5857	T	200	298	5865	MT-TY_with_pairs.tsv
+b	5858	A	208	308		MT-TY_with_pairs.tsv
+b	5859	A	208	323		MT-TY_with_pairs.tsv
+b	5860	A	200	334		MT-TY_with_pairs.tsv
+b	5861	T	187.5	336		MT-TY_with_pairs.tsv
+b	5862	G	175	334		MT-TY_with_pairs.tsv
+b	5863	T	167	323		MT-TY_with_pairs.tsv
+b	5864	C	167	308		MT-TY_with_pairs.tsv
+b	5865	A	175	298	5857	MT-TY_with_pairs.tsv
+b	5866	G	175	283	5856	MT-TY_with_pairs.tsv
+b	5867	G	175	268	5855	MT-TY_with_pairs.tsv
+b	5868	T	175	253	5854	MT-TY_with_pairs.tsv
+b	5869	T	175	238	5853	MT-TY_with_pairs.tsv
+b	5870	A	163	228		MT-TY_with_pairs.tsv
+b	5871	C	152	215	5882	MT-TY_with_pairs.tsv
+b	5872	G	139	215	5881	MT-TY_with_pairs.tsv
+b	5873	A	126	215	5880	MT-TY_with_pairs.tsv
+b	5874	A	113	222		MT-TY_with_pairs.tsv
+b	5875	G	99	221		MT-TY_with_pairs.tsv
+b	5876	T	87	210		MT-TY_with_pairs.tsv
+b	5877	G	87	194.5		MT-TY_with_pairs.tsv
+b	5878	A	100	185		MT-TY_with_pairs.tsv
+b	5879	G	113	185		MT-TY_with_pairs.tsv
+b	5880	T	126	192	5873	MT-TY_with_pairs.tsv
+b	5881	C	139	192	5872	MT-TY_with_pairs.tsv
+b	5882	G	152	192	5871	MT-TY_with_pairs.tsv
+b	5883	G	163	183		MT-TY_with_pairs.tsv
+b	5884	T	173	173		MT-TY_with_pairs.tsv
+b	5885	A	180	160	5833	MT-TY_with_pairs.tsv
+b	5886	A	180	145	5832	MT-TY_with_pairs.tsv
+b	5887	A	180	130	5831	MT-TY_with_pairs.tsv
+b	5888	A	180	115	5830	MT-TY_with_pairs.tsv
+b	5889	T	180	100	5829	MT-TY_with_pairs.tsv
+b	5890	G	180	85	5828	MT-TY_with_pairs.tsv
+b	5891	G	180	70	5827	MT-TY_with_pairs.tsv

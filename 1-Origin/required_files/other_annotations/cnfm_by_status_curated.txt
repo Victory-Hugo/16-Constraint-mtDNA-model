@@ -1,0 +1,91 @@
+var	symbol	consequence	mitomap_status	mitomap_plasmy	MLC_var_score	curated_status	curated_homoplasmy_report
+m.8969G>A	MT-ATP6	missense_variant	Cfrm	-/+	0.01822681	+/+	PMID:32042921
+m.8851T>C	MT-ATP6	missense_variant	Cfrm [VUS*]	+/+	0.04828294	+/+	
+m.9185T>C	MT-ATP6	missense_variant	Cfrm	+/+	0.08002897	+/+	
+m.9176T>C	MT-ATP6	missense_variant	Cfrm [LP*]	+/+	0.0871507	+/+	
+m.9176T>G	MT-ATP6	missense_variant	Cfrm	+/+	0.0871507	+/+	
+m.8993T>C	MT-ATP6	missense_variant	Cfrm [P*]	-/+	0.08859919	+/+	PMID:32042921
+m.8993T>G	MT-ATP6	missense_variant	Cfrm [P*]	+/+	0.08859919	+/+	
+m.9155A>G	MT-ATP6	missense_variant	Cfrm	-/+	0.11096023	-/+	
+m.9035T>C	MT-ATP6	missense_variant	Cfrm	+/+	0.1125596	+/+	
+m.8528T>C	"MT-ATP8,MT-ATP6"	"missense_variant,start_lost"	Cfrm	+/+	0.7	+/+	
+m.7445A>G	MT-CO1	stop_retained_variant	Cfrm	+/+	0	+/+	
+m.14849T>C	MT-CYB	missense_variant	Cfrm	-/+	0.54825276	-/+	
+m.15579A>G	MT-CYB	missense_variant	Cfrm	-/+	0.77862273	-/+	
+m.3376G>A	MT-ND1	missense_variant	Cfrm	+/+	0.27992033	+/+	
+m.3733G>A	MT-ND1	missense_variant	Cfrm [VUS*]	+/+	0.373378	+/+	
+m.4171C>A	MT-ND1	missense_variant	Cfrm	+/+	0.47069829	+/+	
+m.3635G>A	MT-ND1	missense_variant	Cfrm	+/-	0.58509868	+/-	
+m.3700G>A	MT-ND1	missense_variant	Cfrm [VUS*]	+/-	0.86861005	+/-	
+m.3460G>A	MT-ND1	missense_variant	Cfrm	+/+	0.8750679	+/+	
+m.3697G>A	MT-ND1	missense_variant	Cfrm [LP*]	+/+	0.89127286	+/+	
+m.3890G>A	MT-ND1	missense_variant	Cfrm	-/+	0.93252459	+/+	PMID:34390870
+m.10191T>C	MT-ND3	missense_variant	Cfrm	-/+	0.50733297	+/+	PMID:27450679
+m.10158T>C	MT-ND3	missense_variant	Cfrm [P*]	+/+	0.52064096	+/+	
+m.10197G>A	MT-ND3	missense_variant	Cfrm	+/+	0.55232663	+/+	
+m.11778G>A	MT-ND4	missense_variant	Cfrm	+/+	0.87926248	+/+	
+m.11777C>A	MT-ND4	missense_variant	Cfrm	-/+	0.88985455	-/+	
+m.10663T>C	MT-ND4L	missense_variant	Cfrm	+/-	0.86417406	+/-	
+m.13514A>G	MT-ND5	missense_variant	Cfrm	-/+	0.60239001	-/+	
+m.13513G>A	MT-ND5	missense_variant	Cfrm [P*]	-/+	0.63630877	-/+	
+m.13379A>G	MT-ND5	missense_variant	Cfrm	+/-	0.6671495	+/-	
+m.12706T>C	MT-ND5	missense_variant	Cfrm	-/+	0.82240932	-/+	
+m.13051G>A	MT-ND5	missense_variant	Cfrm	+/-	0.87367976	+/-	
+m.13042G>A	MT-ND5	missense_variant	Cfrm	-/+	0.9292655	-/+	
+m.13094T>C	MT-ND5	missense_variant	Cfrm	+/+	0.94233207	+/+	
+m.14568C>T	MT-ND6	missense_variant	Cfrm	+/-	0.13377392	+/-	
+m.14495A>G	MT-ND6	missense_variant	Cfrm	-/+	0.40364536	+/+	PMID:16380918
+m.14487T>C	MT-ND6	missense_variant	Cfrm	-/+	0.45078158	+/+	PMID:23813926
+m.14484T>C	MT-ND6	missense_variant	Cfrm	+/+	0.46408956	+/+	
+m.14482C>A	MT-ND6	missense_variant	Cfrm	+/+	0.49508118	+/+	
+m.14482C>G	MT-ND6	missense_variant	Cfrm	+/+	0.49508118	+/+	
+m.14459G>A	MT-ND6	missense_variant	Cfrm [P*]	+/+	0.8331221	+/+	
+m.14453G>A	MT-ND6	missense_variant	Cfrm	-/+	0.88728952	-/+	
+m.1494C>T	MT-RNR1	non_coding_transcript_exon_variant	Cfrm	+/-	0.81661537	+/-	
+m.1555A>G	MT-RNR1	non_coding_transcript_exon_variant	Cfrm	+/+	0.82449152	+/+	
+m.5650G>A	MT-TA	non_coding_transcript_exon_variant	Cfrm	-/+	0.58358984	-/+	
+m.14674T>C	MT-TE	non_coding_transcript_exon_variant	Cfrm	+/-	0.3923894	+/-	
+m.14709T>C	MT-TE	non_coding_transcript_exon_variant	Cfrm	+/+	0.76727624	+/+	
+m.14710G>A	MT-TE	non_coding_transcript_exon_variant	Cfrm	-/+	0.78489951	-/+	
+m.583G>A	MT-TF	non_coding_transcript_exon_variant	Cfrm	-/+	0.1829018	-/+	
+m.616T>C	MT-TF	non_coding_transcript_exon_variant	Cfrm	+/+	0.51038083	+/+	
+m.10010T>C	MT-TG	non_coding_transcript_exon_variant	Cfrm	-/+	0.48123001	-/+	
+m.12201T>C	MT-TH	non_coding_transcript_exon_variant	Cfrm	-/+	0.33701491	+/+	PMID:34991096
+m.12147G>A	MT-TH	non_coding_transcript_exon_variant	Cfrm	-/+	0.38964331	-/+	
+m.4308G>A	MT-TI	non_coding_transcript_exon_variant	Cfrm	-/+	0.58425373	-/+	
+m.4300A>G	MT-TI	non_coding_transcript_exon_variant	Cfrm	+/+	0.74222946	+/+	
+m.4298G>A	MT-TI	non_coding_transcript_exon_variant	Cfrm	-/+	0.77548434	-/+	
+m.8363G>A	MT-TK	non_coding_transcript_exon_variant	Cfrm	-/+	0.26142193	-/+	
+m.8306T>C	MT-TK	non_coding_transcript_exon_variant	Cfrm	-/+	0.26963003	-/+	
+m.8356T>C	MT-TK	non_coding_transcript_exon_variant	Cfrm	-/+	0.29971634	+/+	PMID:20610441
+m.8344A>G	MT-TK	non_coding_transcript_exon_variant	Cfrm [P*]	-/+	0.41791901	+/+	PMID:36176839
+m.8313G>A	MT-TK	non_coding_transcript_exon_variant	Cfrm	-/+	0.43204176	-/+	
+m.8340G>A	MT-TK	non_coding_transcript_exon_variant	Cfrm	-/+	0.49173155	-/+	
+m.3303C>T	MT-TL1	non_coding_transcript_exon_variant	Cfrm	+/+	0.47932887	+/+	
+m.3302A>G	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.51083348	+/+	PMID:19370763
+m.3291T>C	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.71851047	+/+	PMID:32167396
+m.3271T>C	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.72937413	+/+	PMID:18206799
+m.3260A>G	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.75852496	-/+	
+m.3280A>G	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.76187459	+/+	PMID:12402350
+m.3258T>C	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.76332307	-/+	
+m.3256C>T	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.76622005	-/+	
+m.3243A>T	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.85119802	-/+	
+m.3243A>G	MT-TL1	non_coding_transcript_exon_variant	Cfrm	-/+	0.85119802	-/+	
+m.12294G>A	MT-TL2	non_coding_transcript_exon_variant	Cfrm	-/+	0.24014726	-/+	
+m.12315G>A	MT-TL2	non_coding_transcript_exon_variant	Cfrm	-/+	0.4362967	-/+	
+m.12316G>A	MT-TL2	non_coding_transcript_exon_variant	Cfrm	-/+	0.44740177	-/+	
+m.12276G>A	MT-TL2	non_coding_transcript_exon_variant	Cfrm	-/+	0.47024564	-/+	
+m.4450G>A	MT-TM	non_coding_transcript_exon_variant	Cfrm	-/+	0.68945018	-/+	
+m.5728T>C	MT-TN	non_coding_transcript_exon_variant	Cfrm	-/+	0.77246665	-/+	
+m.5703G>A	MT-TN	non_coding_transcript_exon_variant	Cfrm	-/+	0.80176836	-/+	
+m.5690A>G	MT-TN	non_coding_transcript_exon_variant	Cfrm	-/+	0.83028547	-/+	
+m.15990C>T	MT-TP	non_coding_transcript_exon_variant	Cfrm	-/+	0.50051301	-/+	
+m.4332G>A	MT-TQ	non_coding_transcript_exon_variant	Cfrm	-/+	0.51167844	-/+	
+m.7497G>A	MT-TS1	non_coding_transcript_exon_variant	Cfrm	+/+	0.40636128	+/+	
+m.7510T>C	MT-TS1	non_coding_transcript_exon_variant	Cfrm	-/+	0.54037661	+/+	PMID:12471220
+m.7511T>C	MT-TS1	non_coding_transcript_exon_variant	Cfrm	+/+	0.54490313	+/+	
+m.12258C>A	MT-TS2	non_coding_transcript_exon_variant	Cfrm	-/+	0.52984489	-/+	
+m.1644G>A	MT-TV	non_coding_transcript_exon_variant	Cfrm [LP*]	-/+	0.32714708	+/+	PMID:24691472
+m.1630A>G	MT-TV	non_coding_transcript_exon_variant	Cfrm	-/+	0.36833846	-/+	
+m.1606G>A	MT-TV	non_coding_transcript_exon_variant	Cfrm	-/+	0.74156557	-/+	
+m.5521G>A	MT-TW	non_coding_transcript_exon_variant	Cfrm	-/+	0.44942362	+/+	PMID:20360171
