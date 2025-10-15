@@ -1,0 +1,1 @@
+kmer_start	kmer_end	locus	pvalue	length	shuffle

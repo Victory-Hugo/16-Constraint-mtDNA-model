@@ -1,0 +1,40 @@
+# create a figure to show regional constraint for MT-CYB
+# open chimeraX and paste in commands
+
+open 5XTE
+preset ribbon 
+
+# hide all other proteins and ligands
+select /A,B,C,D,E,F,G,H,K,L,N,O,P,Q,R,S,T,U,W,Y
+transparency sel 100 target abcsp
+select /V:CDL,FES,PEE,PLX
+transparency sel 100 target abcsp
+select /J:CDL,FES,PEE,PLX
+transparency sel 100 target abcsp
+~select /A,B,C,D,E,F,G,H,K,L,N,O,P,Q,R,S,T,U,W,Y,CDL,FES,PEE,PLX
+~select /V:CDL,FES,PEE,PLX
+~select /J:CDL,FES,PEE,PLX
+
+# color CYB in blue 
+color /J,V #377eb8
+
+# color CYB regional constraint and key residues/regions
+color /J:20-37,130-151,196-210,264-276 #ff4040
+color /V:20-37,130-151,196-210,264-276 #ff4040
+color /J,V:HEC,HEM #39FF14
+
+# background color
+set bgColor white
+
+# manually zoom and reposition
+# ie via 'zoom 5'
+zoom 4.5
+# select simple lighting
+lighting simple
+
+# add labels and manually drag to position
+# under 'right move' then 'move label'
+# use ~2dlab all to delete all
+2dlab text 'MT-CYB' color #ff4040 size 34
+
+save figure_scripts/extended_data_figures/FigureED5d_CYB.png supersample 3
