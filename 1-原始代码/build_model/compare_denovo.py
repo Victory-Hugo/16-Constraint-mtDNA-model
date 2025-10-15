@@ -4,27 +4,27 @@ import csv
 import datetime
 from typing import Dict, List, TextIO, Union
 
-# global variables
+# 全局变量
 nucleotides = ["A", "C", "G", "T"]
 class_I_mutations = ["C>A", "T>A", "G>T", "A>T"]
 class_II_mutations = ["C>G", "T>G", "G>C", "A>C"]
 class_III_mutations = ["C>T", "T>C", "G>A", "A>G"]
 mut_types = ["A>C", "A>G", "A>T", "C>A", "C>G", "C>T", "G>A", "G>C", "G>T", "T>A", "T>C", "T>G"]
 
-# definitions of regions used in mitochondrial mutational model building
-# ori refers to OriB-OriH region with known difference in mutational signature, m.16197-191, across artificial break
+# 构建线粒体突变模型时使用的区域定义
+# ori 指代 OriB-OriH 区域，该区域在人工断点两侧（m.16197-191）具有已知的突变特征差异
 start_ori = 16197
-end_ori = 191 + 1  # end not included in range so + 1
+end_ori = 191 + 1  # range 的结束值不包含在范围内，因此需要 +1
 ori_region = list(range(start_ori, 16570)) + list(range(1, end_ori))
 reference_except_ori = list(range(end_ori, start_ori))
 
 
 def build_denovo_dict(variant: str, dict: Dict[str, int]):
-    """Generate dictionary with the de novo variants and their total count.
+    """生成一个包含 de novo 变异及其计数的字典。
 
-    :param variant: de novo variant, in RefPosAlt format
-    :param dict: dictionary name
-    :return: dictionary where the variant is the key, and the value is the total count of the variant
+    :param variant: de novo 变异，采用 RefPosAlt 格式
+    :param dict: 字典名称
+    :return: 字典，键为变异，值为该变异的总计数
     """
     if variant not in dict:
         dict[variant] = 1
@@ -35,14 +35,14 @@ def build_denovo_dict(variant: str, dict: Dict[str, int]):
 
 def filter_denovo(germline_max: Union[int, None], som_tissue_max: Union[int, None], som_cancer_max: Union[int, None],
                   denovo_counts: Dict[str, int]):
-    """Filters the all_denovo.txt file produced by compile_denovo.py.
-    This is to remove de novo variants from samples that are above the maximum sample de novo count.
+    """过滤 compile_denovo.py 生成的 all_denovo.txt 文件。
+    通过移除样本 de novo 数量超过最大阈值的变异，得到最终保留的 de novo 清单。
 
-    :param germline_max: maximum sample de novo count for inclusion, for germline de novo
-    :param som_tissue_max: maximum sample de novo count for inclusion, for somatic tissue de novo
-    :param som_cancer_max: maximum sample de novo count for inclusion, for somatic cancer de novo
-    :param denovo_counts: a dictionary where the variant is the key, and the value is the total count of the variant
-    :return: denovo_counts dictionary
+    :param germline_max: 生殖系 de novo 的样本最大计数阈值
+    :param som_tissue_max: 体细胞组织 de novo 的样本最大计数阈值
+    :param som_cancer_max: 体细胞癌症 de novo 的样本最大计数阈值
+    :param denovo_counts: 字典，键为变异，值为该变异的总计数
+    :return: denovo_counts 字典
     """
     for row in csv.DictReader(open('output_files/denovo/all_denovo.txt'), delimiter='\t'):
         if "germline" in row["sample"]:
@@ -67,11 +67,11 @@ def filter_denovo(germline_max: Union[int, None], som_tissue_max: Union[int, Non
 
 
 def compute_lr_classIII(denovo_counts: Dict[str, int], reference_region: List[int]):
-    """Calculate the likelihood of mutation for the class III mutations.
+    """计算 III 类突变的发生可能性。
 
-    :param denovo_counts: a dictionary where the variant is the key, and the value is the total count of the variant
-    :param reference_region: a list of the coordinates for the mtDNA region to analyze
-    :return: lambda_classIII, a dictionary where the class III mutations are the keys and the value is their likelihood
+    :param denovo_counts: 字典，键为变异，值为该变异的总计数
+    :param reference_region: 待分析的 mtDNA 区域坐标列表
+    :return: lambda_classIII 字典，键为 III 类突变，值为其可能性
     """
     mut_type_counts = make_type_count_vector(denovo_counts=denovo_counts, reference_region=reference_region)
     base_proportions = probability_per_ref_nuc(reference_region=reference_region)
@@ -87,17 +87,16 @@ def compute_lr_classIII(denovo_counts: Dict[str, int], reference_region: List[in
 
 def apply_threshold(germline_max: int, som_tissue_max: int, som_cancer_max: int, category: str, threshold: int,
                     reference_region: List[int], file: TextIO):
-    """For a category of de novo, iterate through a range of thresholds for the maximum sample de novo count.
-    Any de novo variants from samples with a de novo count greater than threshold will not be included in calculations
-    for the class III likelihoods.
+    """针对某一类 de novo，按不同阈值遍历样本 de novo 最大计数。
+    样本 de novo 数量超过阈值的变异将不会用于计算 III 类突变的可能性。
 
-    :param germline_max: maximum sample de novo count for inclusion, for germline de novo
-    :param som_tissue_max: maximum sample de novo count for inclusion, for somatic tissue de novo
-    :param som_cancer_max: maximum sample de novo count for inclusion, for somatic cancer de novo
-    :param category: the category of de novo where the maximum sample de novo count is being iteratively increased
-    :param threshold: the maximum sample de novo mutations count in the loop, for print to file
-    :param reference_region: a list of the coordinates for the mtDNA region to analyze
-    :param file: the txt file to write the class III likelihoods to
+    :param germline_max: 生殖系 de novo 的样本最大计数阈值
+    :param som_tissue_max: 体细胞组织 de novo 的样本最大计数阈值
+    :param som_cancer_max: 体细胞癌症 de novo 的样本最大计数阈值
+    :param category: 当前迭代的 de novo 类别
+    :param threshold: 当前遍历的样本 de novo 最大计数，用于写入文件
+    :param reference_region: 待分析的 mtDNA 区域坐标列表
+    :param file: 用于写入 III 类突变可能性的文本文件对象
     """
     denovo_counts = {}
     denovo_counts = filter_denovo(germline_max=germline_max, som_tissue_max=som_tissue_max,
@@ -118,21 +117,21 @@ if __name__ == "__main__":
     f = open('output_files/denovo/Ts_likelihood_by_category.txt', "w")
     f.write("category	threshold	likelihood_C>T	likelihood_G>A	likelihood_T>C	likelihood_A>G" + '\n')
 
-    # range of values to use as the maximum sample de novo mutations count, for inclusion
-    threshold_range = [1, 2, 3, 4, 5, 40]  # I know maximum is 38, so have manually determined the thresholds to test
+    # 作为样本 de novo 最大计数的候选阈值集合
+    threshold_range = [1, 2, 3, 4, 5, 40]  # 已知最大值为 38，因此手动挑选需要测试的阈值
 
     for threshold in threshold_range:
-        # first, iterate through germline only
+        # 首先仅遍历生殖系样本
         apply_threshold(germline_max=threshold, som_tissue_max=0, som_cancer_max=0,
                         category="germline", threshold=threshold,
                         reference_region=reference_except_ori, file=f)
 
-        # then, include all germline plus iterate through somatic tissue
+        # 然后保留所有生殖系，并遍历体细胞组织
         apply_threshold(germline_max=max(threshold_range), som_tissue_max=threshold, som_cancer_max=0,
                         category="germline + somatic tissue", threshold=threshold,
                         reference_region=reference_except_ori, file=f)
 
-        # then, include all germline and somatic tissue, plus iterate through somatic cancer
+        # 最后在前两类基础上加入体细胞癌症样本
         apply_threshold(germline_max=max(threshold_range), som_tissue_max=max(threshold_range),
                         som_cancer_max=threshold, category="germline + somatic tissue + somatic cancer",
                         threshold=threshold, reference_region=reference_except_ori, file=f)

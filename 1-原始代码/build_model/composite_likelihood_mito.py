@@ -5,28 +5,28 @@ import datetime
 from typing import Dict, List, Tuple, Union
 import os
 
-# global variables
+# 全局变量
 nucleotides = ["A", "C", "G", "T"]
 class_I_mutations = ["C>A", "T>A", "G>T", "A>T"]
 class_II_mutations = ["C>G", "T>G", "G>C", "A>C"]
 class_III_mutations = ["C>T", "T>C", "G>A", "A>G"]
 mut_types = ["A>C", "A>G", "A>T", "C>A", "C>G", "C>T", "G>A", "G>C", "G>T", "T>A", "T>C", "T>G"]
 
-# definitions of regions used in mitochondrial mutational model building
-# ori refers to OriB-OriH region with known difference in mutational signature, m.16197-191, across artificial break
+# 构建线粒体突变模型时使用的区域定义
+# ori 指代 OriB-OriH 区域，在人工断点两侧（m.16197-191）具有已知的突变特征差异
 start_ori = 16197
-end_ori = 191 + 1  # end not included in range so + 1
+end_ori = 191 + 1  # 因 range 的右端不包含该值，因此需要加 1
 ori_region = list(range(start_ori, 16570)) + list(range(1, end_ori))
 reference_except_ori = list(range(end_ori, start_ori))
 
 
-# helper functions
+# 辅助函数
 def build_dictionary(key: Union[str, Tuple[str, str, int]], dictionary: Dict[str, int]):
-    """Generate a dictionary that provides a count for the key.
+    """生成一个字典，为给定键记录出现次数。
 
-    :param key: the string or tuple to count occurrences of
-    :param dictionary: the name of the dictionary
-    :return: a dictionary, where the key is the string or tuple to count occurrences of, and the value is the count
+    :param key: 待统计的字符串或元组
+    :param dictionary: 字典名称
+    :return: 字典，键为待统计对象，值为出现次数
     """
     if key not in dictionary:
         dictionary[key] = 1
@@ -36,12 +36,12 @@ def build_dictionary(key: Union[str, Tuple[str, str, int]], dictionary: Dict[str
 
 
 def build_additive_dictionary(key: Union[str, Tuple[str, str, int]], value: int, dictionary: Dict[str, int]):
-    """Generate a dictionary that provides a cumulative count for the key, where each key has a non-zero value.
+    """生成一个字典，为给定键累计计数，确保每个键的值均为非零。
 
-    :param key: the string or tuple to sum the value across
-    :param value: the count or value assigned to the key
-    :param dictionary: the name of the dictionary
-    :return: a dictionary, where the key is the string or tuple to sum across, and the value is the cumulative count
+    :param key: 需要累加的字符串或元组
+    :param value: 要累加的计数或数值
+    :param dictionary: 字典名称
+    :return: 字典，键为累加对象，值为累计计数
     """
     if key not in dictionary:
         dictionary[key] = value
@@ -51,10 +51,10 @@ def build_additive_dictionary(key: Union[str, Tuple[str, str, int]], value: int,
 
 
 def flip_base(base: str):
-    """Return the pairing nucleotide that is located in the reverse complement strand at the same position.
+    """返回同一位置反义链上的配对碱基。
 
-    :param base: the reference nucleotide
-    :return: flipped_base, the pairing nucleotide
+    :param base: 参考碱基
+    :return: flipped_base，配对碱基
     """
     flipped_base = ''
     if base == "A":
@@ -69,10 +69,10 @@ def flip_base(base: str):
 
 
 def flip_mut(mut: str):
-    """Return the equivalent mutation for the nucleotide at the same position on the reverse complement strand.
+    """返回反义链同一位置上等效的突变类型。
 
-    :param mut: the mutation type in Ref>Alt format
-    :return: flipped_mut, the equivalent mutation for the nucleotide on the reverse complement strand
+    :param mut: Ref>Alt 格式的突变类型
+    :return: flipped_mut，反义链上的等效突变类型
     """
     flipped_mut = ''
     if mut == "A>C":
@@ -103,36 +103,36 @@ def flip_mut(mut: str):
 
 
 def handle_mito_genome(flanking_coord: int, coord: int):
-    """For flanking nucleotides around the artificial break in the circular mtDNA, or around m.3107N spacer, return
-    the correct flanking nucleotide coordinate to use. Can handle correction of flanking nucleotide range [-10:10]/{0}.
+    """针对环状 mtDNA 上人工断点附近或 m.3107N 间隔附近的侧翼碱基，返回正确的侧翼坐标。
+    可处理 [-10:10]/{0} 范围内侧翼碱基的校正。
 
-    :param flanking_coord: the coordinate of the flanking nucleotide, before correction
-    :param coord: the coordinate of the reference nucleotide
-    :return: the correct coordinate of the flanking nucleotide as string, note this will be unchanged unless corrected
+    :param flanking_coord: 侧翼碱基的原始坐标
+    :param coord: 参考碱基的坐标
+    :return: 纠正后的侧翼碱基坐标字符串，如无需校正则保持不变
     """
-    if flanking_coord < 1:  # to handle circular genome
-        flanking_coord = 16569 + flanking_coord  # since flanking_coord will be 0 or negative number
-    elif flanking_coord > 16569:  # to handle circular genome
+    if flanking_coord < 1:  # 处理环状基因组
+        flanking_coord = 16569 + flanking_coord  # 因为 flanking_coord 此时为 0 或负数
+    elif flanking_coord > 16569:  # 处理环状基因组
         flanking_coord = flanking_coord - 16569
-    elif flanking_coord < 3107 and 3118 > coord > 3107:  # to handle m.3107N, this skips this position
+    elif flanking_coord < 3107 and 3118 > coord > 3107:  # 处理 m.3107N，跳过该位置
         flanking_coord = flanking_coord - 1
-    elif flanking_coord > 3107 and 3096 < coord < 3107:  # to handle m.3107N, this skips this position
+    elif flanking_coord > 3107 and 3096 < coord < 3107:  # 处理 m.3107N，跳过该位置
         flanking_coord = flanking_coord + 1
-    elif flanking_coord == 3107 and flanking_coord < coord:  # to handle m.3107N
+    elif flanking_coord == 3107 and flanking_coord < coord:  # 处理 m.3107N
         flanking_coord = 3106
-    elif flanking_coord == 3107 and flanking_coord > coord:  # to handle m.3107N
+    elif flanking_coord == 3107 and flanking_coord > coord:  # 处理 m.3107N
         flanking_coord = 3108
     flanking_coord = str(flanking_coord)
     return flanking_coord
 
 
 def write_file_header(file: str, flanking_range: List[int], variable: str):
-    """Creates the file and header to write sequence context related data to file, for plotting.
+    """创建文件及其表头，用于写入序列上下文数据以便绘图。
 
-    :param file: the path of the file to write to
-    :param flanking_range: a list of flanking positions to write data for, ranging up to [-10:10]/{0}
-    :param variable: the data point to compare the flanking nucleotide to
-    :return: f, the file to which the data is being written
+    :param file: 输出文件路径
+    :param flanking_range: 需要写入的侧翼位置列表，范围为 [-10:10]/{0}
+    :param variable: 用于与侧翼碱基比较的数据变量名
+    :return: f，已打开的输出文件对象
     """
     f = open(file, "w")
     f.write("flanking_nucleotide" + '\t')
@@ -144,12 +144,12 @@ def write_file_header(file: str, flanking_range: List[int], variable: str):
     return f
 
 
-# functions for the composite likelihood model
+# 复合似然模型相关函数
 def make_denovo_counts(denovo_list: str):
-    """Read in the final de novo variants to use, and convert to dictionary.
+    """读取最终的 de novo 变异列表并转换为字典。
 
-    :param denovo_list: path to the final list of de novo mutations to use, in RefPosAlt format with their counts
-    :return: denovo_counts, a dictionary where the variant is the key, and the value is the total count of the variant
+    :param denovo_list: 最终使用的 de novo 变异列表路径，RefPosAlt 格式，附带计数
+    :return: denovo_counts 字典，键为变异，值为该变异的总计数
     """
     denovo_counts = {}
     for row in csv.DictReader(open(denovo_list), delimiter='\t'):
@@ -158,20 +158,20 @@ def make_denovo_counts(denovo_list: str):
 
 
 def make_type_count_vector(denovo_counts: Dict[str, int], reference_region: List[int]):
-    """Count the number of each mutation type within the region specified.
+    """统计指定区域内各突变类型的数量。
 
-    :param denovo_counts: a dictionary where the variant is the key, and the value is the total count of the variant
-    :param reference_region: a list of coordinates for the mtDNA region to count the occurrence of each mutation within
-    :return: mut_type_counts, dictionary where key is the mutation type and the value is its total count in the region
+    :param denovo_counts: 字典，键为变异，值为该变异的总计数
+    :param reference_region: mtDNA 区域的坐标列表，用于统计各突变类型的出现次数
+    :return: mut_type_counts 字典，键为突变类型，值为该区域内的总计数
     """
     mut_type_counts = {}
-    # use a list of all possible SNVs to parse quickly
+    # 使用所有可能的 SNV 列表以加速解析
     for row in csv.DictReader(open('required_files/synthetic_vcf/NC_012920.1_synthetic_vep_noheader.vcf'),
                               delimiter='\t'):
         variant = row["REF"] + row["POS"] + row["ALT"]
         mut_type = row["REF"] + ">" + row["ALT"]
         coord = row["POS"]
-        # count the number of each 12 types of mutation
+        # 统计 12 种突变的出现次数
         if variant in denovo_counts:
             if int(coord) in reference_region:
                 allele_count = denovo_counts[variant]
@@ -183,24 +183,24 @@ def make_type_count_vector(denovo_counts: Dict[str, int], reference_region: List
 
 
 def probability_per_ref_nuc(reference_region: List[int]):
-    """Count the number of times each base (A,C,G,T) occurs within a mtDNA region, and express as a proportion.
-    This will be used to represent the probability of mutation at each reference nucleotide.
+    """统计 mtDNA 区域内各碱基（A、C、G、T）的出现次数，并换算成比例。
+    该比例用于表示每个参考碱基发生突变的概率。
 
-    :param reference_region: a list of the coordinates for the mtDNA region to count the occurrence of each base within
-    :return: base_proportions, a dictionary where key is the base and the value is the proportion of base in the region
+    :param reference_region: mtDNA 区域的坐标列表，用于统计各碱基出现次数
+    :return: base_proportions 字典，键为碱基，值为其在该区域内的占比
     """
-    # use fasta file of the reference mitochondrial genome sequence, use replace to enable parsing per position
+    # 使用线粒体参考基因组的 FASTA 文件，去除换行以便逐位解析
     fasta = open('required_files/synthetic_vcf/NC_012920.1_noheader.fasta').read().replace('\n', '')
 
     dictionary = {}
-    # build a dictionary to count the number of A, C, G, T in the region
+    # 构建字典以统计区域内 A、C、G、T 的数量
     for coord in reference_region:
-        # require the -1 to convert coordinate to position in fasta since the first position in the fasta is 0, not 1
-        if fasta[coord - 1] != "N":  # if base is not N, to skip position m.3107
+        # FASTA 下标从 0 开始，因此需要减 1；若为 N 则跳过 m.3107
+        if fasta[coord - 1] != "N":
             dictionary = build_dictionary(key=fasta[coord - 1], dictionary=dictionary)
     total_number_bases = sum(dictionary.values())
 
-    # calculate as a proportion, keys = A, C, G, T
+    # 计算比例，键为 A、C、G、T
     base_proportions = {}
     for key in dictionary:
         base_proportions[key] = dictionary[key] / total_number_bases
@@ -209,15 +209,15 @@ def probability_per_ref_nuc(reference_region: List[int]):
 
 
 def lr_ref_nuc(type_counts: Dict[str, int], base_proportions: Dict[str, float]):
-    """Calculate the likelihood ratio of mutation at each reference nucleotide n(t) = A,C,G,T.
+    """计算每个参考碱基 n(t) = A、C、G、T 的突变似然比。
 
-    :param type_counts: dictionary where key is the mutation type and value is the total count of type
-    :param base_proportions: a dictionary where key is the base and the value is the proportion of the base
-    :return: lambda_ref_nuc, where key is the reference nucleotide and value is likelihood ratio of reference nucleotide
+    :param type_counts: 字典，键为突变类型，值为对应计数
+    :param base_proportions: 字典，键为碱基，值为其占比
+    :return: lambda_ref_nuc 字典，键为参考碱基，值为突变似然比
     """
     sum_vtype = sum(type_counts.values())
     lambda_ref_nuc = {}
-    # for each base, tally the number of mutations where it is the reference nucleotide, then calculate likelihood ratio
+    # 对每个碱基，统计以其为参考碱基的突变总数，再计算似然比
     for base in nucleotides:
         total_mut_at_base = 0
         for key in type_counts:
@@ -229,28 +229,28 @@ def lr_ref_nuc(type_counts: Dict[str, int], base_proportions: Dict[str, float]):
 
 
 def probability_per_class(base_proportions: Dict[str, float]):
-    """Calculate the probability of each mutation class, using information about the frequency of alternate nucleotide.
+    """利用替换碱基的频率信息，计算每个突变类别的概率。
 
-    :param base_proportions: a dictionary where key is the base and the value is the proportion of base
-    :return: class_probabilities, dictionary where key is class and value is the probability of the mutation class
+    :param base_proportions: 字典，键为碱基，值为其占比
+    :return: class_probabilities 字典，键为突变类别，值为对应的发生概率
     """
     class_probabilities = {}
-    probC_to_A = base_proportions["C"] * (base_proportions["A"] / (1 - base_proportions["C"]))  # type 1
-    probG_to_T = base_proportions["G"] * (base_proportions["T"] / (1 - base_proportions["G"]))  # type 7
-    probT_to_A = base_proportions["T"] * (base_proportions["A"] / (1 - base_proportions["T"]))  # type 4
-    probA_to_T = base_proportions["A"] * (base_proportions["T"] / (1 - base_proportions["A"]))  # type 10
+    probC_to_A = base_proportions["C"] * (base_proportions["A"] / (1 - base_proportions["C"]))  # 类型 1
+    probG_to_T = base_proportions["G"] * (base_proportions["T"] / (1 - base_proportions["G"]))  # 类型 7
+    probT_to_A = base_proportions["T"] * (base_proportions["A"] / (1 - base_proportions["T"]))  # 类型 4
+    probA_to_T = base_proportions["A"] * (base_proportions["T"] / (1 - base_proportions["A"]))  # 类型 10
     class_probabilities["I"] = probC_to_A + probG_to_T + probT_to_A + probA_to_T
 
-    probC_to_G = base_proportions["C"] * (base_proportions["G"] / (1 - base_proportions["C"]))  # type 2
-    probG_to_C = base_proportions["G"] * (base_proportions["C"] / (1 - base_proportions["G"]))  # type 8
-    probT_to_G = base_proportions["T"] * (base_proportions["G"] / (1 - base_proportions["T"]))  # type 6
-    probA_to_C = base_proportions["A"] * (base_proportions["C"] / (1 - base_proportions["A"]))  # type 12
+    probC_to_G = base_proportions["C"] * (base_proportions["G"] / (1 - base_proportions["C"]))  # 类型 2
+    probG_to_C = base_proportions["G"] * (base_proportions["C"] / (1 - base_proportions["G"]))  # 类型 8
+    probT_to_G = base_proportions["T"] * (base_proportions["G"] / (1 - base_proportions["T"]))  # 类型 6
+    probA_to_C = base_proportions["A"] * (base_proportions["C"] / (1 - base_proportions["A"]))  # 类型 12
     class_probabilities["II"] = probC_to_G + probG_to_C + probT_to_G + probA_to_C
 
-    probC_to_T = base_proportions["C"] * (base_proportions["T"] / (1 - base_proportions["C"]))  # type 3
-    probG_to_A = base_proportions["G"] * (base_proportions["A"] / (1 - base_proportions["G"]))  # type 9
-    probT_to_C = base_proportions["T"] * (base_proportions["C"] / (1 - base_proportions["T"]))  # type 5
-    probA_to_G = base_proportions["A"] * (base_proportions["G"] / (1 - base_proportions["A"]))  # type 11
+    probC_to_T = base_proportions["C"] * (base_proportions["T"] / (1 - base_proportions["C"]))  # 类型 3
+    probG_to_A = base_proportions["G"] * (base_proportions["A"] / (1 - base_proportions["G"]))  # 类型 9
+    probT_to_C = base_proportions["T"] * (base_proportions["C"] / (1 - base_proportions["T"]))  # 类型 5
+    probA_to_G = base_proportions["A"] * (base_proportions["G"] / (1 - base_proportions["A"]))  # 类型 11
     class_probabilities["III"] = probC_to_T + probG_to_A + probT_to_C + probA_to_G
 
     print('\n' + "The probability of mutation classes I, II and III is: ", class_probabilities)
@@ -258,13 +258,13 @@ def probability_per_class(base_proportions: Dict[str, float]):
 
 
 def lr_class(type_counts: Dict[str, int], class_probabilities: Dict[str, float]):
-    """Calculate the likelihood ratio of each mutation class - I,II,III.
+    """计算各突变类别（I、II、III）的似然比。
 
-    :param type_counts: dictionary where key is the mutation type and value is the total count of type
-    :param class_probabilities: dictionary where key is class and value is the probability of the mutation class
-    :return: lambda_mut_class, where key is mutation type and value is likelihood ratio of mutation class
+    :param type_counts: 字典，键为突变类型，值为计数
+    :param class_probabilities: 字典，键为突变类别，值为对应概率
+    :return: lambda_mut_class 字典，键为突变类型，值为突变类别的似然比
     """
-    # for each mutation class, tally the number of mutations
+    # 统计每个突变类别的突变数量
     total_I = total_II = total_III = 0
     for key in type_counts:
         if key in class_I_mutations:
@@ -274,7 +274,7 @@ def lr_class(type_counts: Dict[str, int], class_probabilities: Dict[str, float])
         elif key in class_III_mutations:
             total_III += type_counts[key]
 
-    # calculate likelihood ratio of each class
+    # 计算各类别的似然比
     sum_vtype = sum(type_counts.values())
     lambda_mut_class = {}
     for mut in mut_types:
@@ -289,20 +289,20 @@ def lr_class(type_counts: Dict[str, int], class_probabilities: Dict[str, float])
 
 
 def count_type_per_pos(denovo_counts: Dict[str, int]):
-    """Count the number of each mutation type at each mtDNA position - needed for make_mut_context_vector.
-    The returned dictionary can be used for any region as the key includes the position.
+    """统计每个位点上各突变类型的出现次数，为 make_mut_context_vector 提供输入。
+    由于键中包含位点信息，返回的字典可用于任意区域。
 
-    :param denovo_counts: a dictionary where the variant is the key, and the value is the total count of the variant
-    :return: pos_by_type_counts, dictionary with count of each of the 12 mutation types at each mtDNA position
+    :param denovo_counts: 字典，键为变异，值为该变异的总计数
+    :return: pos_by_type_counts 字典，记录每个位点 12 种突变类型的计数
     """
     pos_by_type_counts = {}
-    # use a list of all possible SNVs to parse quickly
+    # 使用所有可能的 SNV 列表以加速解析
     for row in csv.DictReader(open('required_files/synthetic_vcf/NC_012920.1_synthetic_vep_noheader.vcf'),
                               delimiter='\t'):
         variant = row["REF"] + row["POS"] + row["ALT"]
         mut_type = row["REF"] + ">" + row["ALT"]
         coord = row["POS"]
-        # count the number of each 12 types of mutation at each position
+        # 统计每个位点 12 种突变的次数
         if variant in denovo_counts:
             allele_count = denovo_counts[variant]
             pos_by_type_counts[(coord, mut_type)] = allele_count
@@ -311,47 +311,42 @@ def count_type_per_pos(denovo_counts: Dict[str, int]):
 
 def make_mut_context_vector(pos_by_type_counts: Dict[Tuple[str, str], int],
                             flanking_range: List[int], reference_region: List[int], mut_group: str = None):
-    """Generate the mutation sequence context vector Vseq t,p,n which counts the number of each flanking nucleotide
-    around each mutation type for every flanking position, for both transitions and transversions.
+    """生成突变序列上下文向量 Vseq t,p,n，统计每种突变在各侧翼位置的侧翼碱基数量，可同时处理转换和颠换。
 
-    We measure sequence context separately for all four transitions, considering the strand of the reference nucleotide.
-    For Tv, we calculate sequence context in a strand agnostic manner, for pyrimidine mutations at pyrimidine
-    reference nucleotides C and T.
+    对四种转换分别计算序列上下文，并考虑参考链的方向。对于颠换，由于计数较少，按嘧啶突变（C 或 T）汇总处理。
 
-    :param pos_by_type_counts: dictionary with count of each of the 12 mutation types at each mtDNA position
-    :param flanking_range: a list of flanking positions to write data for, ranging up to [-10:10]/{0}
-    :param reference_region: a list of the coordinates for the mtDNA region to calculate for
-    :param mut_group: either Ts or Tv, to represent transitions or transversions respectively, or the default of
-    None which is to include both
-    :return: vseq_vector, a dictionary with tuple key of mutation type, flanking nucleotide and flanking position,
-    and value is the count for the tuple - for Tv the mutation keys are the pyrimidine mutations (C>A,C>G,T>A,T>G).
+    :param pos_by_type_counts: 字典，记录每个位点 12 种突变类型的计数
+    :param flanking_range: 侧翼位置列表，范围为 [-10:10]/{0}
+    :param reference_region: 待计算的 mtDNA 区域坐标列表
+    :param mut_group: 可选值 Ts 或 Tv，分别代表转换或颠换，默认同时包含二者
+    :return: vseq_vector 字典，键为 (突变类型, 侧翼碱基, 侧翼位置)，值为对应计数；对 Tv 来说，突变键为嘧啶突变（C>A、C>G、T>A、T>G）
     """
-    # first, generate dictionary to convert coordinate to reference nucleotide
+    # 首先生成坐标到参考碱基的字典
     rcrs_pos2ref = rcrs_pos_to_ref()
     vseq_vector = {}
     for mut in mut_types:
         for coord in reference_region:
-            if (str(coord), mut) in pos_by_type_counts:  # if the coordinate has a mutation
+            if (str(coord), mut) in pos_by_type_counts:  # 若该坐标存在突变
                 for flanking_pos in flanking_range:
-                    if mut in class_III_mutations:  # Ts
+                    if mut in class_III_mutations:  # 转换（Ts）
                         if mut_group == "Tv":
-                            continue  # ie skip
-                        # count number of A,C,G,T in the positions around each mutation type
-                        # first, convert flanking position within [-10:10]/{0} to flanking coordinate
-                        # then, convert the flanking coordinate to the flanking nucleotide in reference genome
-                        # save flanking nucleotide counts around each mutation type, for each flanking position
+                            continue  # 如果只分析颠换，则跳过
+                        # 统计每种突变周围侧翼位置的 A、C、G、T 数量
+                        # 先将 [-10:10]/{0} 范围内的侧翼位置转换为基因组坐标
+                        # 再将侧翼坐标映射为参考基因组中的侧翼碱基
+                        # 将每个侧翼位置的侧翼碱基计数保存下来
                         flanking_coord = coord + flanking_pos
-                        # this function handles positions near the artificial break and m.3107N spacer
+                        # 该函数可处理人工断点和 m.3107N 间隔附近的坐标
                         flanking_coord = handle_mito_genome(flanking_coord=flanking_coord, coord=coord)
-                        flanking_nuc = rcrs_pos2ref[flanking_coord]  # reference nucleotide of flanking_position
+                        flanking_nuc = rcrs_pos2ref[flanking_coord]  # 侧翼位置的参考碱基
                         vseq_vector = build_additive_dictionary(key=(mut, flanking_nuc, flanking_pos),
                                                                 value=pos_by_type_counts[(str(coord), mut)],
                                                                 dictionary=vseq_vector)
-                    else:  # Tv
+                    else:  # 颠换（Tv）
                         if mut_group == "Ts":
-                            continue  # ie skip
-                        # collapsed dictionary across strands for Tv, given lower counts
-                        # generated as above, except annotate the mutations vs the pyrimidine (C or T)
+                            continue  # 如果只分析转换，则跳过
+                        # 由于计数较少，对 Tv 进行跨链合并
+                        # 与上述逻辑类似，但以嘧啶（C 或 T）为参考记录突变
                         if rcrs_pos2ref[str(coord)] == "C" or rcrs_pos2ref[str(coord)] == "T":
                             pyr_mut = mut
                             flanking_coord = coord + flanking_pos
@@ -361,10 +356,10 @@ def make_mut_context_vector(pos_by_type_counts: Dict[Tuple[str, str], int],
                                                                     value=pos_by_type_counts[(str(coord), mut)],
                                                                     dictionary=vseq_vector)
                         elif rcrs_pos2ref[str(coord)] == "A" or rcrs_pos2ref[str(coord)] == "G":
-                            pyr_mut = flip_mut(mut)  # reverse complement
-                            flanking_coord = coord - flanking_pos  # reverse complement
+                            pyr_mut = flip_mut(mut)  # 求反向互补
+                            flanking_coord = coord - flanking_pos  # 求反向互补
                             flanking_coord = handle_mito_genome(flanking_coord=flanking_coord, coord=coord)
-                            flanking_nuc = flip_base(rcrs_pos2ref[flanking_coord])  # reverse complement
+                            flanking_nuc = flip_base(rcrs_pos2ref[flanking_coord])  # 求反向互补
                             vseq_vector = build_additive_dictionary(key=(pyr_mut, flanking_nuc, flanking_pos),
                                                                     value=pos_by_type_counts[(str(coord), mut)],
                                                                     dictionary=vseq_vector)
@@ -374,30 +369,27 @@ def make_mut_context_vector(pos_by_type_counts: Dict[Tuple[str, str], int],
 
 def write_vseq_for_plotting(vseq_vector: Dict[Tuple[str, str, int], int], mut_type_counts: Dict[str, int],
                             flanking_range: List[int], region_name: str, mut_group: str = None):
-    """Write the mutation sequence context vector Vseq t,p,n to file, for plotting.
-    First convert from counts to frequency.
+    """将突变序列上下文向量 Vseq t,p,n 写入文件以便绘图，并先将计数转换为频率。
 
-    :param vseq_vector: a dictionary with tuple key of mutation type, flanking nucleotide and flanking position,
-    and value is the count for the tuple - for Tv the mutation key is the pyrimidine mutation (C>A,C>G,T>A,T>G)
-    :param mut_type_counts: dictionary where key is the mutation type and the value is its total count in the region
-    :param flanking_range: a list of flanking positions to write data for, ranging up to [-10:10]/{0}
-    :param region_name: the name of the reference region used, to include in file name
-    :param mut_group: either Ts or Tv, to represent transitions or transversions respectively, or the default of
-    None which is to include both
+    :param vseq_vector: 字典，键为 (突变类型, 侧翼碱基, 侧翼位置)，值为计数；对 Tv 而言，突变类型指嘧啶突变（C>A、C>G、T>A、T>G）
+    :param mut_type_counts: 字典，键为突变类型，值为在该区域内的总计数
+    :param flanking_range: 侧翼位置列表，范围为 [-10:10]/{0}
+    :param region_name: 区域名称，用于生成文件名
+    :param mut_group: 可选值 Ts 或 Tv，分别表示转换或颠换，默认同时输出二者
     """
-    # first do Ts, then Tv
+    # 先写出 Ts，再写 Tv
     if mut_group is None or mut_group == "Ts":
         f = write_file_header(
             file='output_files/sequence_context_vectors/Vseq_mut_%s_%s.txt' % ("Ts", region_name),
             flanking_range=flanking_range, variable="mutation_type")
         for flanking_nuc in nucleotides:
-            for mut in class_III_mutations:  # Ts
+            for mut in class_III_mutations:  # 转换（Ts）
                 f.write(flanking_nuc + '\t')
                 for flanking_pos in flanking_range:
-                    # to get as a frequency
+                    # 转换为频率
                     vseq_freq = vseq_vector[(mut, flanking_nuc, flanking_pos)] / mut_type_counts[mut]
                     if flanking_pos == flanking_range[-1]:
-                        f.write(str(vseq_freq) + '\t' + mut + '\n')  # since end of row
+                        f.write(str(vseq_freq) + '\t' + mut + '\n')  # 行末尾写入类型
                     else:
                         f.write(str(vseq_freq) + '\t')
 
@@ -407,66 +399,63 @@ def write_vseq_for_plotting(vseq_vector: Dict[Tuple[str, str, int], int], mut_ty
             flanking_range=flanking_range, variable="mutation_type")
         for flanking_nuc in nucleotides:
             for mut in mut_types:
-                if mut not in class_III_mutations:  # Tv
-                    if mut[0] == "C" or mut[0] == "T":  # only iterate through pyrimidine Tv
+                if mut not in class_III_mutations:  # 颠换（Tv）
+                    if mut[0] == "C" or mut[0] == "T":  # 仅遍历嘧啶颠换
                         f.write(flanking_nuc + '\t')
                         for flanking_pos in flanking_range:
-                            # note vseq_vector only includes pyrimidine transversions (C>A, C>G, T>A, T>C)
-                            # but mut_type_counts includes all 8 Tv types so sum the complements together (ie C>A+G>T)
+                            # vseq_vector 仅包含嘧啶颠换（C>A、C>G、T>A、T>G）
+                            # 但 mut_type_counts 覆盖 8 种颠换，因此需要累加互补突变（如 C>A 与 G>T）
                             vseq_freq = vseq_vector[(mut, flanking_nuc, flanking_pos)] / (
                                         mut_type_counts[mut] + mut_type_counts[flip_mut(mut)])
                             if flanking_pos == flanking_range[-1]:
-                                f.write(str(vseq_freq) + '\t' + mut + '\n')  # since end of row
+                                f.write(str(vseq_freq) + '\t' + mut + '\n')  # 行末尾写入类型
                             else:
                                 f.write(str(vseq_freq) + '\t')
 
 
 def make_ref_freq_vector(mut_group: str, flanking_range: List[int], reference_region: List[int]):
-    """Generate the reference sequence context f(ref) n(t),p,n' which counts the number of each flanking nucleotide
-    around each reference nucleotide for every flanking position.
+    """生成参考序列上下文 f(ref) n(t),p,n'，统计每个参考碱基在各侧翼位置的侧翼碱基数量。
 
-    Do this separately for transitions - Ts - and transversions - Tv. For the Ts we measure sequence context separately
-    for all four reference nucleotides A, C, G, T. For Tv, we calculate sequence context in a strand agnostic manner,
-    for pyrimidine reference nucleotides C and T.
+    转换（Ts）与颠换（Tv）分别计算。对于 Ts，分别统计四种参考碱基 A、C、G、T 的序列上下文；
+    对于 Tv，由于需要跨链合并，仅对嘧啶参考碱基 C、T 进行计算。
 
-    :param mut_group: either Ts or Tv, to represent transitions or transversions respectively
-    :param flanking_range: a list of flanking positions to write data for, ranging up to [-10:10]/{0}
-    :param reference_region: a list of the coordinates for the mtDNA region to count the occurrence of each base in
-    :return: mut_group_fref_vector, a dictionary with tuple key of reference nucleotide, flanking nucleotide and
-    flanking position, and value is the count for the tuple - for Tv the reference nucleotide is the pyrimidine (C or T)
+    :param mut_group: 取值 Ts 或 Tv，分别表示转换或颠换
+    :param flanking_range: 侧翼位置列表，范围为 [-10:10]/{0}
+    :param reference_region: 待统计的 mtDNA 区域坐标列表
+    :return: mut_group_fref_vector 字典，键为 (参考碱基, 侧翼碱基, 侧翼位置)，值为对应计数；对 Tv 来说，参考碱基为嘧啶（C 或 T）
     """
-    # first, generate dictionary to convert coordinate to reference nucleotide
+    # 首先生成坐标到参考碱基的字典
     rcrs_pos2ref = rcrs_pos_to_ref()
     mut_group_fref_vector = {}
     for coord in reference_region:
-        if coord != 3107:  # where reference nucleotide is N
+        if coord != 3107:  # 该位置的参考碱基为 N
             ref_nuc = rcrs_pos2ref[str(coord)]
             for flanking_pos in flanking_range:
                 if mut_group == "Ts":
-                    # count number of A,C,G,T in the positions around each reference nucleotide A,C,G,T
-                    # first, convert flanking position within [-10:10]/{0} to flanking coordinate
-                    # then, convert the flanking coordinate to the flanking nucleotide in reference genome
-                    # save flanking nucleotide counts around each reference nucleotide, for each flanking position
+                    # 统计每个参考碱基（A、C、G、T）周围的 A、C、G、T 侧翼碱基数量
+                    # 先将 [-10:10]/{0} 范围内的侧翼位置转换为基因组坐标
+                    # 再将侧翼坐标映射为参考基因组中的侧翼碱基
+                    # 保存每个参考碱基在各侧翼位置的侧翼碱基计数
                     flanking_coord = coord + flanking_pos
-                    # this function handles positions near the artificial break and m.3107N spacer
+                    # 处理人工断点与 m.3107N 间隔附近的坐标
                     flanking_coord = handle_mito_genome(flanking_coord=flanking_coord, coord=coord)
                     flanking_nuc = rcrs_pos2ref[flanking_coord]
                     mut_group_fref_vector = build_dictionary(key=(ref_nuc, flanking_nuc, flanking_pos),
                                                              dictionary=mut_group_fref_vector)
                 elif mut_group == "Tv":
-                    # collapsed dictionary across strands for Tv, given lower counts
-                    # generated as above, except annotate the reference nucleotide vs the pyrimidine (C or T)
+                    # 由于计数较少，对 Tv 进行跨链合并
+                    # 与上述逻辑类似，但使用嘧啶（C 或 T）作为参考碱基进行记录
                     flanking_coord = pyr_ref_nuc = ''
                     if ref_nuc == "C" or ref_nuc == "T":
                         pyr_ref_nuc = ref_nuc
                         flanking_coord = coord + flanking_pos
                     elif ref_nuc == "A" or ref_nuc == "G":
                         pyr_ref_nuc = flip_base(ref_nuc)
-                        flanking_coord = coord - flanking_pos  # reverse complement
+                        flanking_coord = coord - flanking_pos  # 求反向互补
                     flanking_coord = handle_mito_genome(flanking_coord=flanking_coord, coord=coord)
                     flanking_nuc = rcrs_pos2ref[flanking_coord]
                     if ref_nuc == "A" or ref_nuc == "G":
-                        flanking_nuc = flip_base(flanking_nuc)  # reverse complement
+                        flanking_nuc = flip_base(flanking_nuc)  # 求反向互补
                     mut_group_fref_vector = build_dictionary(key=(pyr_ref_nuc, flanking_nuc, flanking_pos),
                                                              dictionary=mut_group_fref_vector)
     print('\n' + "The count of sequence context around reference nucleotides for mut group ", mut_group,
@@ -477,16 +466,14 @@ def make_ref_freq_vector(mut_group: str, flanking_range: List[int], reference_re
 def write_fref_for_plotting(mut_group: str, mut_group_fref_vector: Dict[Tuple[str, str, int], int],
                             base_proportions: Dict[str, float], flanking_range: List[int],
                             reference_region: List[int], region_name: str):
-    """Write the reference sequence context f(ref) n(t),p,n' to file, for plotting.
-    First convert from counts to frequency.
+    """将参考序列上下文 f(ref) n(t),p,n' 写入文件以便绘图，并先将计数转换为频率。
 
-    :param mut_group: either Ts or Tv, to represent transitions or transversions respectively
-    :param mut_group_fref_vector: a dictionary with tuple key of reference nucleotide, flanking nucleotide and
-    flanking position, and value is the count for the tuple - for Tv the reference nucleotide is the pyrimidine (C or T)
-    :param base_proportions: a dictionary where key is the base and the value is the proportion of base in the region
-    :param flanking_range: a list of flanking positions to write data for, ranging up to [-10:10]/{0}
-    :param reference_region: a list of the coordinates for the mtDNA region to count the occurrence of each base in
-    :param region_name: the name of the reference region used, to include in file name
+    :param mut_group: 取值 Ts 或 Tv，分别表示转换或颠换
+    :param mut_group_fref_vector: 字典，键为 (参考碱基, 侧翼碱基, 侧翼位置)，值为计数；对 Tv 而言，参考碱基为嘧啶（C 或 T）
+    :param base_proportions: 字典，键为碱基，值为其在该区域内的占比
+    :param flanking_range: 侧翼位置列表，范围为 [-10:10]/{0}
+    :param reference_region: mtDNA 区域的坐标列表，用于统计碱基出现次数
+    :param region_name: 区域名称，用于生成文件名
     """
     f = write_file_header(file='output_files/sequence_context_vectors/f_ref_%s_%s.txt' % (mut_group, region_name),
                           flanking_range=flanking_range, variable="reference_nucleotide")
@@ -496,10 +483,10 @@ def write_fref_for_plotting(mut_group: str, mut_group_fref_vector: Dict[Tuple[st
                 f.write(flanking_nuc + '\t')
                 prob_ref_nuc = base_proportions[ref_nuc]
                 for flanking_pos in flanking_range:
-                    # to get as a frequency, before dividing by probability of reference nucleotide = A,C,G,T
+                    # 转换为频率，再除以参考碱基（A、C、G、T）的出现概率
                     f_ref = mut_group_fref_vector[(ref_nuc, flanking_nuc, flanking_pos)] / (len(reference_region) - 1)
                     if flanking_pos == flanking_range[-1]:
-                        f.write(str(f_ref / prob_ref_nuc) + '\t' + ref_nuc + '\n')  # since end of row
+                        f.write(str(f_ref / prob_ref_nuc) + '\t' + ref_nuc + '\n')  # 行末尾写入参考碱基
                     else:
                         f.write(str(f_ref / prob_ref_nuc) + '\t')
         elif mut_group == "Tv":
@@ -511,11 +498,11 @@ def write_fref_for_plotting(mut_group: str, mut_group_fref_vector: Dict[Tuple[st
                 elif pyr_ref_nuc == "T":
                     prob_ref_nuc = base_proportions["A"] + base_proportions["T"]
                 for flanking_pos in flanking_range:
-                    # to get as a frequency, before dividing by probability of pyrimidine reference nucleotide = C,T
+                    # 转换为频率，再除以嘧啶参考碱基（C、T）的出现概率
                     f_ref = mut_group_fref_vector[(pyr_ref_nuc, flanking_nuc, flanking_pos)] / \
                             (len(reference_region) - 1)
                     if flanking_pos == flanking_range[-1]:
-                        f.write(str(f_ref / prob_ref_nuc) + '\t' + pyr_ref_nuc + '\n')  # since end of row
+                        f.write(str(f_ref / prob_ref_nuc) + '\t' + pyr_ref_nuc + '\n')  # 行末尾写入参考碱基
                     else:
                         f.write(str(f_ref / prob_ref_nuc) + '\t')
 
@@ -525,73 +512,66 @@ def lr_seq_context(mut_type_counts: Dict[str, int], vseq_vector: Dict[Tuple[str,
                    Tv_fref_vector: Union[Dict[Tuple[str, str, int], int], None],
                    base_proportions: Dict[str, float], flanking_range: List[int],
                    reference_region: List[int], mut_group: str = None):
-    """Calculate the likelihood ratio of sequence context for all 12 mutation types.
+    """计算 12 种突变类型的序列上下文似然比。
 
-    :param mut_type_counts: dictionary where key is the mutation type and the value is its total count in the region
-    :param vseq_vector: dictionary with tuple key of mutation type, flanking nucleotide and flanking position,
-    and value is the count for the tuple - for Tv the mutation is the pyrimidine mutation (C>A,C>G,T>A,T>G)
-    :param Ts_fref_vector: a dictionary with tuple key of reference nucleotide, flanking nucleotide and
-    flanking position, and value is the count for the tuple
-    :param Tv_fref_vector: a dictionary with tuple key of reference nucleotide, flanking nucleotide and
-    flanking position, and value is the count for the tuple - for Tv the reference nucleotide is the pyrimidine (C or T)
-    :param base_proportions: a dictionary where key is the base and the value is the proportion of base in the region
-    :param flanking_range: a list of flanking positions to write data for, ranging up to [-10:10]/{0}
-    :param reference_region: a list of the coordinates for the mtDNA region to count the occurrence of each base in
-    :param mut_group: either Ts or Tv, to represent transitions or transversions respectively, or the default of
-    None which is to include both
-    :return: lambda_seq_context, where key is a tuple of mutation type, flanking position and flanking nucleotide,
-    and value is likelihood ratio of sequence context, and includes for all 12 mutation types
+    :param mut_type_counts: 字典，键为突变类型，值为该区域内的总计数
+    :param vseq_vector: 字典，键为 (突变类型, 侧翼碱基, 侧翼位置)，值为计数；对 Tv 而言，突变类型为嘧啶突变（C>A、C>G、T>A、T>G）
+    :param Ts_fref_vector: 字典，键为 (参考碱基, 侧翼碱基, 侧翼位置)，值为计数
+    :param Tv_fref_vector: 字典，键为 (参考碱基, 侧翼碱基, 侧翼位置)，值为计数；对 Tv 而言，参考碱基为嘧啶（C 或 T）
+    :param base_proportions: 字典，键为碱基，值为其在该区域内的占比
+    :param flanking_range: 侧翼位置列表，范围为 [-10:10]/{0}
+    :param reference_region: mtDNA 区域的坐标列表，用于统计碱基出现次数
+    :param mut_group: 可选值 Ts 或 Tv，分别表示转换或颠换，默认同时处理二者
+    :return: lambda_seq_context 字典，键为 (突变类型, 侧翼碱基, 侧翼位置)，值为序列上下文似然比，涵盖全部 12 种突变类型
     """
     lambda_seq_context = {}
     for mut in mut_types:
-        if mut in class_III_mutations:  # Ts
+        if mut in class_III_mutations:  # 转换（Ts）
             if mut_group == "Tv":
-                continue  # ie skip
+                continue  # 如果只分析颠换，则跳过
             for flanking_pos in flanking_range:
                 for flanking_nuc in nucleotides:
-                    # numerator is sequence context for the base substitutions Vseq t,p,n
+                    # 分子：突变序列上下文 Vseq t,p,n
                     numerator = vseq_vector[(mut, flanking_nuc, flanking_pos)]
-                    # denominator is Ts_fref_vector - the reference sequence context f(ref) n(t),p,n'
-                    # divided by the number of positions to turn into frequency
-                    # this is then divided by the probability of the reference nucleotide as a scaling factor
+                    # 分母：Ts_fref_vector，即参考序列上下文 f(ref) n(t),p,n'
+                    # 先除以位点数获得频率，再除以参考碱基的概率作为缩放因子
                     ref_nuc = mut[0]
                     f_ref = Ts_fref_vector[(ref_nuc, flanking_nuc, flanking_pos)] / (len(reference_region) - 1)
                     prob_ref = base_proportions[ref_nuc]
                     f_ref_scaled = f_ref / prob_ref
-                    # and then multiplied by the Vtype count for the mutation type
+                    # 最后乘以对应突变类型的计数
                     denominator = mut_type_counts[mut] * f_ref_scaled
                     lambda_seq_context[(mut, flanking_nuc, flanking_pos)] = numerator / denominator
-        elif mut in ["C>A", "C>G", "T>A", "T>G"]:  # pyrimidine Tv
+        elif mut in ["C>A", "C>G", "T>A", "T>G"]:  # 嘧啶颠换
             if mut_group == "Ts":
-                continue  # ie skip
+                continue  # 如果只分析转换，则跳过
             for flanking_pos in flanking_range:
                 for flanking_nuc in nucleotides:
-                    # numerator is sequence context for the base substitutions Vseq t,p,n
-                    # note vseq_vector includes all 4 Ts but only includes pyrimidine Tv (C>A, C>G, T>A, T>C)
+                    # 分子：突变序列上下文 Vseq t,p,n
+                    # 注意 vseq_vector 包含全部 4 种转换，但仅包含嘧啶颠换（C>A、C>G、T>A、T>G）
                     numerator = vseq_vector[(mut, flanking_nuc, flanking_pos)]
-                    # denominator is Tv_fref_vector - the reference sequence context f(ref) n(t),p,n'
-                    # divided by the number of positions to turn into frequency
-                    # this is then divided by the probability of the pyrimidine reference nucleotides as scaling factor
+                    # 分母：Tv_fref_vector，即参考序列上下文 f(ref) n(t),p,n'
+                    # 先除以位点数获得频率，再除以嘧啶参考碱基的概率作为缩放因子
                     pyr_ref_nuc = mut[0]
                     f_ref = Tv_fref_vector[(pyr_ref_nuc, flanking_nuc, flanking_pos)] / (len(reference_region) - 1)
                     prob_ref = ''
-                    # first need to collapse to the pyrimidine
+                    # 先折叠至嘧啶类别
                     if pyr_ref_nuc == "C":
                         prob_ref = base_proportions["C"] + base_proportions["G"]
                     elif pyr_ref_nuc == "T":
                         prob_ref = base_proportions["A"] + base_proportions["T"]
                     f_ref_scaled = f_ref / prob_ref
-                    # and then multiplied by the Vtype count for the mutation type
-                    # but mut_type_counts includes all 8 Tv types so sum the complements together (ie C>A+G>T)
+                    # 然后乘以对应突变类型的计数
+                    # 但 mut_type_counts 包含 8 种颠换，需要将互补突变（如 C>A 与 G>T）合并
                     denominator = (mut_type_counts[mut] + mut_type_counts[flip_mut(mut)]) * f_ref_scaled
                     lambda_seq_context[(mut, flanking_nuc, flanking_pos)] = numerator / denominator
-    for mut in mut_types:  # have to wait until pyrimidine Tv are calculated
+    for mut in mut_types:  # 需在嘧啶颠换计算完成后处理
         if mut_group == "Ts":
-            continue  # ie skip
-        if mut in ["G>T", "G>C", "A>T", "A>C"]:  # purine Tv
+            continue  # 如果只分析转换，则跳过
+        if mut in ["G>T", "G>C", "A>T", "A>C"]:  # 嘌呤颠换
             for flanking_pos in flanking_range:
                 for flanking_nuc in nucleotides:
-                    # these are the same values as for the reverse complement
+                    # 与互补链上的取值相同
                     lambda_seq_context[(mut, flanking_nuc, flanking_pos)] = \
                         lambda_seq_context[(flip_mut(mut), flip_base(flanking_nuc), (flanking_pos * -1))]
     print('\n' + "The likelihood of sequence context around mutation types is: ", lambda_seq_context)
@@ -601,18 +581,14 @@ def lr_seq_context(mut_type_counts: Dict[str, int], vseq_vector: Dict[Tuple[str,
 def write_lambda_seq_context_for_plotting(lambda_seq_context: Dict[Tuple[str, str, int], float],
                                           lambda_ref_nuc: Dict[str, float], lambda_mut_class: Dict[str, float],
                                           flanking_range: List[int], region_name: str,  mut_group: str = None):
-    """Write the likelihood of sequence context to file, for plotting.
-    Also include the likelihood of the reference nucleotide and likelihood of the mutation class.
+    """将序列上下文的似然比写入文件以便绘图，同时包含参考碱基和突变类别的似然比。
 
-    :param lambda_seq_context: dictionary where key is a tuple of mutation type, flanking nucleotide, flanking position,
-    and value is likelihood ratio of sequence context
-    :param lambda_ref_nuc: dictionary where key is reference nucleotide and value is likelihood ratio of mutation
-    at the reference nucleotide
-    :param lambda_mut_class: dictionary where key is mutation type and value is likelihood ratio of mutation class
-    :param flanking_range: a list of flanking positions to write data for, ranging up to [-10:10]/{0}
-    :param region_name: the name of the reference region used, to include in file name
-    :param mut_group: either Ts or Tv, to represent transitions or transversions respectively, or the default of
-    None which is to include both
+    :param lambda_seq_context: 字典，键为 (突变类型, 侧翼碱基, 侧翼位置)，值为序列上下文似然比
+    :param lambda_ref_nuc: 字典，键为参考碱基，值为该碱基的突变似然比
+    :param lambda_mut_class: 字典，键为突变类型，值为突变类别的似然比
+    :param flanking_range: 侧翼位置列表，范围为 [-10:10]/{0}
+    :param region_name: 区域名称，用于生成文件名
+    :param mut_group: 取值 Ts 或 Tv，分别表示转换或颠换，默认同时输出二者
     """
     f = write_file_header(
         file='output_files/sequence_context_vectors/lambda_seq_context_%s.txt' % region_name,
@@ -620,9 +596,9 @@ def write_lambda_seq_context_for_plotting(lambda_seq_context: Dict[Tuple[str, st
         variable="mutation_type" + '\t' + "lambda_ref_nucleotide" + '\t' + "lambda_mutation_class")
     for mut in mut_types:
         if mut_group == "Ts" and mut not in class_III_mutations:
-            continue  # ie skip
+            continue  # 若仅关注转换，则跳过其他类型
         elif mut_group == "Tv" and mut in class_III_mutations:
-            continue
+            continue  # 若仅关注颠换，则跳过转换
         for flanking_nuc in nucleotides:
             f.write(str(flanking_nuc) + '\t')
             for flanking_pos in flanking_range:
@@ -635,17 +611,15 @@ def write_lambda_seq_context_for_plotting(lambda_seq_context: Dict[Tuple[str, st
 
 def inputs_for_composite_likelihood(denovo_list: str, reference_region: List[int], region_name: str,
                                     flanking_range: List[int], mut_group: str = None):
-    """Function to make the dictionaries needed for the composite likelihood calculation.
-    Configured to be able to run on just transitions, or transversions, or both which is the default.
-    This is to handle the ori region separately.
+    """生成复合似然计算所需的各类字典。
+    支持仅计算转换、仅计算颠换，或同时计算二者（默认）。用于将 Ori 区域单独处理。
 
-    :param denovo_list: path to the final list of de novo mutations to use, in RefPosAlt format with their counts
-    :param reference_region: a list of the coordinates for the mtDNA region to analyze
-    :param region_name: the name of the reference region used, to include in file name
-    :param flanking_range: a list of flanking positions to write data for, ranging up to [-10:10]/{0}
-    :param mut_group: either Ts or Tv, to represent transitions or transversions respectively, or the default of
-    None which is to include both
-    :return: lambda_ref_nuc, lambda_mut_class, lambda_seq_context dictionaries for final function
+    :param denovo_list: 最终 de novo 变异列表路径，RefPosAlt 格式并附计数
+    :param reference_region: 待分析的 mtDNA 区域坐标列表
+    :param region_name: 区域名称，用于生成文件名
+    :param flanking_range: 侧翼位置列表，范围为 [-10:10]/{0}
+    :param mut_group: 取值 Ts 或 Tv，分别表示转换或颠换，默认同时包含二者
+    :return: lambda_ref_nuc、lambda_mut_class、lambda_seq_context 三个字典，供后续函数使用
     """
     print('Start with calculating likelihood of mutation at reference nucleotide and likelihood of mutation class')
 
@@ -664,7 +638,7 @@ def inputs_for_composite_likelihood(denovo_list: str, reference_region: List[int
     write_vseq_for_plotting(vseq_vector=vseq_vector, mut_type_counts=mut_type_counts, flanking_range=flanking_range,
                             region_name=region_name, mut_group=mut_group)
 
-    # these functions have to have the mutation group specified, as handled separately
+    # 以下函数需要指定突变类别，以便分别处理
     Ts_fref_vector = Tv_fref_vector = {}
     if mut_group is None or mut_group == "Ts":
         Ts_fref_vector = make_ref_freq_vector(mut_group="Ts", flanking_range=flanking_range,
@@ -695,31 +669,26 @@ def composite_likelihood(lambda_ref_nuc: Dict[str, float], lambda_mut_class: Dic
                          ori_lambda_ref_nuc: Dict[str, float], ori_lambda_mut_class: Dict[str, float],
                          ori_lambda_seq_context: Dict[Tuple[str, str, int], float],
                          context_size: int):
-    """Calculate the composite likelihood of each mutation type at each position in the reference mtDNA sequence.
+    """计算参考 mtDNA 序列中每个位点、每种突变类型的复合似然。
 
-    :param lambda_ref_nuc: dictionary where key is reference nucleotide and value is likelihood ratio of mutation
-    at the reference nucleotide
-    :param lambda_mut_class: dictionary where key is mutation type and value is likelihood ratio of mutation class
-    :param lambda_seq_context: where key is a tuple of mutation type, flanking nucleotide, and flanking position,
-    and value is likelihood ratio of sequence context, and includes for all 12 mutation types
-    :param ori_lambda_ref_nuc: dictionary where key is reference nucleotide and value is likelihood ratio of mutation
-    at the reference nucleotide, in ori region only
-    :param ori_lambda_mut_class: dictionary where key is mutation type and value is likelihood ratio of mutation class,
-    in ori region only
-    :param ori_lambda_seq_context: where key is a tuple of mutation type, flanking nucleotide, and flanking position,
-    and value is likelihood ratio of sequence context, in ori region only
-    :param context_size: how many nucleotides to include for sequence context, 3 is default (trinucleotide)
+    :param lambda_ref_nuc: 字典，键为参考碱基，值为该碱基的突变似然比
+    :param lambda_mut_class: 字典，键为突变类型，值为突变类别的似然比
+    :param lambda_seq_context: 字典，键为 (突变类型, 侧翼碱基, 侧翼位置)，值为序列上下文似然比，涵盖全部 12 种突变类型
+    :param ori_lambda_ref_nuc: 字典，键为参考碱基，值为 Ori 区域内的突变似然比
+    :param ori_lambda_mut_class: 字典，键为突变类型，值为 Ori 区域内的突变类别似然比
+    :param ori_lambda_seq_context: 字典，键为 (突变类型, 侧翼碱基, 侧翼位置)，值为 Ori 区域内的序列上下文似然比
+    :param context_size: 序列上下文窗口大小，默认 3（即三核苷酸）
     """
     f = open('output_files/mutation_likelihoods/mito_mutation_likelihoods.txt', "w")
     f.write("POS	REF	ALT	Likelihood" + '\n')
 
-    # how many nucleotides either side to include in model, +1 since range end not included
+    # 窗口在参考位点两侧各包含多少个碱基；由于 range 右端不包含，需要额外加 1
     pos_range = list(range(1, ((context_size - 1) // 2) + 1))
 
-    # first, generate dictionary to convert coordinate to reference nucleotide
+    # 先生成坐标到参考碱基的映射字典
     rcrs_pos2ref = rcrs_pos_to_ref()
 
-    # iterate through all possible mutations in the mitochondrial genome
+    # 遍历线粒体基因组中所有可能的突变
     for row in csv.DictReader(open('required_files/synthetic_vcf/NC_012920.1_synthetic_vep_noheader.vcf'),
                               delimiter='\t'):
         coord = int(row["POS"])
@@ -727,35 +696,33 @@ def composite_likelihood(lambda_ref_nuc: Dict[str, float], lambda_mut_class: Dic
         alt = row["ALT"]
         mut = ref + ">" + alt
 
-        if coord != 3107:  # this is ref="N"
-            # product_mut_type is likelihood of mutation at reference nucleotide
-            # multiplied by likelihood of mutation class - ori region handled separately
+        if coord != 3107:  # 该位置的参考碱基为 N
+            # product_mut_type 表示参考碱基的突变似然与突变类别似然的乘积；Ori 区域单独处理
             if coord in ori_region:
                 product_mut_type = ori_lambda_ref_nuc[ref] * ori_lambda_mut_class[mut]
             else:
                 product_mut_type = lambda_ref_nuc[ref] * lambda_mut_class[mut]
 
-            # reset product_seq_context to 0 for each mutation type at each reference coordinate
+            # 对每个参考位点的突变类型初始化序列上下文乘积
             product_seq_context = 0
 
-            for number in pos_range:  # this list will range from 1-10, depending on size of sequence context
-                # convert the flanking positions to their coordinates
+            for number in pos_range:  # 取决于上下文窗口大小，这里的数值范围为 1-10
+                # 将侧翼位置转换为具体坐标
                 flanking_coord_list = [coord - number, coord + number]
                 for flanking_coord in flanking_coord_list:
-                    # to designate which is the minus and plus flanking position around the reference coordinate
+                    # 标记该侧翼位置位于参考位点的左侧还是右侧
                     flanking_pos = ''
                     if flanking_coord < coord:
                         flanking_pos = -1 * number
                     elif flanking_coord > coord:
                         flanking_pos = number
-                    # this function handles positions near the artificial break and m.3107N spacer
+                    # 该函数可处理人工断点和 m.3107N 间隔附近的坐标
                     flanking_coord = handle_mito_genome(flanking_coord=flanking_coord, coord=coord)
-                    # reference nucleotide of flanking_position
+                    # 该侧翼坐标对应的参考碱基
                     flanking_nuc = rcrs_pos2ref[flanking_coord]
 
-                    # calculate product of the likelihood for sequence context for each flanking position
-                    # Ts in ori region handled separately
-                    if (coord in ori_region) and (mut in class_III_mutations):  # if Ts in OriB-OriH
+                    # 计算各侧翼位置的序列上下文似然乘积；Ori 区域内的转换单独处理
+                    if (coord in ori_region) and (mut in class_III_mutations):  # OriB-OriH 区域的转换
                         if product_seq_context == 0:
                             product_seq_context = ori_lambda_seq_context[(mut, flanking_nuc, flanking_pos)]
                         else:
@@ -768,9 +735,9 @@ def composite_likelihood(lambda_ref_nuc: Dict[str, float], lambda_mut_class: Dic
                             product_seq_context = product_seq_context * \
                                                   lambda_seq_context[(mut, flanking_nuc, flanking_pos)]
 
-            # final composite likelihood - likelihood mutation type multiplied by likelihood sequence context
+            # 最终复合似然：突变类型似然与序列上下文似然的乘积
             product_pos = product_mut_type * product_seq_context
-            # print to file:
+            # 写入文件
             f.write(str(coord) + '\t' + str(ref) + '\t' + str(alt) + '\t' + str(product_pos) + '\n')
 
 
@@ -784,7 +751,7 @@ if __name__ == "__main__":
                         help="path to the de novo mutation list, in RefPosAlt format with their counts")
     args = parser.parse_args()
 
-    # set defaults
+    # 设置默认参数
     if args.context_size is None:
         args.context_size = 3
     if args.denovo_list is None:
@@ -797,7 +764,7 @@ if __name__ == "__main__":
 
     print('\n' + 'This script will calculate the likelihood of mutation in the mitochondrial genome')
     print('\n' + 'This will be done using window size of ' + str(args.context_size) + ' for sequence context')
-    # double bracket division to return as int
+    # 使用双重整除以确保结果为整数
     flanking_range = [i for i in
                       list(range(-((args.context_size - 1) // 2), (((args.context_size - 1) // 2) + 1)))
                       if i != 0]
@@ -812,7 +779,7 @@ if __name__ == "__main__":
 
     print('\n' + 'Next, calculate for the OriB-OriH region' + '\n')
 
-    # only compute this for transitions - Ts
+    # 仅对转换（Ts）执行该计算
     (ori_lambda_ref_nuc, ori_lambda_mut_class, ori_lambda_seq_context) = \
         inputs_for_composite_likelihood(denovo_list=args.denovo_list, reference_region=ori_region,
                                         region_name="OriB-OriH", flanking_range=flanking_range, mut_group="Ts")

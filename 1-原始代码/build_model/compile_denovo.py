@@ -2,8 +2,21 @@ import csv
 import datetime
 from typing import Dict, TextIO, Union
 import os
-
-
+'''
+该脚本用于整合多个文献及自有数据集中的线粒体 DNA de novo 突变信息，生成统一格式的输出文件。主要功能包括：
+1. 统计每个样本的 de novo 突变数量，并生成样本-突变-计数的三元组。
+2. 支持多种数据来源，包括生殖系（germline）、体细胞组织（somatic tissue）和体细胞癌症（somatic cancer）突变。
+3. 针对不同数据集的格式进行专门处理，确保数据准确整合。
+4. 对于部分数据集（如 GTEx），实现参考序列转换（Yoruba 到 rCRS）。
+5. 输出文件包含所有 de novo 突变、对应样本及样本的 de novo 数量，便于后续分析。
+主要函数说明：
+- build_sample_dict: 统计并更新每个样本的 de novo 数量。
+- write_denovo: 将突变、样本及计数写入输出文件。
+- rcrs_pos_to_ref: 构建 rCRS 位点与参考碱基的映射字典。
+- extract_denovo: 主整合函数，处理所有数据集并输出结果。
+使用方法：
+直接运行脚本，将在 output_files/denovo/all_denovo.txt 生成整合后的 de novo 信息。
+'''
 # 辅助函数
 def build_sample_dict(sample: str, dict: Dict[str, int]):
     """生成包含每个样本 de novo 数量的字典。
