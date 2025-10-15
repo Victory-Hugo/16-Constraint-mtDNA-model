@@ -1,0 +1,33 @@
+# create a figure to show regional constraint for MT-ND1
+# open chimeraX and paste in commands
+
+open 5XTD
+preset ribbon 
+
+# hide all other proteins and ligands
+select /A,B,C,E,F,G,H,I,J,K,L,M,N,O,P,Q,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,n,o,p,u,v,w,8Q1,CDL,FES,FMN,NDP,PEE,PLX,SF4,i,j,k,l,m,r
+transparency sel 100 target abcsp
+~select /A,B,C,E,F,G,H,I,J,K,L,M,N,O,P,Q,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,n,o,p,u,v,w,8Q1,CDL,FES,FMN,NDP,PEE,PLX,SF4,i,j,k,l,m,r
+select :CDL
+transparency sel 100 target abcsp
+~select :CDL
+
+# color ND1 in blue
+color /s #377eb8
+
+# color ND1 regional constraint and key residues/regions
+color /s:44-60,120-134,188-228 #ff4040
+color /s:143,192 #FFFF00 
+select /s:143,192; show sel atoms; style sel stick; ~select /s:143,192
+color /s:200-215 #00FF00
+
+# background color
+set bgColor white
+
+# manually zoom and reposition
+# ie via 'zoom 5'
+zoom 4.5
+# select simple lighting
+lighting simple
+
+save figure_scripts/figures_Figure2b_ND1.png supersample 3
