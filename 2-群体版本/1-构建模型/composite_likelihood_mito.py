@@ -435,8 +435,9 @@ def write_vseq_for_plotting(vseq_vector: Dict[Tuple[str, str, int], int], mut_ty
             for mut in class_III_mutations:  # 转换（Ts）
                 f.write(flanking_nuc + '\t')
                 for flanking_pos in flanking_range:
-                    # 转换为频率
-                    vseq_freq = vseq_vector[(mut, flanking_nuc, flanking_pos)] / mut_type_counts[mut]
+                    numerator = vseq_vector.get((mut, flanking_nuc, flanking_pos), 0)
+                    denom = mut_type_counts.get(mut, 0)
+                    vseq_freq = (numerator / denom) if denom else 0.0
                     if flanking_pos == flanking_range[-1]:
                         f.write(str(vseq_freq) + '\t' + mut + '\n')  # 行末尾写入类型
                     else:
@@ -451,11 +452,10 @@ def write_vseq_for_plotting(vseq_vector: Dict[Tuple[str, str, int], int], mut_ty
                 if mut not in class_III_mutations:  # 颠换（Tv）
                     if mut[0] == "C" or mut[0] == "T":  # 仅遍历嘧啶颠换
                         f.write(flanking_nuc + '\t')
+                        denom = mut_type_counts.get(mut, 0) + mut_type_counts.get(flip_mut(mut), 0)
                         for flanking_pos in flanking_range:
-                            # vseq_vector 仅包含嘧啶颠换（C>A、C>G、T>A、T>G）
-                            # 但 mut_type_counts 覆盖 8 种颠换，因此需要累加互补突变（如 C>A 与 G>T）
-                            vseq_freq = vseq_vector[(mut, flanking_nuc, flanking_pos)] / (
-                                        mut_type_counts[mut] + mut_type_counts[flip_mut(mut)])
+                            numerator = vseq_vector.get((mut, flanking_nuc, flanking_pos), 0)
+                            vseq_freq = (numerator / denom) if denom else 0.0
                             if flanking_pos == flanking_range[-1]:
                                 f.write(str(vseq_freq) + '\t' + mut + '\n')  # 行末尾写入类型
                             else:
@@ -581,16 +581,16 @@ def lr_seq_context(mut_type_counts: Dict[str, int], vseq_vector: Dict[Tuple[str,
             for flanking_pos in flanking_range:
                 for flanking_nuc in nucleotides:
                     # 分子：突变序列上下文 Vseq t,p,n
-                    numerator = vseq_vector[(mut, flanking_nuc, flanking_pos)]
+                    numerator = vseq_vector.get((mut, flanking_nuc, flanking_pos), 0)
                     # 分母：Ts_fref_vector，即参考序列上下文 f(ref) n(t),p,n'
                     # 先除以位点数获得频率，再除以参考碱基的概率作为缩放因子
                     ref_nuc = mut[0]
-                    f_ref = Ts_fref_vector[(ref_nuc, flanking_nuc, flanking_pos)] / (len(reference_region) - 1)
+                    f_ref = Ts_fref_vector.get((ref_nuc, flanking_nuc, flanking_pos), 0) / (len(reference_region) - 1)
                     prob_ref = base_proportions[ref_nuc]
                     f_ref_scaled = f_ref / prob_ref
                     # 最后乘以对应突变类型的计数
-                    denominator = mut_type_counts[mut] * f_ref_scaled
-                    lambda_seq_context[(mut, flanking_nuc, flanking_pos)] = numerator / denominator
+                    denominator = mut_type_counts.get(mut, 0) * f_ref_scaled
+                    lambda_seq_context[(mut, flanking_nuc, flanking_pos)] = (numerator / denominator) if denominator else 0.0
         elif mut in ["C>A", "C>G", "T>A", "T>G"]:  # 嘧啶颠换
             if mut_group == "Ts":
                 continue  # 如果只分析转换，则跳过
@@ -598,11 +598,11 @@ def lr_seq_context(mut_type_counts: Dict[str, int], vseq_vector: Dict[Tuple[str,
                 for flanking_nuc in nucleotides:
                     # 分子：突变序列上下文 Vseq t,p,n
                     # 注意 vseq_vector 包含全部 4 种转换，但仅包含嘧啶颠换（C>A、C>G、T>A、T>G）
-                    numerator = vseq_vector[(mut, flanking_nuc, flanking_pos)]
+                    numerator = vseq_vector.get((mut, flanking_nuc, flanking_pos), 0)
                     # 分母：Tv_fref_vector，即参考序列上下文 f(ref) n(t),p,n'
                     # 先除以位点数获得频率，再除以嘧啶参考碱基的概率作为缩放因子
                     pyr_ref_nuc = mut[0]
-                    f_ref = Tv_fref_vector[(pyr_ref_nuc, flanking_nuc, flanking_pos)] / (len(reference_region) - 1)
+                    f_ref = Tv_fref_vector.get((pyr_ref_nuc, flanking_nuc, flanking_pos), 0) / (len(reference_region) - 1)
                     prob_ref = ''
                     # 先折叠至嘧啶类别
                     if pyr_ref_nuc == "C":
@@ -612,8 +612,8 @@ def lr_seq_context(mut_type_counts: Dict[str, int], vseq_vector: Dict[Tuple[str,
                     f_ref_scaled = f_ref / prob_ref
                     # 然后乘以对应突变类型的计数
                     # 但 mut_type_counts 包含 8 种颠换，需要将互补突变（如 C>A 与 G>T）合并
-                    denominator = (mut_type_counts[mut] + mut_type_counts[flip_mut(mut)]) * f_ref_scaled
-                    lambda_seq_context[(mut, flanking_nuc, flanking_pos)] = numerator / denominator
+                    denominator = (mut_type_counts.get(mut, 0) + mut_type_counts.get(flip_mut(mut), 0)) * f_ref_scaled
+                    lambda_seq_context[(mut, flanking_nuc, flanking_pos)] = (numerator / denominator) if denominator else 0.0
     for mut in mut_types:  # 需在嘧啶颠换计算完成后处理
         if mut_group == "Ts":
             continue  # 如果只分析转换，则跳过

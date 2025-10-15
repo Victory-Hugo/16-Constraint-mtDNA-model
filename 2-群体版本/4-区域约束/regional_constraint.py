@@ -77,10 +77,11 @@ def calculate_per_pos(
 				# RNA基因和非编码基因座保留全部碱基；蛋白编码基因仅保留最严重为错义的变异
 				if not any(x in locus for x in ["MT-A", "MT-C", "MT-N"]) or (
 						("missense" in per_gene[(row["POS"], row["REF"], row["ALT"], locus)]) and not any(
-					x in row["consequence"] for x in oe_functions.more_severe_than_missense)):
+						x in row["consequence"] for x in oe_functions.more_severe_than_missense)):
 					per_pos = oe_functions.sum_obs_likelihood(
 						mutation=mutation, identifier=row["POS"], region=region_to_use,
-						observed=row[obs_value], likelihood=row["Likelihood"], dict=per_pos)
+						observed=row[obs_value], likelihood=row["Likelihood"],
+						callable_samples=row["callable_samples"], dict=per_pos)
 	return per_pos
 
 
@@ -119,11 +120,12 @@ def calculate_per_res(
 				# RNA基因和非编码基因座保留全部碱基；蛋白编码基因仅保留最严重为错义的变异
 				if not any(x in locus for x in ["MT-A", "MT-C", "MT-N"]) or (
 						("missense" in per_gene[(row["POS"], row["REF"], row["ALT"], locus)]) and not any(
-					x in row["consequence"] for x in oe_functions.more_severe_than_missense)):
+						x in row["consequence"] for x in oe_functions.more_severe_than_missense)):
 					# 注意：需使用pos_to_res处理属于双基因的位点
 					per_res = oe_functions.sum_obs_likelihood(
 						mutation=mutation, identifier=str(pos_to_res[(locus, int(row["POS"]))]),
-						region=region_to_use, observed=row[obs_value], likelihood=row["Likelihood"], dict=per_res)
+						region=region_to_use, observed=row[obs_value], likelihood=row["Likelihood"],
+						callable_samples=row["callable_samples"], dict=per_res)
 	return per_res
 
 
@@ -220,7 +222,7 @@ def calculate_kmers_step1(
 	if kmer_end in coords:  # 限制在基因座范围内
 		# 初始化字典条目
 		for mut_group in ['G>A_and_T>C', 'other']:  # 两类突变群组
-			for value in ['obs_max_het', 'sum_LR', 'count']:  # 需要汇总的三项指标
+			for value in ['obs_max_het', 'sum_LR_AN', 'sum_callable', 'count']:  # 需要汇总的指标
 				for region in ['ref_exc_ori', 'ori']:  # 可能使用的两个突变模型
 					kmers_dict[(kmer_start, kmer_end), mut_group, value, region] = 0
 		for pos in kmer_range:
@@ -242,7 +244,7 @@ def calculate_kmers_step1(
 		
 		if float(less_than_pvalue) < sig_threshold:  # 仅保留p值低于阈值的kmer
 			(lower_CI, upper_CI) = oe_functions.calculate_CI(
-				obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, max_parameter=2.5)
+				obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=0.1)
 			if upper_CI < locus_lower_CI:  # 置信区间需与基因座CI不重叠
 				outlier_kmers[(kmer_start, kmer_end)] = (less_than_pvalue, kmer_length)
 
@@ -291,7 +293,7 @@ def calculate_kmers_step2(
 		keys = []
 		for identifier in [(kmer_start, kmer_end)]:
 			for mut_group in ['G>A_and_T>C', 'other']:  # 两类突变群组
-				for value in ['obs_max_het', 'sum_LR', 'count']:  # 三项汇总指标
+				for value in ['obs_max_het', 'sum_LR_AN', 'sum_callable', 'count']:  # 汇总指标
 					for region in ['ref_exc_ori', 'ori']:  # 两种突变模型
 						kmers_dict[identifier, mut_group, value, region] = 0
 						keys.append(mut_group + '-' + value + '-' + region)
@@ -317,7 +319,7 @@ def calculate_kmers_step2(
 		
 		if float(less_than_pvalue) < sig_threshold:  # 仅保留p值低于阈值的kmer
 			(lower_CI, upper_CI) = oe_functions.calculate_CI(
-				obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, max_parameter=2.5)
+				obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=0.1)
 			if upper_CI < locus_lower_CI:  # 要求置信区间与基因座CI不重叠
 				outlier_kmers[(kmer_start, kmer_end)] = (less_than_pvalue, kmer_length)
 
@@ -419,7 +421,7 @@ def annotate_nonoverlapping(
 	ratio_oe = obs_max_het / exp_max_het
 	total_all = oe_functions.calculate_total(sum_dict=kmers_dict, identifier=key)
 	(lower_CI, upper_CI) = oe_functions.calculate_CI(
-		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, max_parameter=2.5)
+		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=0.1)
 	
 	# 将残基范围转换为mtDNA坐标：通常对应第一密码子首位到最后密码子末位
 	# 对于反链上的MT-ND6，需取最后密码子末位到第一密码子首位
@@ -468,7 +470,7 @@ def check_locus_oe(
 		sum_dict=loci_dict, identifier=locus, fit_parameters=fit_parameters)
 	total_all = oe_functions.calculate_total(sum_dict=loci_dict, identifier=locus)
 	(lower_CI, upper_CI) = oe_functions.calculate_CI(
-		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, max_parameter=2.5)
+		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=0.1)
 	
 	if round(locus_oe, 2) != round(obs_max_het / exp_max_het, 2):  # 四舍五入以忽略极小差异
 		print("Error: gene obs:exp does not equal expected value", locus_oe, "vs", obs_max_het / exp_max_het)
@@ -659,7 +661,7 @@ if __name__ == "__main__":
 	if args.input is None:
 		args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
 	if args.obs is None:
-		args.obs = "gnomad_max_hl"
+	args.obs = "carrier_count"
 	if args.out_dir is None:
 		args.out_dir = "real_alignment"
 	if args.parameters is None:

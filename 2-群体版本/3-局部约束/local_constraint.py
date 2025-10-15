@@ -64,14 +64,15 @@ def lookup_dict(input_file: str, obs_value: str):
 			region_to_use = 'ori' if (int(row["POS"]) in oe_functions.ori_region) else 'ref_exc_ori'
 			observed = float(row[obs_value])
 			likelihood = float(row["Likelihood"])
-			dict[(row["POS"], mutation)] = (region_to_use, observed, likelihood)
+			callable_samples = float(row["callable_samples"])
+			dict[(row["POS"], mutation)] = (region_to_use, observed, likelihood, callable_samples)
 	return dict
 
 
 def parallelize_kmers(
 	position: int, 
 	kmer_length: int,
-	lookup_dictionary: Dict[Tuple[str, str], Tuple[str, float, float]],
+	lookup_dictionary: Dict[Tuple[str, str], Tuple[str, float, float, float]],
 	excluded_sites: List[int],
 	fit_parameters: str,
 	loci_dict: Dict[Tuple[int, int], Tuple[str, str]],
@@ -80,7 +81,7 @@ def parallelize_kmers(
 
 	:param position: kmer的起始位置
 	:param kmer_length: 用户指定的kmer长度
-	:param lookup_dictionary: 字典，键为（位置、突变）元组，值为包含区域、观测值和似然值的元组
+	:param lookup_dictionary: 字典，键为（位置、突变）元组，值为包含区域、观测值、似然值和可判读样本数的元组
 	:param excluded_sites: 需要在计算中排除的碱基位置列表
 	:param fit_parameters: 包含线性方程系数和截距的文件路径
 	:param loci_dict: 基于MITOMAP注释的位点详细注释字典
@@ -104,11 +105,12 @@ def parallelize_kmers(
 				if key[0] == str(pos):
 					kmer_sum = oe_functions.sum_obs_likelihood(
 						mutation=key[1], identifier=(start, end), region=lookup_dictionary[key][0], dict=kmer_sum,
-						observed=lookup_dictionary[key][1], likelihood=lookup_dictionary[key][2])
-	
+						observed=lookup_dictionary[key][1], likelihood=lookup_dictionary[key][2],
+						callable_samples=lookup_dictionary[key][3])
+
 	# 计算观测值、期望值及置信区间
 	(total_all, obs_max_het, exp_max_het, ratio_oe, lower_CI, upper_CI) = oe_functions.calculate_oe(
-		item=(start, end), sum_dict=kmer_sum, fit_parameters=fit_parameters, output="dict", file=None, max_parameter=2.5)
+		item=(start, end), sum_dict=kmer_sum, fit_parameters=fit_parameters, output="dict", file=None, alpha=0.1)
 
 	# 注释重叠的基因区
 	loci, loci_type = [], []  # 重叠位点列表
@@ -133,7 +135,7 @@ def parallelize_kmers(
 
 def kmers(
 	kmer_length: int,
-	lookup_dictionary: Dict[Tuple[str, str], Tuple[str, float, float]],
+	lookup_dictionary: Dict[Tuple[str, str], Tuple[str, float, float, float]],
 	excluded_sites: List[int],
 	fit_parameters: str,
 	out_prefix: str):
@@ -410,28 +412,18 @@ if __name__ == "__main__":
 	parser.add_argument(
 		"-kmer_length", type=int, help="Window size to use for analysis in bp")
 	args = parser.parse_args()
-	
-	# 设置默认参数，适用于gnomAD数据
+
+	# Set default parameters for carrier-count analysis
 	if args.input is None:
-		args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
+		args.input = "output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt"
 	if args.obs is None:
-		args.obs = "gnomad_max_hl"
+		args.obs = "carrier_count"
 	if args.parameters is None:
-		args.parameters = 'output/calibration/linear_model_fits.txt'
+		args.parameters = "output/calibration/linear_model_fits.txt"
 	if args.prefix is None:
 		args.prefix = ""
 	if args.exc_sites is None:
-		# 排除gnomAD中易受技术伪影影响的位置：301、302、310、316、3107和16182（3107已在前面排除）
-		# 这些位点在gnomAD中未被识别，因此在计算中剔除
 		args.exc_sites = [301, 302, 310, 316, 16182]
-	if args.kmer_length is None:
-		args.kmer_length = 30
-	
-	for path in ['output/local_constraint']:
-		if not os.path.exists(path):
-			os.makedirs(path)
-			print("Creating required directories")
-	
 	print(datetime.datetime.now(), "Analyze local constraint in the mtDNA!")
 	print("This may take a little time depending on available computing power...")
 	

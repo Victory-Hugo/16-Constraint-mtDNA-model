@@ -1,6 +1,6 @@
 import csv
 import numpy as np
-from scipy.stats import beta
+from scipy.stats import chi2, poisson
 from typing import Dict, List, TextIO, Tuple, Union
 
 '''
@@ -28,7 +28,7 @@ def initialize_sum_dict(identifier_list: List[Union[str, Tuple[int, int]]]):
 	dict = {}
 	for identifier in identifier_list:
 		for mut_group in ['G>A_and_T>C', 'other']:  # 要拟合的两个突变分组
-			for value in ['obs_max_het', 'sum_LR', 'count']:  # 需要求和的三个数值
+			for value in ['obs_max_het', 'sum_LR_AN', 'sum_callable', 'count']:  # 需要求和的数值
 				for region in ['ref_exc_ori', 'ori']:  # 可能应用的两种突变模型
 					dict[identifier, mut_group, value, region] = 0
 	return dict
@@ -36,7 +36,7 @@ def initialize_sum_dict(identifier_list: List[Union[str, Tuple[int, int]]]):
 
 def sum_obs_likelihood(
 		mutation: str, identifier: Union[str, Tuple[int, int]], region: str,
-		observed: Union[str, float], likelihood: Union[str, float],
+		observed: Union[str, float], likelihood: Union[str, float], callable_samples: Union[str, float, int],
 		dict: Dict[Tuple[str, str, str, str], Union[float, int]]):
 	"""对某一类变异的观测最大杂合度、突变似然得分和计数进行求和。
 
@@ -45,29 +45,30 @@ def sum_obs_likelihood(
 	:param region: 取值应为 'ref_exc_ori' 或 'ori'，用于指示应用哪种突变模型
 	:param observed: 用于观测最大杂合度的取值
 	:param likelihood: 用于突变似然得分的取值
+	:param callable_samples: 当前变异可判读的样本数量
 	:param dict: 需要更新的字典名称
 	:return: 一个以标识符、突变分组、需要求和的值和变异所在区域组成的元组为键、以累计值为值的字典
 	"""
 	# 高度可变的 G>A 和 T>C 单独拟合
 	mut_group = 'G>A_and_T>C' if (mutation == 'G>A' or mutation == 'T>C') else 'other'
 	# 注意字典应已初始化（所有预期键的初始值均为0）
+	callable_value = float(callable_samples) if callable_samples is not None else 0.0
 	dict[(identifier, mut_group, 'obs_max_het', region)] += float(observed)
-	dict[(identifier, mut_group, 'sum_LR', region)] += float(likelihood)
+	dict[(identifier, mut_group, 'sum_LR_AN', region)] += float(likelihood) * callable_value
+	dict[(identifier, mut_group, 'sum_callable', region)] += callable_value
 	dict[(identifier, mut_group, 'count', region)] += 1
 	return dict
 
 
-def linear_model(count: int, intercept: float, coefficient: float, sum_lr: float):
-	"""将针对中性变异拟合的线性模型应用于数据，以计算预期的观测最大杂合度总和。
-	会应用一个夹取操作，使预期值不会小于0，也不会大于可能的最大值。
+def linear_model(intercept: float, coefficient: float, exposure: float):
+	"""将针对中性变异拟合的线性模型应用于数据，以计算预期的携带者计数。
 
-	:param count: 需要计算预期值的变异数量
 	:param intercept: 线性方程的截距
 	:param coefficient: 线性方程的系数
-	:param sum_lr: 需要计算预期值的变异的突变似然得分之和
-	:return: 预期的观测最大杂合度总和
+	:param exposure: 变异的加权突变倾向（似然 * 可判读样本数）的总和
+	:return: 预期的携带者计数
 	"""
-	return max(float(0), min(float(count), intercept + (coefficient * sum_lr)))
+	return max(float(0), intercept + (coefficient * exposure))
 
 
 def calibrate(
@@ -83,10 +84,9 @@ def calibrate(
 	:return: 线性模型的输出，即相应突变分组和区域的预期观测最大杂合度总和
 	"""
 	return linear_model(
-		count=sum_dict[(identifier, mut_group, 'count', region)],
 		intercept=parameters[(mut_group, region, 'intercept')],
 		coefficient=parameters[(mut_group, region, 'coefficient')],
-		sum_lr=sum_dict[(identifier, mut_group, 'sum_LR', region)])
+		exposure=sum_dict[(identifier, mut_group, 'sum_LR_AN', region)])
 
 
 def calculate_exp(
@@ -147,81 +147,41 @@ def calculate_total(
 		(identifier, 'other', 'count', 'ori')]
 
 
-def calculate_CI(obs_max_het: float, total: int, exp_max_het: float, max_parameter: float = 2.5):
-	"""使用 Beta 分布计算观测值与预期值之比的90%置信区间。
+def calculate_CI(obs_max_het: float, total: int, exp_max_het: float, alpha: float = 0.1):
+	"""使用 Poisson 近似计算观测值与预期值之比的90%置信区间。
 
-	:param obs_max_het: 观测最大杂合度总和
-	:param total: 可能的变异数量
-	:param exp_max_het: 预期最大杂合度总和
-	:param max_parameter: 变化参数的最大值，默认 2.5
+	:param obs_max_het: 观测携带者数之和
+	:param total: 变异数量（保留参数以保持函数签名兼容）
+	:param exp_max_het: 预期携带者数之和
+	:param alpha: 显著性水平，默认 0.1 对应 90% 置信区间
 	:return: lower_CI 和 upper_CI，即90%置信区间的上下界
 	"""
-	# 针对给定的观测值与预期值计算 Beta 分布的密度
-	# 使用预期值乘以不同的变化参数，并设定需要评估的参数范围
-	varying_parameters = np.arange(0.001, max_parameter, 0.001).tolist()
-	
-	# 将观测值表示为可能值的比例，使其限定在0-1之间
-	prop_poss_maxhet = obs_max_het / total
-	# 如果比例为0或1，则调整到合理范围内以便评估；为保守起见使用最小可能观测值
-	if prop_poss_maxhet == 0:
-		prop_poss_maxhet = 0.1 / total
-	elif prop_poss_maxhet == 1:
-		prop_poss_maxhet = 1 - (0.1 / total)
-	
-	beta_distrib = []
-	for vp in varying_parameters:
-		a = (exp_max_het * vp) + 1  # “成功”次数
-		b = total - (exp_max_het * vp) + 1  # “失败”次数
-		beta_distrib.append(beta.pdf(prop_poss_maxhet, a, b))
+	if exp_max_het <= 0:
+		return 0.0, 0.0
 
-	# 计算该函数的累积分布
-	cumulative_beta = []
-	for value in np.cumsum(beta_distrib):
-		cumulative_beta.append(value / max(np.cumsum(beta_distrib)))
-
-	# 在累计概率等于5%与95%的位置提取对应的变化参数，得到90%置信区间
-	lower_list, upper_list = [], []
-	for value in cumulative_beta:
-		if value < 0.05:
-			lower_list.append(cumulative_beta.index(value))
-		if value > 0.95:
-			upper_list.append(cumulative_beta.index(value))
-	
-	if (obs_max_het > 0) and (len(lower_list) > 0):
-		lower_idx = max(lower_list)  # 概率小于0.05时的最大位置
-		lower_CI = varying_parameters[lower_idx]  # 第5百分位
-	else:
-		lower_CI = 0
-	upper_idx = min(upper_list)  # 概率大于0.95时的最小位置
-	upper_CI = varying_parameters[upper_idx]  # 第95百分位
-	
-	return lower_CI, upper_CI
+	obs_int = int(round(obs_max_het))
+	lower = 0.0 if obs_int == 0 else chi2.ppf(alpha / 2, 2 * obs_int) / (2 * exp_max_het)
+	upper = chi2.ppf(1 - alpha / 2, 2 * (obs_int + 1)) / (2 * exp_max_het)
+	return lower, upper
 
 
 def calculate_pvalue(obs_max_het: float, total: int, exp_max_het: float):
-	"""利用 Beta 分布判断观测值是否显著低于预期值。
+	"""基于 Poisson 分布检验观测值是否显著低于预期值。
 
-	:param obs_max_het: 观测最大杂合度总和
-	:param total: 可能的变异数量
-	:param exp_max_het: 预期最大杂合度总和
+	:param obs_max_het: 观测携带者数之和
+	:param total: 变异数量（保留参数以保持函数签名兼容）
+	:param exp_max_het: 预期携带者数之和
 	:return: less_than_pvalue，即在给定预期值的情况下，观测到小于或等于该观测值的概率
 	"""
-	# 将观测值表示为可能值的比例，使其限定在0-1之间
-	prop_poss_maxhet = obs_max_het / total
-	# 如果比例为0或1，则调整到合理范围内以便评估；为保守起见使用最小可能观测值
-	if prop_poss_maxhet == 0:
-		prop_poss_maxhet = 0.1 / total
-	elif prop_poss_maxhet == 1:
-		prop_poss_maxhet = 1 - (0.1 / total)
-	a = exp_max_het + 1
-	b = total - exp_max_het + 1
-	less_than_pvalue = beta.cdf(prop_poss_maxhet, a, b)
-	return less_than_pvalue
+	if exp_max_het <= 0:
+		return 1.0
+	obs_int = int(round(obs_max_het))
+	return poisson.cdf(obs_int, mu=exp_max_het)
 
 
 def calculate_oe(
 		item: Union[str, Tuple[int, int]], sum_dict: Dict[Tuple[str, str, str, str], Union[float, int]],
-		fit_parameters: str, file: Union[TextIO, None], output: str = "write", max_parameter: float = 2.5):
+		fit_parameters: str, file: Union[TextIO, None], output: str = "write", alpha: float = 0.1):
 	"""计算观测值、预期值、观测与预期之比以及90%置信区间。
 
 	:param item: 需要计算预期值的变异类别标识符
@@ -229,15 +189,15 @@ def calculate_oe(
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param file: 当 output 为 "write" 时用于写入结果的文件
 	:param output: 指定输出到文件或保存为字典，默认 "write"，可选 "dict"
-	:param max_parameter: calculate_CI 使用的变化参数上限，默认 2.5
+	:param alpha: 置信区间的显著性水平，默认 0.1（即 90% 置信区间）
 	"""
 	exp_max_het = calculate_exp(sum_dict=sum_dict, identifier=item, fit_parameters=fit_parameters)
 	obs_max_het = calculate_obs(sum_dict=sum_dict, identifier=item)
-	ratio_oe = obs_max_het / exp_max_het
+	ratio_oe = (obs_max_het / exp_max_het) if exp_max_het > 0 else 0.0
 	total_all = calculate_total(sum_dict=sum_dict, identifier=item)
 
 	(lower_CI, upper_CI) = calculate_CI(
-		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, max_parameter=max_parameter)
+		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=alpha)
 	
 	print("Calculating values for", item)
 	if output == "write":

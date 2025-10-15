@@ -178,7 +178,7 @@ def annotate_rc(input_file: str, rc_file: str):
 	:param rc_file: 含区域约束最终区间的文件
 	"""
 	f = open('output/regional_constraint/mito_regional_constraint_annotation.txt', "w")
-	header = "POS	REF	ALT	symbol	in_rc	min_distance_to_rc	distance_pair	consequence	amino_acids	protein_position	codon_change	gnomad_max_hl	in_phylotree	phyloP_score	tRNA_position	tRNA_domain	RNA_base_type	RNA_modified	rRNA_bridge_base	uniprot_annotation	other_prot_annotation	apogee_class	mitotip_class	hmtvar_class	helix_max_hl	mitomap_gbcnt	mitomap_af	mitomap_status	mitomap_plasmy	mitomap_disease	clinvar_interp"
+	header = "POS	REF	ALT	symbol	in_rc	min_distance_to_rc	distance_pair	consequence	amino_acids	protein_position	codon_change	carrier_count	callable_samples	allele_frequency	gnomad_max_hl	in_phylotree	phyloP_score	tRNA_position	tRNA_domain	RNA_base_type	RNA_modified	rRNA_bridge_base	uniprot_annotation	other_prot_annotation	apogee_class	mitotip_class	hmtvar_class	helix_max_hl	mitomap_gbcnt	mitomap_af	mitomap_status	mitomap_plasmy	mitomap_disease	clinvar_interp"
 	f.write(header + '\n')
 	
 	# 生成所需的辅助字典
@@ -246,6 +246,7 @@ def annotate_rc(input_file: str, rc_file: str):
 			str(vep[(row["REF"], row["POS"], row["ALT"], "aa")]).strip('[]').replace("'", "").replace(" ", "") + '\t' +
 			str(vep[(row["REF"], row["POS"], row["ALT"], "codon")]).strip('[]').replace("'", "").replace(" ", "") + '\t' +
 			str(vep[(row["REF"], row["POS"], row["ALT"], "codon_change")]).strip('[]').replace("'", "").replace(" ", "") + '\t' +
+			str(row["carrier_count"]) + '\t' + str(row["callable_samples"]) + '\t' + str(row["allele_frequency"]) + '\t' +
 			str(max_hl) + '\t' +
 			str(in_phylo) + '\t' +
 			phylop[int(row["POS"])] + '\t' +
@@ -282,7 +283,7 @@ if __name__ == "__main__":
 	if args.rc_input is None:
 		args.rc_input = 'output/regional_constraint/real_alignment/regional_constraint_intervals.txt'
 	if args.obs is None:
-		args.obs = "gnomad_max_hl"
+	args.obs = "carrier_count"
 	if args.parameters is None:
 		args.parameters = 'output/calibration/linear_model_fits.txt'
 	if args.exc_sites is None:

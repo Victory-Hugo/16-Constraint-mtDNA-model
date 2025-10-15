@@ -1,0 +1,62 @@
+# video to show local constrained across MT-RNR2, executed by ChimeraX
+
+open 6zse
+preset ribbon 
+nucleotides ladder
+
+zoom 1.2
+
+# now, color RNR2 and tRNA, mRNA, and proteins
+
+# color RNR2 in purple
+color /XA #aa64b5
+# color A/P-tRNA in orange
+color /r2 #FD5800
+# color P/E-tRNA in yellow
+color /r3 #FFE800
+# color mRNA green
+color /r1 #00FF00
+# color all proteins in blue
+color /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6 #377eb8
+
+movie record
+
+turn y 1 180
+wait
+
+# hide all other proteins and ligands
+select /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6
+transparency sel 100 target abcspf
+~select /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6
+
+# handle nucleotides not becoming transparent
+hide /XB
+
+turn y 1 180
+wait
+movie stop
+
+# now, hide RNR1
+
+# hide RNR1
+hide /AA 
+select /AA
+transparency sel 100 target abcspf
+~select /AA
+
+movie record
+turn y 1 120
+wait
+movie stop
+
+# color rRNAs such that red is 1, and blue is 0
+open  figure_scripts/chimeraX_input/mlc.defattr
+color byattribute mlc palette blue-white-red
+
+wait
+
+movie record
+turn y 1 420
+wait
+
+movie encode framerate 30 output figure_scripts/supplementary_Video/supplementary_video.mp4 

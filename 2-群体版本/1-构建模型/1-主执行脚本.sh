@@ -48,8 +48,6 @@
 # 构建突变模型以计算期望值
 cd "/mnt/f/OneDrive/文档（科研）/脚本/Download/16-Constraint-mtDNA-model/2-群体版本"
 
-python3 1-构建模型/compile_denovo.py
-python3 1-构建模型/compare_denovo.py
-python3 1-构建模型/filter_denovo.py
+python3 1-构建模型/compile_denovo.py --vcf example.vcf.gz --max-af 0.01 --min-carriers 1
 python3 1-构建模型/composite_likelihood_mito.py
-python3 1-构建模型/annotate_mutations.py
+python3 1-构建模型/annotate_mutations.py --variant-stats output/denovo/variant_carrier_stats.txt

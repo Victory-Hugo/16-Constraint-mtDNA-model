@@ -1,0 +1,37 @@
+# create a figure to show regional constraint for MT-ND6
+# open chimeraX and paste in commands
+
+open 5XTD
+preset ribbon 
+
+# hide all other proteins and ligands
+select /A,B,C,E,F,G,H,I,J,K,L,M,N,O,P,Q,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,n,o,p,u,v,w,8Q1,CDL,FES,FMN,NDP,PEE,PLX,SF4,i,j,k,l,r,s
+transparency sel 100 target abcsp
+~select /A,B,C,E,F,G,H,I,J,K,L,M,N,O,P,Q,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,n,o,p,u,v,w,8Q1,CDL,FES,FMN,NDP,PEE,PLX,SF4,i,j,k,l,r,s
+select :CDL
+transparency sel 100 target abcsp
+~select :CDL
+
+# color ND6 in blue 
+color /m #377eb8
+
+# color ND6 regional constraint and key residues/regions
+color /m:66-79,17-30 #ff4040
+color /m:61,62,63,67 #FFFF00
+select /m:61,62,63,67; show sel atoms; style sel stick; ~select /m:61,62,63,67
+
+# background color
+set bgColor white
+
+# manually zoom and reposition
+# ie via 'zoom 5'
+zoom 4.5
+# select simple lighting
+lighting simple
+
+# add labels and manually drag to position
+# under 'right move' then 'move label'
+# use ~2dlab all to delete all
+2dlab text 'MT-ND6' color #ff4040 size 44
+
+save figure_scripts/extended_data_figures/FigureED5e_ND6.png supersample 3

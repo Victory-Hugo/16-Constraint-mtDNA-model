@@ -1,0 +1,37 @@
+# create a figure to show regional constraint for MT-RNR1
+# open chimeraX and paste in commands
+
+open 6zse
+preset ribbon 
+nucleotides ladder
+
+# hide all other proteins and ligands
+select /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6,XA,r2,r3
+transparency sel 100 target abcspf
+~select /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6,XA,r2,r3
+# hack to handle nucleotides not becoming transparent
+hide /XB,XA,r2,r3
+
+# color RNR1 
+color /AA white
+
+# color mRNA green
+color /r1 #00FF00
+Show 
+# color RNR1 regional constraint
+color /AA:871-920,1054-1093,1132-1151,1557-1596 #ff4040
+
+# color modified bases in blue
+color /AA:1076,1486,1488,1583,1584 blue
+
+# color pathogenic variant bases in purple
+color /AA:1494,1555 #7f4188
+
+# change style of highlighted bases
+select /AA:1494,1555,1076,1486,1488,1583,1584; show sel atoms; nucleotides sel atoms; style nucleic & sel stick; ~select /AA:1494,1555,1076,1486,1488,1583,1584
+
+# manually zoom in and position
+
+save figure_scripts/extended_data_figures/FigureED5f_RNR1.png supersample 3
+
+

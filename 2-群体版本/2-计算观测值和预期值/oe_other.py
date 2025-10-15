@@ -41,7 +41,8 @@ def protein_annot_oe(
 				if ('site' in row["uniprot_annotation"]) or row["other_prot_annotation"]:
 					prot_sum = sum_obs_likelihood(
 						mutation=mutation, identifier="site", region='ref_exc_ori',
-						observed=row[obs_value], likelihood=row["Likelihood"], dict=prot_sum)
+						observed=row[obs_value], likelihood=row["Likelihood"],
+						callable_samples=row["callable_samples"], dict=prot_sum)
 						
 	for annot in ["site"]:
 		calculate_oe(item=annot, sum_dict=prot_sum, fit_parameters=fit_parameters, file=file)
@@ -69,12 +70,13 @@ def tRNA_pos_oe(input_file: str, obs_value: str, fit_parameters: str, output_pre
 	
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
-		if int(row["POS"]) not in excluded_sites:
-			if row["symbol"].startswith('MT-T'):
-				for tpos in row["tRNA_position"].split(','):  # 某些位置因位于两个基因而有两个条目
-					tpos_sum = sum_obs_likelihood(
-						mutation=mutation, identifier=tpos, region='ref_exc_ori',
-						observed=row[obs_value], likelihood=row["Likelihood"], dict=tpos_sum)
+	if int(row["POS"]) not in excluded_sites:
+		if row["symbol"].startswith('MT-T'):
+			for tpos in row["tRNA_position"].split(','):  # 某些位置因位于两个基因而有两个条目
+				tpos_sum = sum_obs_likelihood(
+					mutation=mutation, identifier=tpos, region='ref_exc_ori',
+					observed=row[obs_value], likelihood=row["Likelihood"],
+					callable_samples=row["callable_samples"], dict=tpos_sum)
 	# 因此此处会对位于两个基因中的 tRNA 位置进行双重计数
 	
 	for tRNA_pos in tRNA_positions:
@@ -102,14 +104,16 @@ def RNA_base_types_oe(input_file: str, obs_value: str, fit_parameters: str, outp
 		mutation = row["REF"] + '>' + row["ALT"]
 		if int(row["POS"]) not in excluded_sites:
 			for RNA_type in row["RNA_base_type"].split(','):  # 遍历所有类型
-				if row["symbol"].startswith('MT-T'):
-					RNA_type_sum = sum_obs_likelihood(
-						mutation=mutation, identifier=RNA_type + "_tRNA", region='ref_exc_ori',
-						observed=row[obs_value], likelihood=row["Likelihood"], dict=RNA_type_sum)
-				if row["symbol"].startswith('MT-R'):
-					RNA_type_sum = sum_obs_likelihood(
-						mutation=mutation, identifier=RNA_type + "_rRNA", region='ref_exc_ori',
-						observed=row[obs_value], likelihood=row["Likelihood"], dict=RNA_type_sum)
+		if row["symbol"].startswith('MT-T'):
+			RNA_type_sum = sum_obs_likelihood(
+				mutation=mutation, identifier=RNA_type + "_tRNA", region='ref_exc_ori',
+				observed=row[obs_value], likelihood=row["Likelihood"],
+				callable_samples=row["callable_samples"], dict=RNA_type_sum)
+		if row["symbol"].startswith('MT-R'):
+			RNA_type_sum = sum_obs_likelihood(
+				mutation=mutation, identifier=RNA_type + "_rRNA", region='ref_exc_ori',
+				observed=row[obs_value], likelihood=row["Likelihood"],
+				callable_samples=row["callable_samples"], dict=RNA_type_sum)
 	
 	for RNA_type in RNA_types:
 		calculate_oe(item=RNA_type, sum_dict=RNA_type_sum, fit_parameters=fit_parameters, file=file)
@@ -121,15 +125,16 @@ def RNA_base_types_oe(input_file: str, obs_value: str, fit_parameters: str, outp
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
 		identifier = ""
-		if int(row["POS"]) not in excluded_sites:
-			if row["symbol"].startswith('MT-T'):
-				identifier = "modified_tRNA" if row["RNA_modified"] else "non-modified_tRNA"
-			if row["symbol"].startswith('MT-R'):
-				identifier = "modified_rRNA" if row["RNA_modified"] else "non-modified_rRNA"
-			if identifier != "":
-				RNA_mod_sum = sum_obs_likelihood(
-					mutation=mutation, identifier=identifier, region='ref_exc_ori',
-					observed=row[obs_value], likelihood=row["Likelihood"], dict=RNA_mod_sum)
+	if int(row["POS"]) not in excluded_sites:
+		if row["symbol"].startswith('MT-T'):
+			identifier = "modified_tRNA" if row["RNA_modified"] else "non-modified_tRNA"
+		if row["symbol"].startswith('MT-R'):
+			identifier = "modified_rRNA" if row["RNA_modified"] else "non-modified_rRNA"
+		if identifier != "":
+			RNA_mod_sum = sum_obs_likelihood(
+				mutation=mutation, identifier=identifier, region='ref_exc_ori',
+				observed=row[obs_value], likelihood=row["Likelihood"],
+				callable_samples=row["callable_samples"], dict=RNA_mod_sum)
 	
 	for mod in RNA_mods:
 		calculate_oe(item=mod, sum_dict=RNA_mod_sum, fit_parameters=fit_parameters, file=file)
@@ -157,12 +162,13 @@ def tRNA_domain_oe(input_file: str, obs_value: str, fit_parameters: str, output_
 	
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
-		if int(row["POS"]) not in excluded_sites:
-			if row["symbol"].startswith('MT-T'):
-				for tRNA_dom in row["tRNA_domain"].split(','):  # 遍历所有结构域
-					tRNA_dom_sum = sum_obs_likelihood(
-						mutation=mutation, identifier=tRNA_dom, region='ref_exc_ori',
-						observed=row[obs_value], likelihood=row["Likelihood"], dict=tRNA_dom_sum)
+	if int(row["POS"]) not in excluded_sites:
+		if row["symbol"].startswith('MT-T'):
+			for tRNA_dom in row["tRNA_domain"].split(','):  # 遍历所有结构域
+				tRNA_dom_sum = sum_obs_likelihood(
+					mutation=mutation, identifier=tRNA_dom, region='ref_exc_ori',
+					observed=row[obs_value], likelihood=row["Likelihood"],
+					callable_samples=row["callable_samples"], dict=tRNA_dom_sum)
 	
 	for tRNA_dom in tRNA_domains:
 		calculate_oe(item=tRNA_dom, sum_dict=tRNA_dom_sum, fit_parameters=fit_parameters, file=file)
@@ -188,14 +194,15 @@ def insilico_oe(input_file: str, obs_value: str, fit_parameters: str, output_pre
 	
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
-		if int(row["POS"]) not in excluded_sites:
-			# 仅保留错义作为最严重后果的情况
-			if ("missense" in row["consequence"]) and not any(x in row["consequence"] for x in more_severe_than_missense):
-				for apogee_class in row["apogee_class"].split(','):  # 某些位置因位于两个基因而出现两次
-					if apogee_class:
-						apogee_sum = sum_obs_likelihood(
-							mutation=mutation, identifier=apogee_class + "-APOGEE", region='ref_exc_ori',
-							observed=row[obs_value], likelihood=row["Likelihood"], dict=apogee_sum)
+	if int(row["POS"]) not in excluded_sites:
+		# 仅保留错义作为最严重后果的情况
+		if ("missense" in row["consequence"]) and not any(x in row["consequence"] for x in more_severe_than_missense):
+			for apogee_class in row["apogee_class"].split(','):  # 某些位置因位于两个基因而出现两次
+				if apogee_class:
+					apogee_sum = sum_obs_likelihood(
+						mutation=mutation, identifier=apogee_class + "-APOGEE", region='ref_exc_ori',
+						observed=row[obs_value], likelihood=row["Likelihood"],
+						callable_samples=row["callable_samples"], dict=apogee_sum)
 	
 	for apogee_class in apogee:
 		calculate_oe(item=apogee_class, sum_dict=apogee_sum, fit_parameters=fit_parameters, file=file)
@@ -207,11 +214,12 @@ def insilico_oe(input_file: str, obs_value: str, fit_parameters: str, output_pre
 	
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
-		if int(row["POS"]) not in excluded_sites:
-			if row["symbol"].startswith('MT-T'):
-				mitotip_sum = sum_obs_likelihood(
-					mutation=mutation, identifier=row["mitotip_class"] + "-MitoTip", region='ref_exc_ori',
-					observed=row[obs_value], likelihood=row["Likelihood"], dict=mitotip_sum)
+	if int(row["POS"]) not in excluded_sites:
+		if row["symbol"].startswith('MT-T'):
+			mitotip_sum = sum_obs_likelihood(
+				mutation=mutation, identifier=row["mitotip_class"] + "-MitoTip", region='ref_exc_ori',
+				observed=row[obs_value], likelihood=row["Likelihood"],
+				callable_samples=row["callable_samples"], dict=mitotip_sum)
 	
 	for mitotip_class in mitotip:
 		calculate_oe(item=mitotip_class, sum_dict=mitotip_sum, fit_parameters=fit_parameters, file=file)
@@ -222,11 +230,12 @@ def insilico_oe(input_file: str, obs_value: str, fit_parameters: str, output_pre
 	
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
-		if int(row["POS"]) not in excluded_sites:
-			if row["symbol"].startswith('MT-T') and row["hmtvar_class"] != "None":
-				hmtvar_sum = sum_obs_likelihood(
-					mutation=mutation, identifier=row["hmtvar_class"] + "-HmtVar", region='ref_exc_ori',
-					observed=row[obs_value], likelihood=row["Likelihood"], dict=hmtvar_sum)
+	if int(row["POS"]) not in excluded_sites:
+		if row["symbol"].startswith('MT-T') and row["hmtvar_class"] != "None":
+			hmtvar_sum = sum_obs_likelihood(
+				mutation=mutation, identifier=row["hmtvar_class"] + "-HmtVar", region='ref_exc_ori',
+				observed=row[obs_value], likelihood=row["Likelihood"],
+				callable_samples=row["callable_samples"], dict=hmtvar_sum)
 	
 	for hmtvar_class in hmtvar:
 		calculate_oe(item=hmtvar_class, sum_dict=hmtvar_sum, fit_parameters=fit_parameters, file=file)
@@ -251,17 +260,18 @@ def disease_vars_oe(input_file: str, obs_value: str, fit_parameters: str, output
 	
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
-		if int(row["POS"]) not in excluded_sites:
-			region_to_use = 'ori' if (int(row["POS"]) in ori_region) else 'ref_exc_ori'
-			status = ''
-			if "Cfrm" in row["mitomap_status"]:
-				status = "Cfrm-MITOMAP"
-			elif "Reported" in row["mitomap_status"]:
-				status = "Reported-MITOMAP"
-			if status != '':
-				mitomap_sum = sum_obs_likelihood(
-					mutation=mutation, identifier=status, region=region_to_use,
-					observed=row[obs_value], likelihood=row["Likelihood"], dict=mitomap_sum)
+	if int(row["POS"]) not in excluded_sites:
+		region_to_use = 'ori' if (int(row["POS"]) in ori_region) else 'ref_exc_ori'
+		status = ''
+		if "Cfrm" in row["mitomap_status"]:
+			status = "Cfrm-MITOMAP"
+		elif "Reported" in row["mitomap_status"]:
+			status = "Reported-MITOMAP"
+		if status != '':
+			mitomap_sum = sum_obs_likelihood(
+				mutation=mutation, identifier=status, region=region_to_use,
+				observed=row[obs_value], likelihood=row["Likelihood"],
+				callable_samples=row["callable_samples"], dict=mitomap_sum)
 	
 	for status in mitomap_status:
 		calculate_oe(item=status, sum_dict=mitomap_sum, fit_parameters=fit_parameters, file=file)
@@ -273,12 +283,13 @@ def disease_vars_oe(input_file: str, obs_value: str, fit_parameters: str, output
 	
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
-		if int(row["POS"]) not in excluded_sites:
-			if (row["clinvar_interp"] + "-ClinVar") in clinvar_status:
-				region_to_use = 'ori' if (int(row["POS"]) in ori_region) else 'ref_exc_ori'
-				clinvar_sum = sum_obs_likelihood(
-					mutation=mutation, identifier=row["clinvar_interp"] + "-ClinVar", region=region_to_use,
-					observed=row[obs_value], likelihood=row["Likelihood"], dict=clinvar_sum)
+	if int(row["POS"]) not in excluded_sites:
+		if (row["clinvar_interp"] + "-ClinVar") in clinvar_status:
+			region_to_use = 'ori' if (int(row["POS"]) in ori_region) else 'ref_exc_ori'
+			clinvar_sum = sum_obs_likelihood(
+				mutation=mutation, identifier=row["clinvar_interp"] + "-ClinVar", region=region_to_use,
+				observed=row[obs_value], likelihood=row["Likelihood"],
+				callable_samples=row["callable_samples"], dict=clinvar_sum)
 	
 	for status in clinvar_status:
 		calculate_oe(item=status, sum_dict=clinvar_sum, fit_parameters=fit_parameters, file=file)
@@ -320,10 +331,11 @@ def vus_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: 
 					elif ("benign" in row["mitotip_class"]) and ("polymorphic" in row["hmtvar_class"])\
 							and (float(row["mitomap_af"]) > 0.005):
 						status = status + "-BP4-BS1"
-			if status != '':
-				mitomap_sum = sum_obs_likelihood(
-					mutation=mutation, identifier=status, region=region_to_use,
-					observed=row[obs_value], likelihood=row["Likelihood"], dict=mitomap_sum)
+	if status != '':
+		mitomap_sum = sum_obs_likelihood(
+			mutation=mutation, identifier=status, region=region_to_use,
+			observed=row[obs_value], likelihood=row["Likelihood"],
+			callable_samples=row["callable_samples"], dict=mitomap_sum)
 	
 	for status in mitomap_status:
 		calculate_oe(item=status, sum_dict=mitomap_sum, fit_parameters=fit_parameters, file=file)
@@ -350,10 +362,11 @@ def vus_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: 
 						status = status + "-PP3-PM2s"
 					elif ("benign" in row["mitotip_class"]) and ("polymorphic" in row["hmtvar_class"]) and (float(row["mitomap_af"]) > 0.005):
 						status = status + "-BP4-BS1"
-			if status != '':
-				clinvar_sum = sum_obs_likelihood(
-					mutation=mutation, identifier=status, region=region_to_use,
-					observed=row[obs_value], likelihood=row["Likelihood"], dict=clinvar_sum)
+	if status != '':
+		clinvar_sum = sum_obs_likelihood(
+			mutation=mutation, identifier=status, region=region_to_use,
+			observed=row[obs_value], likelihood=row["Likelihood"],
+			callable_samples=row["callable_samples"], dict=clinvar_sum)
 	
 	for status in clinvar_status:
 		calculate_oe(item=status, sum_dict=clinvar_sum, fit_parameters=fit_parameters, file=file)
@@ -374,18 +387,18 @@ if __name__ == "__main__":
 	args = parser.parse_args()
 	
 	# 设置 gnomAD 的默认值
-	if args.input is None:
-		args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
-	if args.obs is None:
-		args.obs = "gnomad_max_hl"
-	if args.parameters is None:
-		args.parameters = 'output/calibration/linear_model_fits.txt'
-	if args.prefix is None:
-		args.prefix = ""
-	if args.exc_sites is None:
-		# 排除 gnomAD 中的“artifact_prone_sites”：301、302、310、316、3107 和 16182（3107 已排除）
-		# 这些位点在 gnomAD 中未调用，因此在计算中剔除
-		args.exc_sites = [301, 302, 310, 316, 16182]
+if args.input is None:
+	args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
+if args.obs is None:
+	args.obs = "carrier_count"
+if args.parameters is None:
+	args.parameters = 'output/calibration/linear_model_fits.txt'
+if args.prefix is None:
+	args.prefix = ""
+if args.exc_sites is None:
+	# 排除 gnomAD 中的“artifact_prone_sites”：301、302、310、316、3107 和 16182（3107 已排除）
+	# 这些位点在 gnomAD 中未调用，因此在计算中剔除
+	args.exc_sites = [301, 302, 310, 316, 16182]
 	
 	for path in ['output/oe']:
 		if not os.path.exists(path):

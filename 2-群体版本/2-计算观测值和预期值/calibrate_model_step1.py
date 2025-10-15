@@ -40,15 +40,13 @@ def calibrate(input_file: str, obs_value: str, output_prefix: str, excluded_site
 	gene_length = {}
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		for gene in row["symbol"].split(','):  # 拆分是为了处理同属两个基因的位点
-			# 将控制区与其他非编码区域单独标记
-			gene = 'control_region' if (int(row["POS"]) <= 576 or int(row["POS"]) >= 16024) else gene
-			gene = 'other_non-coding' if gene == '' else gene
-			# 排除 ori 区域及需剔除的位点
+			gene_label = 'control_region' if (int(row["POS"]) <= 576 or int(row["POS"]) >= 16024) else gene
+			gene_label = 'other_non-coding' if gene_label == '' else gene_label
 			if (int(row["POS"]) not in ori_region) and (int(row["POS"]) not in excluded_sites):
-				if gene not in gene_length:
-					gene_length[gene] = 1
+				if gene_label not in gene_length:
+					gene_length[gene_label] = 1
 				else:
-					gene_length[gene] += 1
+					gene_length[gene_label] += 1
 	
 	# 现在初始化用于对各基因/位点求和的字典，并将所有值设为0
 	calibration = initialize_sum_dict(identifier_list=list(gene_length.keys()))
@@ -74,14 +72,11 @@ def calibrate(input_file: str, obs_value: str, output_prefix: str, excluded_site
 			if (int(row["POS"]) not in ori_region) and (int(row["POS"]) not in excluded_sites):
 				# 中性标准：在系统发育树中出现的单倍群变异或 phyloP 处于最低十分位
 				if int(row["in_phylotree"]) == 1 or (float(row["phyloP_score"]) < float(phylop_threshold)):
-					# 将控制区与其他非编码区域单独标记
-					gene = 'control_region' if (int(row["POS"]) <= 576 or int(row["POS"]) >= 16024) else gene
-					gene = 'other_non-coding' if gene == '' else gene
-					# 对每个基因/位点累加对应数值
+					gene_label = 'control_region' if (int(row["POS"]) <= 576 or int(row["POS"]) >= 16024) else gene
+					gene_label = 'other_non-coding' if gene_label == '' else gene_label
 					calibration = sum_obs_likelihood(
-						mutation=mutation, identifier=gene, region='ref_exc_ori', dict=calibration,
-						observed=row[obs_value], likelihood=row["Likelihood"])
-					# 写入文件，位于两个基因的变异会记录两次
+						mutation=mutation, identifier=gene_label, region='ref_exc_ori', dict=calibration,
+						observed=row[obs_value], likelihood=row["Likelihood"], callable_samples=row["callable_samples"])
 					reason = 'haplogroup_variant' if (int(row["in_phylotree"]) == 1) else 'lowest_decile_phyloP'
 					f.write('m.' + str(row["POS"]) + row["REF"] + '>' + row["ALT"] + '\t' + str(row["POS"]) + '\t' + reason + '\n')
 	
@@ -94,7 +89,7 @@ def calibrate(input_file: str, obs_value: str, output_prefix: str, excluded_site
 			f.write(
 				mut_group + '\t' + gene + '\t' +
 				str(calibration[(gene, mut_group, 'obs_max_het', 'ref_exc_ori')]) + '\t' +
-				str(calibration[(gene, mut_group, 'sum_LR', 'ref_exc_ori')]) + '\t' +
+				str(calibration[(gene, mut_group, 'sum_LR_AN', 'ref_exc_ori')]) + '\t' +
 				str(calibration[(gene, mut_group, 'count', 'ref_exc_ori')]) + '\t' +
 				str(gene_length[gene] / 3) + '\n')  # 计数包含每个位点的3种SNV，因此需除以3
 
@@ -138,15 +133,11 @@ def calibrate_ori(input_file: str, obs_value: str, output_prefix: str, excluded_
 	for row in csv.DictReader(open(input_file), delimiter='\t'):
 		mutation = row["REF"] + '>' + row["ALT"]
 		for n_block in ori_blocks:
-			# 若变异位于当前循环的 ori 区块
 			if (int(row["POS"]) in ori_blocks[n_block]) and (int(row["POS"]) not in excluded_sites):
-				# 中性标准：在系统发育树中出现的单倍群变异或 phyloP 处于最低十分位
 				if int(row["in_phylotree"]) == 1 or (float(row["phyloP_score"]) < float(phylop_threshold)):
-					# 对每个区块累加对应数值
 					calibration = sum_obs_likelihood(
 						mutation=mutation, identifier=n_block, region='ori', dict=calibration,
-						observed=row[obs_value], likelihood=row["Likelihood"])
-					# 写入文件
+						observed=row[obs_value], likelihood=row["Likelihood"], callable_samples=row["callable_samples"])
 					reason = 'haplogroup_variant' if (int(row["in_phylotree"]) == 1) else 'lowest_decile_phyloP'
 					f.write('m.' + str(row["POS"]) + row["REF"] + '>' + row["ALT"] + '\t' + str(row["POS"]) + '\t' + reason + '\n')
 	
@@ -159,7 +150,7 @@ def calibrate_ori(input_file: str, obs_value: str, output_prefix: str, excluded_
 			f.write(
 				mut_group + '\t' + n_block + '\t' +
 				str(calibration[(n_block, mut_group, 'obs_max_het', 'ori')]) + '\t' +
-				str(calibration[(n_block, mut_group, 'sum_LR', 'ori')]) + '\t' +
+				str(calibration[(n_block, mut_group, 'sum_LR_AN', 'ori')]) + '\t' +
 				str(calibration[(n_block, mut_group, 'count', 'ori')]) + '\t' +
 				str(len(ori_blocks[n_block])) + '\n')
 
@@ -174,19 +165,19 @@ if __name__ == "__main__":
 		"-prefix", type=str, help="Output files prefix")
 	parser.add_argument(
 		"-exc_sites", type=int, nargs='+', help="List of base positions to exclude from calibration")
-	args = parser.parse_args()
-	
-	# 设置 gnomAD 的默认值
-	if args.input is None:
-		args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
-	if args.obs is None:
-		args.obs = "gnomad_max_hl"
-	if args.prefix is None:
-		args.prefix = ""
-	if args.exc_sites is None:
-		# 排除 gnomAD 中的“artifact_prone_sites”：301、302、310、316、3107 和 16182（3107 已排除）
-		# 这些位点在 gnomAD 中未调用，因此在计算中剔除
-		args.exc_sites = [301, 302, 310, 316, 16182]
+args = parser.parse_args()
+
+# 设置 gnomAD 的默认值
+if args.input is None:
+	args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
+if args.obs is None:
+	args.obs = "carrier_count"
+if args.prefix is None:
+	args.prefix = ""
+if args.exc_sites is None:
+	# 排除 gnomAD 中的“artifact_prone_sites”：301、302、310、316、3107 和 16182（3107 已排除）
+	# 这些位点在 gnomAD 中未调用，因此在计算中剔除
+	args.exc_sites = [301, 302, 310, 316, 16182]
 	
 	for path in ['output/calibration']:
 		if not os.path.exists(path):

@@ -1,0 +1,51 @@
+# create a figure for tRNA
+# open chimeraX and paste in commands
+
+open 6zse
+preset ribbon 
+nucleotides ladder
+
+ 
+# hide all other proteins and ligands
+select /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6,XA,AA,r3
+transparency sel 100 target abcspf
+~select /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6,XA,AA,r3
+
+# hack to handle nucleotides not becoming transparent
+hide /XB,XA,AA,r3
+
+# background color 
+set bgColor white
+
+# zoom and manually position
+zoom 2.5
+
+# color tRNAs by position
+# using A/P-tRNA 
+open  figure_scripts/chimeraX_input/tRNApos.defattr
+#color byattribute tRNApos palette #e41a1c:#f18b8c:#fdfafa
+color byattribute tRNApos palette #e41a1c:#eb5f60:#f3a4a5:#fbe7e7:#fdfafa
+
+# remove additional bases
+select /r2:74-76
+transparency sel 100 target abcspf
+~select /r2:74-76
+hide /r2:74-76
+
+# style position 46 and d-stem differently
+select /r2:10-13,22-25,46; show sel atoms; nucleotides sel atoms; style nucleic & sel stick; ~select /r2:10-13,22-25,46
+
+# color mRNA green
+color /r1 #00FF00
+
+# label bases of interest
+
+label /r2:46 residues text "Pos. 46" height 3 
+2dlabels arrow start 0.2,0.6 end 0.25,0.65 weight 0.2
+label /r2:11 residues text "D-stem" height 3 
+
+save figure_scripts/figures/Figure3e_tRNA_3D.png supersample 3
+
+
+
+
