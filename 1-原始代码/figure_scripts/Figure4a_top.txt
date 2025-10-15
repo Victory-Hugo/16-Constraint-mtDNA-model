@@ -1,0 +1,109 @@
+# create a figure for zoom in on most locally constrained sites
+# open chimeraX and paste in commands
+
+open 5Z62
+preset ribbon 
+
+# hide other proteins
+select /D,E,F,G,H,I,J,K,L,M,N,B,C,A
+transparency sel 100 target abcsp
+~select /D,E,F,G,H,I,J,K,L,M,N,B,C,A
+
+# start with CO1
+
+# hide all other residues
+select /A:240,290,291,CU; transparency sel 0 target abcsp; ~select /A:240,290,291,CU
+
+# color copper binding residues
+color /A:CU #B87333
+color /A:240,290,291 red
+select /A:240,290,291; show sel atoms; style sel stick; ~select /A:240,290,291
+
+# background color 
+set bgColor white
+
+# manually zoom and position, then label
+label /A:240,290,291 residues
+label /A:CU residues text "Cu"
+
+save figure_scripts/figures/Figure4a_CO1.png supersample 3
+
+
+# CO2
+
+select /B:196,198,200,204,CU; transparency sel 0 target abcsp; ~select /B:196,198,200,204,CU
+
+# color copper binding residues
+color /B:CU #B87333
+color /B:196,198,200,204 red
+select /B:196,198,200,204; show sel atoms; style sel stick; ~select /B:196,198,200,204
+
+# remove 198 from view
+select /B:198; transparency sel 100 target abcsp; ~select /B:198
+
+# manually zoom and position, then label
+label /B:196,198,200,204 residues
+label /B:CU residues text "Cu"
+
+save figure_scripts/figures/Figure4a_CO2.png supersample 3
+
+
+# RNR2
+
+open 6zse
+preset ribbon 
+nucleotides ladder
+
+# hide all other proteins and ligands
+select /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6,AA,XA,r3
+transparency sel 100 target abcspf
+~select /0,1,2,3,4,5,6,7,8,9,A0,A1,A2,A3,A4,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,XB,XD,XE,XF,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ,a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t1,t2,t3,t4,t5,t6,AA,XA,r3
+
+# hack to handle nucleotides not becoming transparent
+hide /XB,AA,XA,r3
+
+# color A/P-tRNA in orange
+color /r2 #FC8F32
+# color mRNA green
+color /r1 #00FF00
+
+# background color 
+set bgColor white
+
+# manually zoom and position, then label
+select /XA:3032-3071; transparency sel 0 target abcsp; ~select /XA:3032-3071
+color /XA:3032-3071 red
+show /XA:3032-3071
+nucleotides ladder
+2dlabel text 'm.3032-3071' size 50
+2dlabel text 'tRNA' size 50
+2dlabel text 'mRNA' size 50
+
+save figure_scripts/figures/Figure4a_RNR2.png supersample 3
+
+
+# MT-ND4
+# use the pdb used for figure 3e from ovine from PMID: 32972993
+
+open 6ZKM
+preset ribbon
+
+# hide all other proteins and ligands
+select /1,2,3,4,5,6,7,8,9,A,H,J,K,L,N,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+transparency sel 100 target abcsp
+~select /1,2,3,4,5,6,7,8,9,A,H,J,K,L,N,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+
+# background color 
+set bgColor white
+
+# set colors for residues involved in rotenone binding
+select /M:1-210,218-459; transparency sel 100 target abcsp; ~select /M:1-210,218-459
+color /M:210-218 red
+select /M:210-218; show sel atoms; style sel stick; ~select /M:210-218
+select /M:3PE,PC1;transparency sel 100 target abcsp; ~select /M:3PE,PC1
+
+# manually zoom and position, then label
+2dlabel text 'Rotenone' size 50
+label /M:215 residues size 50
+
+save figure_scripts/figures/Figure4a_ND4_ov.png supersample 3
