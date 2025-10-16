@@ -661,7 +661,7 @@ if __name__ == "__main__":
 	if args.input is None:
 		args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
 	if args.obs is None:
-	args.obs = "carrier_count"
+		args.obs = "carrier_count"
 	if args.out_dir is None:
 		args.out_dir = "real_alignment"
 	if args.parameters is None:

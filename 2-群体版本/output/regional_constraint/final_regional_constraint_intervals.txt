@@ -1,1 +1,0 @@
-start	end	locus	protein_pos_start	protein_pos_end	obs_max_het	exp_max_het	ratio_oe	lower_CI	upper_CI	total	pvalue	length	fdr

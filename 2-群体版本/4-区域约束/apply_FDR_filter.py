@@ -213,14 +213,14 @@ def annotate_final(
 			mutation = row["REF"] + '>' + row["ALT"]
 			region_to_use = 'ori' if (int(row["POS"]) in oe_functions.ori_region) else 'ref_exc_ori'
 			if int(row["POS"]) in kmer_coords:
-			# RNA基因和非编码区域保留全部碱基；蛋白编码基因仅保留最严重为错义的变异
+				# RNA基因和非编码区域保留全部碱基；蛋白编码基因仅保留最严重为错义的变异
 				if not any(x in locus for x in ["MT-A", "MT-C", "MT-N"]) or (
 						("missense" in per_gene[(row["POS"], row["REF"], row["ALT"], locus)]) and not any(
 					x in row["consequence"] for x in oe_functions.more_severe_than_missense)):
-				per_kmer = oe_functions.sum_obs_likelihood(
-					mutation=mutation, identifier=(key[0], key[1]), region=region_to_use,
-					observed=row[obs_value], likelihood=row["Likelihood"],
-					callable_samples=row["callable_samples"], dict=per_kmer)
+					per_kmer = oe_functions.sum_obs_likelihood(
+						mutation=mutation, identifier=(key[0], key[1]), region=region_to_use,
+						observed=row[obs_value], likelihood=row["Likelihood"],
+						callable_samples=row["callable_samples"], dict=per_kmer)
 	
 	# 计算观测值与期望值
 	obs_max_het = oe_functions.calculate_obs(sum_dict=per_kmer, identifier=(key[0], key[1]))
@@ -400,7 +400,7 @@ if __name__ == "__main__":
 	if args.input is None:
 		args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
 	if args.obs is None:
-	args.obs = "carrier_count"
+		args.obs = "carrier_count"
 	if args.parameters is None:
 		args.parameters = 'output/calibration/linear_model_fits.txt'
 	if args.exc_sites is None:

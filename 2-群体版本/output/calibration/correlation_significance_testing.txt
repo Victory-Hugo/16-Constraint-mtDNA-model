@@ -5,20 +5,20 @@ lm(formula = obs_max_het ~ sum_likelihood + length, data = file[file$mutation_gr
     "G>A_and_T>C", ])
 
 Residuals:
-   Min     1Q Median     3Q    Max 
--6.383 -1.008  0.215  1.046  5.481 
+    Min      1Q  Median      3Q     Max 
+-2.7891 -0.4571 -0.1735  0.7202  2.5360 
 
 Coefficients:
                 Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    -0.060891   0.490424  -0.124   0.9019    
-sum_likelihood  0.199500   0.004748  42.019   <2e-16 ***
-length          0.004319   0.001988   2.173   0.0365 *  
+(Intercept)    8.046e-02  2.360e-01   0.341   0.7351    
+sum_likelihood 1.438e-03  4.864e-05  29.561   <2e-16 ***
+length         1.409e-03  6.768e-04   2.082   0.0445 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 2.354 on 36 degrees of freedom
-Multiple R-squared:  0.9974,	Adjusted R-squared:  0.9973 
-F-statistic:  6969 on 2 and 36 DF,  p-value: < 2.2e-16
+Residual standard error: 1.135 on 36 degrees of freedom
+Multiple R-squared:  0.9899,	Adjusted R-squared:  0.9893 
+F-statistic:  1762 on 2 and 36 DF,  p-value: < 2.2e-16
 
 [1] "All other mutation group (for reference excluding OriB-OriH)"
 
@@ -27,20 +27,20 @@ lm(formula = obs_max_het ~ sum_likelihood + length, data = file[file$mutation_gr
     "other", ])
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--19.4493  -4.0110   0.3298   2.3990  26.7828 
+    Min      1Q  Median      3Q     Max 
+-6.0953 -1.2102 -0.0170  0.0742 10.9746 
 
 Coefficients:
-                Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    -1.045907   2.047937  -0.511    0.613    
-sum_likelihood  0.712469   0.025255  28.211   <2e-16 ***
-length         -0.014502   0.009094  -1.595    0.120    
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     0.1494603  0.6062239   0.247    0.807    
+sum_likelihood  0.0022865  0.0001716  13.326 1.74e-15 ***
+length         -0.0019486  0.0020387  -0.956    0.346    
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 9.931 on 36 degrees of freedom
-Multiple R-squared:  0.9941,	Adjusted R-squared:  0.9937 
-F-statistic:  3017 on 2 and 36 DF,  p-value: < 2.2e-16
+Residual standard error: 2.942 on 36 degrees of freedom
+Multiple R-squared:  0.9544,	Adjusted R-squared:  0.9519 
+F-statistic: 377.1 on 2 and 36 DF,  p-value: < 2.2e-16
 
 [1] "G>A and T>C mutation group for OriB-OriH region"
 
@@ -50,21 +50,21 @@ lm(formula = obs_max_het ~ sum_likelihood + length, data = ori_file[ori_file$mut
 
 Residuals:
          1          2          3          4          5          6          7 
- 2.917e+00 -1.971e+00  1.020e+00  2.132e+00 -2.442e+00 -2.191e+00  5.344e-01 
+-6.501e-01  2.162e+00  1.314e+00 -7.509e-01 -1.840e+00 -7.509e-01  5.151e-01 
          8 
--8.882e-16 
+ 4.163e-16 
 
 Coefficients:
-               Estimate Std. Error t value Pr(>|t|)   
-(Intercept)    46.12793   48.43370   0.952  0.38463   
-sum_likelihood  0.18609    0.03535   5.264  0.00329 **
-length         -0.63456    0.69568  -0.912  0.40353   
+                 Estimate Std. Error t value Pr(>|t|)   
+(Intercept)    -1.689e+01  2.939e+01  -0.575  0.59040   
+sum_likelihood  1.017e-03  2.341e-04   4.346  0.00739 **
+length          2.520e-01  4.188e-01   0.602  0.57361   
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 2.409 on 5 degrees of freedom
-Multiple R-squared:  0.8532,	Adjusted R-squared:  0.7945 
-F-statistic: 14.53 on 2 and 5 DF,  p-value: 0.008252
+Residual standard error: 1.523 on 5 degrees of freedom
+Multiple R-squared:  0.8125,	Adjusted R-squared:  0.7375 
+F-statistic: 10.83 on 2 and 5 DF,  p-value: 0.01523
 
 [1] "All other mutation group for OriB-OriH region"
 
@@ -74,67 +74,67 @@ lm(formula = obs_max_het ~ sum_likelihood + length, data = ori_file[ori_file$mut
 
 Residuals:
          9         10         11         12         13         14         15 
--2.201e+00  4.619e+00 -3.693e+00 -6.379e+00 -3.098e+00  3.512e-01  1.040e+01 
+ 3.841e-02 -9.604e-02  3.044e+00 -7.075e-01 -8.120e-01 -2.407e-01 -1.226e+00 
         16 
- 9.992e-16 
+ 3.296e-17 
 
 Coefficients:
-                Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    -48.34135  121.42695  -0.398  0.70698    
-sum_likelihood   0.55576    0.05069  10.963  0.00011 ***
-length           0.67785    1.71513   0.395  0.70898    
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    -4.7757546 29.6181030  -0.161 0.878214    
+sum_likelihood  0.0014827  0.0001454  10.196 0.000156 ***
+length          0.0798252  0.4188914   0.191 0.856364    
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 6.299 on 5 degrees of freedom
-Multiple R-squared:  0.961,	Adjusted R-squared:  0.9454 
-F-statistic: 61.59 on 2 and 5 DF,  p-value: 0.0003005
+Residual standard error: 1.549 on 5 degrees of freedom
+Multiple R-squared:  0.9549,	Adjusted R-squared:  0.9369 
+F-statistic: 52.93 on 2 and 5 DF,  p-value: 0.000432
 
 [1] "cocor package analysis"
 [1] "G>A and T>C mutation group (for reference excluding OriB-OriH)"
 
   Results of a comparison of two overlapping correlations based on dependent groups
 
-Comparison between r.jk = 0.9985 and r.jh = 0.9333
-Difference: r.jk - r.jh = 0.0652
-Related correlation: r.kh = 0.9278
+Comparison between r.jk = 0.9943 and r.jh = 0.8628
+Difference: r.jk - r.jh = 0.1315
+Related correlation: r.kh = 0.8492
 Group size: n = 39
 Null hypothesis: r.jk is equal to r.jh
 Alternative hypothesis: r.jk is greater than r.jh (one-sided)
 Alpha: 0.05
 
 pearson1898: Pearson and Filon's z (1898)
-  z = 3.1938, p-value = 0.0007
+  z = 3.2737, p-value = 0.0005
   Null hypothesis rejected
 
 hotelling1940: Hotelling's t (1940)
-  t = 20.2927, df = 36, p-value = 0.0000
+  t = 14.2888, df = 36, p-value = 0.0000
   Null hypothesis rejected
 
 williams1959: Williams' t (1959)
-  t = 16.7727, df = 36, p-value = 0.0000
+  t = 11.6793, df = 36, p-value = 0.0000
   Null hypothesis rejected
 
 olkin1967: Olkin's z (1967)
-  z = 3.1938, p-value = 0.0007
+  z = 3.2737, p-value = 0.0005
   Null hypothesis rejected
 
 dunn1969: Dunn and Clark's z (1969)
-  z = 11.3777, p-value = 0.0000
+  z = 9.1504, p-value = 0.0000
   Null hypothesis rejected
 
 hendrickson1970: Hendrickson, Stanley, and Hills' (1970) modification of Williams' t (1959)
-  t = 20.2925, df = 36, p-value = 0.0000
+  t = 14.2883, df = 36, p-value = 0.0000
   Null hypothesis rejected
 
 steiger1980: Steiger's (1980) modification of Dunn and Clark's z (1969) using average correlations
-  z = 11.1742, p-value = 0.0000
+  z = 9.0748, p-value = 0.0000
   Null hypothesis rejected
 
 meng1992: Meng, Rosenthal, and Rubin's z (1992)
-  z = 11.1833, p-value = 0.0000
+  z = 9.0851, p-value = 0.0000
   Null hypothesis rejected
-  95% confidence interval for r.jk - r.jh: 1.5901 2.2659
+  95% confidence interval for r.jk - r.jh: 1.2754 1.9771
   Null hypothesis rejected (Lower boundary > 0)
 
 hittner2003: Hittner, May, and Silver's (2003) modification of Dunn and Clark's z (1969) using a backtransformed average Fisher's (1921) Z procedure
@@ -142,168 +142,168 @@ hittner2003: Hittner, May, and Silver's (2003) modification of Dunn and Clark's 
   Null hypothesis retained
 
 zou2007: Zou's (2007) confidence interval
-  95% confidence interval for r.jk - r.jh: 0.0344 0.1226
+  95% confidence interval for r.jk - r.jh: 0.0702 0.2412
   Null hypothesis rejected (Lower boundary > 0)
 
 [1] "All other mutation group (for reference excluding OriB-OriH)"
 
   Results of a comparison of two overlapping correlations based on dependent groups
 
-Comparison between r.jk = 0.9968 and r.jh = 0.9289
-Difference: r.jk - r.jh = 0.0679
-Related correlation: r.kh = 0.939
+Comparison between r.jk = 0.9764 and r.jh = 0.8542
+Difference: r.jk - r.jh = 0.1221
+Related correlation: r.kh = 0.8907
 Group size: n = 39
 Null hypothesis: r.jk is equal to r.jh
 Alternative hypothesis: r.jk is greater than r.jh (one-sided)
 Alpha: 0.05
 
 pearson1898: Pearson and Filon's z (1898)
-  z = 3.1734, p-value = 0.0008
+  z = 3.0985, p-value = 0.0010
   Null hypothesis rejected
 
 hotelling1940: Hotelling's t (1940)
-  t = 15.1355, df = 36, p-value = 0.0000
+  t = 7.3443, df = 36, p-value = 0.0000
   Null hypothesis rejected
 
 williams1959: Williams' t (1959)
-  t = 14.1620, df = 36, p-value = 0.0000
+  t = 7.1504, df = 36, p-value = 0.0000
   Null hypothesis rejected
 
 olkin1967: Olkin's z (1967)
-  z = 3.1734, p-value = 0.0008
+  z = 3.0985, p-value = 0.0010
   Null hypothesis rejected
 
 dunn1969: Dunn and Clark's z (1969)
-  z = 10.1099, p-value = 0.0000
+  z = 6.1629, p-value = 0.0000
   Null hypothesis rejected
 
 hendrickson1970: Hendrickson, Stanley, and Hills' (1970) modification of Williams' t (1959)
-  t = 15.1355, df = 36, p-value = 0.0000
+  t = 7.3443, df = 36, p-value = 0.0000
   Null hypothesis rejected
 
 steiger1980: Steiger's (1980) modification of Dunn and Clark's z (1969) using average correlations
-  z = 9.3087, p-value = 0.0000
+  z = 5.7447, p-value = 0.0000
   Null hypothesis rejected
 
 meng1992: Meng, Rosenthal, and Rubin's z (1992)
-  z = 9.2860, p-value = 0.0000
+  z = 5.7099, p-value = 0.0000
   Null hypothesis rejected
-  95% confidence interval for r.jk - r.jh: 1.2390 1.9020
+  95% confidence interval for r.jk - r.jh: 0.6183 1.2647
   Null hypothesis rejected (Lower boundary > 0)
 
 hittner2003: Hittner, May, and Silver's (2003) modification of Dunn and Clark's z (1969) using a backtransformed average Fisher's (1921) Z procedure
-  z = 33.7681, p-value = 0.0000
+  z = 5.3849, p-value = 0.0000
   Null hypothesis rejected
 
 zou2007: Zou's (2007) confidence interval
-  95% confidence interval for r.jk - r.jh: 0.0360 0.1282
+  95% confidence interval for r.jk - r.jh: 0.0646 0.2327
   Null hypothesis rejected (Lower boundary > 0)
 
 [1] "G>A and T>C mutation group for OriB-OriH region"
 
   Results of a comparison of two overlapping correlations based on dependent groups
 
-Comparison between r.jk = 0.9104 and r.jh = 0.1999
-Difference: r.jk - r.jh = 0.7105
-Related correlation: r.kh = 0.3784
+Comparison between r.jk = 0.8938 and r.jh = 0.3228
+Difference: r.jk - r.jh = 0.571
+Related correlation: r.kh = 0.2344
 Group size: n = 8
 Null hypothesis: r.jk is equal to r.jh
 Alternative hypothesis: r.jk is greater than r.jh (one-sided)
 Alpha: 0.05
 
 pearson1898: Pearson and Filon's z (1898)
-  z = 2.1805, p-value = 0.0146
+  z = 1.7950, p-value = 0.0363
   Null hypothesis rejected
 
 hotelling1940: Hotelling's t (1940)
-  t = 3.7196, df = 5, p-value = 0.0069
+  t = 2.3828, df = 5, p-value = 0.0315
   Null hypothesis rejected
 
 williams1959: Williams' t (1959)
-  t = 3.3812, df = 5, p-value = 0.0098
+  t = 2.0625, df = 5, p-value = 0.0471
   Null hypothesis rejected
 
 olkin1967: Olkin's z (1967)
-  z = 2.1805, p-value = 0.0146
+  z = 1.7950, p-value = 0.0363
   Null hypothesis rejected
 
 dunn1969: Dunn and Clark's z (1969)
-  z = 2.5242, p-value = 0.0058
+  z = 1.8353, p-value = 0.0332
   Null hypothesis rejected
 
 hendrickson1970: Hendrickson, Stanley, and Hills' (1970) modification of Williams' t (1959)
-  t = 3.6880, df = 5, p-value = 0.0071
+  t = 2.3654, df = 5, p-value = 0.0322
   Null hypothesis rejected
 
 steiger1980: Steiger's (1980) modification of Dunn and Clark's z (1969) using average correlations
-  z = 2.3852, p-value = 0.0085
+  z = 1.8014, p-value = 0.0358
   Null hypothesis rejected
 
 meng1992: Meng, Rosenthal, and Rubin's z (1992)
-  z = 2.2943, p-value = 0.0109
+  z = 1.7882, p-value = 0.0369
   Null hypothesis rejected
-  95% confidence interval for r.jk - r.jh: 0.1934 2.4611
-  Null hypothesis rejected (Lower boundary > 0)
+  95% confidence interval for r.jk - r.jh: -0.1062 2.3178
+  Null hypothesis retained (Lower boundary <= 0)
 
 hittner2003: Hittner, May, and Silver's (2003) modification of Dunn and Clark's z (1969) using a backtransformed average Fisher's (1921) Z procedure
-  z = 2.2699, p-value = 0.0116
+  z = 1.8005, p-value = 0.0359
   Null hypothesis rejected
 
 zou2007: Zou's (2007) confidence interval
-  95% confidence interval for r.jk - r.jh: 0.1260 1.4785
-  Null hypothesis rejected (Lower boundary > 0)
+  95% confidence interval for r.jk - r.jh: -0.0411 1.3847
+  Null hypothesis retained (Lower boundary <= 0)
 
 [1] "All other mutation group for OriB-OriH region"
 
   Results of a comparison of two overlapping correlations based on dependent groups
 
-Comparison between r.jk = 0.9797 and r.jh = -0.1528
-Difference: r.jk - r.jh = 1.1325
-Related correlation: r.kh = -0.191
+Comparison between r.jk = 0.977 and r.jh = -0.1311
+Difference: r.jk - r.jh = 1.1081
+Related correlation: r.kh = -0.1525
 Group size: n = 8
 Null hypothesis: r.jk is equal to r.jh
 Alternative hypothesis: r.jk is greater than r.jh (one-sided)
 Alpha: 0.05
 
 pearson1898: Pearson and Filon's z (1898)
-  z = 3.2612, p-value = 0.0006
+  z = 3.1726, p-value = 0.0008
   Null hypothesis rejected
 
 hotelling1940: Hotelling's t (1940)
-  t = 8.3080, df = 5, p-value = 0.0002
+  t = 7.6849, df = 5, p-value = 0.0003
   Null hypothesis rejected
 
 williams1959: Williams' t (1959)
-  t = 4.2938, df = 5, p-value = 0.0039
+  t = 4.2826, df = 5, p-value = 0.0039
   Null hypothesis rejected
 
 olkin1967: Olkin's z (1967)
-  z = 3.2612, p-value = 0.0006
+  z = 3.1726, p-value = 0.0008
   Null hypothesis rejected
 
 dunn1969: Dunn and Clark's z (1969)
-  z = 3.6519, p-value = 0.0001
+  z = 3.5741, p-value = 0.0002
   Null hypothesis rejected
 
 hendrickson1970: Hendrickson, Stanley, and Hills' (1970) modification of Williams' t (1959)
-  t = 5.8317, df = 5, p-value = 0.0010
+  t = 5.7895, df = 5, p-value = 0.0011
   Null hypothesis rejected
 
 steiger1980: Steiger's (1980) modification of Dunn and Clark's z (1969) using average correlations
-  z = 3.4418, p-value = 0.0003
+  z = 3.3671, p-value = 0.0004
   Null hypothesis rejected
 
 meng1992: Meng, Rosenthal, and Rubin's z (1992)
-  z = 3.5404, p-value = 0.0002
+  z = 3.4747, p-value = 0.0003
   Null hypothesis rejected
-  95% confidence interval for r.jk - r.jh: 1.0908 3.7964
+  95% confidence interval for r.jk - r.jh: 1.0285 3.6900
   Null hypothesis rejected (Lower boundary > 0)
 
 hittner2003: Hittner, May, and Silver's (2003) modification of Dunn and Clark's z (1969) using a backtransformed average Fisher's (1921) Z procedure
-  z = 15.2131, p-value = 0.0000
+  z = 6.8900, p-value = 0.0000
   Null hypothesis rejected
 
 zou2007: Zou's (2007) confidence interval
-  95% confidence interval for r.jk - r.jh: 0.3451 1.7560
+  95% confidence interval for r.jk - r.jh: 0.3291 1.7441
   Null hypothesis rejected (Lower boundary > 0)
 

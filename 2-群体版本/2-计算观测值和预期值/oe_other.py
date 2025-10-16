@@ -104,16 +104,16 @@ def RNA_base_types_oe(input_file: str, obs_value: str, fit_parameters: str, outp
 		mutation = row["REF"] + '>' + row["ALT"]
 		if int(row["POS"]) not in excluded_sites:
 			for RNA_type in row["RNA_base_type"].split(','):  # 遍历所有类型
-		if row["symbol"].startswith('MT-T'):
-			RNA_type_sum = sum_obs_likelihood(
-				mutation=mutation, identifier=RNA_type + "_tRNA", region='ref_exc_ori',
-				observed=row[obs_value], likelihood=row["Likelihood"],
-				callable_samples=row["callable_samples"], dict=RNA_type_sum)
-		if row["symbol"].startswith('MT-R'):
-			RNA_type_sum = sum_obs_likelihood(
-				mutation=mutation, identifier=RNA_type + "_rRNA", region='ref_exc_ori',
-				observed=row[obs_value], likelihood=row["Likelihood"],
-				callable_samples=row["callable_samples"], dict=RNA_type_sum)
+				if row["symbol"].startswith('MT-T'):
+					RNA_type_sum = sum_obs_likelihood(
+						mutation=mutation, identifier=RNA_type + "_tRNA", region='ref_exc_ori',
+						observed=row[obs_value], likelihood=row["Likelihood"],
+						callable_samples=row["callable_samples"], dict=RNA_type_sum)
+				if row["symbol"].startswith('MT-R'):
+					RNA_type_sum = sum_obs_likelihood(
+						mutation=mutation, identifier=RNA_type + "_rRNA", region='ref_exc_ori',
+						observed=row[obs_value], likelihood=row["Likelihood"],
+						callable_samples=row["callable_samples"], dict=RNA_type_sum)
 	
 	for RNA_type in RNA_types:
 		calculate_oe(item=RNA_type, sum_dict=RNA_type_sum, fit_parameters=fit_parameters, file=file)

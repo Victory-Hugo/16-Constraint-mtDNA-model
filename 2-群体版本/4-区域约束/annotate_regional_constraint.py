@@ -283,7 +283,7 @@ if __name__ == "__main__":
 	if args.rc_input is None:
 		args.rc_input = 'output/regional_constraint/real_alignment/regional_constraint_intervals.txt'
 	if args.obs is None:
-	args.obs = "carrier_count"
+		args.obs = "carrier_count"
 	if args.parameters is None:
 		args.parameters = 'output/calibration/linear_model_fits.txt'
 	if args.exc_sites is None:

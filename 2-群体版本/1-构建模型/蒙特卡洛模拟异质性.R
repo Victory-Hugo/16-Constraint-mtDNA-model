@@ -4,7 +4,7 @@ library(parallel)
 library(stats)
 library(tidyr)
 
-setwd("/mnt/f/OneDrive/文档（科研）/脚本/Download/16-Constraint-mtDNA-model/2-整理后/1-构建模型")
+setwd("/mnt/f/OneDrive/文档（科研）/脚本/Download/16-Constraint-mtDNA-model/2-群体版本/1-构建模型")
 dir.create("../output/蒙特卡洛模拟/")
 
 # 用于跨世代（卵母细胞发生）模拟杂合度的函数

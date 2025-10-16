@@ -46,6 +46,6 @@
 # │   ├── regional_constraint.py
 # │   └── 阅读我.md
 
-cd /mnt/f/OneDrive/文档（科研）/脚本/Download/16-Constraint-mtDNA-model
+cd /mnt/f/OneDrive/文档（科研）/脚本/Download/16-Constraint-mtDNA-model/2-群体版本
 
 python3 3-局部约束/local_constraint.py

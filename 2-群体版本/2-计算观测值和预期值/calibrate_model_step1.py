@@ -165,19 +165,19 @@ if __name__ == "__main__":
 		"-prefix", type=str, help="Output files prefix")
 	parser.add_argument(
 		"-exc_sites", type=int, nargs='+', help="List of base positions to exclude from calibration")
-args = parser.parse_args()
+	args = parser.parse_args()
 
-# 设置 gnomAD 的默认值
-if args.input is None:
-	args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
-if args.obs is None:
-	args.obs = "carrier_count"
-if args.prefix is None:
-	args.prefix = ""
-if args.exc_sites is None:
-	# 排除 gnomAD 中的“artifact_prone_sites”：301、302、310、316、3107 和 16182（3107 已排除）
-	# 这些位点在 gnomAD 中未调用，因此在计算中剔除
-	args.exc_sites = [301, 302, 310, 316, 16182]
+		# 设置 gnomAD 的默认值
+	if args.input is None:
+		args.input = 'output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt'
+	if args.obs is None:
+		args.obs = "carrier_count"
+	if args.prefix is None:
+		args.prefix = ""
+	if args.exc_sites is None:
+		# 排除 gnomAD 中的"artifact_prone_sites"：301、302、310、316、3107 和 16182（3107 已排除）
+		# 这些位点在 gnomAD 中未调用，因此在计算中剔除
+		args.exc_sites = [301, 302, 310, 316, 16182]
 	
 	for path in ['output/calibration']:
 		if not os.path.exists(path):
