@@ -4,18 +4,18 @@ from oe_functions import *
 import os
 from typing import List
 '''
-该脚本用于计算不同功能变异类别（如同义、错义、终止密码子获得/丢失、rRNA、tRNA、间隔区等）的观测值与预期值之比（obs/exp），并给出90%置信区间。主要流程包括：
-1. 读取包含突变似然得分和观测最大杂合度的注释文件。
+该脚本用于计算不同功能变异类别（如同义、错义、终止密码子获得/丢失、rRNA、tRNA、间隔区等）的携带者计数与预期值之比（obs/exp），并给出90%置信区间。主要流程包括：
+1. 读取包含突变似然得分和观测携带者计数的注释文件。
 2. 按功能变异类别累加观测值和似然值，排除指定的碱基位点。
 3. 基于线性模型参数文件，计算每类变异的预期值。
-4. 输出每类变异的obs/exp比值及置信区间到指定文件。
+4. 输出每类变异的 obs/exp 比值及置信区间到指定文件。
 参数说明：
-- input_file: 注释文件路径，包含突变似然得分与观测最大杂合度。
-- obs_value: 观测值列名，指定用于计算的最大杂合度数据来源。
+- input_file: 注释文件路径，包含突变似然得分与观测携带者计数。
+- obs_value: 观测值列名，指定用于计算的携带者计数来源。
 - fit_parameters: 线性模型参数文件路径，用于计算预期值。
 - output_prefix: 输出文件名前缀。
 - excluded_sites: 需要排除的碱基位点列表。
-命令行参数支持自定义输入文件、观测值来源、模型参数、输出前缀及排除位点，默认使用gnomAD相关数据。输出结果包括每类变异的变异计数、观测值、预期值、obs/exp比值及其置信区间。
+命令行参数支持自定义输入文件、观测值来源、模型参数、输出前缀及排除位点，默认使用 gnomAD 相关数据。输出结果包括每类变异的变异计数、观测值、预期值、obs/exp 比值及其置信区间。
 
 '''
 
@@ -23,7 +23,7 @@ def consequences_oe(
 		input_file: str, obs_value: str, fit_parameters: str, output_prefix: str, excluded_sites: List[int]):
 	"""计算功能变异类别的观测值与预期值之比及其90%置信区间。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -74,9 +74,9 @@ def consequences_oe(
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
-		"-input", type=str, help="Annotated file with mutation likelihood scores and observed maximum heteroplasmy")
+		"-input", type=str, help="Annotated file with mutation likelihood scores and observed carrier counts")
 	parser.add_argument(
-		"-obs", type=str, help="Population dataset from which observed maximum heteroplasmy is obtained")
+		"-obs", type=str, help="Population dataset providing observed carrier counts")
 	parser.add_argument(
 		"-parameters", type=str, help="File with parameters from linear model to calculate expected")
 	parser.add_argument(

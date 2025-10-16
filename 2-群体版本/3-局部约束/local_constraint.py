@@ -9,21 +9,21 @@ import pandas as pd
 import sys
 from typing import Dict, List, Tuple
 '''
-该脚本用于分析线粒体DNA（mtDNA）上的局部功能约束，计算每个窗口（kmer）和每个位点的观测/期望（obs/exp）比值及其置信区间，并进行功能注释。主要流程包括：
-1. 构建查找字典：从注释文件中提取每个位点和突变的观测最大杂合度及似然值。
-2. 并行计算窗口（kmer）：对每个窗口计算obs/exp比值及置信区间，并注释重叠的MITOMAP功能区。
+该脚本用于分析线粒体 DNA（mtDNA）上的局部功能约束，计算每个窗口（kmer）和每个位点的观测/期望（obs/exp）比值及其置信区间，并进行功能注释。主要流程包括：
+1. 构建查找字典：从注释文件中提取每个位点和突变的观测携带者计数及似然值。
+2. 并行计算窗口（kmer）：对每个窗口计算 obs/exp 比值及置信区间，并注释重叠的 MITOMAP 功能区。
 3. 汇总窗口结果：生成所有窗口的详细注释表，并按不同功能区（蛋白、RNA、非编码）进行分组排名。
-4. 基于窗口结果，计算每个位点的平均obs/exp置信区间及相关注释，输出每个位点的功能约束评分。
+4. 基于窗口结果，计算每个位点的平均 obs/exp 置信区间及相关注释，输出每个位点的功能约束评分。
 5. 最终输出窗口和每个位点的局部约束结果文件，便于后续分析和可视化。
 主要函数说明：
-- lookup_dict: 构建用于查找观测值和似然值的字典。
-- parallelize_kmers: 并行计算每个窗口的obs/exp比值及置信区间，并进行功能区注释。
-- kmers: 计算所有窗口的obs/exp比值及相关注释，输出窗口级结果。
-- per_base: 基于窗口结果，计算每个位点的平均obs/exp置信区间及相关注释，输出位点级结果。
+- lookup_dict: 构建用于查找观测载荷与似然值的字典。
+- parallelize_kmers: 并行计算每个窗口的 obs/exp 比值及置信区间，并进行功能区注释。
+- kmers: 计算所有窗口的 obs/exp 比值及相关注释，输出窗口级结果。
+- per_base: 基于窗口结果，计算每个位点的平均 obs/exp 置信区间及相关注释，输出位点级结果。
 - annotate: 整合所有注释信息，输出每个位点的详细功能约束评分和注释。
 命令行参数：
-- -input: 注释文件路径，包含突变似然分数和观测最大杂合度。
-- -obs: 观测最大杂合度的列名。
+- -input: 注释文件路径，包含突变似然分数和观测携带者计数。
+- -obs: 观测携带者计数的列名。
 - -parameters: 线性模型参数文件路径，用于计算期望值。
 - -prefix: 输出文件前缀。
 - -exc_sites: 需排除的位点列表。
@@ -35,7 +35,7 @@ from typing import Dict, List, Tuple
 - oe_functions, annotate_mutations, compile_denovo
 - pandas, numpy, csv, multiprocessing, argparse, datetime, os, sys
 注意事项：
-- 需提前准备MITOMAP功能区注释文件和相关功能注释文件。
+- 需提前准备 MITOMAP 功能区注释文件和相关功能注释文件。
 - 计算过程涉及多进程并行，运行时间与计算资源相关。
 '''
 # 添加模块搜索路径
@@ -49,9 +49,9 @@ import compile_denovo
 
 
 def lookup_dict(input_file: str, obs_value: str):
-	"""创建一个字典，用于查找观测到的最大杂合度和似然值。
+	"""创建一个字典，用于查找观测到的携带者计数和似然值。
 
-	:param input_file: 包含突变似然评分和观测最大杂合度的注释文件
+	:param input_file: 包含突变似然评分和观测携带者计数的注释文件
 	:param obs_value: 观测值的列标题
 	:return: 字典，键为（位置、突变）元组，值为包含变异所在区域、观测值和似然值的元组
 	"""
@@ -109,7 +109,7 @@ def parallelize_kmers(
 						callable_samples=lookup_dictionary[key][3])
 
 	# 计算观测值、期望值及置信区间
-	(total_all, obs_max_het, exp_max_het, ratio_oe, lower_CI, upper_CI) = oe_functions.calculate_oe(
+	(total_all, observed_carriers, expected_carriers, ratio_oe, lower_CI, upper_CI) = oe_functions.calculate_oe(
 		item=(start, end), sum_dict=kmer_sum, fit_parameters=fit_parameters, output="dict", file=None, alpha=0.1)
 
 	# 注释重叠的基因区
@@ -129,7 +129,8 @@ def parallelize_kmers(
 	loci_type = str(loci_type).strip('[]').replace("'", "")
 	
 	# 将结果写入字典
-	kmer_dict[(start, end)] = (total_all, obs_max_het, exp_max_het, ratio_oe, lower_CI, upper_CI, loci, loci_type)
+	kmer_dict[(start, end)] = (
+		total_all, observed_carriers, expected_carriers, ratio_oe, lower_CI, upper_CI, loci, loci_type)
 	return kmer_dict
 
 
@@ -172,7 +173,7 @@ def kmers(
 	
 	# 使用pandas依据上限置信区间为每个kmer计算百分位排名
 	df = pd.DataFrame.from_dict(kmers, orient='index', columns=[
-		'total_all', 'obs_max_het', 'exp_max_het', 'ratio_oe', 'lower_CI', 'upper_CI', 'loci', 'loci_type'])
+		'total_all', 'observed_carriers', 'expected_carriers', 'ratio_oe', 'lower_CI', 'upper_CI', 'loci', 'loci_type'])
 	df.index = pd.MultiIndex.from_tuples(df.index, names=['start', 'end'])
 	df = df.reset_index()
 	print(df)
@@ -310,7 +311,7 @@ def per_base(
 			]
 		# 对每个位置计算其重叠kmer的obs:exp上限CI平均值
 		mean_OEUF = filtered_df['upper_CI'].mean()
-		mean_exp = filtered_df['exp_max_het'].mean()
+		mean_exp = filtered_df['expected_carriers'].mean()
 
 		# 注释区域，以便分别对蛋白、RNA基因及非编码区域排名
 		loci, loci_type = [], []
@@ -400,9 +401,9 @@ def annotate(
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
-		"-input", type=str, help="Annotated file with mutation likelihood scores and observed maximum heteroplasmy")
+		"-input", type=str, help="Annotated file with mutation likelihood scores and observed carrier counts")
 	parser.add_argument(
-		"-obs", type=str, help="Population dataset from which observed maximum heteroplasmy is obtained")
+		"-obs", type=str, help="Population dataset providing observed carrier counts")
 	parser.add_argument(
 		"-parameters", type=str, help="File with parameters from linear model to calculate expected")
 	parser.add_argument(

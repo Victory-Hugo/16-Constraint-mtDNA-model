@@ -187,7 +187,7 @@ def annotate_final(
 	:param dict_key: real_filtered_outlier_kmers中的键，与key一致但用于查找原始结果
 	:param locus: 基因座名称
 	:param output_file: 输出文件句柄
-	:param input_file: 包含突变似然评分和观测最大杂合度的注释文件路径
+	:param input_file: 包含突变似然评分和观测携带者计数的注释文件路径
 	:param obs_value: 观测值列标题
 	:param excluded_sites: 需要排除的位点列表
 	:param fit_parameters: 包含线性模型系数和截距的文件路径
@@ -223,20 +223,20 @@ def annotate_final(
 						callable_samples=row["callable_samples"], dict=per_kmer)
 	
 	# 计算观测值与期望值
-	obs_max_het = oe_functions.calculate_obs(sum_dict=per_kmer, identifier=(key[0], key[1]))
-	obs_max_het = 0.0 if obs_max_het < 0.001 else obs_max_het  # 处理极小数值
-	exp_max_het = oe_functions.calculate_exp(
+	observed_carriers = oe_functions.calculate_obs(sum_dict=per_kmer, identifier=(key[0], key[1]))
+	observed_carriers = 0.0 if observed_carriers < 0.001 else observed_carriers  # 处理极小数值
+	expected_carriers = oe_functions.calculate_exp(
 		sum_dict=per_kmer, identifier=(key[0], key[1]), fit_parameters=fit_parameters)
 	total_all = oe_functions.calculate_total(sum_dict=per_kmer, identifier=(key[0], key[1]))
-	ratio_oe = obs_max_het / exp_max_het
+	ratio_oe = observed_carriers / expected_carriers
 	(lower_CI, upper_CI) = oe_functions.calculate_CI(
-		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het)
+		observed_carriers=observed_carriers, total=total_all, expected_carriers=expected_carriers)
 	# 输出时写入残基坐标等信息
 	output_file.write(
 		str(key[0]) + '\t' + str(key[1]) + '\t' + str(locus) + '\t' +
 		str(pos_to_res[(locus, key[0])] if (locus, key[0]) in pos_to_res else '') + '\t' +
 		str(pos_to_res[(locus, key[1])] if (locus, key[1]) in pos_to_res else '') + '\t' +
-		str(obs_max_het) + '\t' + str(exp_max_het) + '\t' + str(ratio_oe) + '\t' +
+		str(observed_carriers) + '\t' + str(expected_carriers) + '\t' + str(ratio_oe) + '\t' +
 		str(lower_CI) + '\t' + str(upper_CI) + '\t' + str(total_all) + '\t' +
 		str(real_filtered_outlier_kmers[(dict_key[0], dict_key[1], "0")][0]) + '\t' +
 		str(real_filtered_outlier_kmers[(dict_key[0], dict_key[1], "0")][1]) + '\t' +
@@ -258,7 +258,7 @@ def apply_FDR_filter(
 	:param real_all: 真实比对中重叠显著区域的文件
 	:param shuffle_all: 所有置换中重叠显著区域的文件
 	:param shuffle_list: 需遍历的置换编号列表
-	:param input_file: 包含突变似然评分和观测最大杂合度的注释文件路径
+	:param input_file: 包含突变似然评分和观测携带者计数的注释文件路径
 	:param obs_value: 观测值列标题
 	:param excluded_sites: 需要排除的位点列表
 	:param fit_parameters: 包含线性模型系数和截距的文件路径
@@ -387,9 +387,9 @@ def apply_FDR_filter(
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
-		"-input", type=str, help="Annotated file with mutation likelihood scores and observed maximum heteroplasmy")
+		"-input", type=str, help="Annotated file with mutation likelihood scores and observed carrier counts")
 	parser.add_argument(
-		"-obs", type=str, help="Population dataset from which observed maximum heteroplasmy is obtained")
+		"-obs", type=str, help="Population dataset providing observed carrier counts")
 	parser.add_argument(
 		"-parameters", type=str, help="File with parameters from linear model to calculate expected")
 	parser.add_argument(
@@ -414,7 +414,7 @@ if __name__ == "__main__":
 	# 创建最终结果文件
 	file = open('output/regional_constraint/final_regional_constraint_intervals.txt', "w")
 	file.write(
-		"start	end	locus	protein_pos_start	protein_pos_end	obs_max_het	exp_max_het	ratio_oe	"
+		"start	end	locus	protein_pos_start	protein_pos_end	observed_carriers	expected_carriers	ratio_oe	"
 		"lower_CI	upper_CI	total	pvalue	length	fdr" + '\n')
 	
 	# 汇总需要使用的置换编号——先处理蛋白基因

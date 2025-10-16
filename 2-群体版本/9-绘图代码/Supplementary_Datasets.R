@@ -12,10 +12,10 @@ write.table(file[, c("locus", "start", "end", "consequence", "observed", "expect
 # Supplementary Dataset 2 - regional constraint intervals
 
 file <- read.delim(file = '../output_files/regional_constraint/final_regional_constraint_intervals.txt', header = TRUE, sep= "\t")
-file$obs_max_het <- round(file$obs_max_het, 3)
-file$exp_max_het <- round(file$exp_max_het, 3)
+file$observed_carriers <- round(file$observed_carriers, 3)
+file$expected_carriers <- round(file$expected_carriers, 3)
 file$ratio_oe <- round(file$ratio_oe, 3)
-write.table(file[, c("locus", "start", "end", "protein_pos_start", "protein_pos_end", "obs_max_het", "exp_max_het", "ratio_oe", "lower_CI", "upper_CI")], 
+write.table(file[, c("locus", "start", "end", "protein_pos_start", "protein_pos_end", "observed_carriers", "expected_carriers", "ratio_oe", "lower_CI", "upper_CI")], 
             file = 'supplementary_datasets/supplementary_dataset_2.tsv', col.names = c("Symbol", "Start_position", "End_position", "Protein_residue_start", "Protein_residue_end", "Observed", "Expected", "obs:exp", "Lower_CI", "Upper_CI"), row.names = FALSE, sep = '\t', quote = FALSE)
 
 

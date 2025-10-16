@@ -1,4 +1,4 @@
-mutation_group	symbol	obs_max_het	sum_likelihood	count	length
+mutation_group	symbol	observed_carriers	sum_likelihood	count	length
 G>A_and_T>C	block_1	8.0	7764.092781522886	12	70
 G>A_and_T>C	block_2	5.0	2051.139806842602	16	70
 G>A_and_T>C	block_3	4.0	1901.5391237669742	15	70

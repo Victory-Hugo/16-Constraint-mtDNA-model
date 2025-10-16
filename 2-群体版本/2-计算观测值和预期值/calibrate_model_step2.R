@@ -8,10 +8,10 @@
 #' 
 #' @details
 #' 1. 读取观测值与突变得分的输入文件（分为参考区和OriB-OriH区）。
-#' 2. 对不同突变组（G>A_and_T>C 和 other）分别拟合线性模型（obs_max_het ~ sum_likelihood），提取系数与截距并保存。
+#' 2. 对不同突变组（G>A_and_T>C 和 other）分别拟合线性模型（observed_carriers ~ sum_likelihood），提取系数与截距并保存。
 #' 3. 若选择进行显著性检验，则：
-#'    - 对各组数据拟合多元线性模型（obs_max_het ~ sum_likelihood + length），输出模型摘要。
-#'    - 使用 cocor 包对相关系数进行依赖性检验，比较 sum_likelihood 与 length 对 obs_max_het 的相关性显著性。
+#'    - 对各组数据拟合多元线性模型（observed_carriers ~ sum_likelihood + length），输出模型摘要。
+#'    - 使用 cocor 包对相关系数进行依赖性检验，比较 sum_likelihood 与 length 对 observed_carriers 的相关性显著性。
 #'    - 检验结果保存至指定输出文件。
 #' 
 #' @return 无返回值，结果写入指定输出文件。
@@ -37,14 +37,14 @@ calibrate_step2 <- function(prefix = NA, do_sig_test = NA){
   ori_file <- read.delim(file = sprintf('output/calibration/%sloci_obs_vs_scores_ori.txt', prefix), header = TRUE, sep = "\t")
   
   model_fits <- rbind(c("region", "mutation_group", "item", "value"),
-                      c("ref_exc_ori", "G>A_and_T>C", "coefficient",  coef(lm(obs_max_het ~ sum_likelihood, data = file[file$mutation_group == "G>A_and_T>C",]))["sum_likelihood"]),
-                      c("ref_exc_ori", "G>A_and_T>C", "intercept", coef(lm(obs_max_het ~ sum_likelihood, data = file[file$mutation_group == "G>A_and_T>C",]))["(Intercept)"]),
-                      c("ref_exc_ori", "other", "coefficient", coef(lm(obs_max_het ~ sum_likelihood, data = file[file$mutation_group == "other",]))["sum_likelihood"]),
-                      c("ref_exc_ori", "other", "intercept", coef(lm(obs_max_het ~ sum_likelihood, data = file[file$mutation_group == "other",]))["(Intercept)"]),
-                      c("ori", "G>A_and_T>C", "coefficient", coef(lm(obs_max_het ~ sum_likelihood, data = ori_file[ori_file$mutation_group == "G>A_and_T>C",]))["sum_likelihood"]),
-                      c("ori", "G>A_and_T>C", "intercept", coef(lm(obs_max_het ~ sum_likelihood, data = ori_file[ori_file$mutation_group == "G>A_and_T>C",]))["(Intercept)"]),
-                      c("ori", "other", "coefficient", coef(lm(obs_max_het ~ sum_likelihood, data = ori_file[ori_file$mutation_group == "other",]))["sum_likelihood"]),
-                      c("ori", "other", "intercept", coef(lm(obs_max_het ~ sum_likelihood, data = ori_file[ori_file$mutation_group == "other",]))["(Intercept)"]))
+                      c("ref_exc_ori", "G>A_and_T>C", "coefficient",  coef(lm(observed_carriers ~ sum_likelihood, data = file[file$mutation_group == "G>A_and_T>C",]))["sum_likelihood"]),
+                      c("ref_exc_ori", "G>A_and_T>C", "intercept", coef(lm(observed_carriers ~ sum_likelihood, data = file[file$mutation_group == "G>A_and_T>C",]))["(Intercept)"]),
+                      c("ref_exc_ori", "other", "coefficient", coef(lm(observed_carriers ~ sum_likelihood, data = file[file$mutation_group == "other",]))["sum_likelihood"]),
+                      c("ref_exc_ori", "other", "intercept", coef(lm(observed_carriers ~ sum_likelihood, data = file[file$mutation_group == "other",]))["(Intercept)"]),
+                      c("ori", "G>A_and_T>C", "coefficient", coef(lm(observed_carriers ~ sum_likelihood, data = ori_file[ori_file$mutation_group == "G>A_and_T>C",]))["sum_likelihood"]),
+                      c("ori", "G>A_and_T>C", "intercept", coef(lm(observed_carriers ~ sum_likelihood, data = ori_file[ori_file$mutation_group == "G>A_and_T>C",]))["(Intercept)"]),
+                      c("ori", "other", "coefficient", coef(lm(observed_carriers ~ sum_likelihood, data = ori_file[ori_file$mutation_group == "other",]))["sum_likelihood"]),
+                      c("ori", "other", "intercept", coef(lm(observed_carriers ~ sum_likelihood, data = ori_file[ori_file$mutation_group == "other",]))["(Intercept)"]))
   
   write.table(model_fits, file = sprintf("output/calibration/%slinear_model_fits.txt", prefix), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
   
@@ -56,13 +56,13 @@ calibrate_step2 <- function(prefix = NA, do_sig_test = NA){
     
     # 检验哪个变量与观测到的中性变异相关性更强
     print("G>A and T>C mutation group (for reference excluding OriB-OriH)")
-    print(summary(lm(obs_max_het ~ sum_likelihood + length, data = file[file$mutation_group == "G>A_and_T>C",])))
+    print(summary(lm(observed_carriers ~ sum_likelihood + length, data = file[file$mutation_group == "G>A_and_T>C",])))
     print("All other mutation group (for reference excluding OriB-OriH)")
-    print(summary(lm(obs_max_het ~ sum_likelihood + length, data = file[file$mutation_group == "other",])))
+    print(summary(lm(observed_carriers ~ sum_likelihood + length, data = file[file$mutation_group == "other",])))
     print("G>A and T>C mutation group for OriB-OriH region")
-    print(summary(lm(obs_max_het ~ sum_likelihood + length, data = ori_file[ori_file$mutation_group == "G>A_and_T>C",])))
+    print(summary(lm(observed_carriers ~ sum_likelihood + length, data = ori_file[ori_file$mutation_group == "G>A_and_T>C",])))
     print("All other mutation group for OriB-OriH region")
-    print(summary(lm(obs_max_het ~ sum_likelihood + length, data = ori_file[ori_file$mutation_group == "other",])))
+    print(summary(lm(observed_carriers ~ sum_likelihood + length, data = ori_file[ori_file$mutation_group == "other",])))
     
     # 借助 cocor 包展示：观测到的中性变异水平与突变似然得分的相关性比与位点长度的相关性更显著。
     # 这是针对相关变量存在共享自变量（即相关系数依赖）的两组相关性进行单侧假设检验。
@@ -72,26 +72,26 @@ calibrate_step2 <- function(prefix = NA, do_sig_test = NA){
     
     print("cocor package analysis")
     print("G>A and T>C mutation group (for reference excluding OriB-OriH)")
-    print(cocor.dep.groups.overlap(cor.test(file[file$mutation_group == "G>A_and_T>C", c("obs_max_het")], file[file$mutation_group == "G>A_and_T>C", c("sum_likelihood")], method = "pearson")$estimate, 
-                             cor.test(file[file$mutation_group == "G>A_and_T>C", c("obs_max_het")], file[file$mutation_group == "G>A_and_T>C", c("length")], method = "pearson")$estimate, 
+    print(cocor.dep.groups.overlap(cor.test(file[file$mutation_group == "G>A_and_T>C", c("observed_carriers")], file[file$mutation_group == "G>A_and_T>C", c("sum_likelihood")], method = "pearson")$estimate, 
+                             cor.test(file[file$mutation_group == "G>A_and_T>C", c("observed_carriers")], file[file$mutation_group == "G>A_and_T>C", c("length")], method = "pearson")$estimate, 
                              cor.test(file[file$mutation_group == "G>A_and_T>C", c("sum_likelihood")], file[file$mutation_group == "G>A_and_T>C", c("length")], method = "pearson")$estimate, 
                              n = 39, alternative = "greater", alpha = 0.05, conf.level = 0.95, null.value = 0))
     
     print("All other mutation group (for reference excluding OriB-OriH)")
-    print(cocor.dep.groups.overlap(cor.test(file[file$mutation_group == "other", c("obs_max_het")], file[file$mutation_group == "other", c("sum_likelihood")], method = "pearson")$estimate, 
-                             cor.test(file[file$mutation_group == "other", c("obs_max_het")], file[file$mutation_group == "other", c("length")], method = "pearson")$estimate, 
+    print(cocor.dep.groups.overlap(cor.test(file[file$mutation_group == "other", c("observed_carriers")], file[file$mutation_group == "other", c("sum_likelihood")], method = "pearson")$estimate, 
+                             cor.test(file[file$mutation_group == "other", c("observed_carriers")], file[file$mutation_group == "other", c("length")], method = "pearson")$estimate, 
                              cor.test(file[file$mutation_group == "other", c("sum_likelihood")], file[file$mutation_group == "other", c("length")], method = "pearson")$estimate, 
                              n = 39, alternative = "greater", alpha = 0.05, conf.level = 0.95, null.value = 0))
     
     print("G>A and T>C mutation group for OriB-OriH region")
-    print(cocor.dep.groups.overlap(cor.test(ori_file[ori_file$mutation_group == "G>A_and_T>C", c("obs_max_het")], ori_file[ori_file$mutation_group == "G>A_and_T>C", c("sum_likelihood")], method = "pearson")$estimate, 
-                             cor.test(ori_file[ori_file$mutation_group == "G>A_and_T>C", c("obs_max_het")], ori_file[ori_file$mutation_group == "G>A_and_T>C", c("length")], method = "pearson")$estimate, 
+    print(cocor.dep.groups.overlap(cor.test(ori_file[ori_file$mutation_group == "G>A_and_T>C", c("observed_carriers")], ori_file[ori_file$mutation_group == "G>A_and_T>C", c("sum_likelihood")], method = "pearson")$estimate, 
+                             cor.test(ori_file[ori_file$mutation_group == "G>A_and_T>C", c("observed_carriers")], ori_file[ori_file$mutation_group == "G>A_and_T>C", c("length")], method = "pearson")$estimate, 
                              cor.test(ori_file[ori_file$mutation_group == "G>A_and_T>C", c("sum_likelihood")], ori_file[ori_file$mutation_group == "G>A_and_T>C", c("length")], method = "pearson")$estimate, 
                              n = 8, alternative = "greater", alpha = 0.05, conf.level = 0.95, null.value = 0))
     
     print("All other mutation group for OriB-OriH region")
-    print(cocor.dep.groups.overlap(cor.test(ori_file[ori_file$mutation_group == "other", c("obs_max_het")], ori_file[ori_file$mutation_group == "other", c("sum_likelihood")], method = "pearson")$estimate, 
-                             cor.test(ori_file[ori_file$mutation_group == "other", c("obs_max_het")], ori_file[ori_file$mutation_group == "other", c("length")], method = "pearson")$estimate, 
+    print(cocor.dep.groups.overlap(cor.test(ori_file[ori_file$mutation_group == "other", c("observed_carriers")], ori_file[ori_file$mutation_group == "other", c("sum_likelihood")], method = "pearson")$estimate, 
+                             cor.test(ori_file[ori_file$mutation_group == "other", c("observed_carriers")], ori_file[ori_file$mutation_group == "other", c("length")], method = "pearson")$estimate, 
                              cor.test(ori_file[ori_file$mutation_group == "other", c("sum_likelihood")], ori_file[ori_file$mutation_group == "other", c("length")], method = "pearson")$estimate, 
                              n = 8, alternative = "greater", alpha = 0.05, conf.level = 0.95, null.value = 0))
     sink()

@@ -1,7 +1,7 @@
 [1] "G>A and T>C mutation group (for reference excluding OriB-OriH)"
 
 Call:
-lm(formula = obs_max_het ~ sum_likelihood + length, data = file[file$mutation_group == 
+lm(formula = observed_carriers ~ sum_likelihood + length, data = file[file$mutation_group == 
     "G>A_and_T>C", ])
 
 Residuals:
@@ -23,7 +23,7 @@ F-statistic:  1762 on 2 and 36 DF,  p-value: < 2.2e-16
 [1] "All other mutation group (for reference excluding OriB-OriH)"
 
 Call:
-lm(formula = obs_max_het ~ sum_likelihood + length, data = file[file$mutation_group == 
+lm(formula = observed_carriers ~ sum_likelihood + length, data = file[file$mutation_group == 
     "other", ])
 
 Residuals:
@@ -45,7 +45,7 @@ F-statistic: 377.1 on 2 and 36 DF,  p-value: < 2.2e-16
 [1] "G>A and T>C mutation group for OriB-OriH region"
 
 Call:
-lm(formula = obs_max_het ~ sum_likelihood + length, data = ori_file[ori_file$mutation_group == 
+lm(formula = observed_carriers ~ sum_likelihood + length, data = ori_file[ori_file$mutation_group == 
     "G>A_and_T>C", ])
 
 Residuals:
@@ -69,7 +69,7 @@ F-statistic: 10.83 on 2 and 5 DF,  p-value: 0.01523
 [1] "All other mutation group for OriB-OriH region"
 
 Call:
-lm(formula = obs_max_het ~ sum_likelihood + length, data = ori_file[ori_file$mutation_group == 
+lm(formula = observed_carriers ~ sum_likelihood + length, data = ori_file[ori_file$mutation_group == 
     "other", ])
 
 Residuals:

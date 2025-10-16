@@ -15,7 +15,7 @@ import annotate_mutations
 def calculate_distance(input_file: str, rc_file: str):
 	"""计算蛋白和rRNA三维结构中距区域约束最近的位置。
 
-	:param input_file: 包含突变似然评分和观测最大杂合度的注释文件
+	:param input_file: 包含突变似然评分和观测携带者计数的注释文件
 	:param rc_file: 含区域约束最终区间的文件
 	:return: 字典，记录蛋白或rRNA每个位点到区域约束的最小距离
 	"""
@@ -174,7 +174,7 @@ def calculate_distance(input_file: str, rc_file: str):
 def annotate_rc(input_file: str, rc_file: str):
 	"""为所有可能的mtDNA SNV添加区域约束注释。
 
-	:param input_file: 包含突变似然评分和观测最大杂合度的注释文件
+	:param input_file: 包含突变似然评分和观测携带者计数的注释文件
 	:param rc_file: 含区域约束最终区间的文件
 	"""
 	f = open('output/regional_constraint/mito_regional_constraint_annotation.txt', "w")
@@ -270,7 +270,7 @@ if __name__ == "__main__":
 	parser.add_argument("-input", type=str, help="Annotated file with mutation likelihood scores")
 	parser.add_argument("-rc_input", type=str, help="File with areas of regional constraint")
 	parser.add_argument(
-		"-obs", type=str, help="Population dataset from which observed maximum heteroplasmy is obtained")
+		"-obs", type=str, help="Population dataset providing observed carrier counts")
 	parser.add_argument(
 		"-parameters", type=str, help="File with parameters from linear model to calculate expected")
 	parser.add_argument(

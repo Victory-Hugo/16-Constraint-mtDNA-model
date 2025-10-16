@@ -50,11 +50,11 @@ def calculate_per_pos(
 		input_file: str,
 		obs_value: str,
 		excluded_sites: List[int]):
-	"""汇总每个碱基位置的观测最大杂合度、突变似然值及计数。
+	"""汇总每个碱基位置的观测携带者计数、突变似然值及计数。
 
 	:param locus: 基因座名称
 	:param locus_coords: 构成该基因座的碱基坐标列表
-	:param input_file: 包含突变似然评分和观测最大杂合度的注释文件
+	:param input_file: 包含突变似然评分和观测携带者计数的注释文件
 	:param obs_value: 观测值列标题
 	:param excluded_sites: 需要在计算中排除的碱基位置列表
 	:return: per_pos字典，键为（碱基位置、突变类别、汇总值类型、变异所在区域）元组，值为对应的汇总结果
@@ -93,12 +93,12 @@ def calculate_per_res(
 		obs_value: str,
 		excluded_sites: List[int],
 		pos_to_res: Dict[Tuple[str, int], int]):
-	"""汇总每个蛋白残基的观测最大杂合度、突变似然值及计数。
+	"""汇总每个蛋白残基的观测携带者计数、突变似然值及计数。
 
 	:param locus: 基因座名称
 	:param locus_coords: 构成该基因座的碱基坐标列表
 	:param codon_coords: 蛋白残基编号列表（从1开始）
-	:param input_file: 包含突变似然评分和观测最大杂合度的注释文件
+	:param input_file: 包含突变似然评分和观测携带者计数的注释文件
 	:param obs_value: 观测值列标题
 	:param excluded_sites: 需要排除的碱基位置列表
 	:param pos_to_res: 将碱基坐标转换为蛋白残基编号的字典
@@ -222,7 +222,7 @@ def calculate_kmers_step1(
 	if kmer_end in coords:  # 限制在基因座范围内
 		# 初始化字典条目
 		for mut_group in ['G>A_and_T>C', 'other']:  # 两类突变群组
-			for value in ['obs_max_het', 'sum_LR_AN', 'sum_callable', 'count']:  # 需要汇总的指标
+			for value in ['observed_carriers', 'sum_LR_AN', 'sum_callable', 'count']:  # 需要汇总的指标
 				for region in ['ref_exc_ori', 'ori']:  # 可能使用的两个突变模型
 					kmers_dict[(kmer_start, kmer_end), mut_group, value, region] = 0
 		for pos in kmer_range:
@@ -231,20 +231,20 @@ def calculate_kmers_step1(
 					kmers_dict[((kmer_start, kmer_end), key[1], key[2], key[3])] += per_unit_dict[key]
 		
 		# 计算p值前，先得到观测值与期望值
-		exp_max_het = oe_functions.calculate_exp(
+		expected_carriers = oe_functions.calculate_exp(
 			sum_dict=kmers_dict, identifier=(kmer_start, kmer_end), fit_parameters=fit_parameters)
-		obs_max_het = oe_functions.calculate_obs(sum_dict=kmers_dict, identifier=(kmer_start, kmer_end))
-		obs_max_het = 0.0 if obs_max_het < 0.001 else obs_max_het  # 处理极小数值
+		observed_carriers = oe_functions.calculate_obs(sum_dict=kmers_dict, identifier=(kmer_start, kmer_end))
+		observed_carriers = 0.0 if observed_carriers < 0.001 else observed_carriers  # 处理极小数值
 		total_all = oe_functions.calculate_total(sum_dict=kmers_dict, identifier=(kmer_start, kmer_end))
 		# 期望值基于基因座的obs:exp比进行缩放
 		less_than_pvalue = oe_functions.calculate_pvalue(
-			obs_max_het=obs_max_het, total=total_all, exp_max_het=(exp_max_het * locus_oe))
+			observed_carriers=observed_carriers, total=total_all, expected_carriers=(expected_carriers * locus_oe))
 		
-		# print((kmer_start, kmer_end), obs_max_het, exp_max_het, total_all, less_than_pvalue)
+		# print((kmer_start, kmer_end), observed_carriers, expected_carriers, total_all, less_than_pvalue)
 		
 		if float(less_than_pvalue) < sig_threshold:  # 仅保留p值低于阈值的kmer
 			(lower_CI, upper_CI) = oe_functions.calculate_CI(
-				obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=0.1)
+				observed_carriers=observed_carriers, total=total_all, expected_carriers=expected_carriers, alpha=0.1)
 			if upper_CI < locus_lower_CI:  # 置信区间需与基因座CI不重叠
 				outlier_kmers[(kmer_start, kmer_end)] = (less_than_pvalue, kmer_length)
 
@@ -293,7 +293,7 @@ def calculate_kmers_step2(
 		keys = []
 		for identifier in [(kmer_start, kmer_end)]:
 			for mut_group in ['G>A_and_T>C', 'other']:  # 两类突变群组
-				for value in ['obs_max_het', 'sum_LR_AN', 'sum_callable', 'count']:  # 汇总指标
+				for value in ['observed_carriers', 'sum_LR_AN', 'sum_callable', 'count']:  # 汇总指标
 					for region in ['ref_exc_ori', 'ori']:  # 两种突变模型
 						kmers_dict[identifier, mut_group, value, region] = 0
 						keys.append(mut_group + '-' + value + '-' + region)
@@ -306,20 +306,20 @@ def calculate_kmers_step2(
 					(str(kmer_start_minus_one), key.split('-')[0], key.split('-')[1], key.split('-')[2])])
 		
 		# 计算p值前，先得到观测值与期望值
-		exp_max_het = oe_functions.calculate_exp(
+		expected_carriers = oe_functions.calculate_exp(
 			sum_dict=kmers_dict, identifier=(kmer_start, kmer_end), fit_parameters=fit_parameters)
-		obs_max_het = oe_functions.calculate_obs(sum_dict=kmers_dict, identifier=(kmer_start, kmer_end))
-		obs_max_het = 0.0 if obs_max_het < 0.001 else obs_max_het  # 处理极小数值
+		observed_carriers = oe_functions.calculate_obs(sum_dict=kmers_dict, identifier=(kmer_start, kmer_end))
+		observed_carriers = 0.0 if observed_carriers < 0.001 else observed_carriers  # 处理极小数值
 		total_all = oe_functions.calculate_total(sum_dict=kmers_dict, identifier=(kmer_start, kmer_end))
 		# 期望值基于基因座的obs:exp比进行缩放
 		less_than_pvalue = oe_functions.calculate_pvalue(
-			obs_max_het=obs_max_het, total=total_all, exp_max_het=(exp_max_het * locus_oe))
+			observed_carriers=observed_carriers, total=total_all, expected_carriers=(expected_carriers * locus_oe))
 		
-		# print(locus, (kmer_start, kmer_end), obs_max_het, exp_max_het, total_all, less_than_pvalue)
+		# print(locus, (kmer_start, kmer_end), observed_carriers, expected_carriers, total_all, less_than_pvalue)
 		
 		if float(less_than_pvalue) < sig_threshold:  # 仅保留p值低于阈值的kmer
 			(lower_CI, upper_CI) = oe_functions.calculate_CI(
-				obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=0.1)
+				observed_carriers=observed_carriers, total=total_all, expected_carriers=expected_carriers, alpha=0.1)
 			if upper_CI < locus_lower_CI:  # 要求置信区间与基因座CI不重叠
 				outlier_kmers[(kmer_start, kmer_end)] = (less_than_pvalue, kmer_length)
 
@@ -414,14 +414,14 @@ def annotate_nonoverlapping(
 	key = (key_start, key_end)
 	
 	# 计算obs:exp比值及置信区间
-	obs_max_het = oe_functions.calculate_obs(sum_dict=kmers_dict, identifier=key)
-	obs_max_het = 0 if obs_max_het < 0.001 else obs_max_het  # 处理极小数值
-	exp_max_het = oe_functions.calculate_exp(
+	observed_carriers = oe_functions.calculate_obs(sum_dict=kmers_dict, identifier=key)
+	observed_carriers = 0 if observed_carriers < 0.001 else observed_carriers  # 处理极小数值
+	expected_carriers = oe_functions.calculate_exp(
 		sum_dict=kmers_dict, identifier=key, fit_parameters=fit_parameters)
-	ratio_oe = obs_max_het / exp_max_het
+	ratio_oe = observed_carriers / expected_carriers
 	total_all = oe_functions.calculate_total(sum_dict=kmers_dict, identifier=key)
 	(lower_CI, upper_CI) = oe_functions.calculate_CI(
-		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=0.1)
+		observed_carriers=observed_carriers, total=total_all, expected_carriers=expected_carriers, alpha=0.1)
 	
 	# 将残基范围转换为mtDNA坐标：通常对应第一密码子首位到最后密码子末位
 	# 对于反链上的MT-ND6，需取最后密码子末位到第一密码子首位
@@ -432,7 +432,7 @@ def annotate_nonoverlapping(
 	
 	# 以碱基坐标保存结果
 	filtered_outlier_kmers[key] = (
-		obs_max_het, exp_max_het, ratio_oe, lower_CI, upper_CI, total_all, kmer_pvalue, kmer_length)
+		observed_carriers, expected_carriers, ratio_oe, lower_CI, upper_CI, total_all, kmer_pvalue, kmer_length)
 	
 	return filtered_outlier_kmers
 
@@ -465,15 +465,15 @@ def check_locus_oe(
 		loci_dict[(locus, key[1], key[2], key[3])] += per_unit_dict[key]
 
 	# 计算观测/期望比
-	obs_max_het = oe_functions.calculate_obs(sum_dict=loci_dict, identifier=locus)
-	exp_max_het = oe_functions.calculate_exp(
+	observed_carriers = oe_functions.calculate_obs(sum_dict=loci_dict, identifier=locus)
+	expected_carriers = oe_functions.calculate_exp(
 		sum_dict=loci_dict, identifier=locus, fit_parameters=fit_parameters)
 	total_all = oe_functions.calculate_total(sum_dict=loci_dict, identifier=locus)
 	(lower_CI, upper_CI) = oe_functions.calculate_CI(
-		obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het, alpha=0.1)
+		observed_carriers=observed_carriers, total=total_all, expected_carriers=expected_carriers, alpha=0.1)
 	
-	if round(locus_oe, 2) != round(obs_max_het / exp_max_het, 2):  # 四舍五入以忽略极小差异
-		print("Error: gene obs:exp does not equal expected value", locus_oe, "vs", obs_max_het / exp_max_het)
+	if round(locus_oe, 2) != round(observed_carriers / expected_carriers, 2):  # 四舍五入以忽略极小差异
+		print("Error: gene obs:exp does not equal expected value", locus_oe, "vs", observed_carriers / expected_carriers)
 		sys.exit()
 	
 	return locus_oe, lower_CI
@@ -499,7 +499,7 @@ def regional_constraint(
 	:param loci_type: 'p'表示仅分析蛋白基因，'rn'表示RNA与非编码，'both'表示全部
 	:param res_to_pos: 将蛋白残基映射到碱基坐标的字典
 	:param pos_to_res: 将碱基坐标映射到蛋白残基的字典
-	:param input_file: 包含突变似然评分和观测最大杂合度的注释文件路径
+	:param input_file: 包含突变似然评分和观测携带者计数的注释文件路径
 	:param obs_value: 观测值列标题
 	:param excluded_sites: 需要在计算中排除的碱基位置列表
 	:param fit_parameters: 包含线性模型系数和截距的文件路径
@@ -514,7 +514,7 @@ def regional_constraint(
 	kmer_file.write("kmer_start	kmer_end	locus	pvalue	length	shuffle" + '\n')
 
 	kmer_file2 = open('%s/regional_constraint_intervals.txt' % out_dir, "w")
-	header = "kmer_start	kmer_end	locus	protein_pos_start	protein_pos_end	obs_max_het	exp_max_het	ratio_oe	lower_CI	upper_CI	total	kmer_pvalue	length	shuffle	out_dir"
+	header = "kmer_start	kmer_end	locus	protein_pos_start	protein_pos_end	observed_carriers	expected_carriers	ratio_oe	lower_CI	upper_CI	total	kmer_pvalue	length	shuffle	out_dir"
 	kmer_file2.write(header + '\n')
 
 	# n_shuffles = 0 表示使用真实比对
@@ -636,9 +636,9 @@ def regional_constraint(
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
-		"-input", type=str, help="Annotated file with mutation likelihood scores and observed maximum heteroplasmy")
+		"-input", type=str, help="Annotated file with mutation likelihood scores and observed carrier counts")
 	parser.add_argument(
-		"-obs", type=str, help="Population dataset from which observed maximum heteroplasmy is obtained")
+		"-obs", type=str, help="Population dataset providing observed carrier counts")
 	parser.add_argument(
 		"-parameters", type=str, help="File with parameters from linear model to calculate expected")
 	parser.add_argument(

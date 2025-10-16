@@ -1,4 +1,4 @@
-mutation_group	symbol	obs_max_het	sum_likelihood	count	length
+mutation_group	symbol	observed_carriers	sum_likelihood	count	length
 G>A_and_T>C	control_region	85.0	12728.01163444465	85	515.0
 G>A_and_T>C	MT-TF	3.0	468.29301574126754	3	71.0
 G>A_and_T>C	MT-RNR1	58.35484	7757.380420243431	59	954.0

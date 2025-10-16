@@ -5,14 +5,14 @@ import os
 from typing import List
 
 '''
-该脚本用于对线粒体DNA参考序列中的中性变异进行模型校准，分别统计非 OriB-OriH 区域和 OriB-OriH 区域的观测最大杂合度、突变似然得分及计数。主要功能如下：
+该脚本用于对线粒体 DNA 参考序列中的中性变异进行模型校准，分别统计非 OriB-OriH 区域和 OriB-OriH 区域的携带者计数、突变似然得分及计数。主要功能如下：
 1. calibrate(input_file, obs_value, output_prefix, excluded_sites):
 	- 对参考序列（不含 OriB-OriH 区域）中的中性变异进行累计统计。
 	- 中性变异定义为系统发育树中出现的单倍群变异或 phyloP 评分处于最低十分位。
-	- 按基因或功能区分组，输出每组的观测最大杂合度、突变似然得分和计数。
+	- 按基因或功能区分组，输出每组的携带者计数、突变似然得分和计数。
 2. calibrate_ori(input_file, obs_value, output_prefix, excluded_sites):
 	- 对 OriB-OriH 区域中的中性变异进行累计统计。
-	- OriB-OriH 区域按约70 bp 划分为等长区块，分别统计每个区块的观测最大杂合度、突变似然得分和计数。
+	- OriB-OriH 区域按约 70 bp 划分为等长区块，分别统计每个区块的携带者计数、突变似然得分和计数。
 3. 主程序入口：
 	- 解析命令行参数，包括输入文件、观测值列名、输出前缀和需排除的位点列表。
 	- 设置默认参数并创建输出目录。
@@ -22,16 +22,16 @@ from typing import List
 - numpy, csv, argparse, datetime, os 等标准库
 输出：
 - 校准所用的中性变异列表（neutral_variants_used.txt）
-- 各基因/区块的观测值与似然得分统计文件（loci_obs_vs_scores.txt, loci_obs_vs_scores_ori.txt）
+- 各基因/区块的携带者计数与似然得分统计文件（loci_obs_vs_scores.txt, loci_obs_vs_scores_ori.txt）
 适用场景：
 - 线粒体DNA变异功能模型的校准与评估
 - 变异分布与功能区块的统计分析
 '''
 
 def calibrate(input_file: str, obs_value: str, output_prefix: str, excluded_sites: List[int]):
-	"""对参考序列（不含 OriB-OriH 区域）中的中性变异，累计观测最大杂合度、突变似然得分以及计数。
+	"""对参考序列（不含 OriB-OriH 区域）中的中性变异，累计携带者计数、突变似然得分以及计数。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param output_prefix: 输出文件名前缀
 	:param excluded_sites: 需要在计算中排除的碱基位点列表
@@ -82,22 +82,22 @@ def calibrate(input_file: str, obs_value: str, output_prefix: str, excluded_site
 	
 	# 写文件供绘图使用
 	f = open('output/calibration/%sloci_obs_vs_scores.txt' % output_prefix, "w")
-	header = "mutation_group	symbol	obs_max_het	sum_likelihood	count	length"
+	header = "mutation_group	symbol	observed_carriers	sum_likelihood	count	length"
 	f.write(header + '\n')
 	for mut_group in ['G>A_and_T>C', 'other']:  # 需要校准的两类突变分组
 		for gene in gene_length:
 			f.write(
 				mut_group + '\t' + gene + '\t' +
-				str(calibration[(gene, mut_group, 'obs_max_het', 'ref_exc_ori')]) + '\t' +
+				str(calibration[(gene, mut_group, 'observed_carriers', 'ref_exc_ori')]) + '\t' +
 				str(calibration[(gene, mut_group, 'sum_LR_AN', 'ref_exc_ori')]) + '\t' +
 				str(calibration[(gene, mut_group, 'count', 'ref_exc_ori')]) + '\t' +
 				str(gene_length[gene] / 3) + '\n')  # 计数包含每个位点的3种SNV，因此需除以3
 
 
 def calibrate_ori(input_file: str, obs_value: str, output_prefix: str, excluded_sites: List[int]):
-	"""对 OriB-OriH 区域中的中性变异，累计观测最大杂合度、突变似然得分以及计数。
+	"""对 OriB-OriH 区域中的中性变异，累计携带者计数、突变似然得分以及计数。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param output_prefix: 输出文件名前缀
 	:param excluded_sites: 需要在计算中排除的碱基位点列表
@@ -143,13 +143,13 @@ def calibrate_ori(input_file: str, obs_value: str, output_prefix: str, excluded_
 	
 	# 写文件供绘图使用
 	f = open('output/calibration/%sloci_obs_vs_scores_ori.txt' % output_prefix, "w")
-	header = "mutation_group	symbol	obs_max_het	sum_likelihood	count	length"
+	header = "mutation_group	symbol	observed_carriers	sum_likelihood	count	length"
 	f.write(header + '\n')
 	for mut_group in ['G>A_and_T>C', 'other']:  # 需要校准的两类突变分组
 		for n_block in ori_blocks:
 			f.write(
 				mut_group + '\t' + n_block + '\t' +
-				str(calibration[(n_block, mut_group, 'obs_max_het', 'ori')]) + '\t' +
+				str(calibration[(n_block, mut_group, 'observed_carriers', 'ori')]) + '\t' +
 				str(calibration[(n_block, mut_group, 'sum_LR_AN', 'ori')]) + '\t' +
 				str(calibration[(n_block, mut_group, 'count', 'ori')]) + '\t' +
 				str(len(ori_blocks[n_block])) + '\n')
@@ -158,9 +158,9 @@ def calibrate_ori(input_file: str, obs_value: str, output_prefix: str, excluded_
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
-		"-input", type=str, help="Annotated file with mutation likelihood scores and observed maximum heteroplasmy")
+		"-input", type=str, help="Annotated file with mutation likelihood scores and observed carrier counts")
 	parser.add_argument(
-		"-obs", type=str, help="Population dataset from which observed maximum heteroplasmy is obtained")
+		"-obs", type=str, help="Population dataset providing observed carrier counts")
 	parser.add_argument(
 		"-prefix", type=str, help="Output files prefix")
 	parser.add_argument(

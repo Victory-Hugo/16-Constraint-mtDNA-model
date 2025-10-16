@@ -19,7 +19,7 @@ def protein_annot_oe(
 		input_file: str, obs_value: str, fit_parameters: str, output_prefix: str, excluded_sites: List[int]):
 	"""计算基于 UniProt 等注释的错义变异的观测值与预期值之比及其90%置信区间。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -51,7 +51,7 @@ def protein_annot_oe(
 def tRNA_pos_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: str, excluded_sites: List[int]):
 	"""计算每个 tRNA 位置的观测值与预期值之比及其90%置信区间。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -86,7 +86,7 @@ def tRNA_pos_oe(input_file: str, obs_value: str, fit_parameters: str, output_pre
 def RNA_base_types_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: str, excluded_sites: List[int]):
 	"""计算 RNA 基因中不同碱基类型的观测值与预期值之比及其90%置信区间。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -143,7 +143,7 @@ def RNA_base_types_oe(input_file: str, obs_value: str, fit_parameters: str, outp
 def tRNA_domain_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: str, excluded_sites: List[int]):
 	"""计算不同 tRNA 结构域的观测值与预期值之比及其90%置信区间。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -178,7 +178,7 @@ def insilico_oe(input_file: str, obs_value: str, fit_parameters: str, output_pre
 	"""计算不同 in silico 预测工具的观测值与预期值之比及其90%置信区间。
 	APOGEE 针对错义变异，MitoTip 与 HmtVar 针对 tRNA，这三者均为 ACMG 调整建议中的推荐工具。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -244,7 +244,7 @@ def insilico_oe(input_file: str, obs_value: str, fit_parameters: str, output_pre
 def disease_vars_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: str, excluded_sites: List[int]):
 	"""计算不同疾病相关变异的观测值与预期值之比及其90%置信区间。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -298,7 +298,7 @@ def disease_vars_oe(input_file: str, obs_value: str, fit_parameters: str, output
 def vus_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: str, excluded_sites: List[int]):
 	"""计算不同 VUS 子集的观测值与预期值之比及其90%置信区间。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -375,9 +375,9 @@ def vus_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
-		"-input", type=str, help="Annotated file with mutation likelihood scores and observed maximum heteroplasmy")
+		"-input", type=str, help="Annotated file with mutation likelihood scores and observed carrier counts")
 	parser.add_argument(
-		"-obs", type=str, help="Population dataset from which observed maximum heteroplasmy is obtained")
+		"-obs", type=str, help="Population dataset providing observed carrier counts")
 	parser.add_argument(
 		"-parameters", type=str, help="File with parameters from linear model to calculate expected")
 	parser.add_argument(

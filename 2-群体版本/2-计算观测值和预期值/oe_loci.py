@@ -2,9 +2,9 @@ import argparse
 import datetime
 from oe_functions import *
 import os
-'''该脚本用于计算线粒体基因组各基因或位点的观测最大杂合度与预期值之比（obs/exp），并给出90%置信区间及p值。主要功能如下：
-1. 读取注释文件，包含突变似然得分和观测最大杂合度。
-2. 读取线性模型参数文件，用于计算预期最大杂合度。
+'''该脚本用于计算线粒体基因组各基因或位点的携带者计数与预期值之比（obs/exp），并给出90%置信区间及p值。主要功能如下：
+1. 读取注释文件，包含突变似然得分和观测携带者计数。
+2. 读取线性模型参数文件，用于计算预期携带者计数。
 3. 支持排除指定的碱基位点（如易出错位点）。
 4. 针对每个位点和变异类型（同义、错义、终止、SNV）累加观测值和似然值。
 5. 计算每个位点的obs/exp比值、置信区间和p值，并输出到指定文件。
@@ -13,7 +13,7 @@ import os
 主要函数：
 - loci_oe: 计算每个位点的观测/预期比及置信区间，输出结果文件。
 命令行参数说明：
-- -input: 注释文件路径（含突变似然得分与观测最大杂合度）
+- -input: 注释文件路径（含突变似然得分与观测携带者计数）
 - -obs: 观测值列名
 - -parameters: 线性模型参数文件路径
 - -prefix: 输出文件名前缀
@@ -25,7 +25,7 @@ import os
 def loci_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix: str, excluded_sites: List[int]):
 	"""计算基因和位点的观测值与预期值之比及其90%置信区间。
 
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param output_prefix: 输出文件名前缀
@@ -84,33 +84,33 @@ def loci_oe(input_file: str, obs_value: str, fit_parameters: str, output_prefix:
 						callable_samples=row["callable_samples"], dict=loci_sum)
 		# 计算预期值
 		for variant_type in ['synonymous', 'missense', 'stop_gain', 'SNV']:
-			exp_max_het = calculate_exp(sum_dict=loci_sum, identifier=variant_type, fit_parameters=fit_parameters)
-			if exp_max_het > 0:  # 跳过与该位点无关的变异后果
-				obs_max_het = calculate_obs(identifier=variant_type, sum_dict=loci_sum)
-				ratio_oe = obs_max_het / exp_max_het
+			expected_carriers = calculate_exp(sum_dict=loci_sum, identifier=variant_type, fit_parameters=fit_parameters)
+			if expected_carriers > 0:  # 跳过与该位点无关的变异后果
+				observed_carriers = calculate_obs(identifier=variant_type, sum_dict=loci_sum)
+				ratio_oe = observed_carriers / expected_carriers
 				total_all = calculate_total(identifier=variant_type, sum_dict=loci_sum)
 				(lower_CI, upper_CI) = calculate_CI(
-					obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het)
-				# 为保守起见，将观测值设为上置信界（upper_CI * exp_max_het）
+					observed_carriers=observed_carriers, total=total_all, expected_carriers=expected_carriers)
+				# 为保守起见，将观测值设为上置信界（upper_CI * expected_carriers）
 				pvalue = calculate_pvalue(
-					obs_max_het=(upper_CI * exp_max_het), total=total_all, exp_max_het=exp_max_het)
+					observed_carriers=(upper_CI * expected_carriers), total=total_all, expected_carriers=expected_carriers)
 				
 				print("Calculating values for", variant_type, "in", str(mitomap_loci[loci][0]))
 				
 				output = file_genes if ((variant_type != "SNV") or ("RNA" in mitomap_loci[loci][1])) else file_noncoding
-				if (output == file_genes) or ((output == file_noncoding) and (round(exp_max_het) >= 10)):
+				if (output == file_genes) or ((output == file_noncoding) and (round(expected_carriers) >= 10)):
 					output.write(
 						mitomap_loci[loci][0] + '\t' + mitomap_loci[loci][1] + '\t' + str(loci[0]) + '\t' + str(loci[1])
-						+ '\t' + variant_type + '\t' + str(total_all) + '\t' + str(obs_max_het) + '\t' + str(exp_max_het)
+						+ '\t' + variant_type + '\t' + str(total_all) + '\t' + str(observed_carriers) + '\t' + str(expected_carriers)
 						+ '\t' + str(ratio_oe) + '\t' + str(lower_CI) + '\t' + str(upper_CI) + '\t' + str(pvalue) + '\n')
 
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument(
-		"-input", type=str, help="Annotated file with mutation likelihood scores and observed maximum heteroplasmy")
+		"-input", type=str, help="Annotated file with mutation likelihood scores and observed carrier counts")
 	parser.add_argument(
-		"-obs", type=str, help="Population dataset from which observed maximum heteroplasmy is obtained")
+		"-obs", type=str, help="Population dataset providing observed carrier counts")
 	parser.add_argument(
 		"-parameters", type=str, help="File with parameters from linear model to calculate expected")
 	parser.add_argument(

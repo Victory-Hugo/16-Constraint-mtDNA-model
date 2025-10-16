@@ -3,11 +3,11 @@ library(ggpubr)
 
 # SUPPLEMENTARY DATA 2
 
-# Figure S2a - plot the correlation between the mutation likelihood scores and the observed maximum heteroplasmy of neutral variants in gnomAD
+# Figure S2a - plot the correlation between the mutation likelihood scores and the observed carrier counts of neutral variants in gnomAD
 
 file <- read.delim(file = '../output_files/calibration/loci_obs_vs_scores.txt', header = TRUE, sep = "\t")
 
-plotA <- ggplot(data = file, aes(y = obs_max_het, x = sum_likelihood, color = mutation_group)) +
+plotA <- ggplot(data = file, aes(y = observed_carriers, x = sum_likelihood, color = mutation_group)) +
   geom_point(size = 1) + 
   labs(x = "Mutation likelihood", y = "Observed neutral variation") + 
   paper_theme +
@@ -22,9 +22,9 @@ plotA <- ggplot(data = file, aes(y = obs_max_het, x = sum_likelihood, color = mu
   guides(color = guide_legend(override.aes = list(fill = NA)))
 
 
-# FigureS2b - plot the correlation between the mutation likelihood scores and the observed maximum heteroplasmy of neutral variants in gnomAD, in tRNA genes only
+# FigureS2b - plot the correlation between the mutation likelihood scores and the observed carrier counts of neutral variants in gnomAD, in tRNA genes only
 
-plotB <- ggplot(data = file[grepl("MT-T", file$symbol), ], aes(y = obs_max_het, x = sum_likelihood, color = mutation_group)) +
+plotB <- ggplot(data = file[grepl("MT-T", file$symbol), ], aes(y = observed_carriers, x = sum_likelihood, color = mutation_group)) +
   geom_point(size = 1) +
   labs(x = "Mutation likelihood", y = "Observed neutral variation in tRNAs") + 
   paper_theme +
@@ -40,11 +40,11 @@ plotB <- ggplot(data = file[grepl("MT-T", file$symbol), ], aes(y = obs_max_het, 
   guides(color = guide_legend(override.aes = list(fill = NA)))
 
 
-# Figure S2c - plot the correlation between the mutation likelihood scores and the observed maximum heteroplasmy of neutral variants in gnomAD, in the OriB-OriH region
+# Figure S2c - plot the correlation between the mutation likelihood scores and the observed carrier counts of neutral variants in gnomAD, in the OriB-OriH region
 
 ori_file <- read.delim(file = '../output_files/calibration/loci_obs_vs_scores_ori.txt', header = TRUE, sep = "\t")
 
-plotC <- ggplot(data = ori_file, aes(y = obs_max_het, x = sum_likelihood, color = mutation_group)) +
+plotC <- ggplot(data = ori_file, aes(y = observed_carriers, x = sum_likelihood, color = mutation_group)) +
   geom_point(size = 1) +
   labs(x = "Mutation likelihood", y = "Observed neutral variation in OriB-OriH") + 
   paper_theme +
@@ -65,4 +65,3 @@ plotC <- ggplot(data = ori_file, aes(y = obs_max_het, x = sum_likelihood, color 
 ggarrange(plotA, plotB, plotC, ncol = 3, nrow = 1, labels = c("a", "b", "c"), font.label = list(size = 10))
 
 ggsave("supplementary_figures/FigureS2.jpeg", width = 180, height = 60, dpi = 600, units = c("mm"))  
-

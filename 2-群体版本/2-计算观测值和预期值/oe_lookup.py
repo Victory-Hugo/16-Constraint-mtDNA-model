@@ -3,17 +3,17 @@ import datetime
 from oe_functions import *
 import os
 '''
-该脚本用于计算线粒体基因组指定坐标区间的观测最大杂合度与预期值之比（O/E ratio），并给出其90%置信区间（OEUF）。
+该脚本用于计算线粒体基因组指定坐标区间的携带者计数与预期值之比（O/E ratio），并给出其90%置信区间（OEUF）。
 主要功能：
-- 读取含突变似然得分与观测最大杂合度的注释文件。
+- 读取含突变似然得分与观测携带者计数的注释文件。
 - 根据用户指定的坐标区间，累加观测值与似然值，排除指定的碱基位点。
-- 利用线性方程参数文件，计算区间内的预期最大杂合度。
+- 利用线性方程参数文件，计算区间内的预期携带者计数。
 - 输出区间的观测值、预期值、O/E比值及OEUF（90%置信区间上界）。
 参数说明：
 - start (int): 要分析区间的起始坐标（必需）。
 - end (int): 要分析区间的终止坐标（必需）。
-- input_file (str): 含突变似然得分与观测最大杂合度的注释文件路径。
-- obs_value (str): 观测最大杂合度对应的列名。
+- input_file (str): 含突变似然得分与观测携带者计数的注释文件路径。
+- obs_value (str): 观测携带者计数对应的列名。
 - fit_parameters (str): 包含线性方程系数与截距的文件路径。
 - excluded_sites (List[int]): 需要在计算中排除的碱基位点列表。
 命令行参数：
@@ -30,7 +30,7 @@ python3 oe_lookup.py -start 1 -end 16569
 - 坐标范围应在1-16569之间（线粒体基因组范围）。
 - 默认排除 gnomAD 中的 artifact-prone sites。
 输出内容：
-- 区间的观测最大杂合度、预期最大杂合度、O/E 比值及 OEUF（90%置信区间上界）。
+- 区间的观测携带者计数、预期携带者计数、O/E 比值及 OEUF（90%置信区间上界）。
 '''
 
 def oe_lookup(
@@ -40,7 +40,7 @@ def oe_lookup(
 
 	:param start: 起始坐标
 	:param end: 终止坐标
-	:param input_file: 含突变似然得分与观测最大杂合度的注释文件
+	:param input_file: 含突变似然得分与观测携带者计数的注释文件
 	:param obs_value: 观测值列的列名
 	:param fit_parameters: 包含线性方程系数与截距的文件路径
 	:param excluded_sites: 需要在计算中排除的碱基位点列表
@@ -60,14 +60,14 @@ def oe_lookup(
 					callable_samples=row["callable_samples"], dict=loci_sum)
 	# 计算比例与置信区间
 	for variant_type in ['all SNVs']:
-		exp_max_het = calculate_exp(sum_dict=loci_sum, identifier=variant_type, fit_parameters=fit_parameters)
-		obs_max_het = calculate_obs(identifier=variant_type, sum_dict=loci_sum)
-		ratio_oe = obs_max_het / exp_max_het
+		expected_carriers = calculate_exp(sum_dict=loci_sum, identifier=variant_type, fit_parameters=fit_parameters)
+		observed_carriers = calculate_obs(identifier=variant_type, sum_dict=loci_sum)
+		ratio_oe = observed_carriers / expected_carriers
 		total_all = calculate_total(identifier=variant_type, sum_dict=loci_sum)
 		(lower_CI, upper_CI) = calculate_CI(
-			obs_max_het=obs_max_het, total=total_all, exp_max_het=exp_max_het)
+			observed_carriers=observed_carriers, total=total_all, expected_carriers=expected_carriers)
 	print(
-		"For interval", start, "to", end, "the observed and expected values are", obs_max_het, "and", exp_max_het,
+		"For interval", start, "to", end, "the observed and expected values are", observed_carriers, "and", expected_carriers,
 		". The ratio is ", ratio_oe, "and the OEUF is", upper_CI, ".")
 
 
@@ -75,9 +75,9 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser(
 		description="计算给定坐标区间的观测值与预期值之比及其90%置信区间")
 	parser.add_argument(
-		"-input", type=str, help="含突变似然得分与观测最大杂合度的注释文件")
+		"-input", type=str, help="含突变似然得分与观测携带者计数的注释文件")
 	parser.add_argument(
-		"-obs", type=str, help="获取观测最大杂合度的人群数据集")
+		"-obs", type=str, help="提供观测携带者计数的人群数据集")
 	parser.add_argument(
 		"-parameters", type=str, help="包含线性方程系数与截距的文件路径")
 	parser.add_argument(
