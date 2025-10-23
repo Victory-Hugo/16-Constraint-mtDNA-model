@@ -1,2 +1,0 @@
-protein_annotation	variant_count	observed	expected	obs:exp	lower_CI	upper_CI
-site	345	0.0	1.840752372296702	0.0	0.0	1.6274499050712736

@@ -4,6 +4,42 @@ import datetime
 import json
 import sys
 from compile_denovo import rcrs_pos_to_ref
+#* ====================输入文件====================
+#* output/mutation_likelihoods/mito_mutation_likelihoods.txt(TSV)
+
+#* 同时读取0-required_files中大量制表符文本/VCF/FASTA资源:
+#	gnomAD
+# 	HelixMTdb
+#	MITOMAP
+# 	ClinVar
+#	MitImpact
+# 	MitoTip
+# 	HmtVar
+# 	phyloP
+# 	rRNA/tRNA 注释
+# 	UniProt
+# 	chimp 对齐等
+#* ===============================================
+
+#* ====================输出文件================
+#* output/mutation_likelihoods/mito_mutation_likelihoods_annotated.txt(TSV)
+
+# POS	REF	ALT	Likelihood	trinucleotide	symbol	consequence	amino_acids	protein_position	codon_change	gnomad_max_hl	gnomad_af_hom	gnomad_af_het	gnomad_ac_hom	gnomad_ac_het	in_phylotree	phyloP_score	tRNA_position	tRNA_domain	RNA_base_type	RNA_modified	rRNA_bridge_base	uniprot_annotation	other_prot_annotation	apogee_class	mitotip_class	hmtvar_class	helix_max_hl	helix_af_hom	helix_af_het	mitomap_gbcnt	mitomap_af	mitomap_status	mitomap_plasmy	mitomap_disease	clinvar_interp	chimp_ref
+# 1	G	T	0.14134500722481702	GGA		intergenic_variant				0	0	0	0	0	0	0.190					No						0	0	0	0	0					G
+# 1	G	A	5.362865793881791	GGA		intergenic_variant				0	0	0	0	0	0	0.190					No						0	0	0	0	0					G
+# 1	G	C	0.10345603902146028	GGA		intergenic_variant				0	0	0	0	0	0	0.190					No					None	0	0	0	0	0					G
+# POS/REF/ALT/Likelihood：沿用前一步模型的结果，说明 m.1 的 G→A 复合似然约 5.36（较高），而 G→T/G→C 很低。
+# trinucleotide = GGA：表示参考序列中该位点及左右各 1 个碱基是 GGA，为后续分析密码子上下文提供信息。
+# symbol / consequence：落在 G 仔细检查是非编码区，VEP 判定为 intergenic_variant，没有具体基因、氨基酸或密码子变化，因此这些列为空。
+# gnomad_max_hl 等 gnomAD 列都为 0，说明在 gnomAD v3.1 的线粒体数据里未观测到对应变异。
+# in_phylotree = 0：该突变不在 PhyloTree 的单倍群标志列表中。
+# phyloP_score = 0.190：跨 100 种脊椎动物的保守性评分较低，提示这个位置进化约束不强。
+# tRNA、RNA 相关列为空且 rRNA_bridge_base = No，说明既不在 tRNA，也不是 rRNA 桥接碱基。
+# uniprot_annotation、other_prot_annotation、apogee_class、mitotip_class、hmtvar_class 等都空，对应位置没有蛋白或预测注释；None 出现在 other_prot_annotation 里表示显式标注“无”。
+# HelixMTdb、MITOMAP、ClinVar 列全为 0 或空，说明这些数据库同样未收录该变体；mitomap_status、clinvar_interp 空白意味着没有报道的疾病关联或临床解释。
+# chimp_ref = G：人-黑猩猩比对中，黑猩猩在该位置也是 G，意味着参考等位基因是保守的祖先状态。
+# 综合起来，这张注释表让你一眼就能看出：m.1 的 G→A 虽然在模型里“容易发生”，但实际人群数据中尚未见到，且位于非编码、低保守度区域，也没任何数据库提示致病性，虽然理论上可能高发，但目前证据不足。
+#* =========================================
 
 
 def rcrs_pos_to_trinucleotide():

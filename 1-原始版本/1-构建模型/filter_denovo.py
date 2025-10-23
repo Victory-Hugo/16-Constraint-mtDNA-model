@@ -1,30 +1,38 @@
 import argparse
-"""
-该脚本用于过滤和统计不同类型的de novo变异（新生突变），并将结果写入输出文件。
-
-功能说明:
-- 通过命令行参数指定三类de novo变异的最大计数阈值:
-    - germline_max: 生殖系de novo的最大计数阈值
-    - som_tissue_max: 体细胞组织de novo的最大计数阈值
-    - som_cancer_max: 体细胞癌症de novo的最大计数阈值（默认为1）
-- 调用`filter_denovo`函数进行实际过滤和计数
-- 输出最终用于计算突变可能性分数的de novo列表及其计数到指定文件
-
-参数:
-    -germline_max (int): 生殖系de novo最大计数阈值
-    -som_tissue_max (int): 体细胞组织de novo最大计数阈值
-    -som_cancer_max (int): 体细胞癌症de novo最大计数阈值
-
-输出:
-    output/denovo/final_denovo.txt: 包含每个de novo及其计数的文件
-
-使用方法:
-    python filter_denovo.py -germline_max <值> -som_tissue_max <值> -som_cancer_max <值>
-"""
 from compare_denovo import filter_denovo
 import datetime
 
+#* ====================输入文件====================
+#* output/denovo/all_denovo.txt(TSV)
+#* ===============================================
 
+#* ====================输出文件====================
+#* output/denovo/final_denovo.txt(TSV，含denovo / count列)。
+#* 它确保用来建模的 de novo 集合来自“正常”样本，减少异常突变负荷对 mtDNA 变异率估计的干扰。
+#* ===============================================
+
+#* ====================输出文件格式================
+# denovo	count
+# T12586C	1
+# T13819C	1
+# A1409G	2
+# A214G	8
+# T6351C	2
+# G1747A	3
+#* ===============================================
+
+#* ====================脚本功能====================
+#* 真正的筛选发生在 compare_denovo.py 里的 filter_denovo 函数中。
+# 举个简化例子：假设 all_denovo.txt 有两行
+# denovo    sample             sample_denovo_count
+# A1234G    sample1-germline   2
+# A1234G    sample2-germline   10
+# 默认阈值对生殖系是 None（全部保留），返回 {'A1234G': 2+10}。如果调用时把 germline_max 设为 5，那么第二行会被丢弃（因为 10>5），只剩第一行，返回 {'A1234G': 1}。
+# filter_denovo.py 得到这个字典后，就写成：
+# denovo    count
+# A1234G    1
+# 这就是“筛选 + 汇总”的过程。
+#* ===============================================
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-germline_max", type=int,

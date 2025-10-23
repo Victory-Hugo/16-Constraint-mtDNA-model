@@ -4,56 +4,49 @@ import csv
 import datetime
 from typing import Dict, List, Tuple, Union
 import os
-'''
-composite_likelihood_mito.py
 
-该脚本用于构建线粒体DNA（mtDNA）突变的复合似然模型，结合参考碱基、突变类别和序列上下文信息，
-计算全基因组范围内每个位点、每种突变类型的突变概率。主要功能包括：
+#* ====================输入文件====================
+# 1. output/denovo/final_denovo.txt(TSV)
+# 2. 0-required_files/synthetic_vcf/NC_012920.1_synthetic_vep_noheader.vcf(VCF) 
+# 3. 0-required_files/synthetic_vcf/NC_012920.1_noheader.fasta(FASTA)
+#* ===============================================
 
-1. 数据读取与预处理
-    - 读取de novo突变列表（RefPosAlt格式，附计数）。
-    - 读取线粒体参考基因组FASTA文件和所有可能的SNV列表（VCF格式）。
+#* ====================输出文件================
+# 输出会写入output/sequence_context_vectors/目录下的多份制表符文本（如Vseq_mut_Ts_.txt、Vseq_mut_Tv_.txt、lambda_seq_context_.txt、以及 OriB-OriH 专用文件）
+# 以及最终的output/mutation_likelihoods/mito_mutation_likelihoods.txt(TSV，含POS / REF / ALT / Likelihood)。
+# 该模型提供“预期突变率”，是计算 mtDNA 约束、识别异常缺失突变区段的核心。
+#* ===============================================
 
-2. 区域定义
-    - 支持对OriB-OriH区域（m.16197-191）与其他参考区域分别建模，考虑人工断点和特殊间隔（如m.3107N）。
+#* ====================逻辑关键================
+# 1. 用纯观测数据估计 mtDNA 的基础突变率分布
+#   它逐步统计：
+#   每个参考碱基在指定区域出现的频率（A、C、G、T 各占多少比例）。
+#   各类突变（12 种 Ref>Alt）在观察到的 de novo 中出现了多少次。
+#   每个突变在其左右窗口（默认三核苷酸，也可调更长）中不同侧翼碱基的组合频率。
+# 这些统计被转换成“似然比”：例如某个碱基在 Ori 之外区域发生 C>T 的相对频率是背景预期的几倍；特定三核苷酸环境是否显著偏好某种突变等等。
+# 2. 把这些似然因子乘在一起，得到全基因组逐位点的突变概率表
+# 对于线粒体基因组上的每一个位置、每一种可能的单核苷酸替换，脚本会综合：
+#    该位置参考碱基突变的总体倾向（lambda_ref_nuc）。
+#    属于哪一类突变（I/II/III）对应的倾向（lambda_mut_class）。
+#    该位置上下文序列（氨基酸/侧翼碱基）对这一突变的偏好程度（lambda_seq_context）。
+#    对 OriB-OriH 区域的特殊处理（转换突变单独拟合）以尊重复制起始区的异常模式。
+# 乘积就得到一个复合似然，最终写入 output/mutation_likelihoods/mito_mutation_likelihoods.txt：表格里的每一行是 POS REF ALT Likelihood。
+#* ===============================================
 
-3. 统计与概率计算
-    - 统计各突变类型在指定区域的出现次数。
-    - 计算参考碱基（A、C、G、T）在区域内的比例。
-    - 计算各突变类别（I、II、III）的概率与似然比。
-    - 统计每个位点、每种突变类型的出现次数。
-
-4. 序列上下文建模
-    - 统计突变及参考碱基在侧翼窗口（如三核苷酸）内的序列上下文分布。
-    - 分别处理转换（Ts）和颠换（Tv）突变，支持跨链合并。
-
-5. 复合似然计算
-    - 综合参考碱基、突变类别和序列上下文的似然比，计算每个位点、每种突变类型的复合突变概率。
-    - OriB-OriH区域的转换突变单独处理。
-
-6. 文件输出
-    - 输出各类统计结果和似然比至指定文件夹，便于后续绘图和分析。
-
-主要函数说明：
-- build_dictionary, build_additive_dictionary: 辅助字典构建与计数。
-- flip_base, flip_mut: 计算反义链碱基及突变类型。
-- handle_mito_genome: 校正环状mtDNA及特殊间隔的侧翼坐标。
-- make_denovo_counts, make_type_count_vector: 读取并统计de novo突变数据。
-- probability_per_ref_nuc, lr_ref_nuc: 计算参考碱基比例及突变似然比。
-- probability_per_class, lr_class: 计算突变类别概率及似然比。
-- count_type_per_pos, make_mut_context_vector: 统计每个位点、每种突变类型的上下文分布。
-- make_ref_freq_vector: 统计参考序列上下文分布。
-- lr_seq_context: 计算序列上下文的似然比。
-- composite_likelihood: 综合各类似然比，计算全基因组突变概率。
-- write_*: 各类统计结果写入文件。
+#* ==============mito_mutation_likelihoods.txt====
+# POS	REF	ALT	Likelihood
+# 1	G	T	0.14134500722481702
+# 1	G	A	5.362865793881791
+# 1	G	C	0.10345603902146028
+# 2	A	T	0.04233871554629856
+#* G>A 5.36：m.1 位点以 G 为参考，换成 A 的可能性约是同位点发生其余
+#* 替换/模型基线的 5 倍以上，说明在环状基因组起点附近，G>A 转换特别常见。
+#* 在遗传应用里，这张表就是“期望值”的基准。
+#* ===============================================
 
 
-输出：
-- 各类统计文件及最终的mito_mutation_likelihoods.txt，包含每个位点、每种突变类型的复合似然。
 
-适用场景：
-- 线粒体突变谱建模、序列上下文分析、突变概率预测、可视化等科研任务。
-'''
+
 # 全局变量
 nucleotides = ["A", "C", "G", "T"]
 class_I_mutations = ["C>A", "T>A", "G>T", "A>T"]
